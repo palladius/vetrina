@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="it" class="scroll-smooth">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>🎠 Palladius Vetrina — Giochi per Bimbi & Tool di Papà</title>
-  <meta name="description" content="Vetrina interattiva dei giochi e delle app create da Riccardo per i suoi bimbi: Tubature, Orologia.io, Puzzle, Pasta Invaders e i tool di sviluppo." />
+  <title>🎠 Palladius Showcase — Kids Games & Dad's Tools</title>
+  <meta name="description" content="Interactive showcase of games and apps created by Riccardo for his kids: Tubature, Orologia.io, Puzzle, Pasta Invaders, plus developer tools." />
 
   <!-- Tailwind CSS via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -44,9 +44,9 @@
         <span class="text-3xl filter drop-shadow-sm">🎠</span>
         <div>
           <h1 class="font-fun text-xl sm:text-2xl font-bold tracking-tight text-slate-900 leading-tight">
-            Palladius <span class="text-indigo-600">Vetrina</span>
+            Palladius <span class="text-indigo-600">Showcase</span>
           </h1>
-          <p class="text-xs text-slate-500 font-medium hidden sm:block">I Giochi di Papà Riccardo per i Bimbi & Tools</p>
+          <p class="text-xs text-slate-500 font-medium hidden sm:block">Dad Riccardo's Kids Games & Dev Tools</p>
         </div>
       </div>
 
@@ -68,15 +68,15 @@
   <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16">
     <div class="text-center max-w-3xl mx-auto mb-8">
       <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-800 mb-3 shadow-sm">
-        <span>✨ Spazio Creativo di Famiglia</span>
+        <span>✨ Family Creative Hub</span>
         <span>•</span>
-        <span>Alessandro, Sebi & Papà</span>
+        <span>Alessandro, Sebi & Dad</span>
       </div>
       <h2 class="font-fun text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
-        Tutti i Giochi & Progetti in Vetrina
+        All Games & Projects on Display
       </h2>
       <p class="text-base sm:text-lg text-slate-600 mt-2 font-normal">
-        Dai puzzle di tubature fantasy con draghi e idraulici agli orologi interattivi, passando per la pasta spaziale e i tool di sviluppo.
+        From fantasy pipe-puzzles with dragons and plumbers to interactive clocks, space pasta, and developer tooling.
       </p>
     </div>
 
@@ -90,16 +90,16 @@
           type="text"
           id="search-input"
           autofocus
-          placeholder="Cerca al volo: 'tubature', 'orologio', 'flutter', 'puzzle', 'tetri'..."
+          placeholder="Quick search: 'tubature', 'clock', 'flutter', 'puzzle', 'tetri'..."
           class="w-full py-4 pl-3 pr-24 text-base sm:text-lg text-slate-800 placeholder-slate-400 bg-transparent focus:outline-none"
           autocomplete="off"
         />
         <!-- Keyboard hint & Clear button -->
         <div class="absolute right-3 flex items-center gap-2">
-          <button id="clear-search-btn" class="hidden p-1 text-slate-400 hover:text-slate-600 rounded-full hover:bg-slate-100 transition" title="Cancella ricerca (Esc)">
+          <button id="clear-search-btn" class="hidden p-1 text-slate-400 hover:text-slate-600 rounded-full hover:bg-slate-100 transition" title="Clear search (Esc)">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
           </button>
-          <kbd class="hidden sm:inline-block px-2 py-1 text-xs font-semibold text-slate-400 bg-slate-100 rounded border border-slate-200" title="Premi / da qualsiasi punto per cercare">/</kbd>
+          <kbd class="hidden sm:inline-block px-2 py-1 text-xs font-semibold text-slate-400 bg-slate-100 rounded border border-slate-200" title="Press / from anywhere to search">/</kbd>
         </div>
       </div>
 
@@ -107,30 +107,30 @@
       <div id="active-filters" class="flex flex-wrap items-center gap-2 mt-3 min-h-[28px]"></div>
     </div>
 
-    <!-- Category Discrimination Controls (Giochi Bimbi vs Tool di Papà) -->
+    <!-- Category Discrimination Controls (Kids Games vs Dad's Tools) -->
     <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8 pb-4 border-b border-slate-200/80">
       <!-- Main Category Tabs -->
       <div class="inline-flex p-1 rounded-xl bg-slate-200/70 backdrop-blur-sm border border-slate-300/60 shadow-inner">
         <button
           data-category="all"
           class="category-filter-btn active px-4 py-2 rounded-lg text-sm font-semibold transition-all bg-indigo-600 text-white shadow-md">
-          🌟 Tutti (9)
+          🌟 All (11)
         </button>
         <button
           data-category="kids"
           class="category-filter-btn px-4 py-2 rounded-lg text-sm font-semibold transition-all bg-white text-slate-700 hover:text-indigo-600">
-          🧸 Giochi dei Bimbi (7)
+          🧸 Kids Games (7)
         </button>
         <button
           data-category="tools"
           class="category-filter-btn px-4 py-2 rounded-lg text-sm font-semibold transition-all bg-white text-slate-700 hover:text-indigo-600">
-          🛠️ Tool di Papà (2)
+          🛠️ Dad's Tools (4)
         </button>
       </div>
 
       <!-- Quick Tag Filter Pills -->
       <div class="flex items-center gap-1.5 overflow-x-auto pb-1 sm:pb-0">
-        <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider mr-1">Filtra:</span>
+        <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider mr-1">Filter:</span>
         <button onclick="window.filterByTag('tubature')" class="px-2.5 py-1 rounded-full text-xs font-medium bg-white hover:bg-emerald-50 text-emerald-700 hover:text-emerald-800 border border-emerald-200 shadow-sm transition">
           🚰 Tubature
         </button>
@@ -141,18 +141,18 @@
           🧩 Puzzle
         </button>
         <button onclick="window.filterByTag('educational')" class="px-2.5 py-1 rounded-full text-xs font-medium bg-white hover:bg-indigo-50 text-slate-700 hover:text-indigo-600 border border-slate-200 shadow-sm transition">
-          ⏰ Educativi
+          ⏰ Educational
         </button>
         <button onclick="window.filterByTag('ai')" class="px-2.5 py-1 rounded-full text-xs font-medium bg-white hover:bg-indigo-50 text-slate-700 hover:text-indigo-600 border border-slate-200 shadow-sm transition">
-          🤖 Con AI
+          🤖 AI-Powered
         </button>
       </div>
     </div>
 
     <!-- Results count bar -->
     <div class="flex items-center justify-between text-xs text-slate-500 mb-6 font-medium">
-      <span id="count-display">Caricamento vetrina...</span>
-      <span class="hidden sm:inline">💡 Clicca su uno screenshot o su "🕹️ Gioca Qui" per giocare subito!</span>
+      <span id="count-display">Loading showcase...</span>
+      <span class="hidden sm:inline">💡 Click any screenshot or "🕹️ Play Here" to start playing instantly!</span>
     </div>
 
     <!-- Games & Tools Showcase Grid -->
@@ -163,15 +163,15 @@
     <!-- Empty State (No Search Results) -->
     <div id="empty-state" class="hidden text-center py-16 px-4">
       <div class="text-5xl mb-4">🔍✨</div>
-      <h3 class="font-fun text-2xl font-bold text-slate-800">Nessun gioco trovato</h3>
+      <h3 class="font-fun text-2xl font-bold text-slate-800">No creations found</h3>
       <p class="text-slate-500 text-sm mt-1 max-w-md mx-auto">
-        Nessun elemento corrisponde a <span id="empty-query" class="font-semibold text-slate-700"></span>.
-        Prova a cercare con altre parole chiave come <em>"tubature"</em>, <em>"puzzle"</em>, <em>"orologio"</em> o <em>"flutter"</em>.
+        No projects match <span id="empty-query" class="font-semibold text-slate-700"></span>.
+        Try searching for other keywords such as <em>"tubature"</em>, <em>"puzzle"</em>, <em>"clock"</em>, or <em>"flutter"</em>.
       </p>
       <button
         id="reset-filters-btn"
         class="mt-5 px-5 py-2.5 rounded-xl text-sm font-semibold text-white bg-indigo-600 hover:bg-indigo-700 shadow-sm transition">
-        Mostra tutti i giochi
+        Show all creations
       </button>
     </div>
   </main>
@@ -183,15 +183,15 @@
       <div class="px-4 py-3 bg-slate-800/90 border-b border-slate-700 flex items-center justify-between">
         <div class="flex items-center gap-3">
           <span class="text-xl">🕹️</span>
-          <h3 id="play-modal-title" class="font-fun text-lg font-bold text-white tracking-wide">Gioca</h3>
+          <h3 id="play-modal-title" class="font-fun text-lg font-bold text-white tracking-wide">Play</h3>
         </div>
         <div class="flex items-center gap-3">
           <a id="play-modal-external-link" href="#" target="_blank" rel="noopener noreferrer"
              class="inline-flex items-center gap-1 px-3 py-1 rounded-lg text-xs font-medium text-slate-300 hover:text-white bg-slate-700/80 hover:bg-slate-700 transition">
-            <span>Apri a tutto schermo</span>
+            <span>Open Full Screen</span>
             <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
           </a>
-          <button id="play-modal-close-btn" class="p-1.5 text-slate-400 hover:text-white rounded-lg hover:bg-slate-700 transition" title="Chiudi (Esc)">
+          <button id="play-modal-close-btn" class="p-1.5 text-slate-400 hover:text-white rounded-lg hover:bg-slate-700 transition" title="Close (Esc)">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
           </button>
         </div>
@@ -217,10 +217,10 @@
   <footer class="glass-panel border-t border-slate-200/80 mt-20 py-10">
     <div class="max-w-7xl mx-auto px-4 text-center">
       <p class="font-fun text-base font-semibold text-slate-700">
-        🎠 Fatto con amore da Riccardo per Alessandro & Sebi
+        🎠 Crafted with love by Riccardo for Alessandro & Sebi
       </p>
       <p class="text-xs text-slate-500 mt-1">
-        Tutti i giochi sono open-source e ospitati su GitHub Pages • Configurazione centralizzata in <code class="px-1.5 py-0.5 rounded bg-slate-100 text-indigo-600 font-mono text-xs">data/games.yaml</code>
+        All games are open-source and hosted on GitHub Pages • Central YAML configuration in <code class="px-1.5 py-0.5 rounded bg-slate-100 text-indigo-600 font-mono text-xs">data/games.yaml</code>
       </p>
     </div>
   </footer>

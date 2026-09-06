@@ -4,8 +4,8 @@ window.PALLADIUS_GAMES = [
     "id": "tubature",
     "title": "🚰 Tubature: The Dungeon Plumber",
     "category": "kids",
-    "tagline": "Un magico puzzle fantasy di condutture con Riccardo e il draghetto smeraldo!",
-    "description": "Vibrante pipe-puzzle game fantasy con Riccardo in salopette e cappellino giallo con la 'R' e il suo piccolo drago verde. Ruota i condotti magici nel dungeon per far scorrere l'acqua cristallina attraverso tutte le tessere della griglia!",
+    "tagline": "Enchanting fantasy pipe-puzzle game starring Riccardo and his baby dragon!",
+    "description": "A vibrant pipe-puzzle game built with Flutter & Riverpod. Starring Riccardo the Dungeon Plumber (wearing his signature yellow 'R' cap) and his cute emerald dragon companion. Rotate magical conduits to let crystal water rush through every single dungeon tile!",
     "screenshot": "assets/screenshots/tubature.jpg",
     "screenshot_gif": "assets/screenshots/tubature_gameplay.gif",
     "play_url": "https://palladius.github.io/tubature/",
@@ -21,22 +21,22 @@ window.PALLADIUS_GAMES = [
       "tubature",
       "puzzle",
       "flutter",
-      "bimbi",
-      "logica",
+      "kids",
+      "logic",
       "fantasy",
       "tetris",
-      "idraulico"
+      "plumber"
     ],
-    "badge": "🟢 Gioca Live",
-    "target": "Bimbi & Famiglia",
+    "badge": "🟢 Play Live",
+    "target": "Kids & Family",
     "featured": true
   },
   {
     "id": "orologiaio",
     "title": "⏰ Orologia.io (Time Master)",
     "category": "kids",
-    "tagline": "Impara a leggere l'orologio analogico e digitale giocando con Sebi e Alessandro!",
-    "description": "Mobile clock-learning game appositamente progettato per insegnare ai bambini come leggere l'orologio analogico (le lancette, i quarti, le mezze), impostare i display digitali e comprendere i numeri a 7 segmenti.",
+    "tagline": "Master reading analog & digital clocks with Sebi and Alessandro!",
+    "description": "Interactive mobile clock-learning game designed to teach kids how to read analog clocks (hands, quarter sub-ticks, half-past), adjust digital displays, and master 7-segment digital digits configurations with dedicated guides for Sebi and Ale.",
     "screenshot": "assets/screenshots/orologiaio.png",
     "play_url": "https://palladius.github.io/orologia.io/",
     "repo_url": "https://github.com/palladius/orologia.io",
@@ -47,14 +47,14 @@ window.PALLADIUS_GAMES = [
       "Web"
     ],
     "tags": [
-      "orologiaio",
+      "clock",
       "educational",
       "flutter",
-      "bimbi",
-      "orologio",
-      "scuola"
+      "kids",
+      "learning",
+      "school"
     ],
-    "badge": "🟢 Gioca Live",
+    "badge": "🟢 Play Live",
     "target": "Alessandro & Sebi",
     "featured": true
   },
@@ -62,8 +62,8 @@ window.PALLADIUS_GAMES = [
     "id": "kids-jigsaw-puzzle",
     "title": "🧩 Kids Jigsaw Puzzle",
     "category": "kids",
-    "tagline": "Puzzle interattivo con le foto di famiglia, draghi ed eroi!",
-    "description": "Gioco di puzzle per bambini dove è possibile utilizzare foto personali della famiglia o immagini divertenti. Le tessere corrette adiacenti si agganciano e uniscono automaticamente mentre risolvi il puzzle!",
+    "tagline": "Interactive puzzle with family photos, heroes, and smart-merging tiles!",
+    "description": "A delightful jigsaw puzzle game for kids where you can play with family photos or favorite illustrations. Adjacent correct pieces automatically merge and lock together with difficulty levels ranging from 'Easy Peasy' to 'Netflix is Down'!",
     "screenshot": "assets/screenshots/kids-jigsaw-puzzle.png",
     "play_url": "https://palladius.github.io/kids-jigsaw-puzzle/",
     "repo_url": "https://github.com/palladius/kids-jigsaw-puzzle",
@@ -76,46 +76,48 @@ window.PALLADIUS_GAMES = [
     "tags": [
       "puzzle",
       "flutter",
-      "bimbi",
-      "foto"
+      "kids",
+      "photos",
+      "family"
     ],
-    "badge": "🟢 Gioca Live",
-    "target": "Tutta la Famiglia",
+    "badge": "🟢 Play Live",
+    "target": "The Whole Family",
     "featured": true
   },
   {
     "id": "pasta-invaders",
     "title": "🍝 Pasta Invaders",
     "category": "kids",
-    "tagline": "Arcade shooter cosmico contro la pasta volante con telecronaca della Nonna!",
-    "description": "Divertente shooter arcade ispirato a Space Invaders: difendi la terra dall'invasione spaziale di rigatoni, tagliatelle e tortellini, con commento satirico e incoraggiamenti in tempo reale generati da Nonna via Gemini AI!",
+    "tagline": "Cosmic arcade shooter against flying pasta with live Nonna commentary!",
+    "description": "A hilarious Space Invaders-style arcade shooter: defend the galaxy from an airborne invasion of rigatoni, tagliatelle, and ravioli, featuring real-time satirical commentary and encouragement from Nonna powered by Google Gemini AI! [Playable via Google AI Studio].",
     "screenshot": "assets/screenshots/pasta-invaders.png",
-    "play_url": "",
+    "play_url": "https://aistudio.google.com/apps/drive/1YEMXop64tbCrh8RBHiF1um5o6iRKzInm?resourceKey=0-yreZnGE7-QQn_2WhLHdjpg",
     "repo_url": "https://github.com/palladius/pasta-invaders",
     "can_embed": false,
     "tech": [
       "React",
       "HTML5 Canvas",
-      "Gemini AI"
+      "Gemini AI",
+      "AI Studio"
     ],
     "tags": [
       "arcade",
       "ai",
-      "bimbi",
+      "kids",
       "pasta",
-      "divertimento",
+      "fun",
       "invaders"
     ],
-    "badge": "👾 Arcade + AI",
-    "target": "Bimbi & Ragazzi",
+    "badge": "👾 Play in AI Studio",
+    "target": "Kids & Young Gamers",
     "featured": true
   },
   {
     "id": "parola-del-giorno",
     "title": "📜 Parola del Giorno",
     "category": "kids",
-    "tagline": "L'archivio della sapienza desueta di Casa Carlesso e del folletto Pux!",
-    "description": "Ogni giorno una gemma rara e affascinante della lingua italiana (es. fanfaluca, solerzia, cazzabubbola), illustrata con immagini favolistiche create con l'IA per arricchire il lessico dei bimbi con poesia e allegria.",
+    "tagline": "The whimsical archive of vintage Italian words curated by Pux the Pixie!",
+    "description": "Every day a rare, lyrical Italian word (like fanfaluca, solerzia, cazzabubbola) paired with dreamy fantasy AI artwork and pronunciation to enrich children's vocabulary with laughter and wonder.",
     "screenshot": "assets/screenshots/parola-del-giorno.png",
     "play_url": "https://palladius.github.io/parola-del-giorno/",
     "repo_url": "https://github.com/palladius/parola-del-giorno",
@@ -127,21 +129,21 @@ window.PALLADIUS_GAMES = [
     ],
     "tags": [
       "educational",
-      "lettere",
-      "bimbi",
-      "fiabe",
-      "lingua"
+      "words",
+      "kids",
+      "fairytales",
+      "language"
     ],
-    "badge": "🟢 Esplora Live",
-    "target": "Casa Carlesso",
+    "badge": "🟢 Explore Live",
+    "target": "Carlesso Household",
     "featured": false
   },
   {
     "id": "baby-alphabet",
     "title": "🔤 Baby Alphabet (AJ-Alphabet)",
     "category": "kids",
-    "tagline": "Costruita in 24 ore per insegnare le lettere dell'alfabeto ad Alessandro!",
-    "description": "App interattiva creata con amore per supportare l'apprendimento delle lettere e dei suoni. Nata dalla sfida 'hold my beer' di Papà per far appassionare Alessandro alla lettura dell'alfabeto in 24 ore. [Nota: attualmente offline, aperta issue #1 per ripristino su Cloud Run].",
+    "tagline": "Built in 24 hours to help Alessandro learn letters and phonetic sounds!",
+    "description": "Interactive learning app created out of Dad's 24-hour 'hold my beer' challenge to teach Alessandro letters and pronunciation with custom photos. [Currently offline; tracking resurrection on Cloud Run via Issue #1].",
     "screenshot": "assets/screenshots/baby-alphabet.jpg",
     "play_url": "",
     "repo_url": "https://github.com/palladius/baby-alphabet",
@@ -156,8 +158,8 @@ window.PALLADIUS_GAMES = [
     "tags": [
       "alphabet",
       "educational",
-      "bimbi",
-      "scuola"
+      "kids",
+      "school"
     ],
     "badge": "🔧 Offline (GHI #1)",
     "target": "Alessandro",
@@ -167,8 +169,8 @@ window.PALLADIUS_GAMES = [
     "id": "genai-kids-stories",
     "title": "📖 GenAI Kids Bedtime Stories",
     "category": "kids",
-    "tagline": "Generatore di favole della buonanotte personalizzate per bimbi!",
-    "description": "Applicazione intelligente che inventa storie della buonanotte personalizzate e uniche per i bambini, arricchite da illustrazioni fiabesche generate tramite Google Cloud e Vertex AI.",
+    "tagline": "Personalized bedtime story generator for kids with AI illustrations!",
+    "description": "AI-driven bedtime story creator that crafts personalized fairy tales for children, illustrated and translated on the fly using Google Cloud Run, Gemini, and Vertex AI.",
     "screenshot": "assets/screenshots/genai-kids-stories.png",
     "play_url": "https://genai-kids-stories-gcloud-poor-cdlu26pd4q-ew.a.run.app/",
     "repo_url": "https://github.com/palladius/genai-kids-stories",
@@ -181,19 +183,19 @@ window.PALLADIUS_GAMES = [
     "tags": [
       "stories",
       "ai",
-      "bimbi",
-      "fiabe"
+      "kids",
+      "bedtime"
     ],
     "badge": "🤖 AI Stories",
-    "target": "Favole della Buonanotte",
+    "target": "Bedtime Storytellers",
     "featured": false
   },
   {
     "id": "conductoras",
     "title": "🚂 Conductoras (Conductor at Scale)",
     "category": "tools",
-    "tagline": "Orchestra N repository git con navicelle spaziali e animazioni temporali!",
-    "description": "Framework per osservare e gestire N repository git contemporaneamente, tracciare token consumati (misurati in Macha Lattes 🍵!) e animare l'evoluzione del codice su scala intergalattica.",
+    "tagline": "Observe and orchestrate N git repositories with spaceship visualizers!",
+    "description": "Framework to observe multiple git repositories concurrently across worktrees, track token spend (measured in Macha Lattes 🍵!), and animate code history progression with retro-futuristic spaceship UI.",
     "screenshot": "assets/screenshots/conductoras.jpg",
     "play_url": "",
     "repo_url": "https://github.com/palladius/conductoras",
@@ -209,16 +211,16 @@ window.PALLADIUS_GAMES = [
       "sre",
       "automation"
     ],
-    "badge": "🛠️ Tool di Papà",
-    "target": "Papà Riccardo & Dev",
+    "badge": "🛠️ Dad's Tool",
+    "target": "Dad Riccardo & Devs",
     "featured": false
   },
   {
     "id": "sumaron",
     "title": "🐴 Sumaron (The Big Donkey of Summarization)",
     "category": "tools",
-    "tagline": "Il somaro saggio per riassumere qualsiasi cartella con Gemini e doppio caching!",
-    "description": "Fast, cache-efficient directory summarizer powered by Google Gemini and Imagen. Nome ispirato a 'Il signore dei Tarzanelli' (somaro + Sauron di Mordor) con hashing deterministico e zero spreco di quote API.",
+    "tagline": "Fast, cache-efficient directory summarizer powered by Gemini & Imagen!",
+    "description": "Codebase and folder summarizer with deterministic two-tier caching and automated visual documentation. Humorous homage to 'Il signore dei Tarzanelli' (Somaro donkey + Sauron of Mordor).",
     "screenshot": "assets/screenshots/sumaron.jpg",
     "play_url": "",
     "repo_url": "https://github.com/palladius/sumaron",
@@ -234,16 +236,16 @@ window.PALLADIUS_GAMES = [
       "cli",
       "caching"
     ],
-    "badge": "🛠️ Tool di Papà",
-    "target": "Dev & Codebase Explorer",
+    "badge": "🛠️ Dad's Tool",
+    "target": "Devs & Code Explorers",
     "featured": false
   },
   {
     "id": "gprism",
     "title": "💎 Gprism (Git Privatize in Secret Manager)",
     "category": "tools",
-    "tagline": "Salva i tuoi file segreti (.env) in Google Cloud Secret Manager invece che in git!",
-    "description": "Evoluzione di git-privatize scritta in Ruby. Cifra e sincronizza automaticamente i file sensibili (.env, credenziali) in Google Cloud Secret Manager, con supporto per file grandi fino a >64KB con offloading su GCS.",
+    "tagline": "Store secret files in Google Cloud Secret Manager instead of git!",
+    "description": "Ruby-based evolution of git-privatize that securely encrypts and synchronizes sensitive files (.env, credentials) to Google Cloud Secret Manager, with automated GCS offloading for payloads exceeding 64KB.",
     "screenshot": "assets/screenshots/gprism.jpg",
     "play_url": "",
     "repo_url": "https://github.com/palladius/gprism",
@@ -262,16 +264,16 @@ window.PALLADIUS_GAMES = [
       "git",
       "cli"
     ],
-    "badge": "🛠️ Tool di Papà",
-    "target": "Dev & SRE",
+    "badge": "🛠️ Dad's Tool",
+    "target": "Devs & SREs",
     "featured": false
   },
   {
     "id": "storagify",
     "title": "📦 Storagify",
     "category": "tools",
-    "tagline": "Zero-friction CLI tool per sincronizzare output multimediali su Google Cloud Storage!",
-    "description": "Tool CLI in Python per sincronizzare le cartelle di output di automazioni, script LLM e harness AI su Google Cloud Storage con rendering HTML Astro-styled, directory indexing e upload differenziali a banda ottimizzata.",
+    "tagline": "Zero-friction CLI tool to sync media output folders to Cloud Storage!",
+    "description": "Python CLI tool to sync rich media and report output folders from AI harnesses and automation scripts to GCS with Astro-styled HTML rendering, directory indexing, and bandwidth-optimized delta uploads.",
     "screenshot": "assets/screenshots/storagify.png",
     "play_url": "",
     "repo_url": "https://gitlab.com/palladius/storagify",
@@ -290,8 +292,8 @@ window.PALLADIUS_GAMES = [
       "cli",
       "automation"
     ],
-    "badge": "🛠️ Tool di Papà",
-    "target": "AI Agents & Dev",
+    "badge": "🛠️ Dad's Tool",
+    "target": "AI Agents & Devs",
     "featured": false
   }
 ];
