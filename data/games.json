@@ -315,6 +315,41 @@
     "featured": true
   },
   {
+    "id": "antigravity-ruby-sdk",
+    "title": "💎 Antigravity Ruby SDK",
+    "audience": "tools",
+    "kind": "tool",
+    "category": "tools",
+    "tagline": "Official Unofficial Antigravity SDK for Ruby — Autonomous AI agents in Ruby & Rails!",
+    "description": "Full-featured Ruby SDK for Google Antigravity autonomous AI agents! Seamless Rails integration, token streaming, declarative Policy DSL with sandbox permissions, audit logging, sidecars, guards, and Telegram bot voice integration.",
+    "screenshot": "assets/screenshots/antigravity-ruby-sdk.jpg",
+    "youtube_id": "HuM6T_-NqO8",
+    "youtube_url": "https://youtu.be/HuM6T_-NqO8",
+    "play_url": "",
+    "repo_url": "https://github.com/palladius/antigravity-ruby-sdk",
+    "can_embed": false,
+    "created_at": "2026-08-18",
+    "tech": [
+      "Ruby",
+      "Antigravity SDK",
+      "Rails",
+      "Gemini API",
+      "Telegram Bot"
+    ],
+    "tags": [
+      "tools",
+      "ruby",
+      "sdk",
+      "ai",
+      "antigravity",
+      "agents",
+      "video"
+    ],
+    "badge": "🎬 Demo Video",
+    "target": "Rubyists & AI Devs",
+    "featured": true
+  },
+  {
     "id": "sumaron",
     "title": "🐴 Sumaron (The Big Donkey of Summarization)",
     "audience": "tools",
