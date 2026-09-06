@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --font-display: 'Fredoka', cursive, sans-serif;
+  --font-body: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  background: radial-gradient(circle at 10% 20%, rgba(240, 249, 255, 1) 0%, rgba(254, 242, 242, 0.7) 40%, rgba(245, 243, 255, 1) 90%);
+  min-height: 100vh;
+  color: #1e293b;
+}
+
+.font-fun {
+  font-family: var(--font-display);
+}
+
+/* Glassmorphism effects */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 30px -10px rgba(99, 102, 241, 0.15), 0 10px 15px -5px rgba(0, 0, 0, 0.04);
+  border-color: rgba(165, 180, 252, 0.9);
+}
+
+/* Screenshot Zoom Effect */
+.card-img-wrapper {
+  overflow: hidden;
+  position: relative;
+}
+
+.card-img-wrapper img {
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover .card-img-wrapper img {
+  transform: scale(1.04);
+}
+
+.play-overlay {
+  opacity: 0;
+  transition: opacity 0.25s ease-in-out;
+  background: linear-gradient(to top, rgba(15, 23, 42, 0.75) 0%, rgba(15, 23, 42, 0.2) 60%, transparent 100%);
+}
+
+.glass-card:hover .play-overlay {
+  opacity: 1;
+}
+
+/* Search bar pulse highlight */
+#search-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.25);
+}
+
+/* Category Filter Tabs */
+.filter-btn.active {
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+  color: white;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.35);
+}
+
+/* Tag chips */
+.tag-chip {
+  transition: all 0.2s ease;
+}
+
+.tag-chip:hover {
+  transform: scale(1.05);
+}
+
+/* Floating soft circles in background */
+.bg-blob {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(80px);
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.blob-1 {
+  width: 450px;
+  height: 450px;
+  background: rgba(254, 205, 211, 0.5);
+  top: -100px;
+  right: -50px;
+}
+
+.blob-2 {
+  width: 500px;
+  height: 500px;
+  background: rgba(199, 210, 254, 0.5);
+  bottom: 50px;
+  left: -100px;
+}
+
+.blob-3 {
+  width: 350px;
+  height: 350px;
+  background: rgba(254, 240, 138, 0.4);
+  top: 40%;
+  right: 15%;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
