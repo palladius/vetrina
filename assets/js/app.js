@@ -68,9 +68,10 @@
   }
 
   function updateDynamicCountLabels() {
-    const totalCount = allGames.length;
-    const kidsCount = allGames.filter((g) => g.audience === 'kids' || g.category === 'kids').length;
-    const toolsCount = allGames.filter((g) => g.audience === 'tools' || g.category === 'tools').length;
+    const visibleGames = allGames.filter((g) => !g.archived && !g.hidden);
+    const totalCount = visibleGames.length;
+    const kidsCount = visibleGames.filter((g) => g.audience === 'kids' || g.category === 'kids').length;
+    const toolsCount = visibleGames.filter((g) => g.audience === 'tools' || g.category === 'tools').length;
 
     audienceBtns.forEach((btn) => {
       const aud = btn.dataset.audience;
@@ -79,8 +80,8 @@
       if (aud === 'tools') btn.textContent = `🛠️ Dad's Tools (${toolsCount})`;
     });
 
-    const gamesCount = allGames.filter((g) => g.kind === 'game' || g.is_game).length;
-    const eduCount = allGames.filter((g) => g.kind === 'educational' || (g.tags || []).includes('educational')).length;
+    const gamesCount = visibleGames.filter((g) => g.kind === 'game' || g.is_game).length;
+    const eduCount = visibleGames.filter((g) => g.kind === 'educational' || (g.tags || []).includes('educational')).length;
 
     kindBtns.forEach((btn) => {
       const k = btn.dataset.kind;
@@ -220,6 +221,11 @@
   // Filter & Search Logic with Tree Navigation
   function getFilteredGames() {
     return allGames.filter((item) => {
+      // 0. Exclude archived & unplayable items (hidden from showcase!)
+      if (item.archived || item.hidden) {
+        return false;
+      }
+
       // 1. Audience filter (Kids vs Tools)
       const itemAudience = item.audience || item.category;
       if (currentAudience !== 'all' && itemAudience !== currentAudience) {
@@ -325,7 +331,7 @@
 
     renderActiveFilterBadges();
 
-    const totalCount = allGames.length;
+    const totalCount = allGames.filter((g) => !g.archived && !g.hidden).length;
     countDisplay.innerHTML = `Showing <strong>${sorted.length}</strong> of ${totalCount} creations`;
 
     if (sorted.length === 0) {

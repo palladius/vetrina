@@ -115,6 +115,7 @@ window.PALLADIUS_GAMES = [
     "repo_url": "https://github.com/palladius/pasta-invaders",
     "can_embed": false,
     "archived": true,
+    "hidden": true,
     "created_at": "2026",
     "model_used": "Gemini 2.5 Flash",
     "tech": [
