@@ -106,6 +106,8 @@ window.PALLADIUS_GAMES = [
     "play_url": "https://aistudio.google.com/apps/drive/1YEMXop64tbCrh8RBHiF1um5o6iRKzInm?resourceKey=0-yreZnGE7-QQn_2WhLHdjpg",
     "repo_url": "https://github.com/palladius/pasta-invaders",
     "can_embed": false,
+    "created_at": "2026",
+    "model_used": "Gemini 2.5 Flash",
     "tech": [
       "React",
       "HTML5 Canvas",
@@ -124,6 +126,72 @@ window.PALLADIUS_GAMES = [
     "badge": "👾 Play in AI Studio",
     "target": "Kids & Young Gamers",
     "featured": true
+  },
+  {
+    "id": "smurfs-and-dragons",
+    "title": "🐉 Smurfs & Dragons (Carlessian Game)",
+    "audience": "kids",
+    "kind": "game",
+    "is_game": true,
+    "category": "kids",
+    "tagline": "Silly auto-shooting arcade runner with dragons & armies built with Gemini 2.0!",
+    "description": "A hilarious, silly arcade game built with p5.js where your army auto-fires arrows at incoming challenges! Aim at RED choices [-X] to shoot them up into positives [+10] before colliding. Built with Gemini 2.0 (circa 2024/2025).",
+    "screenshot": "assets/screenshots/smurfs-and-dragons.png",
+    "play_url": "https://smurfs-and-dragons.web.app/",
+    "can_embed": true,
+    "created_at": "Circa 2024",
+    "model_used": "Gemini 2.0",
+    "tech": [
+      "p5.js",
+      "Canvas",
+      "Gemini 2.0",
+      "Firebase"
+    ],
+    "tags": [
+      "silly",
+      "game",
+      "kids",
+      "p5js",
+      "gemini2.0",
+      "dragons",
+      "arcade"
+    ],
+    "badge": "👾 Silly • Gemini 2.0",
+    "target": "Kids & Family Fun",
+    "featured": false
+  },
+  {
+    "id": "dungemoji",
+    "title": "🏰 Dungemoji: Rogue-like Adventure",
+    "audience": "kids",
+    "kind": "game",
+    "is_game": true,
+    "category": "kids",
+    "tagline": "Retro ASCII & Emoji dungeon crawler with rats 🐀, bats 🦇, goblins 👺 & dragons 🐉!",
+    "description": "Your Emoji Rogue-like Adventure! Explore procedural ASCII dungeon rooms with virtual controls, fight giant bats, goblins, skeletons, zombies, and the mighty 🐉 Dragon! Generated with Gemini 2.0 (circa 2024/2025) using p5.js and retro 8-bit sound effects.",
+    "screenshot": "assets/screenshots/dungemoji.png",
+    "play_url": "https://dungemoji.web.app/",
+    "can_embed": true,
+    "created_at": "Circa 2024",
+    "model_used": "Gemini 2.0",
+    "tech": [
+      "p5.js",
+      "p5.sound",
+      "Gemini 2.0",
+      "Firebase"
+    ],
+    "tags": [
+      "silly",
+      "game",
+      "kids",
+      "roguelike",
+      "emoji",
+      "gemini2.0",
+      "retro"
+    ],
+    "badge": "👾 Silly • Gemini 2.0",
+    "target": "Retro Gamers & Kids",
+    "featured": false
   },
   {
     "id": "parola-del-giorno",

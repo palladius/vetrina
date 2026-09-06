@@ -414,6 +414,12 @@
               <div>
                 <div class="flex items-center justify-between gap-2 mb-2">
                   ${targetPill}
+                  ${(game.created_at || game.model_used)
+                    ? `<div class="flex items-center gap-1.5 text-[11px] text-slate-500 font-medium">
+                         ${game.created_at ? `<span>📅 ${game.created_at}</span>` : ''}
+                         ${game.model_used ? `<span class="px-1.5 py-0.5 rounded bg-indigo-50 text-indigo-700 font-semibold border border-indigo-100">🤖 ${game.model_used}</span>` : ''}
+                       </div>`
+                    : ''}
                 </div>
 
                 <h3 class="font-fun text-xl font-bold text-slate-900 group-hover:text-indigo-600 transition-colors leading-tight">
