@@ -25,17 +25,22 @@ body {
 }
 
 .glass-card {
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.94);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(226, 232, 240, 0.8);
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid rgba(226, 232, 240, 0.85);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease;
 }
 
 .glass-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 30px -10px rgba(99, 102, 241, 0.15), 0 10px 15px -5px rgba(0, 0, 0, 0.04);
-  border-color: rgba(165, 180, 252, 0.9);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 28px -8px rgba(99, 102, 241, 0.18), 0 8px 12px -4px rgba(0, 0, 0, 0.04);
+  border-color: rgba(165, 180, 252, 0.95);
+}
+
+.card-hover-details {
+  transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease, margin-top 0.25s ease, padding-top 0.25s ease;
+  will-change: max-height, opacity;
 }
 
 /* Screenshot Zoom Effect */

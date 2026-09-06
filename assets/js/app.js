@@ -387,83 +387,63 @@
           : '';
 
         // Action Buttons
+        // Action Buttons (Compact & snappy)
         let playBtn = '';
-        if (game.archived) {
-          playBtn = `
-            <a href="${game.repo_url}" target="_blank" rel="noopener noreferrer"
-               class="inline-flex items-center justify-center gap-2 flex-1 px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 border border-slate-300 transition-all">
-              <span>📦 View Code (Archived)</span>
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-            </a>
-          `;
-        } else if (game.play_url && game.play_url.trim() !== '') {
+        if (game.play_url && game.play_url.trim() !== '') {
           if (game.can_embed) {
             playBtn = `
               <button onclick="window.playGameInline('${game.id}')"
-                 class="inline-flex items-center justify-center gap-1.5 flex-1 px-3.5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold text-white bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-700 hover:to-violet-700 shadow-sm hover:shadow-md transition-all">
+                 class="inline-flex items-center justify-center gap-1.5 flex-1 px-3 py-2 rounded-xl text-xs font-semibold text-white bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-700 hover:to-violet-700 shadow-sm hover:shadow-md transition-all">
                 <span>🕹️ Play Here</span>
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
               </button>
-              <a href="${game.play_url}" target="_blank" rel="noopener noreferrer" title="Open in new tab"
-                 class="p-2.5 rounded-xl text-slate-600 hover:text-indigo-600 bg-slate-100 hover:bg-slate-200 border border-slate-200 transition-all">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-              </a>
             `;
           } else {
             playBtn = `
               <a href="${game.play_url}" target="_blank" rel="noopener noreferrer"
-                 class="inline-flex items-center justify-center gap-2 flex-1 px-4 py-2.5 rounded-xl text-sm font-semibold text-white bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-700 hover:to-violet-700 shadow-sm hover:shadow-md transition-all">
+                 class="inline-flex items-center justify-center gap-1.5 flex-1 px-3 py-2 rounded-xl text-xs font-semibold text-white bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-700 hover:to-violet-700 shadow-sm hover:shadow-md transition-all">
                 <span>🎮 Play Now</span>
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
               </a>
             `;
           }
         } else if (game.youtube_url) {
           playBtn = `
             <a href="${game.youtube_url}" target="_blank" rel="noopener noreferrer"
-               class="inline-flex items-center justify-center gap-2 flex-1 px-4 py-2.5 rounded-xl text-sm font-semibold text-white bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-700 hover:to-rose-700 shadow-sm hover:shadow-md transition-all">
+               class="inline-flex items-center justify-center gap-1.5 flex-1 px-3 py-2 rounded-xl text-xs font-semibold text-white bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-700 hover:to-rose-700 shadow-sm hover:shadow-md transition-all">
               <span>🎬 Watch Demo</span>
-              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+              <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
             </a>
           `;
         } else if (game.issue_url) {
           playBtn = `
             <a href="${game.issue_url}" target="_blank" rel="noopener noreferrer"
-               class="inline-flex items-center justify-center gap-2 flex-1 px-4 py-2.5 rounded-xl text-sm font-semibold text-amber-800 bg-amber-50 hover:bg-amber-100 border border-amber-200 transition-all">
-              <span>🔧 Fix / Revive (Issue #1)</span>
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+               class="inline-flex items-center justify-center gap-1.5 flex-1 px-3 py-2 rounded-xl text-xs font-semibold text-amber-800 bg-amber-50 hover:bg-amber-100 border border-amber-200 transition-all">
+              <span>🔧 Fix (Issue #1)</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
             </a>
           `;
         } else {
           playBtn = `
             <a href="${game.repo_url}" target="_blank" rel="noopener noreferrer"
-               class="inline-flex items-center justify-center gap-2 flex-1 px-4 py-2.5 rounded-xl text-sm font-semibold text-indigo-700 bg-indigo-50 hover:bg-indigo-100 border border-indigo-200 transition-all">
-              <span>🚀 Explore Project</span>
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+               class="inline-flex items-center justify-center gap-1.5 flex-1 px-3 py-2 rounded-xl text-xs font-semibold text-indigo-700 bg-indigo-50 hover:bg-indigo-100 border border-indigo-200 transition-all">
+              <span>🚀 Explore</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
             </a>
           `;
         }
 
-        const repoBtn = game.repo_url
-          ? `
-            <a href="${game.repo_url}" target="_blank" rel="noopener noreferrer" title="View Source Code on GitHub"
-               class="inline-flex items-center justify-center p-2.5 rounded-xl text-slate-600 hover:text-slate-900 bg-slate-100 hover:bg-slate-200 border border-slate-200 transition-all">
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-            </a>
-          `
-          : '';
-
         const techHtml = (game.tech || [])
           .map(
             (t) =>
-              `<button onclick="window.filterByTag('${t}')" class="px-2 py-0.5 text-xs font-medium rounded-md bg-slate-100 text-slate-700 hover:bg-slate-200 transition-colors">${t}</button>`
+              `<button onclick="window.filterByTag('${t}')" class="px-2 py-0.5 text-[11px] font-medium rounded-md bg-slate-100 text-slate-700 hover:bg-slate-200 transition-colors">${t}</button>`
           )
           .join('');
 
         const tagsHtml = (game.tags || [])
           .map(
             (tag) =>
-              `<button onclick="window.filterByTag('${tag}')" class="tag-chip text-xs text-indigo-600 hover:text-indigo-800 font-medium">#${tag}</button>`
+              `<button onclick="window.filterByTag('${tag}')" class="tag-chip text-[11px] text-indigo-600 hover:text-indigo-800 font-medium">#${tag}</button>`
           )
           .join('');
 
@@ -479,15 +459,15 @@
         const ytAttr = game.youtube_id ? `data-youtube="${game.youtube_id}" id="yt-wrap-${game.id}"` : '';
 
         return `
-          <article class="glass-card rounded-2xl overflow-hidden flex flex-col shadow-sm" data-id="${game.id}">
+          <article class="glass-card rounded-2xl overflow-hidden flex flex-col shadow-sm transition-all duration-300 group" data-id="${game.id}">
             <!-- Screenshot / Video Header with Hover Zoom and 2s Autoplay -->
-            <div class="card-img-wrapper block h-56 bg-slate-900/10 relative group" ${ytAttr}>
+            <div class="card-img-wrapper block h-44 sm:h-48 bg-slate-900/10 relative" ${ytAttr}>
               <a href="${imgTargetUrl}" ${imgClickAction} target="_blank" rel="noopener noreferrer" class="block w-full h-full">
                 <img src="${game.screenshot}" ${gifAttrs} alt="${game.title}" class="w-full h-full object-cover object-center" loading="lazy" />
               </a>
               
-              <!-- Top Badges with Clear Game vs Edu Distinction -->
-              <div class="absolute top-3 left-3 flex flex-wrap gap-2 z-10 pointer-events-none">
+              <!-- Top Badges (Category & Status) -->
+              <div class="absolute top-2.5 left-2.5 flex flex-wrap gap-1.5 z-10 pointer-events-none">
                 ${typeBadge}
                 ${statusBadge}
               </div>
@@ -495,65 +475,81 @@
               <!-- Play hover overlay -->
               ${game.play_url && game.play_url.trim() !== '' ? `
               <div class="play-overlay absolute inset-0 flex items-center justify-center z-20 pointer-events-none">
-                <div class="w-14 h-14 rounded-full bg-white/95 text-indigo-600 flex items-center justify-center shadow-xl transform group-hover:scale-110 transition-transform">
-                  <svg class="w-7 h-7 ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                <div class="w-12 h-12 rounded-full bg-white/95 text-indigo-600 flex items-center justify-center shadow-xl transform group-hover:scale-110 transition-transform">
+                  <svg class="w-6 h-6 ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
                 </div>
-              </div>` : (game.archived ? `
-              <div class="play-overlay absolute inset-0 flex items-center justify-center z-20 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity">
-                <div class="px-3.5 py-1.5 rounded-full bg-slate-900/85 text-white text-xs font-semibold backdrop-blur-sm shadow-xl flex items-center gap-1.5">
-                  <span>📦 Unplayable (Code Only)</span>
-                </div>
-              </div>` : '')}
+              </div>` : ''}
             </div>
 
-            <!-- Content Area -->
-            <div class="p-5 flex-1 flex flex-col justify-between">
+            <!-- Resting Content Area (Less is More: ~25-30% vertical height) -->
+            <div class="p-3.5 sm:p-4 flex-1 flex flex-col justify-between">
               <div>
-                <div class="flex items-center justify-between gap-2 mb-2">
-                  <div class="flex items-center gap-1.5">
+                <!-- Row 1: Title with Emoji + Score Badge -->
+                <div class="flex items-start justify-between gap-2 mb-1">
+                  <h3 class="font-fun text-base sm:text-lg font-bold text-slate-900 group-hover:text-indigo-600 transition-colors leading-tight line-clamp-1">
+                    <a href="${imgTargetUrl}" ${imgClickAction} class="hover:text-indigo-600">
+                      ${game.title}
+                    </a>
+                  </h3>
+                  <div class="flex-shrink-0">
                     ${scorePill}
-                    ${targetPill}
                   </div>
-                  ${(game.created_at || game.model_used)
-                    ? `<div class="flex items-center gap-1.5 text-[11px] text-slate-500 font-medium">
-                         ${game.created_at ? `<span>📅 ${game.created_at}</span>` : ''}
-                         ${game.model_used ? `<span class="px-1.5 py-0.5 rounded bg-indigo-50 text-indigo-700 font-semibold border border-indigo-100">🤖 ${game.model_used}</span>` : ''}
-                       </div>`
-                    : ''}
                 </div>
 
-                <h3 class="font-fun text-xl font-bold text-slate-900 group-hover:text-indigo-600 transition-colors leading-tight">
-                  <a href="${imgTargetUrl}" ${imgClickAction} class="hover:text-indigo-600">
-                    ${game.title}
-                  </a>
-                </h3>
-
-                <p class="text-sm font-medium text-indigo-600 mt-1 mb-2">
+                <!-- Row 2: Subtitle / Tagline (1 clean, subtle line) -->
+                <p class="text-xs text-slate-500 font-medium line-clamp-1 mb-3">
                   ${game.tagline || ''}
-                </p>
-
-                <p class="text-sm text-slate-600 line-clamp-3 leading-relaxed mb-4">
-                  ${game.description || ''}
                 </p>
               </div>
 
-              <div>
-                <!-- Tech & Tags -->
-                <div class="flex flex-wrap items-center gap-1.5 mb-2">
+              <!-- Row 3: Action Buttons (Snappy Play Button + Info icon) -->
+              <div class="flex items-center gap-2">
+                ${playBtn}
+                ${game.play_url ? `
+                  <a href="${game.play_url}" target="_blank" rel="noopener noreferrer" title="Open in new tab"
+                     class="p-2 rounded-xl text-slate-400 hover:text-indigo-600 bg-slate-50 hover:bg-slate-100 border border-slate-200 transition-all flex-shrink-0">
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                  </a>
+                ` : ''}
+                <button onclick="window.openGameDetails('${game.id}')" title="Full Details & Modal"
+                   class="p-2 rounded-xl text-slate-400 hover:text-slate-700 bg-slate-50 hover:bg-slate-100 border border-slate-200 transition-all flex-shrink-0">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                </button>
+              </div>
+
+              <!-- Hover Drawer (Reveals Description, Tech Stack & Tags smoothly on mouse hover) -->
+              <div class="card-hover-details max-h-0 opacity-0 overflow-hidden group-hover:max-h-96 group-hover:opacity-100 group-hover:mt-3 transition-all duration-300 ease-in-out border-t border-slate-100/80 group-hover:pt-2.5">
+                <div class="flex items-center justify-between text-[11px] text-slate-400 mb-2">
+                  ${targetPill}
+                  <div class="flex items-center gap-1.5 font-medium">
+                    ${game.created_at ? `<span>📅 ${game.created_at}</span>` : ''}
+                    ${game.model_used ? `<span class="px-1.5 py-0.5 rounded bg-indigo-50 text-indigo-700 font-semibold border border-indigo-100">🤖 ${game.model_used}</span>` : ''}
+                  </div>
+                </div>
+
+                <p class="text-xs text-slate-600 line-clamp-3 leading-relaxed mb-2.5">
+                  ${game.description || ''}
+                </p>
+
+                <!-- Tech stack -->
+                <div class="flex flex-wrap items-center gap-1 mb-2">
                   ${techHtml}
                 </div>
-                <div class="flex flex-wrap items-center gap-2 mb-4 pt-1">
+
+                <!-- Hashtags -->
+                <div class="flex flex-wrap items-center gap-1.5 mb-2.5">
                   ${tagsHtml}
                 </div>
 
-                <!-- Action Buttons -->
-                <div class="flex items-center gap-2 pt-3 border-t border-slate-100">
-                  ${playBtn}
-                  ${repoBtn}
-                  <button onclick="window.openGameDetails('${game.id}')" title="Details & Info" class="p-2.5 rounded-xl text-slate-500 hover:text-slate-800 bg-slate-100 hover:bg-slate-200 border border-slate-200 transition-all">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                  </button>
-                </div>
+                <!-- GitHub link -->
+                ${game.repo_url ? `
+                <div class="pt-2 border-t border-slate-100 flex items-center justify-between text-xs">
+                  <a href="${game.repo_url}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-slate-600 hover:text-slate-900 font-medium transition-colors">
+                    <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                    <span>View Repository</span>
+                  </a>
+                  <span class="text-[10px] text-slate-400">GitHub</span>
+                </div>` : ''}
               </div>
             </div>
           </article>
