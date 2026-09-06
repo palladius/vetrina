@@ -12,10 +12,12 @@
   let currentKind = 'all';     // 'all', 'game', 'educational', 'tool'
   let currentTag = null;
   let searchTerm = '';
+  let currentSort = 'juicy';   // 'juicy', 'score', 'recency', 'name'
 
   // DOM Elements
   const searchInput = document.getElementById('search-input');
   const clearSearchBtn = document.getElementById('clear-search-btn');
+  const sortSelect = document.getElementById('sort-select');
   const gamesGrid = document.getElementById('games-grid');
   const emptyState = document.getElementById('empty-state');
   const emptyQuerySpan = document.getElementById('empty-query');
@@ -186,6 +188,8 @@
     currentAudience = 'all';
     currentKind = 'all';
     currentTag = null;
+    currentSort = 'juicy';
+    if (sortSelect) sortSelect.value = 'juicy';
     searchInput.value = '';
     clearSearchBtn.classList.add('hidden');
 
@@ -261,16 +265,70 @@
     });
   }
 
+  // Calculate Juicy Ranking Score (Base Score + Recency Bonus + Media/Playable Bonus - Penalties)
+  function calculateJuicyScore(game) {
+    const baseScore = typeof game.score === 'number' ? game.score : 50;
+    let bonus = 0;
+
+    // Recency bonus from created_at
+    const d = (game.created_at || '').toLowerCase();
+    if (d.includes('2026-08') || d.includes('2026-07')) {
+      bonus += 16;
+    } else if (d.includes('2026')) {
+      bonus += 12;
+    } else if (d.includes('2025')) {
+      bonus += 8;
+    } else if (d.includes('2024')) {
+      bonus += 4;
+    }
+
+    // Playability & Media bonus
+    if (game.can_embed) bonus += 7;
+    if (game.youtube_id) bonus += 7;
+    if (game.featured) bonus += 4;
+
+    // Penalties for unplayable / offline
+    if (game.archived) bonus -= 25;
+    if (game.id === 'baby-alphabet') bonus -= 20;
+
+    return baseScore + bonus;
+  }
+
+  function getSortedGames(games) {
+    const copy = [...games];
+    switch (currentSort) {
+      case 'juicy':
+        return copy.sort((a, b) => calculateJuicyScore(b) - calculateJuicyScore(a));
+      case 'score':
+        return copy.sort((a, b) => {
+          const scoreA = typeof a.score === 'number' ? a.score : 50;
+          const scoreB = typeof b.score === 'number' ? b.score : 50;
+          return scoreB - scoreA;
+        });
+      case 'recency':
+        return copy.sort((a, b) => {
+          const dateA = a.created_at || '';
+          const dateB = b.created_at || '';
+          return dateB.localeCompare(dateA);
+        });
+      case 'name':
+        return copy.sort((a, b) => a.title.localeCompare(b.title));
+      default:
+        return copy;
+    }
+  }
+
   // Render cards
   function render() {
     const filtered = getFilteredGames();
+    const sorted = getSortedGames(filtered);
 
     renderActiveFilterBadges();
 
     const totalCount = allGames.length;
-    countDisplay.innerHTML = `Showing <strong>${filtered.length}</strong> of ${totalCount} creations`;
+    countDisplay.innerHTML = `Showing <strong>${sorted.length}</strong> of ${totalCount} creations`;
 
-    if (filtered.length === 0) {
+    if (sorted.length === 0) {
       gamesGrid.innerHTML = '';
       emptyState.classList.remove('hidden');
       if (emptyQuerySpan) {
@@ -281,8 +339,27 @@
 
     emptyState.classList.add('hidden');
 
-    gamesGrid.innerHTML = filtered
+    gamesGrid.innerHTML = sorted
       .map((game) => {
+        // Score Badge Calculation
+        const score = typeof game.score === 'number' ? game.score : 50;
+        let scoreBadgeClass = 'bg-slate-100 text-slate-700 border-slate-200';
+        let scoreIcon = '🎯';
+        if (score >= 90) {
+          scoreBadgeClass = 'bg-gradient-to-r from-amber-100 to-yellow-100 text-amber-900 border-amber-300 shadow-xs font-bold';
+          scoreIcon = '⭐';
+        } else if (score >= 80) {
+          scoreBadgeClass = 'bg-gradient-to-r from-emerald-100 to-teal-100 text-emerald-900 border-emerald-300 shadow-xs font-bold';
+          scoreIcon = '🔥';
+        } else if (score >= 70) {
+          scoreBadgeClass = 'bg-indigo-50 text-indigo-800 border-indigo-200 font-semibold';
+          scoreIcon = '✨';
+        } else if (score < 50) {
+          scoreBadgeClass = 'bg-rose-50 text-rose-700 border-rose-200 font-medium';
+          scoreIcon = '📦';
+        }
+        const scorePill = `<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs border ${scoreBadgeClass}" title="Quality & Polish Score: ${score}/100">${scoreIcon} <strong>${score}</strong><span class="text-[10px] opacity-70">/100</span></span>`;
+
         // Precise Badge Distinction (Game vs Educational vs Tool)
         let typeBadge = '';
         if (game.audience === 'tools' || game.kind === 'tool' || game.category === 'tools') {
@@ -427,7 +504,10 @@
             <div class="p-5 flex-1 flex flex-col justify-between">
               <div>
                 <div class="flex items-center justify-between gap-2 mb-2">
-                  ${targetPill}
+                  <div class="flex items-center gap-1.5">
+                    ${scorePill}
+                    ${targetPill}
+                  </div>
                   ${(game.created_at || game.model_used)
                     ? `<div class="flex items-center gap-1.5 text-[11px] text-slate-500 font-medium">
                          ${game.created_at ? `<span>📅 ${game.created_at}</span>` : ''}
@@ -542,6 +622,20 @@
       `);
     }
 
+    if (currentSort !== 'juicy') {
+      const sortLabels = {
+        score: '🏆 Top Score',
+        recency: '📅 Newest First',
+        name: '🔤 Alphabetical'
+      };
+      badges.push(`
+        <span class="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium bg-amber-100 text-amber-900">
+          Sort: ${sortLabels[currentSort] || currentSort}
+          <button onclick="window.setSort('juicy')" class="hover:text-amber-950 ml-1 font-bold">×</button>
+        </span>
+      `);
+    }
+
     activeFiltersContainer.innerHTML = badges.join('');
   }
 
@@ -613,9 +707,35 @@
     render();
   };
 
+  window.setSort = function (sortType) {
+    currentSort = sortType;
+    if (sortSelect && sortSelect.value !== sortType) {
+      sortSelect.value = sortType;
+    }
+    render();
+  };
+
   window.openGameDetails = function (gameId) {
     const game = allGames.find((g) => g.id === gameId);
     if (!game || !detailModal || !modalBody) return;
+
+    const score = typeof game.score === 'number' ? game.score : 50;
+    let scoreBadgeClass = 'bg-slate-100 text-slate-700 border-slate-200';
+    let scoreIcon = '🎯';
+    if (score >= 90) {
+      scoreBadgeClass = 'bg-amber-100 text-amber-900 border-amber-300 font-bold';
+      scoreIcon = '⭐';
+    } else if (score >= 80) {
+      scoreBadgeClass = 'bg-emerald-100 text-emerald-900 border-emerald-300 font-bold';
+      scoreIcon = '🔥';
+    } else if (score >= 70) {
+      scoreBadgeClass = 'bg-indigo-100 text-indigo-900 border-indigo-200 font-semibold';
+      scoreIcon = '✨';
+    } else if (score < 50) {
+      scoreBadgeClass = 'bg-rose-50 text-rose-700 border-rose-200 font-medium';
+      scoreIcon = '📦';
+    }
+    const modalScorePill = `<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs border ${scoreBadgeClass}">${scoreIcon} Score: <strong>${score}</strong>/100</span>`;
 
     let modalTypeBadge = '';
     if (game.audience === 'tools' || game.kind === 'tool') {
@@ -632,6 +752,7 @@
           <img src="${game.screenshot}" alt="${game.title}" class="w-full h-full object-cover">
         </div>
         <div class="flex items-center gap-2">
+          ${modalScorePill}
           ${modalTypeBadge}
           ${game.badge ? `<span class="px-2.5 py-1 rounded-full text-xs font-medium bg-indigo-50 text-indigo-700">${game.badge}</span>` : ''}
           ${game.target ? `<span class="text-xs text-slate-500">🎯 ${game.target}</span>` : ''}

@@ -21,14 +21,16 @@ def main():
 
     print(f"✅ Loaded {len(data)} items from YAML.")
 
-    # Validate screenshots
+    # Validate screenshots and ensure default score
     for item in data:
+        if "score" not in item or item["score"] is None:
+            item["score"] = 50
         shot = item.get("screenshot")
         if shot:
             full_path = os.path.join(PROJECT_ROOT, shot)
             exists = os.path.isfile(full_path)
             status = "FOUND" if exists else "MISSING"
-            print(f"   [{status}] {item['id']}: {shot}")
+            print(f"   [{status}] {item['id']}: {shot} (Score: {item['score']})")
 
     # Write data/games.json
     os.makedirs(os.path.dirname(JSON_FILE), exist_ok=True)

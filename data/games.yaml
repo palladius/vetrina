@@ -14,6 +14,8 @@
   audience: "kids"
   kind: "game"
   category: "kids"
+  score: 95
+  created_at: "2026"
   tagline: "Enchanting fantasy pipe-puzzle game starring Riccardo and his baby dragon!"
   description: "A vibrant pipe-puzzle game built with Flutter & Riverpod. Starring Riccardo the Dungeon Plumber (wearing his signature yellow 'R' cap) and his cute emerald dragon companion. Rotate magical conduits to let crystal water rush through every single dungeon tile!"
   screenshot: "assets/screenshots/tubature.jpg"
@@ -46,6 +48,8 @@
   kind: "educational"
   is_game: true
   category: "kids"
+  score: 88
+  created_at: "2025"
   tagline: "Master reading analog & digital clocks with Sebi and Alessandro!"
   description: "Interactive clock-learning game designed to teach children how to read analog clocks (hands, quarter sub-ticks, half-past), adjust digital displays, and master 7-segment digital digits configurations with dedicated guides for Sebi and Ale."
   screenshot: "assets/screenshots/orologiaio.png"
@@ -73,6 +77,8 @@
   audience: "kids"
   kind: "game"
   category: "kids"
+  score: 89
+  created_at: "2025"
   tagline: "Interactive puzzle with family photos, heroes, and smart-merging tiles!"
   description: "A delightful jigsaw puzzle game for kids where you can play with family photos or favorite illustrations. Adjacent correct pieces automatically merge and lock together with difficulty levels ranging from 'Easy Peasy' to 'Netflix is Down'!"
   screenshot: "assets/screenshots/kids-jigsaw-puzzle.png"
@@ -100,6 +106,7 @@
   kind: "game"
   is_game: true
   category: "kids"
+  score: 48
   tagline: "Cosmic arcade shooter against flying pasta with live Nonna commentary!"
   description: "A hilarious Space Invaders-style arcade shooter: defend the galaxy from an airborne invasion of rigatoni, tagliatelle, and ravioli, featuring real-time satirical commentary and encouragement from Nonna powered by Google Gemini AI! [Why archived? No link to online game! Unplayable, just link to app code - SCHADE!]"
   screenshot: "assets/screenshots/pasta-invaders.png"
@@ -131,6 +138,7 @@
   kind: "game"
   is_game: true
   category: "kids"
+  score: 75
   tagline: "Silly auto-shooting arcade runner with dragons & armies built with Gemini 2.0!"
   description: "A hilarious, silly arcade game built with p5.js where your army auto-fires arrows at incoming challenges! Aim at RED choices [-X] to shoot them up into positives [+10] before colliding. Built with Gemini 2.0 (circa 2024/2025)."
   screenshot: "assets/screenshots/smurfs-and-dragons.png"
@@ -161,6 +169,7 @@
   kind: "game"
   is_game: true
   category: "kids"
+  score: 74
   tagline: "Retro ASCII & Emoji dungeon crawler with rats 🐀, bats 🦇, goblins 👺 & dragons 🐉!"
   description: "Your Emoji Rogue-like Adventure! Explore procedural ASCII dungeon rooms with virtual controls, fight giant bats, goblins, skeletons, zombies, and the mighty 🐉 Dragon! Generated with Gemini 2.0 (circa 2024/2025) using p5.js and retro 8-bit sound effects."
   screenshot: "assets/screenshots/dungemoji.png"
@@ -191,6 +200,8 @@
   kind: "educational"
   is_game: false
   category: "kids"
+  score: 82
+  created_at: "2025"
   tagline: "The whimsical archive of vintage Italian words curated by Pux the Pixie!"
   description: "Not a game, but a lyrical educational archive for children! Every day a rare vintage Italian word (like fanfaluca, solerzia, cazzabubbola) paired with dreamy fantasy AI artwork and pronunciation to enrich children's vocabulary with laughter and wonder."
   screenshot: "assets/screenshots/parola-del-giorno.png"
@@ -218,6 +229,8 @@
   kind: "educational"
   is_game: false
   category: "kids"
+  score: 42
+  created_at: "2023"
   tagline: "Built in 24 hours to help Alessandro learn letters and phonetic sounds!"
   description: "Interactive educational tool created out of Dad's 24-hour 'hold my beer' challenge to teach Alessandro letters and pronunciation with custom family photos. [Currently offline; tracking resurrection on Cloud Run via Issue #1]."
   screenshot: "assets/screenshots/baby-alphabet.jpg"
@@ -246,6 +259,8 @@
   kind: "educational"
   is_game: false
   category: "kids"
+  score: 62
+  created_at: "2024"
   tagline: "Personalized bedtime story generator for kids with AI illustrations!"
   description: "AI-driven educational bedtime story creator that crafts personalized fairy tales for children, illustrated and translated on the fly using Google Cloud Run, Gemini, and Vertex AI."
   screenshot: "assets/screenshots/genai-kids-stories.png"
@@ -276,6 +291,8 @@
   audience: "tools"
   kind: "tool"
   category: "tools"
+  score: 93
+  created_at: "2026-07-18"
   tagline: "Observe and orchestrate N git repositories with spaceship visualizers!"
   description: "Framework to observe multiple git repositories concurrently across worktrees, track token spend (measured in Macha Lattes 🍵!), and animate code history progression with retro-futuristic spaceship UI."
   screenshot: "assets/screenshots/conductoras.jpg"
@@ -304,6 +321,8 @@
   audience: "tools"
   kind: "tool"
   category: "tools"
+  score: 92
+  created_at: "2026-08-18"
   tagline: "Official Unofficial Antigravity SDK for Ruby — Autonomous AI agents in Ruby & Rails!"
   description: "Full-featured Ruby SDK for Google Antigravity autonomous AI agents! Seamless Rails integration, token streaming, declarative Policy DSL with sandbox permissions, audit logging, sidecars, guards, and Telegram bot voice integration."
   screenshot: "assets/screenshots/antigravity-ruby-sdk.jpg"
@@ -312,7 +331,6 @@
   play_url: ""
   repo_url: "https://github.com/palladius/antigravity-ruby-sdk"
   can_embed: false
-  created_at: "2026-08-18"
   tech:
     - "Ruby"
     - "Antigravity SDK"
@@ -336,6 +354,8 @@
   audience: "tools"
   kind: "tool"
   category: "tools"
+  score: 72
+  created_at: "2026"
   tagline: "Fast, cache-efficient directory summarizer powered by Gemini & Imagen!"
   description: "Codebase and folder summarizer with deterministic two-tier caching and automated visual documentation. Humorous homage to 'Il signore dei Tarzanelli' (Somaro donkey + Sauron of Mordor)."
   screenshot: "assets/screenshots/sumaron.jpg"
@@ -360,6 +380,8 @@
   audience: "tools"
   kind: "tool"
   category: "tools"
+  score: 66
+  created_at: "2026"
   tagline: "Store secret files in Google Cloud Secret Manager instead of git!"
   description: "Ruby-based evolution of git-privatize that securely encrypts and synchronizes sensitive files (.env, credentials) to Google Cloud Secret Manager, with automated GCS offloading for payloads exceeding 64KB."
   screenshot: "assets/screenshots/gprism.jpg"
@@ -387,6 +409,8 @@
   audience: "tools"
   kind: "tool"
   category: "tools"
+  score: 69
+  created_at: "2026"
   tagline: "Zero-friction CLI tool to sync media output folders to Cloud Storage!"
   description: "Python CLI tool to sync rich media and report output folders from AI harnesses and automation scripts to GCS with Astro-styled HTML rendering, directory indexing, and bandwidth-optimized delta uploads."
   screenshot: "assets/screenshots/storagify.png"
