@@ -237,5 +237,61 @@ window.PALLADIUS_GAMES = [
     "badge": "🛠️ Tool di Papà",
     "target": "Dev & Codebase Explorer",
     "featured": false
+  },
+  {
+    "id": "gprism",
+    "title": "💎 Gprism (Git Privatize in Secret Manager)",
+    "category": "tools",
+    "tagline": "Salva i tuoi file segreti (.env) in Google Cloud Secret Manager invece che in git!",
+    "description": "Evoluzione di git-privatize scritta in Ruby. Cifra e sincronizza automaticamente i file sensibili (.env, credenziali) in Google Cloud Secret Manager, con supporto per file grandi fino a >64KB con offloading su GCS.",
+    "screenshot": "assets/screenshots/gprism.jpg",
+    "play_url": "",
+    "repo_url": "https://github.com/palladius/gprism",
+    "can_embed": false,
+    "tech": [
+      "Ruby",
+      "Secret Manager",
+      "GCP",
+      "CLI"
+    ],
+    "tags": [
+      "tools",
+      "gcp",
+      "security",
+      "secrets",
+      "git",
+      "cli"
+    ],
+    "badge": "🛠️ Tool di Papà",
+    "target": "Dev & SRE",
+    "featured": false
+  },
+  {
+    "id": "storagify",
+    "title": "📦 Storagify",
+    "category": "tools",
+    "tagline": "Zero-friction CLI tool per sincronizzare output multimediali su Google Cloud Storage!",
+    "description": "Tool CLI in Python per sincronizzare le cartelle di output di automazioni, script LLM e harness AI su Google Cloud Storage con rendering HTML Astro-styled, directory indexing e upload differenziali a banda ottimizzata.",
+    "screenshot": "assets/screenshots/storagify.png",
+    "play_url": "",
+    "repo_url": "https://gitlab.com/palladius/storagify",
+    "can_embed": false,
+    "tech": [
+      "Python",
+      "Cloud Storage",
+      "GCP",
+      "Astro"
+    ],
+    "tags": [
+      "tools",
+      "gcp",
+      "storage",
+      "media",
+      "cli",
+      "automation"
+    ],
+    "badge": "🛠️ Tool di Papà",
+    "target": "AI Agents & Dev",
+    "featured": false
   }
 ];

@@ -57,6 +57,18 @@
         console.error('No games data found.');
       }
     }
+    // Update dynamic count badges on filter tabs
+    const totalCount = allGames.length;
+    const kidsCount = allGames.filter((g) => g.category === 'kids').length;
+    const toolsCount = allGames.filter((g) => g.category === 'tools').length;
+
+    filterBtns.forEach((btn) => {
+      const cat = btn.dataset.category;
+      if (cat === 'all') btn.textContent = `🌟 Tutti (${totalCount})`;
+      if (cat === 'kids') btn.textContent = `🧸 Giochi dei Bimbi (${kidsCount})`;
+      if (cat === 'tools') btn.textContent = `🛠️ Tool di Papà (${toolsCount})`;
+    });
+
     render();
   }
 
