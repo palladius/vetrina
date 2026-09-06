@@ -1,5 +1,6 @@
 // ==============================================================================
 // 🎠 Palladius Showcase: Interactive Showcase App
+// Tree Classification: Audience (All, Kids, Tools) -> Kind (Game, Educational, Tool)
 // ==============================================================================
 
 (function () {
@@ -7,7 +8,8 @@
 
   // State
   let allGames = [];
-  let currentCategory = 'all'; // 'all', 'kids', 'tools'
+  let currentAudience = 'all'; // 'all', 'kids', 'tools'
+  let currentKind = 'all';     // 'all', 'game', 'educational', 'tool'
   let currentTag = null;
   let searchTerm = '';
 
@@ -19,7 +21,8 @@
   const emptyQuerySpan = document.getElementById('empty-query');
   const resetFiltersBtn = document.getElementById('reset-filters-btn');
   const countDisplay = document.getElementById('count-display');
-  const filterBtns = document.querySelectorAll('.category-filter-btn');
+  const audienceBtns = document.querySelectorAll('.audience-filter-btn');
+  const kindBtns = document.querySelectorAll('.kind-filter-btn');
   const activeFiltersContainer = document.getElementById('active-filters');
 
   // Detail Modal elements
@@ -58,19 +61,31 @@
       }
     }
 
-    // Update dynamic count badges on filter tabs
-    const totalCount = allGames.length;
-    const kidsCount = allGames.filter((g) => g.category === 'kids').length;
-    const toolsCount = allGames.filter((g) => g.category === 'tools').length;
+    updateDynamicCountLabels();
+    render();
+  }
 
-    filterBtns.forEach((btn) => {
-      const cat = btn.dataset.category;
-      if (cat === 'all') btn.textContent = `🌟 All (${totalCount})`;
-      if (cat === 'kids') btn.textContent = `🧸 Kids Games (${kidsCount})`;
-      if (cat === 'tools') btn.textContent = `🛠️ Dad's Tools (${toolsCount})`;
+  function updateDynamicCountLabels() {
+    const totalCount = allGames.length;
+    const kidsCount = allGames.filter((g) => g.audience === 'kids' || g.category === 'kids').length;
+    const toolsCount = allGames.filter((g) => g.audience === 'tools' || g.category === 'tools').length;
+
+    audienceBtns.forEach((btn) => {
+      const aud = btn.dataset.audience;
+      if (aud === 'all') btn.textContent = `🌟 All (${totalCount})`;
+      if (aud === 'kids') btn.textContent = `🧸 Kids & Family (${kidsCount})`;
+      if (aud === 'tools') btn.textContent = `🛠️ Dad's Tools (${toolsCount})`;
     });
 
-    render();
+    const gamesCount = allGames.filter((g) => g.kind === 'game' || g.is_game).length;
+    const eduCount = allGames.filter((g) => g.kind === 'educational' || (g.tags || []).includes('educational')).length;
+
+    kindBtns.forEach((btn) => {
+      const k = btn.dataset.kind;
+      if (k === 'game') btn.innerHTML = `🎮 Games (${gamesCount})`;
+      if (k === 'educational') btn.innerHTML = `📚 Educational (${eduCount})`;
+      if (k === 'tool') btn.innerHTML = `🛠️ Tools (${toolsCount})`;
+    });
   }
 
   // Setup UI listeners
@@ -98,17 +113,32 @@
       });
     }
 
-    // Category button filters (All, Kids Games, Dad's Tools)
-    filterBtns.forEach((btn) => {
+    // Audience filter buttons (All, Kids & Family, Dad's Tools)
+    audienceBtns.forEach((btn) => {
       btn.addEventListener('click', () => {
-        filterBtns.forEach((b) => {
+        audienceBtns.forEach((b) => {
           b.classList.remove('active', 'bg-indigo-600', 'text-white', 'shadow-md');
           b.classList.add('bg-white', 'text-slate-700');
         });
         btn.classList.add('active', 'bg-indigo-600', 'text-white', 'shadow-md');
         btn.classList.remove('bg-white', 'text-slate-700');
 
-        currentCategory = btn.dataset.category || 'all';
+        currentAudience = btn.dataset.audience || 'all';
+        render();
+      });
+    });
+
+    // Kind filter buttons (All Kinds, Games, Educational, Tools)
+    kindBtns.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        kindBtns.forEach((b) => {
+          b.classList.remove('active', 'bg-slate-800', 'text-white');
+          b.classList.add('bg-white', 'text-slate-600');
+        });
+        btn.classList.add('active', 'bg-slate-800', 'text-white');
+        btn.classList.remove('bg-white', 'text-slate-600');
+
+        currentKind = btn.dataset.kind || 'all';
         render();
       });
     });
@@ -153,12 +183,14 @@
 
   function resetAllFilters() {
     searchTerm = '';
-    currentCategory = 'all';
+    currentAudience = 'all';
+    currentKind = 'all';
     currentTag = null;
     searchInput.value = '';
     clearSearchBtn.classList.add('hidden');
-    filterBtns.forEach((b) => {
-      if (b.dataset.category === 'all') {
+
+    audienceBtns.forEach((b) => {
+      if (b.dataset.audience === 'all') {
         b.classList.add('active', 'bg-indigo-600', 'text-white', 'shadow-md');
         b.classList.remove('bg-white', 'text-slate-700');
       } else {
@@ -166,19 +198,42 @@
         b.classList.add('bg-white', 'text-slate-700');
       }
     });
+
+    kindBtns.forEach((b) => {
+      if (b.dataset.kind === 'all') {
+        b.classList.add('active', 'bg-slate-800', 'text-white');
+        b.classList.remove('bg-white', 'text-slate-600');
+      } else {
+        b.classList.remove('active', 'bg-slate-800', 'text-white');
+        b.classList.add('bg-white', 'text-slate-600');
+      }
+    });
+
     render();
     searchInput.focus();
   }
 
-  // Filter & Search Logic
+  // Filter & Search Logic with Tree Navigation
   function getFilteredGames() {
     return allGames.filter((item) => {
-      // 1. Category filter (kids vs tools)
-      if (currentCategory !== 'all' && item.category !== currentCategory) {
+      // 1. Audience filter (Kids vs Tools)
+      const itemAudience = item.audience || item.category;
+      if (currentAudience !== 'all' && itemAudience !== currentAudience) {
         return false;
       }
 
-      // 2. Tag filter
+      // 2. Kind / Subcategory filter (Game vs Educational vs Tool)
+      if (currentKind !== 'all') {
+        if (currentKind === 'game') {
+          if (item.kind !== 'game' && !item.is_game) return false;
+        } else if (currentKind === 'educational') {
+          if (item.kind !== 'educational' && !(item.tags || []).includes('educational')) return false;
+        } else if (currentKind === 'tool') {
+          if (item.kind !== 'tool' && itemAudience !== 'tools') return false;
+        }
+      }
+
+      // 3. Tag filter
       if (currentTag) {
         const itemTags = (item.tags || []).map((t) => t.toLowerCase());
         const itemTech = (item.tech || []).map((t) => t.toLowerCase());
@@ -187,7 +242,7 @@
         }
       }
 
-      // 3. Search query matching
+      // 4. Search query matching
       if (searchTerm) {
         const idMatch = (item.id || '').toLowerCase().includes(searchTerm);
         const titleMatch = (item.title || '').toLowerCase().includes(searchTerm);
@@ -228,10 +283,17 @@
 
     gamesGrid.innerHTML = filtered
       .map((game) => {
-        const isKids = game.category === 'kids';
-        const categoryBadge = isKids
-          ? `<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800 border border-emerald-200">🧸 Kids Game</span>`
-          : `<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-amber-100 text-amber-800 border border-amber-200">🛠️ Dad's Tool</span>`;
+        // Precise Badge Distinction (Game vs Educational vs Tool)
+        let typeBadge = '';
+        if (game.audience === 'tools' || game.kind === 'tool' || game.category === 'tools') {
+          typeBadge = `<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-amber-100 text-amber-900 border border-amber-200">🛠️ Dad's Tool</span>`;
+        } else if (game.id === 'orologiaio') {
+          typeBadge = `<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-sky-100 text-sky-900 border border-sky-200">⏰ Kids Edu-Game</span>`;
+        } else if (game.kind === 'educational' || !game.is_game && (game.tags || []).includes('educational')) {
+          typeBadge = `<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-purple-100 text-purple-900 border border-purple-200">📚 Kids Educational</span>`;
+        } else {
+          typeBadge = `<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-900 border border-emerald-200">🎮 Kids Game</span>`;
+        }
 
         const statusBadge = game.badge
           ? `<span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-indigo-50 text-indigo-700 border border-indigo-200">${game.badge}</span>`
@@ -241,7 +303,7 @@
           ? `<span class="text-xs text-slate-500 font-medium">🎯 ${game.target}</span>`
           : '';
 
-        // Primary action button
+        // Action Buttons
         let playBtn = '';
         if (game.play_url && game.play_url.trim() !== '') {
           if (game.can_embed) {
@@ -265,6 +327,14 @@
               </a>
             `;
           }
+        } else if (game.youtube_url) {
+          playBtn = `
+            <a href="${game.youtube_url}" target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center justify-center gap-2 flex-1 px-4 py-2.5 rounded-xl text-sm font-semibold text-white bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-700 hover:to-rose-700 shadow-sm hover:shadow-md transition-all">
+              <span>🎬 Watch Demo</span>
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+            </a>
+          `;
         } else if (game.issue_url) {
           playBtn = `
             <a href="${game.issue_url}" target="_blank" rel="noopener noreferrer"
@@ -315,25 +385,29 @@
           ? `onmouseenter="this.dataset.static=this.src; this.src='${game.screenshot_gif}';" onmouseleave="this.src=this.dataset.static;"`
           : ``;
 
+        const ytAttr = game.youtube_id ? `data-youtube="${game.youtube_id}" id="yt-wrap-${game.id}"` : '';
+
         return `
           <article class="glass-card rounded-2xl overflow-hidden flex flex-col shadow-sm" data-id="${game.id}">
-            <!-- Screenshot Header with Hover Zoom -->
-            <a href="${imgTargetUrl}" ${imgClickAction} target="_blank" rel="noopener noreferrer" class="card-img-wrapper block h-56 bg-slate-900/10 relative group">
-              <img src="${game.screenshot}" ${gifAttrs} alt="${game.title}" class="w-full h-full object-cover object-center" loading="lazy" />
+            <!-- Screenshot / Video Header with Hover Zoom and 2s Autoplay -->
+            <div class="card-img-wrapper block h-56 bg-slate-900/10 relative group" ${ytAttr}>
+              <a href="${imgTargetUrl}" ${imgClickAction} target="_blank" rel="noopener noreferrer" class="block w-full h-full">
+                <img src="${game.screenshot}" ${gifAttrs} alt="${game.title}" class="w-full h-full object-cover object-center" loading="lazy" />
+              </a>
               
-              <!-- Top Badges -->
-              <div class="absolute top-3 left-3 flex flex-wrap gap-2 z-10">
-                ${categoryBadge}
+              <!-- Top Badges with Clear Game vs Edu Distinction -->
+              <div class="absolute top-3 left-3 flex flex-wrap gap-2 z-10 pointer-events-none">
+                ${typeBadge}
                 ${statusBadge}
               </div>
 
               <!-- Play hover overlay -->
-              <div class="play-overlay absolute inset-0 flex items-center justify-center z-20">
+              <div class="play-overlay absolute inset-0 flex items-center justify-center z-20 pointer-events-none">
                 <div class="w-14 h-14 rounded-full bg-white/95 text-indigo-600 flex items-center justify-center shadow-xl transform group-hover:scale-110 transition-transform">
                   <svg class="w-7 h-7 ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
                 </div>
               </div>
-            </a>
+            </div>
 
             <!-- Content Area -->
             <div class="p-5 flex-1 flex flex-col justify-between">
@@ -380,18 +454,52 @@
         `;
       })
       .join('');
+
+    // Auto-start YouTube videos after 2 seconds (no audio by default, loop & controls enabled)
+    if (window._youtubeTimer) clearTimeout(window._youtubeTimer);
+    window._youtubeTimer = setTimeout(() => {
+      document.querySelectorAll('[data-youtube]').forEach((container) => {
+        const ytid = container.dataset.youtube;
+        if (!ytid) return;
+        container.innerHTML = `
+          <div class="relative w-full h-full bg-black">
+            <iframe
+              class="w-full h-full border-0 absolute inset-0 z-20"
+              src="https://www.youtube-nocookie.com/embed/${ytid}?autoplay=1&mute=1&loop=1&playlist=${ytid}&controls=1&modestbranding=1"
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+        `;
+      });
+    }, 2000);
   }
 
   function renderActiveFilterBadges() {
     if (!activeFiltersContainer) return;
     let badges = [];
 
-    if (currentCategory !== 'all') {
-      const label = currentCategory === 'kids' ? '🧸 Kids Games' : "🛠️ Dad's Tools";
+    if (currentAudience !== 'all') {
+      const label = currentAudience === 'kids' ? '🧸 Kids & Family' : "🛠️ Dad's Tools";
       badges.push(`
         <span class="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium bg-indigo-100 text-indigo-800">
-          Category: ${label}
-          <button onclick="window.setCategoryFilter('all')" class="hover:text-indigo-900 ml-1 font-bold">×</button>
+          Audience: ${label}
+          <button onclick="window.setAudienceFilter('all')" class="hover:text-indigo-900 ml-1 font-bold">×</button>
+        </span>
+      `);
+    }
+
+    if (currentKind !== 'all') {
+      const kindLabels = {
+        game: '🎮 Games',
+        educational: '📚 Educational',
+        tool: '🛠️ Tools'
+      };
+      badges.push(`
+        <span class="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium bg-emerald-100 text-emerald-800">
+          Type: ${kindLabels[currentKind] || currentKind}
+          <button onclick="window.setKindFilter('all')" class="hover:text-emerald-900 ml-1 font-bold">×</button>
         </span>
       `);
     }
@@ -457,10 +565,10 @@
     searchInput.focus();
   };
 
-  window.setCategoryFilter = function (cat) {
-    currentCategory = cat;
-    filterBtns.forEach((b) => {
-      if (b.dataset.category === cat) {
+  window.setAudienceFilter = function (aud) {
+    currentAudience = aud;
+    audienceBtns.forEach((b) => {
+      if (b.dataset.audience === aud) {
         b.classList.add('active', 'bg-indigo-600', 'text-white', 'shadow-md');
         b.classList.remove('bg-white', 'text-slate-700');
       } else {
@@ -471,9 +579,32 @@
     render();
   };
 
+  window.setKindFilter = function (kind) {
+    currentKind = kind;
+    kindBtns.forEach((b) => {
+      if (b.dataset.kind === kind) {
+        b.classList.add('active', 'bg-slate-800', 'text-white');
+        b.classList.remove('bg-white', 'text-slate-600');
+      } else {
+        b.classList.remove('active', 'bg-slate-800', 'text-white');
+        b.classList.add('bg-white', 'text-slate-600');
+      }
+    });
+    render();
+  };
+
   window.openGameDetails = function (gameId) {
     const game = allGames.find((g) => g.id === gameId);
     if (!game || !detailModal || !modalBody) return;
+
+    let modalTypeBadge = '';
+    if (game.audience === 'tools' || game.kind === 'tool') {
+      modalTypeBadge = `<span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-amber-100 text-amber-900">🛠️ Dad's Tool</span>`;
+    } else if (game.kind === 'educational') {
+      modalTypeBadge = `<span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-purple-100 text-purple-900">📚 Kids Educational</span>`;
+    } else {
+      modalTypeBadge = `<span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-900">🎮 Kids Game</span>`;
+    }
 
     modalBody.innerHTML = `
       <div class="space-y-4">
@@ -481,9 +612,7 @@
           <img src="${game.screenshot}" alt="${game.title}" class="w-full h-full object-cover">
         </div>
         <div class="flex items-center gap-2">
-          <span class="px-2.5 py-1 rounded-full text-xs font-semibold ${game.category === 'kids' ? 'bg-emerald-100 text-emerald-800' : 'bg-amber-100 text-amber-800'}">
-            ${game.category === 'kids' ? '🧸 Kids Game' : "🛠️ Dad's Tool"}
-          </span>
+          ${modalTypeBadge}
           ${game.badge ? `<span class="px-2.5 py-1 rounded-full text-xs font-medium bg-indigo-50 text-indigo-700">${game.badge}</span>` : ''}
           ${game.target ? `<span class="text-xs text-slate-500">🎯 ${game.target}</span>` : ''}
         </div>
