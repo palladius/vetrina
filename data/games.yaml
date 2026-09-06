@@ -134,12 +134,14 @@
   title: "🔤 Baby Alphabet (AJ-Alphabet)"
   category: "kids"
   tagline: "Costruita in 24 ore per insegnare le lettere dell'alfabeto ad Alessandro!"
-  description: "App interattiva creata con amore per supportare l'apprendimento delle lettere e dei suoni. Nata dalla sfida 'hold my beer' di Papà per far appassionare Alessandro alla lettura dell'alfabeto in 24 ore."
+  description: "App interattiva creata con amore per supportare l'apprendimento delle lettere e dei suoni. Nata dalla sfida 'hold my beer' di Papà per far appassionare Alessandro alla lettura dell'alfabeto in 24 ore. [Nota: attualmente offline, aperta issue #1 per ripristino su Cloud Run]."
   screenshot: "assets/screenshots/baby-alphabet.jpg"
-  play_url: "http://aj-alphabet.palladi.us/"
+  play_url: ""
   repo_url: "https://github.com/palladius/baby-alphabet"
+  issue_url: "https://github.com/palladius/baby-alphabet/issues/1"
   can_embed: false
   tech:
+    - "Ruby on Rails"
     - "Web Audio"
     - "Docker"
     - "Kubernetes"
@@ -148,7 +150,7 @@
     - "educational"
     - "bimbi"
     - "scuola"
-  badge: "📚 Educativo"
+  badge: "🔧 Offline (GHI #1)"
   target: "Alessandro"
   featured: false
 
