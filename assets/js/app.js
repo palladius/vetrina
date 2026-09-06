@@ -296,7 +296,7 @@
         }
 
         const statusBadge = game.badge
-          ? `<span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-indigo-50 text-indigo-700 border border-indigo-200">${game.badge}</span>`
+          ? `<span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium ${game.archived ? 'bg-amber-100 text-amber-800 border border-amber-300' : 'bg-indigo-50 text-indigo-700 border border-indigo-200'}">${game.badge}</span>`
           : '';
 
         const targetPill = game.target
@@ -305,7 +305,15 @@
 
         // Action Buttons
         let playBtn = '';
-        if (game.play_url && game.play_url.trim() !== '') {
+        if (game.archived) {
+          playBtn = `
+            <a href="${game.repo_url}" target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center justify-center gap-2 flex-1 px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 border border-slate-300 transition-all">
+              <span>📦 View Code (Archived)</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+            </a>
+          `;
+        } else if (game.play_url && game.play_url.trim() !== '') {
           if (game.can_embed) {
             playBtn = `
               <button onclick="window.playGameInline('${game.id}')"
@@ -402,11 +410,17 @@
               </div>
 
               <!-- Play hover overlay -->
+              ${game.play_url && game.play_url.trim() !== '' ? `
               <div class="play-overlay absolute inset-0 flex items-center justify-center z-20 pointer-events-none">
                 <div class="w-14 h-14 rounded-full bg-white/95 text-indigo-600 flex items-center justify-center shadow-xl transform group-hover:scale-110 transition-transform">
                   <svg class="w-7 h-7 ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
                 </div>
-              </div>
+              </div>` : (game.archived ? `
+              <div class="play-overlay absolute inset-0 flex items-center justify-center z-20 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity">
+                <div class="px-3.5 py-1.5 rounded-full bg-slate-900/85 text-white text-xs font-semibold backdrop-blur-sm shadow-xl flex items-center gap-1.5">
+                  <span>📦 Unplayable (Code Only)</span>
+                </div>
+              </div>` : '')}
             </div>
 
             <!-- Content Area -->
@@ -637,10 +651,11 @@
         </div>
 
         <div class="flex items-center gap-3 pt-4 border-t border-slate-200">
+          ${game.archived ? `<a href="${game.repo_url}" target="_blank" class="flex-1 text-center py-2.5 px-4 rounded-xl text-sm font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 border border-slate-300 transition">📦 View Archived Code (Unplayable)</a>` : ''}
           ${game.can_embed ? `<button onclick="window.closeModal(); window.playGameInline('${game.id}')" class="flex-1 text-center py-2.5 px-4 rounded-xl text-sm font-semibold text-white bg-indigo-600 hover:bg-indigo-700 transition">🕹️ Play Here (Fullscreen)</button>` : ''}
           ${game.play_url ? `<a href="${game.play_url}" target="_blank" class="text-center py-2.5 px-4 rounded-xl text-sm font-semibold text-indigo-600 bg-indigo-50 hover:bg-indigo-100 transition">Open Tab</a>` : ''}
           ${game.issue_url ? `<a href="${game.issue_url}" target="_blank" class="text-center py-2.5 px-4 rounded-xl text-sm font-semibold text-amber-800 bg-amber-50 hover:bg-amber-100 border border-amber-200 transition">🔧 View Issue #1</a>` : ''}
-          ${game.repo_url ? `<a href="${game.repo_url}" target="_blank" class="text-center py-2.5 px-4 rounded-xl text-sm font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 transition">📂 GitHub</a>` : ''}
+          ${game.repo_url && !game.archived ? `<a href="${game.repo_url}" target="_blank" class="text-center py-2.5 px-4 rounded-xl text-sm font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 transition">📂 GitHub</a>` : ''}
         </div>
       </div>
     `;
