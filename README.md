@@ -1,17 +1,41 @@
-# 🎠 Palladius Showcase — Kids Games & Dad's Tools
+# 🎠 Palladius Showcase — Kids Games, Diaries & Dev Tools
 
-> An interactive, responsive showcase for all games created for the kids (Tubature, Orologia.io, Puzzle, Pasta Invaders, etc.) and Riccardo's developer tools.
+> An interactive, responsive showcase for all games created for the kids (Tubature, Orologia.io, Puzzle, etc.), Papino's life diaries, and Riccardo's developer tools.
 
-![Screenshot](assets/screenshots/tubature.jpg)
+[![Deploy to GitHub Pages](https://github.com/palladius/palladius-vetrina/actions/workflows/deploy.yml/badge.svg)](https://github.com/palladius/palladius-vetrina/actions/workflows/deploy.yml)
+
+🌐 **Live Website on GitHub Pages:** **[https://palladius.github.io/palladius-vetrina/](https://palladius.github.io/palladius-vetrina/)**  
+🧸 **Direct Kids Bookmark (Ale & Sebi's Club):** **[https://palladius.github.io/palladius-vetrina/#kids](https://palladius.github.io/palladius-vetrina/#kids)**  
+✈️ **Offline Games (PWA):** **[https://palladius.github.io/palladius-vetrina/#pwa](https://palladius.github.io/palladius-vetrina/#pwa)**  
+📔 **Papino's Diaries:** **[https://palladius.github.io/palladius-vetrina/#diaries](https://palladius.github.io/palladius-vetrina/#diaries)**  
+
+![Showcase Inception](assets/screenshots/vetrina-meta.jpg)
 
 ## ✨ Features
 
-- 🧸 **Clean Discrimination between Kids Games & Dev Tools**: dedicated filter tabs to instantly separate children's games from father's development tools and frameworks.
-- ⚡ **Instant Autofocused Search**: ultra-responsive client-side search engine; type keywords (e.g. `tubature`, `clock`, `flutter`, `puzzle`) to filter titles, descriptions, and tags in real-time.
-- 🕹️ **Interactive Arcade Player (Embeds)**: click "🕹️ Play Here" to launch Flutter web games in a fullscreen overlay without leaving the showcase.
-- 🎮 **Large Clickable Screenshots**: smooth hover zoom and animated gameplay GIFs on hover.
-- 📝 **Single Source of Truth in YAML**: easily add or edit projects in `data/games.yaml`.
-- 🚀 **Zero Runtime Dependencies**: static HTML5, TailwindCSS, and modern Vanilla JS ready for instant deployment to GitHub Pages.
+- 🧸 **Ale & Sebi's Kids Club (#kids)**: Instant bookmarkable link with stylized Pixar avatar of Ale & Sebi playing games together.
+- ✈️ **PWA & Offline Plane Ready**: Filter games and apps that can work offline during travel (`#pwa`).
+- 📔 **Papino's Diaries & Life Section**: 50° Compleanno Palladiano (Bigoli con la Veganiga), Septober Next, Private Journal, South Africa Diary, and Ricc Reads the News.
+- 🪞 **Meta Inception (#meta)**: A recursive Droste mirror of the showcase inside the showcase!
+- ⚡ **Instant Search & Juicy Mix**: Fuzzy search + smart ranking algorithm combining scores (1-100) and recency bonuses.
+- 🧪 **Human-Proof YAML Testing Suite**: Automated tests that run on every `git push` to catch typos, broken links, missing screenshots, or invalid scores before publishing.
+- 🚀 **Automated CI/CD with GitHub Pages**: Push to `main` and GitHub Actions automatically tests, builds, and deploys.
+
+## 🧪 Testing Your YAML Edits (Human-Proof!)
+
+Whenever you edit `data/games.yaml`, test your changes locally before pushing:
+
+```bash
+python3 tests/test_games_yaml.py
+```
+
+The test suite automatically verifies:
+- ✅ YAML syntax and schema integrity
+- ✅ Unique ID slugs (no duplicate entries)
+- ✅ Valid audiences (`kids`, `journals`, `tools`) and kinds (`game`, `educational`, `journal`, `tool`)
+- ✅ That all referenced screenshots exist on disk in `assets/screenshots/`
+- ✅ Valid URLs (`play_url`, `repo_url`, `youtube_url`, `article_url`, etc.)
+- ✅ Valid score ranges (1-100)
 
 ## 🛠️ Adding or Editing Projects
 
@@ -19,30 +43,34 @@
 2. Add or update an entry:
    ```yaml
    - id: "my-game"
-     title: "Game Title"
-     category: "kids" # or "tools"
+     title: "🎮 My Awesome Game"
+     audience: "kids" # "kids", "journals", or "tools"
+     kind: "game"     # "game", "educational", "journal", or "tool"
+     score: 90
      tagline: "Catchy subtitle"
      description: "Full description"
      screenshot: "assets/screenshots/my-game.png"
      play_url: "https://palladius.github.io/my-game/"
      repo_url: "https://github.com/palladius/my-game"
-     tech: ["Flutter", "Dart"]
-     tags: ["puzzle", "kids"]
-     badge: "🟢 Play Live"
+     article_url: "https://ricc.rocks/..." # Optional!
+     pwa: true                            # Optional: can run offline on a plane!
+     tech: ["Flutter", "Dart", "PWA"]
+     tags: ["puzzle", "kids", "pwa"]
+     badge: "🟢 Play Live • PWA"
      target: "Alessandro & Sebi"
    ```
-3. Run the sync build:
+3. Run the compiler:
    ```bash
-   just build
-   # or:
-   ./bin/build.py
+   python3 bin/build.py
+   ```
+4. Run the test:
+   ```bash
+   python3 tests/test_games_yaml.py
    ```
 
 ## 💻 Local Preview
 
 ```bash
-just serve
-# or:
 python3 -m http.server 8080
 ```
-Open [http://localhost:8080](http://localhost:8080) in your browser.
+Open [http://localhost:8080](http://localhost:8080) or [http://localhost:8080/#kids](http://localhost:8080/#kids).

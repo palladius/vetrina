@@ -43,8 +43,30 @@
   async function init() {
     setupEventListeners();
     await loadGamesData();
-    if (searchInput) {
+    handleHashRouting();
+    window.addEventListener('hashchange', handleHashRouting);
+    if (searchInput && !window.location.hash) {
       searchInput.focus();
+    }
+  }
+
+  // Support direct bookmarkable hash endpoints: #kids, #ale-sebi, #tools, #diaries, #pwa, or game modal #game-tubature
+  function handleHashRouting() {
+    const hash = window.location.hash.replace(/^#\/?/, '').toLowerCase();
+    if (!hash) return;
+
+    if (hash === 'kids' || hash === 'ale-sebi' || hash === 'ale-seby' || hash === 'kids-club') {
+      window.filterByAudience('kids');
+    } else if (hash === 'tools' || hash === 'dads-tools') {
+      window.filterByAudience('tools');
+    } else if (hash === 'diaries' || hash === 'journals') {
+      window.filterByAudience('journals');
+    } else if (hash === 'pwa' || hash === 'offline') {
+      window.filterByTag('pwa');
+    } else if (hash.startsWith('game-') || hash.startsWith('app-')) {
+      const gId = hash.replace(/^(game-|app-)/, '');
+      const g = allGames.find((item) => item.id === gId);
+      if (g) window.openGameDetails(g.id);
     }
   }
 
@@ -71,12 +93,14 @@
     const visibleGames = allGames.filter((g) => !g.archived && !g.hidden);
     const totalCount = visibleGames.length;
     const kidsCount = visibleGames.filter((g) => g.audience === 'kids' || g.category === 'kids').length;
+    const journalsCount = visibleGames.filter((g) => g.audience === 'journals' || g.category === 'journals' || g.kind === 'journal').length;
     const toolsCount = visibleGames.filter((g) => g.audience === 'tools' || g.category === 'tools').length;
 
     audienceBtns.forEach((btn) => {
       const aud = btn.dataset.audience;
       if (aud === 'all') btn.textContent = `🌟 All (${totalCount})`;
       if (aud === 'kids') btn.textContent = `🧸 Kids & Family (${kidsCount})`;
+      if (aud === 'journals') btn.textContent = `📔 Papino's Diaries (${journalsCount})`;
       if (aud === 'tools') btn.textContent = `🛠️ Dad's Tools (${toolsCount})`;
     });
 
@@ -87,6 +111,7 @@
       const k = btn.dataset.kind;
       if (k === 'game') btn.innerHTML = `🎮 Games (${gamesCount})`;
       if (k === 'educational') btn.innerHTML = `📚 Educational (${eduCount})`;
+      if (k === 'journal') btn.innerHTML = `📔 Diaries (${journalsCount})`;
       if (k === 'tool') btn.innerHTML = `🛠️ Tools (${toolsCount})`;
     });
   }
@@ -116,18 +141,11 @@
       });
     }
 
-    // Audience filter buttons (All, Kids & Family, Dad's Tools)
+    // Audience filter buttons (All, Kids & Family, Papino's Diaries, Dad's Tools)
     audienceBtns.forEach((btn) => {
       btn.addEventListener('click', () => {
-        audienceBtns.forEach((b) => {
-          b.classList.remove('active', 'bg-indigo-600', 'text-white', 'shadow-md');
-          b.classList.add('bg-white', 'text-slate-700');
-        });
-        btn.classList.add('active', 'bg-indigo-600', 'text-white', 'shadow-md');
-        btn.classList.remove('bg-white', 'text-slate-700');
-
-        currentAudience = btn.dataset.audience || 'all';
-        render();
+        const aud = btn.dataset.audience || 'all';
+        window.setAudienceFilter(aud);
       });
     });
 
@@ -232,12 +250,14 @@
         return false;
       }
 
-      // 2. Kind / Subcategory filter (Game vs Educational vs Tool)
+      // 2. Kind / Subcategory filter (Game vs Educational vs Journal vs Tool)
       if (currentKind !== 'all') {
         if (currentKind === 'game') {
           if (item.kind !== 'game' && !item.is_game) return false;
         } else if (currentKind === 'educational') {
           if (item.kind !== 'educational' && !(item.tags || []).includes('educational')) return false;
+        } else if (currentKind === 'journal') {
+          if (item.kind !== 'journal' && itemAudience !== 'journals') return false;
         } else if (currentKind === 'tool') {
           if (item.kind !== 'tool' && itemAudience !== 'tools') return false;
         }
@@ -525,15 +545,22 @@
                   ${tagsHtml}
                 </div>
 
-                <!-- "codice" in piccolo -->
-                ${game.repo_url ? `
+                <!-- Links: Article & Codice -->
                 <div class="pt-2 border-t border-slate-100 flex items-center justify-between text-xs">
-                  <span class="text-[11px] text-slate-400">Open source</span>
-                  <a href="${game.repo_url}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-slate-500 hover:text-indigo-600 font-semibold transition-colors">
-                    <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-                    <span>codice</span>
-                  </a>
-                </div>` : ''}
+                  <div>
+                    ${game.article_url ? `
+                      <a href="${game.article_url}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-indigo-600 hover:text-indigo-800 font-semibold transition-colors">
+                        <span>📰 read article</span>
+                      </a>
+                    ` : '<span class="text-[11px] text-slate-400">Open source</span>'}
+                  </div>
+                  ${game.repo_url ? `
+                    <a href="${game.repo_url}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-slate-500 hover:text-indigo-600 font-semibold transition-colors">
+                      <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                      <span>codice</span>
+                    </a>
+                  ` : ''}
+                </div>
               </div>
             </div>
           </article>
@@ -667,6 +694,11 @@
 
   window.setAudienceFilter = function (aud) {
     currentAudience = aud;
+    if (history.replaceState && aud !== 'all') {
+      history.replaceState(null, '', '#' + (aud === 'kids' ? 'kids' : aud));
+    } else if (history.replaceState && aud === 'all') {
+      history.replaceState(null, '', window.location.pathname);
+    }
     audienceBtns.forEach((b) => {
       if (b.dataset.audience === aud) {
         b.classList.add('active', 'bg-indigo-600', 'text-white', 'shadow-md');
@@ -678,6 +710,7 @@
     });
     render();
   };
+  window.filterByAudience = window.setAudienceFilter;
 
   window.setKindFilter = function (kind) {
     currentKind = kind;
@@ -692,6 +725,7 @@
     });
     render();
   };
+  window.filterByKind = window.setKindFilter;
 
   window.setSort = function (sortType) {
     currentSort = sortType;
@@ -761,6 +795,7 @@
           ${game.archived ? `<a href="${game.repo_url}" target="_blank" class="flex-1 text-center py-2.5 px-4 rounded-xl text-sm font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 border border-slate-300 transition">📦 View Archived Code (Unplayable)</a>` : ''}
           ${game.can_embed ? `<button onclick="window.closeModal(); window.playGameInline('${game.id}')" class="flex-1 text-center py-2.5 px-4 rounded-xl text-sm font-semibold text-white bg-indigo-600 hover:bg-indigo-700 transition">🕹️ Play Here (Fullscreen)</button>` : ''}
           ${game.play_url ? `<a href="${game.play_url}" target="_blank" class="text-center py-2.5 px-4 rounded-xl text-sm font-semibold text-indigo-600 bg-indigo-50 hover:bg-indigo-100 transition">Open Tab</a>` : ''}
+          ${game.article_url ? `<a href="${game.article_url}" target="_blank" class="text-center py-2.5 px-4 rounded-xl text-sm font-semibold text-purple-700 bg-purple-50 hover:bg-purple-100 border border-purple-200 transition">📰 Read Article</a>` : ''}
           ${game.issue_url ? `<a href="${game.issue_url}" target="_blank" class="text-center py-2.5 px-4 rounded-xl text-sm font-semibold text-amber-800 bg-amber-50 hover:bg-amber-100 border border-amber-200 transition">🔧 View Issue #1</a>` : ''}
           ${game.repo_url && !game.archived ? `<a href="${game.repo_url}" target="_blank" class="text-center py-2.5 px-4 rounded-xl text-sm font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 transition">📂 GitHub</a>` : ''}
         </div>

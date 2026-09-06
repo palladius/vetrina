@@ -51,10 +51,11 @@
       </div>
 
       <div class="flex items-center gap-3">
-        <a href="https://github.com/palladius/tubature" target="_blank" rel="noopener noreferrer"
-           class="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-emerald-700 hover:text-emerald-800 bg-emerald-50 hover:bg-emerald-100 rounded-lg border border-emerald-200 shadow-sm transition-all">
-          <span>🚰 Tubature Live</span>
-        </a>
+        <button onclick="window.filterByAudience('kids')" title="Kids Zone: Ale & Sebi's Games"
+           class="inline-flex items-center gap-2 pl-1.5 pr-3 py-1 text-xs font-bold text-amber-900 hover:text-amber-950 bg-gradient-to-r from-amber-100 to-yellow-200 hover:from-amber-200 hover:to-yellow-300 rounded-full border border-amber-300 shadow-sm hover:shadow transition-all">
+          <img src="assets/images/ale_sebi_gaming.jpg" alt="Ale & Sebi" class="w-6 h-6 rounded-full object-cover border border-amber-400 shadow-xs" />
+          <span>Ale & Sebi's Club</span>
+        </button>
         <a href="https://github.com/palladius/palladius-vetrina" target="_blank" rel="noopener noreferrer"
            class="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-slate-700 hover:text-indigo-600 bg-white/80 hover:bg-white rounded-lg border border-slate-200 shadow-sm transition-all">
           <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
@@ -114,17 +115,22 @@
         <div class="inline-flex p-1 rounded-xl bg-slate-200/70 backdrop-blur-sm border border-slate-300/60 shadow-inner">
           <button
             data-audience="all"
-            class="audience-filter-btn active px-4 py-2 rounded-lg text-sm font-semibold transition-all bg-indigo-600 text-white shadow-md">
-            🌟 All (13)
+            class="audience-filter-btn active px-3.5 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all bg-indigo-600 text-white shadow-md">
+            🌟 All (18)
           </button>
           <button
             data-audience="kids"
-            class="audience-filter-btn px-4 py-2 rounded-lg text-sm font-semibold transition-all bg-white text-slate-700 hover:text-indigo-600">
+            class="audience-filter-btn px-3.5 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all bg-white text-slate-700 hover:text-indigo-600">
             🧸 Kids & Family (8)
           </button>
           <button
+            data-audience="journals"
+            class="audience-filter-btn px-3.5 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all bg-white text-slate-700 hover:text-indigo-600">
+            📔 Papino's Diaries (5)
+          </button>
+          <button
             data-audience="tools"
-            class="audience-filter-btn px-4 py-2 rounded-lg text-sm font-semibold transition-all bg-white text-slate-700 hover:text-indigo-600">
+            class="audience-filter-btn px-3.5 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all bg-white text-slate-700 hover:text-indigo-600">
             🛠️ Dad's Tools (5)
           </button>
         </div>
@@ -140,17 +146,22 @@
           <button
             data-kind="game"
             class="kind-filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold transition-all bg-white text-slate-600 hover:text-emerald-700 hover:bg-emerald-50">
-            🎮 Games Only
+            🎮 Games (5)
           </button>
           <button
             data-kind="educational"
             class="kind-filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold transition-all bg-white text-slate-600 hover:text-purple-700 hover:bg-purple-50">
-            📚 Educational Only
+            📚 Educational (4)
+          </button>
+          <button
+            data-kind="journal"
+            class="kind-filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold transition-all bg-white text-slate-600 hover:text-amber-700 hover:bg-amber-50">
+            📔 Diaries (5)
           </button>
           <button
             data-kind="tool"
-            class="kind-filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold transition-all bg-white text-slate-600 hover:text-amber-700 hover:bg-amber-50">
-            🛠️ Tools Only
+            class="kind-filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold transition-all bg-white text-slate-600 hover:text-indigo-700 hover:bg-indigo-50">
+            🛠️ Tools (5)
           </button>
         </div>
       </div>
@@ -158,8 +169,8 @@
       <!-- Quick Tag Filter Pills -->
       <div class="flex items-center gap-1.5 overflow-x-auto pt-1">
         <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider mr-1">Quick Tags:</span>
-        <button onclick="window.filterByTag('tubature')" class="px-2.5 py-1 rounded-full text-xs font-medium bg-white hover:bg-emerald-50 text-emerald-700 hover:text-emerald-800 border border-emerald-200 shadow-sm transition">
-          🚰 Tubature
+        <button onclick="window.filterByTag('pwa')" class="px-2.5 py-1 rounded-full text-xs font-medium bg-white hover:bg-emerald-50 text-emerald-700 hover:text-emerald-800 border border-emerald-200 shadow-sm transition">
+          ✈️ Works Offline (PWA)
         </button>
         <button onclick="window.filterByTag('flutter')" class="px-2.5 py-1 rounded-full text-xs font-medium bg-white hover:bg-indigo-50 text-slate-700 hover:text-indigo-600 border border-slate-200 shadow-sm transition">
           📱 Flutter
@@ -173,6 +184,9 @@
         <button onclick="window.filterByTag('words')" class="px-2.5 py-1 rounded-full text-xs font-medium bg-white hover:bg-purple-50 text-purple-700 hover:text-purple-800 border border-purple-200 shadow-sm transition">
           📜 Words & Stories
         </button>
+        <button onclick="window.filterByTag('diary')" class="px-2.5 py-1 rounded-full text-xs font-medium bg-white hover:bg-amber-50 text-amber-800 hover:text-amber-900 border border-amber-200 shadow-sm transition">
+          📔 Diaries & Life
+        </button>
         <button onclick="window.filterByTag('ai')" class="px-2.5 py-1 rounded-full text-xs font-medium bg-white hover:bg-indigo-50 text-slate-700 hover:text-indigo-600 border border-slate-200 shadow-sm transition">
           🤖 AI-Powered
         </button>
@@ -181,6 +195,9 @@
         </button>
         <button onclick="window.filterByTag('ruby')" class="px-2.5 py-1 rounded-full text-xs font-medium bg-white hover:bg-rose-50 text-rose-700 hover:text-rose-800 border border-rose-200 shadow-sm transition">
           💎 Ruby
+        </button>
+        <button onclick="window.filterByTag('meta')" class="px-2.5 py-1 rounded-full text-xs font-bold bg-white hover:bg-indigo-50 text-indigo-800 hover:text-indigo-950 border border-indigo-300 shadow-sm transition">
+          🪞 #meta
         </button>
       </div>
     </div>

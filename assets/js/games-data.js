@@ -19,10 +19,10 @@ window.PALLADIUS_GAMES = [
       "Flutter",
       "Riverpod",
       "Dart",
-      "Web"
+      "Web",
+      "PWA"
     ],
     "tags": [
-      "tubature",
       "puzzle",
       "flutter",
       "kids",
@@ -30,9 +30,12 @@ window.PALLADIUS_GAMES = [
       "logic",
       "fantasy",
       "tetris",
-      "plumber"
+      "plumber",
+      "pwa",
+      "offline"
     ],
-    "badge": "🟢 Play Live",
+    "pwa": true,
+    "badge": "🟢 Play Live • PWA",
     "target": "Kids & Family",
     "featured": true
   },
@@ -86,7 +89,8 @@ window.PALLADIUS_GAMES = [
     "tech": [
       "Flutter",
       "Dart",
-      "Web"
+      "Web",
+      "PWA"
     ],
     "tags": [
       "puzzle",
@@ -94,9 +98,12 @@ window.PALLADIUS_GAMES = [
       "kids",
       "game",
       "photos",
-      "family"
+      "family",
+      "pwa",
+      "offline"
     ],
-    "badge": "🟢 Play Live",
+    "pwa": true,
+    "badge": "🟢 Play Live • PWA",
     "target": "The Whole Family",
     "featured": true
   },
@@ -290,6 +297,7 @@ window.PALLADIUS_GAMES = [
       "Python"
     ],
     "tags": [
+      "words",
       "stories",
       "educational",
       "ai",
@@ -347,6 +355,7 @@ window.PALLADIUS_GAMES = [
     "screenshot": "assets/screenshots/antigravity-ruby-sdk.jpg",
     "youtube_id": "HuM6T_-NqO8",
     "youtube_url": "https://youtu.be/HuM6T_-NqO8",
+    "article_url": "https://ricc.rocks/en/posts/technology/2026-08-13-antigravity-ruby-sdk-article/",
     "play_url": "",
     "repo_url": "https://github.com/palladius/antigravity-ruby-sdk",
     "can_embed": false,
@@ -461,6 +470,206 @@ window.PALLADIUS_GAMES = [
     ],
     "badge": "🛠️ Dad's Tool",
     "target": "AI Agents & Devs",
+    "featured": false
+  },
+  {
+    "id": "palladius-vetrina",
+    "title": "🪞 Palladius Vetrina (Mise en Abyme)",
+    "audience": "tools",
+    "kind": "tool",
+    "category": "tools",
+    "score": 99,
+    "created_at": "2026-09-06",
+    "tagline": "The showcase that showcases the showcase that showcases the showcase...",
+    "description": "A recursive Droste-effect inception loop! The Palladius Showcase running inside a browser, showcasing itself in an infinite visual mirror. Zero runtime dependencies, instant search, and pure philosophical meta-satisfaction.",
+    "screenshot": "assets/screenshots/vetrina-meta.jpg",
+    "play_url": "https://palladius.github.io/palladius-vetrina/",
+    "repo_url": "https://github.com/palladius/palladius-vetrina",
+    "can_embed": true,
+    "pwa": true,
+    "tech": [
+      "TailwindCSS",
+      "Vanilla JS",
+      "YAML",
+      "GitHub Pages",
+      "Python"
+    ],
+    "tags": [
+      "meta",
+      "droste",
+      "inception",
+      "showcase",
+      "tools",
+      "recursive",
+      "infinite",
+      "pwa"
+    ],
+    "badge": "🪞 #meta • Inception",
+    "target": "Philosophers & Devs",
+    "featured": true
+  },
+  {
+    "id": "compleanno-palladiano-2026",
+    "title": "🍽️ Compleanno di Papà (50° Mezzo Secolo)",
+    "audience": "journals",
+    "kind": "journal",
+    "category": "journals",
+    "score": 96,
+    "created_at": "2026",
+    "tagline": "50 Shades of Yellow: Banquet d'Avanguardia & Bigoli con la Veganiga!",
+    "description": "Official gastronomic website celebrating Riccardo's 50th birthday on December 29, 2026. Featuring Ermete Bottazzi's avant-garde cruelty-free menu (Bigoli con la Veganiga di Lugano, Aria di Bosco Ferrarese, Tiramisù allo Struzzo Vegano) built with Astro & Tailwind.",
+    "screenshot": "assets/screenshots/compleanno-palladiano.png",
+    "play_url": "https://palladius.github.io/compleanno-palladiano-2026/menu/",
+    "repo_url": "https://github.com/palladius/compleanno-palladiano-2026",
+    "can_embed": true,
+    "tech": [
+      "Astro",
+      "Tailwind",
+      "TypeScript",
+      "GitHub Pages"
+    ],
+    "tags": [
+      "journal",
+      "diary",
+      "family",
+      "food",
+      "riccardo",
+      "50th",
+      "veganiga"
+    ],
+    "badge": "🎉 50° Compleanno",
+    "target": "Friends & Family",
+    "featured": true
+  },
+  {
+    "id": "septober-next",
+    "title": "🗓️ Septober Next (Node/Python Todo PWA)",
+    "audience": "journals",
+    "kind": "journal",
+    "category": "journals",
+    "score": 91,
+    "created_at": "2026",
+    "tagline": "Procrastinators unite... with real-time WebSockets & magic parser!",
+    "description": "Modern rewrite of Riccardo's 15-year-old todo app with natural language magic parsing (dates, priorities, wishlists), real-time WebSockets synchronization, Supabase persistence, touch swipe gestures, and sleek dark mode UI deployed on Cloud Run.",
+    "screenshot": "assets/screenshots/septober.jpg",
+    "play_url": "https://septober-next-467916597830.europe-west1.run.app/",
+    "repo_url": "https://github.com/palladius/septober",
+    "pwa": true,
+    "can_embed": true,
+    "tech": [
+      "FastAPI",
+      "Python",
+      "WebSockets",
+      "Cloud Run",
+      "PWA"
+    ],
+    "tags": [
+      "journal",
+      "diary",
+      "todo",
+      "productivity",
+      "pwa",
+      "offline",
+      "websockets"
+    ],
+    "badge": "🗓️ Todo App • PWA",
+    "target": "Dad Riccardo",
+    "featured": true
+  },
+  {
+    "id": "private-journal",
+    "title": "🔒 Riccardo's Private Journal",
+    "audience": "journals",
+    "kind": "journal",
+    "category": "journals",
+    "score": 88,
+    "created_at": "2026",
+    "tagline": "Family memoirs, Polaroid chronicles, and AI-illustrated private stories.",
+    "description": "Riccardo's deeply personal family memoirs and daily chronicles, featuring automated Polaroid photo galleries, AI Pixar-style memory renders with Ale and Sebi, and protected behind Cloudflare Zero Trust Access.",
+    "screenshot": "assets/screenshots/private-journal.jpg",
+    "play_url": "https://lobby-ricc-pvt-journal2.palladiusbonton.workers.dev/",
+    "repo_url": "https://github.com/palladius/lobby-ricc-pvt-journal",
+    "can_embed": false,
+    "tech": [
+      "Jekyll",
+      "Cloudflare Workers",
+      "Zero Trust",
+      "Pixar AI"
+    ],
+    "tags": [
+      "journal",
+      "diary",
+      "private",
+      "family",
+      "memoirs",
+      "polaroid"
+    ],
+    "badge": "🔒 Private Journal",
+    "target": "Riccardo & Family",
+    "featured": false
+  },
+  {
+    "id": "lobby-sudafrica-journal",
+    "title": "🇿🇦 South Africa Diary (Lobby Safari)",
+    "audience": "journals",
+    "kind": "journal",
+    "category": "journals",
+    "score": 89,
+    "created_at": "2026",
+    "tagline": "Pilanesberg safaris, lions, Franschhoek wine trams & family adventures!",
+    "description": "Travelogue and daily photo diary of the Carlesso family trip to South Africa in February 2026. From Pilanesberg National Park game drives and lion encounters to the Franschhoek wine tram and the resurrection of Lobby.",
+    "screenshot": "assets/screenshots/sudafrica-journal.png",
+    "play_url": "https://lobby-sudafrica-journal.palladiusbonton.workers.dev/",
+    "repo_url": "https://github.com/palladius/lobby-sudafrica-journal",
+    "can_embed": false,
+    "tech": [
+      "Jekyll",
+      "Markdown",
+      "Cloudflare Workers",
+      "Pixar Maps"
+    ],
+    "tags": [
+      "journal",
+      "diary",
+      "travel",
+      "south-africa",
+      "safari",
+      "family"
+    ],
+    "badge": "🇿🇦 Travel Diary",
+    "target": "Family & Explorers",
+    "featured": false
+  },
+  {
+    "id": "ricc-reads-the-news",
+    "title": "📰 Ricc Reads the News",
+    "audience": "journals",
+    "kind": "journal",
+    "category": "journals",
+    "score": 84,
+    "created_at": "2026",
+    "tagline": "Weekly agile newsletter connecting tech, politics, food & AI disruption!",
+    "description": "Riccardo's weekly newsletter connecting the dots between breakthrough AI developments, global tech currents, occasional politics, and Italian cuisine, rendered with sleek editorial layout.",
+    "screenshot": "assets/screenshots/ricc-reads-the-news.png",
+    "play_url": "https://ricc-reads-the-news.netlify.app/",
+    "repo_url": "https://github.com/palladius/ricc-reads-the-news",
+    "can_embed": false,
+    "tech": [
+      "Jekflix",
+      "Jekyll",
+      "Netlify",
+      "Markdown"
+    ],
+    "tags": [
+      "journal",
+      "diary",
+      "newsletter",
+      "news",
+      "tech",
+      "ai"
+    ],
+    "badge": "📰 Newsletter",
+    "target": "Curious Minds & Techies",
     "featured": false
   }
 ];
