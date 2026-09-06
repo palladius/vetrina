@@ -22,16 +22,22 @@
   const filterBtns = document.querySelectorAll('.category-filter-btn');
   const activeFiltersContainer = document.getElementById('active-filters');
 
-  // Modal elements
+  // Detail Modal elements
   const detailModal = document.getElementById('detail-modal');
   const modalCloseBtn = document.getElementById('modal-close-btn');
   const modalBody = document.getElementById('modal-body');
+
+  // Play / Iframe Modal elements
+  const playModal = document.getElementById('play-modal');
+  const playModalTitle = document.getElementById('play-modal-title');
+  const playModalIframe = document.getElementById('play-modal-iframe');
+  const playModalExternalLink = document.getElementById('play-modal-external-link');
+  const playModalCloseBtn = document.getElementById('play-modal-close-btn');
 
   // Initialize
   async function init() {
     setupEventListeners();
     await loadGamesData();
-    // Auto-focus search input immediately
     if (searchInput) {
       searchInput.focus();
     }
@@ -101,7 +107,9 @@
         searchInput.focus();
         searchInput.select();
       } else if (e.key === 'Escape') {
-        if (detailModal && !detailModal.classList.contains('hidden')) {
+        if (playModal && !playModal.classList.contains('hidden')) {
+          closePlayModal();
+        } else if (detailModal && !detailModal.classList.contains('hidden')) {
           closeModal();
         } else if (searchInput.value) {
           searchInput.value = '';
@@ -119,6 +127,13 @@
     if (detailModal) {
       detailModal.addEventListener('click', (e) => {
         if (e.target === detailModal) closeModal();
+      });
+    }
+
+    if (playModalCloseBtn) playModalCloseBtn.addEventListener('click', closePlayModal);
+    if (playModal) {
+      playModal.addEventListener('click', (e) => {
+        if (e.target === playModal) closePlayModal();
       });
     }
   }
@@ -161,6 +176,7 @@
 
       // 3. Search query matching
       if (searchTerm) {
+        const idMatch = (item.id || '').toLowerCase().includes(searchTerm);
         const titleMatch = (item.title || '').toLowerCase().includes(searchTerm);
         const descMatch = (item.description || '').toLowerCase().includes(searchTerm);
         const taglineMatch = (item.tagline || '').toLowerCase().includes(searchTerm);
@@ -168,7 +184,7 @@
         const tagMatch = (item.tags || []).some((t) => t.toLowerCase().includes(searchTerm));
         const techMatch = (item.tech || []).some((t) => t.toLowerCase().includes(searchTerm));
 
-        if (!titleMatch && !descMatch && !taglineMatch && !targetMatch && !tagMatch && !techMatch) {
+        if (!idMatch && !titleMatch && !descMatch && !taglineMatch && !targetMatch && !tagMatch && !techMatch) {
           return false;
         }
       }
@@ -181,17 +197,11 @@
   function render() {
     const filtered = getFilteredGames();
 
-    // Render active filters pill bar
     renderActiveFilterBadges();
 
-    // Update counter
     const totalCount = allGames.length;
-    const kidsCount = allGames.filter((g) => g.category === 'kids').length;
-    const toolsCount = allGames.filter((g) => g.category === 'tools').length;
-
     countDisplay.innerHTML = `Mostrando <strong>${filtered.length}</strong> di ${totalCount} elementi`;
 
-    // Handle Empty State
     if (filtered.length === 0) {
       gamesGrid.innerHTML = '';
       emptyState.classList.remove('hidden');
@@ -203,7 +213,6 @@
 
     emptyState.classList.add('hidden');
 
-    // Build Cards HTML
     gamesGrid.innerHTML = filtered
       .map((game) => {
         const isKids = game.category === 'kids';
@@ -222,13 +231,27 @@
         // Primary action button
         let playBtn = '';
         if (game.play_url && game.play_url.trim() !== '') {
-          playBtn = `
-            <a href="${game.play_url}" target="_blank" rel="noopener noreferrer"
-               class="inline-flex items-center justify-center gap-2 flex-1 px-4 py-2.5 rounded-xl text-sm font-semibold text-white bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-700 hover:to-violet-700 shadow-sm hover:shadow-md transition-all">
-              <span>🎮 Gioca Ora</span>
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-            </a>
-          `;
+          if (game.can_embed) {
+            playBtn = `
+              <button onclick="window.playGameInline('${game.id}')"
+                 class="inline-flex items-center justify-center gap-1.5 flex-1 px-3.5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold text-white bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-700 hover:to-violet-700 shadow-sm hover:shadow-md transition-all">
+                <span>🕹️ Gioca Qui</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              </button>
+              <a href="${game.play_url}" target="_blank" rel="noopener noreferrer" title="Apri in nuova scheda"
+                 class="p-2.5 rounded-xl text-slate-600 hover:text-indigo-600 bg-slate-100 hover:bg-slate-200 border border-slate-200 transition-all">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+              </a>
+            `;
+          } else {
+            playBtn = `
+              <a href="${game.play_url}" target="_blank" rel="noopener noreferrer"
+                 class="inline-flex items-center justify-center gap-2 flex-1 px-4 py-2.5 rounded-xl text-sm font-semibold text-white bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-700 hover:to-violet-700 shadow-sm hover:shadow-md transition-all">
+                <span>🎮 Gioca Ora</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+              </a>
+            `;
+          }
         } else {
           playBtn = `
             <a href="${game.repo_url}" target="_blank" rel="noopener noreferrer"
@@ -239,7 +262,6 @@
           `;
         }
 
-        // Secondary action (GitHub Code)
         const repoBtn = game.repo_url
           ? `
             <a href="${game.repo_url}" target="_blank" rel="noopener noreferrer" title="Vedi Codice Sorgente su GitHub"
@@ -249,7 +271,6 @@
           `
           : '';
 
-        // Tech pills
         const techHtml = (game.tech || [])
           .map(
             (t) =>
@@ -257,7 +278,6 @@
           )
           .join('');
 
-        // Tag pills
         const tagsHtml = (game.tags || [])
           .map(
             (tag) =>
@@ -265,22 +285,30 @@
           )
           .join('');
 
-        // Clickable image target URL
-        const imageClickUrl = (game.play_url && game.play_url.trim() !== '') ? game.play_url : game.repo_url;
+        // Action when clicking screenshot
+        const imgClickAction = game.can_embed
+          ? `onclick="window.playGameInline('${game.id}'); return false;"`
+          : ``;
+        const imgTargetUrl = game.play_url && game.play_url.trim() !== '' ? game.play_url : game.repo_url;
+
+        // Gif hover attributes if present
+        const gifAttrs = game.screenshot_gif
+          ? `onmouseenter="this.dataset.static=this.src; this.src='${game.screenshot_gif}';" onmouseleave="this.src=this.dataset.static;"`
+          : ``;
 
         return `
           <article class="glass-card rounded-2xl overflow-hidden flex flex-col shadow-sm" data-id="${game.id}">
             <!-- Screenshot Header with Hover Zoom -->
-            <a href="${imageClickUrl}" target="_blank" rel="noopener noreferrer" class="card-img-wrapper block h-56 bg-slate-900/10 relative group">
-              <img src="${game.screenshot}" alt="${game.title}" class="w-full h-full object-cover object-center" loading="lazy" />
+            <a href="${imgTargetUrl}" ${imgClickAction} target="_blank" rel="noopener noreferrer" class="card-img-wrapper block h-56 bg-slate-900/10 relative group">
+              <img src="${game.screenshot}" ${gifAttrs} alt="${game.title}" class="w-full h-full object-cover object-center" loading="lazy" />
               
-              <!-- Subtle top badges over image -->
+              <!-- Top Badges -->
               <div class="absolute top-3 left-3 flex flex-wrap gap-2 z-10">
                 ${categoryBadge}
                 ${statusBadge}
               </div>
 
-              <!-- Play hover overlay with glowing icon -->
+              <!-- Play hover overlay -->
               <div class="play-overlay absolute inset-0 flex items-center justify-center z-20">
                 <div class="w-14 h-14 rounded-full bg-white/95 text-indigo-600 flex items-center justify-center shadow-xl transform group-hover:scale-110 transition-transform">
                   <svg class="w-7 h-7 ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
@@ -296,7 +324,7 @@
                 </div>
 
                 <h3 class="font-fun text-xl font-bold text-slate-900 group-hover:text-indigo-600 transition-colors leading-tight">
-                  <a href="${imageClickUrl}" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-600">
+                  <a href="${imgTargetUrl}" ${imgClickAction} class="hover:text-indigo-600">
                     ${game.title}
                   </a>
                 </h3>
@@ -370,7 +398,28 @@
     activeFiltersContainer.innerHTML = badges.join('');
   }
 
-  // Global helper functions exposed for HTML inline handlers
+  // Play game inline in an arcade iframe modal
+  window.playGameInline = function (gameId) {
+    const game = allGames.find((g) => g.id === gameId);
+    if (!game || !game.play_url || !playModal || !playModalIframe) return;
+
+    playModalTitle.textContent = game.title;
+    playModalIframe.src = game.play_url;
+    if (playModalExternalLink) {
+      playModalExternalLink.href = game.play_url;
+    }
+
+    playModal.classList.remove('hidden');
+    playModal.classList.add('flex');
+  };
+
+  function closePlayModal() {
+    if (!playModal || !playModalIframe) return;
+    playModalIframe.src = 'about:blank'; // Stop audio and scripts in iframe
+    playModal.classList.add('hidden');
+    playModal.classList.remove('flex');
+  }
+
   window.filterByTag = function (tag) {
     currentTag = tag;
     render();
@@ -434,8 +483,9 @@
         </div>
 
         <div class="flex items-center gap-3 pt-4 border-t border-slate-200">
-          ${game.play_url ? `<a href="${game.play_url}" target="_blank" class="flex-1 text-center py-2.5 px-4 rounded-xl text-sm font-semibold text-white bg-indigo-600 hover:bg-indigo-700 transition">🎮 Gioca Live</a>` : ''}
-          ${game.repo_url ? `<a href="${game.repo_url}" target="_blank" class="text-center py-2.5 px-4 rounded-xl text-sm font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 transition">📂 GitHub Repository</a>` : ''}
+          ${game.can_embed ? `<button onclick="window.closeModal(); window.playGameInline('${game.id}')" class="flex-1 text-center py-2.5 px-4 rounded-xl text-sm font-semibold text-white bg-indigo-600 hover:bg-indigo-700 transition">🕹️ Gioca Qui (Schermo Intero)</button>` : ''}
+          ${game.play_url ? `<a href="${game.play_url}" target="_blank" class="text-center py-2.5 px-4 rounded-xl text-sm font-semibold text-indigo-600 bg-indigo-50 hover:bg-indigo-100 transition">Apri Scheda</a>` : ''}
+          ${game.repo_url ? `<a href="${game.repo_url}" target="_blank" class="text-center py-2.5 px-4 rounded-xl text-sm font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 transition">📂 GitHub</a>` : ''}
         </div>
       </div>
     `;
@@ -443,6 +493,8 @@
     detailModal.classList.remove('hidden');
     detailModal.classList.add('flex');
   };
+
+  window.closeModal = closeModal;
 
   function closeModal() {
     if (!detailModal) return;

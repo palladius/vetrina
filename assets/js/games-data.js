@@ -2,24 +2,30 @@
 window.PALLADIUS_GAMES = [
   {
     "id": "tubature",
-    "title": "Tubature: The Dungeon Plumber",
+    "title": "🚰 Tubature: The Dungeon Plumber",
     "category": "kids",
     "tagline": "Un magico puzzle fantasy di condutture con Riccardo e il draghetto smeraldo!",
     "description": "Vibrante pipe-puzzle game fantasy con Riccardo in salopette e cappellino giallo con la 'R' e il suo piccolo drago verde. Ruota i condotti magici nel dungeon per far scorrere l'acqua cristallina attraverso tutte le tessere della griglia!",
     "screenshot": "assets/screenshots/tubature.jpg",
+    "screenshot_gif": "assets/screenshots/tubature_gameplay.gif",
     "play_url": "https://palladius.github.io/tubature/",
     "repo_url": "https://github.com/palladius/tubature",
+    "can_embed": true,
     "tech": [
       "Flutter",
       "Riverpod",
-      "Dart"
+      "Dart",
+      "Web"
     ],
     "tags": [
+      "tubature",
       "puzzle",
       "flutter",
       "bimbi",
       "logica",
-      "fantasy"
+      "fantasy",
+      "tetris",
+      "idraulico"
     ],
     "badge": "🟢 Gioca Live",
     "target": "Bimbi & Famiglia",
@@ -27,19 +33,21 @@ window.PALLADIUS_GAMES = [
   },
   {
     "id": "orologiaio",
-    "title": "Orologia.io (Time Master)",
+    "title": "⏰ Orologia.io (Time Master)",
     "category": "kids",
     "tagline": "Impara a leggere l'orologio analogico e digitale giocando con Sebi e Alessandro!",
     "description": "Mobile clock-learning game appositamente progettato per insegnare ai bambini come leggere l'orologio analogico (le lancette, i quarti, le mezze), impostare i display digitali e comprendere i numeri a 7 segmenti.",
     "screenshot": "assets/screenshots/orologiaio.png",
     "play_url": "https://palladius.github.io/orologia.io/",
     "repo_url": "https://github.com/palladius/orologia.io",
+    "can_embed": true,
     "tech": [
       "Flutter",
       "Dart",
       "Web"
     ],
     "tags": [
+      "orologiaio",
       "educational",
       "flutter",
       "bimbi",
@@ -52,13 +60,14 @@ window.PALLADIUS_GAMES = [
   },
   {
     "id": "kids-jigsaw-puzzle",
-    "title": "Kids Jigsaw Puzzle",
+    "title": "🧩 Kids Jigsaw Puzzle",
     "category": "kids",
     "tagline": "Puzzle interattivo con le foto di famiglia, draghi ed eroi!",
     "description": "Gioco di puzzle per bambini dove è possibile utilizzare foto personali della famiglia o immagini divertenti. Le tessere corrette adiacenti si agganciano e uniscono automaticamente mentre risolvi il puzzle!",
     "screenshot": "assets/screenshots/kids-jigsaw-puzzle.png",
     "play_url": "https://palladius.github.io/kids-jigsaw-puzzle/",
     "repo_url": "https://github.com/palladius/kids-jigsaw-puzzle",
+    "can_embed": true,
     "tech": [
       "Flutter",
       "Dart",
@@ -76,13 +85,14 @@ window.PALLADIUS_GAMES = [
   },
   {
     "id": "pasta-invaders",
-    "title": "Pasta Invaders",
+    "title": "🍝 Pasta Invaders",
     "category": "kids",
     "tagline": "Arcade shooter cosmico contro la pasta volante con telecronaca della Nonna!",
     "description": "Divertente shooter arcade ispirato a Space Invaders: difendi la terra dall'invasione spaziale di rigatoni, tagliatelle e tortellini, con commento satirico e incoraggiamenti in tempo reale generati da Nonna via Gemini AI!",
     "screenshot": "assets/screenshots/pasta-invaders.png",
     "play_url": "",
     "repo_url": "https://github.com/palladius/pasta-invaders",
+    "can_embed": false,
     "tech": [
       "React",
       "HTML5 Canvas",
@@ -93,7 +103,8 @@ window.PALLADIUS_GAMES = [
       "ai",
       "bimbi",
       "pasta",
-      "divertimento"
+      "divertimento",
+      "invaders"
     ],
     "badge": "👾 Arcade + AI",
     "target": "Bimbi & Ragazzi",
@@ -101,13 +112,14 @@ window.PALLADIUS_GAMES = [
   },
   {
     "id": "parola-del-giorno",
-    "title": "Parola del Giorno",
+    "title": "📜 Parola del Giorno",
     "category": "kids",
     "tagline": "L'archivio della sapienza desueta di Casa Carlesso e del folletto Pux!",
     "description": "Ogni giorno una gemma rara e affascinante della lingua italiana (es. fanfaluca, solerzia, cazzabubbola), illustrata con immagini favolistiche create con l'IA per arricchire il lessico dei bimbi con poesia e allegria.",
     "screenshot": "assets/screenshots/parola-del-giorno.png",
     "play_url": "https://palladius.github.io/parola-del-giorno/",
     "repo_url": "https://github.com/palladius/parola-del-giorno",
+    "can_embed": true,
     "tech": [
       "Tailwind",
       "HTML5",
@@ -126,21 +138,22 @@ window.PALLADIUS_GAMES = [
   },
   {
     "id": "baby-alphabet",
-    "title": "Baby Alphabet (AJ-Alphabet)",
+    "title": "🔤 Baby Alphabet (AJ-Alphabet)",
     "category": "kids",
     "tagline": "Costruita in 24 ore per insegnare le lettere dell'alfabeto ad Alessandro!",
     "description": "App interattiva creata con amore per supportare l'apprendimento delle lettere e dei suoni. Nata dalla sfida 'hold my beer' di Papà per far appassionare Alessandro alla lettura dell'alfabeto in 24 ore.",
     "screenshot": "assets/screenshots/baby-alphabet.jpg",
     "play_url": "http://aj-alphabet.palladi.us/",
     "repo_url": "https://github.com/palladius/baby-alphabet",
+    "can_embed": false,
     "tech": [
       "Web Audio",
       "Docker",
       "Kubernetes"
     ],
     "tags": [
-      "educational",
       "alphabet",
+      "educational",
       "bimbi",
       "scuola"
     ],
@@ -150,21 +163,22 @@ window.PALLADIUS_GAMES = [
   },
   {
     "id": "genai-kids-stories",
-    "title": "GenAI Kids Bedtime Stories",
+    "title": "📖 GenAI Kids Bedtime Stories",
     "category": "kids",
     "tagline": "Generatore di favole della buonanotte personalizzate per bimbi!",
     "description": "Applicazione intelligente che inventa storie della buonanotte personalizzate e uniche per i bambini, arricchite da illustrazioni fiabesche generate tramite Google Cloud e Vertex AI.",
     "screenshot": "assets/screenshots/genai-kids-stories.png",
     "play_url": "https://genai-kids-stories-gcloud-poor-cdlu26pd4q-ew.a.run.app/",
     "repo_url": "https://github.com/palladius/genai-kids-stories",
+    "can_embed": false,
     "tech": [
       "Cloud Run",
       "Gemini / Vertex AI",
       "Python"
     ],
     "tags": [
-      "ai",
       "stories",
+      "ai",
       "bimbi",
       "fiabe"
     ],
@@ -174,13 +188,14 @@ window.PALLADIUS_GAMES = [
   },
   {
     "id": "conductoras",
-    "title": "Conductoras (Conductor at Scale)",
+    "title": "🚂 Conductoras (Conductor at Scale)",
     "category": "tools",
     "tagline": "Orchestra N repository git con navicelle spaziali e animazioni temporali!",
     "description": "Framework per osservare e gestire N repository git contemporaneamente, tracciare token consumati (misurati in Macha Lattes 🍵!) e animare l'evoluzione del codice su scala intergalattica.",
     "screenshot": "assets/screenshots/conductoras.jpg",
     "play_url": "",
     "repo_url": "https://github.com/palladius/conductoras",
+    "can_embed": false,
     "tech": [
       "Node.js",
       "Git Worktrees",
@@ -198,13 +213,14 @@ window.PALLADIUS_GAMES = [
   },
   {
     "id": "sumaron",
-    "title": "Sumaron (The Big Donkey of Summarization)",
+    "title": "🐴 Sumaron (The Big Donkey of Summarization)",
     "category": "tools",
     "tagline": "Il somaro saggio per riassumere qualsiasi cartella con Gemini e doppio caching!",
     "description": "Fast, cache-efficient directory summarizer powered by Google Gemini and Imagen. Nome ispirato a 'Il signore dei Tarzanelli' (somaro + Sauron di Mordor) con hashing deterministico e zero spreco di quote API.",
     "screenshot": "assets/screenshots/sumaron.jpg",
     "play_url": "",
     "repo_url": "https://github.com/palladius/sumaron",
+    "can_embed": false,
     "tech": [
       "Go",
       "Google Gemini",
