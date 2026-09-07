@@ -454,8 +454,9 @@
   tagline: "Multimodal character consistency engine, 85mm portrait framing & LLM forensic likeness auditing!"
   description: "GenAI image synthesis studio using Google Gemini 3.1 Flash Image. Features multi-character reference binding, automated 85mm portrait composition, LLM-as-a-Judge forensic likeness auditing, and an interactive voting web app."
   screenshot: "assets/screenshots/gemini-tools.png"
-  play_url: "https://storage.googleapis.com/palladius-genai-storagify/ricc-mac/HOME/git/gemini-tools/out/index.html"
+  play_url: ""
   repo_url: "https://github.com/palladius/gemini-tools"
+
   can_embed: false
   tech:
     - "Python"
