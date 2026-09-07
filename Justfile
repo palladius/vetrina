@@ -1,7 +1,5 @@
-# Justfile for palladius-vetrina
-
-default:
-    @just --list
+# Justfile for vetrina
+# Quick tasks for Palladius Showcase
 
 # Build JSON and JS datasets from data/games.yaml
 build:

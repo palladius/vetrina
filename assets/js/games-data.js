@@ -114,21 +114,22 @@ window.PALLADIUS_GAMES = [
     "kind": "game",
     "is_game": true,
     "category": "kids",
-    "score": 48,
+    "score": 78,
     "tagline": "Cosmic arcade shooter against flying pasta with live Nonna commentary!",
-    "description": "A hilarious Space Invaders-style arcade shooter: defend the galaxy from an airborne invasion of rigatoni, tagliatelle, and ravioli, featuring real-time satirical commentary and encouragement from Nonna powered by Google Gemini AI! [Why archived? No link to online game! Unplayable, just link to app code - SCHADE!]",
+    "description": "A hilarious Space Invaders-style arcade shooter: defend the galaxy from an airborne invasion of rigatoni, tagliatelle, and ravioli, featuring real-time satirical commentary and encouragement from Nonna powered by Google Gemini AI!",
     "screenshot": "assets/screenshots/pasta-invaders.png",
-    "play_url": "",
+    "play_url": "https://ai.studio/apps/drive/1YEMXop64tbCrh8RBHiF1um5o6iRKzInm?resourceKey=0-yreZnGE7-QQn_2WhLHdjpg",
     "repo_url": "https://github.com/palladius/pasta-invaders",
     "can_embed": false,
-    "archived": true,
-    "hidden": true,
+    "archived": false,
+    "hidden": false,
     "created_at": "2026",
     "model_used": "Gemini 2.5 Flash",
     "tech": [
       "React",
       "HTML5 Canvas",
-      "Gemini AI"
+      "Gemini 2.5 Flash",
+      "Vite"
     ],
     "tags": [
       "arcade",
@@ -137,9 +138,9 @@ window.PALLADIUS_GAMES = [
       "game",
       "pasta",
       "fun",
-      "archived"
+      "shooter"
     ],
-    "badge": "📦 Archived",
+    "badge": "🍝 Nonna AI • Game",
     "target": "Kids & Young Gamers",
     "featured": false
   },
@@ -483,8 +484,8 @@ window.PALLADIUS_GAMES = [
     "tagline": "The showcase that showcases the showcase that showcases the showcase...",
     "description": "A recursive Droste-effect inception loop! The Palladius Showcase running inside a browser, showcasing itself in an infinite visual mirror. Zero runtime dependencies, instant search, and pure philosophical meta-satisfaction.",
     "screenshot": "assets/screenshots/vetrina-meta.jpg",
-    "play_url": "https://palladius.github.io/palladius-vetrina/",
-    "repo_url": "https://github.com/palladius/palladius-vetrina",
+    "play_url": "https://palladius.github.io/vetrina/",
+    "repo_url": "https://github.com/palladius/vetrina",
     "can_embed": true,
     "pwa": true,
     "tech": [

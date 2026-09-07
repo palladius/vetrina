@@ -2,12 +2,12 @@
 
 > An interactive, responsive showcase for all games created for the kids (Tubature, Orologia.io, Puzzle, etc.), Papino's life diaries, and Riccardo's developer tools.
 
-[![Deploy to GitHub Pages](https://github.com/palladius/palladius-vetrina/actions/workflows/deploy.yml/badge.svg)](https://github.com/palladius/palladius-vetrina/actions/workflows/deploy.yml)
+[![Deploy to GitHub Pages](https://github.com/palladius/vetrina/actions/workflows/deploy.yml/badge.svg)](https://github.com/palladius/vetrina/actions/workflows/deploy.yml)
 
-🌐 **Live Website on GitHub Pages:** **[https://palladius.github.io/palladius-vetrina/](https://palladius.github.io/palladius-vetrina/)**  
-🧸 **Direct Kids Bookmark (Ale & Sebi's Club):** **[https://palladius.github.io/palladius-vetrina/#kids](https://palladius.github.io/palladius-vetrina/#kids)**  
-✈️ **Offline Games (PWA):** **[https://palladius.github.io/palladius-vetrina/#pwa](https://palladius.github.io/palladius-vetrina/#pwa)**  
-📔 **Papino's Diaries:** **[https://palladius.github.io/palladius-vetrina/#diaries](https://palladius.github.io/palladius-vetrina/#diaries)**  
+🌐 **Live Website on GitHub Pages:** **[https://palladius.github.io/vetrina/](https://palladius.github.io/vetrina/)**  
+🧸 **Direct Kids Bookmark (Ale & Sebi's Club):** **[https://palladius.github.io/vetrina/#kids](https://palladius.github.io/vetrina/#kids)**  
+✈️ **Offline Games (PWA):** **[https://palladius.github.io/vetrina/#pwa](https://palladius.github.io/vetrina/#pwa)**  
+📔 **Papino's Diaries:** **[https://palladius.github.io/vetrina/#diaries](https://palladius.github.io/vetrina/#diaries)**  
 
 ![Showcase Inception](assets/screenshots/vetrina-meta.jpg)
 
