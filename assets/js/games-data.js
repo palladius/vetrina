@@ -474,6 +474,42 @@ window.PALLADIUS_GAMES = [
     "featured": false
   },
   {
+    "id": "gemini-tools",
+    "title": "🎨 Gemini Tools & Character Consistency Studio",
+    "audience": "tools",
+    "kind": "tool",
+    "category": "tools",
+    "score": 95,
+    "created_at": "2026",
+    "tagline": "Multimodal character consistency engine, 85mm portrait framing & LLM forensic likeness auditing!",
+    "description": "GenAI image synthesis studio using Google Gemini 3.1 Flash Image. Features multi-character reference binding, automated 85mm portrait composition, LLM-as-a-Judge forensic likeness auditing, and an interactive voting web app.",
+    "screenshot": "assets/screenshots/gemini-tools.png",
+    "play_url": "https://storage.googleapis.com/palladius-genai-storagify/ricc-mac/HOME/git/gemini-tools/out/index.html",
+    "repo_url": "https://github.com/palladius/gemini-tools",
+    "can_embed": false,
+    "tech": [
+      "Python",
+      "Google GenAI SDK",
+      "Gemini 3.1 Flash Image",
+      "Rich",
+      "Node.js",
+      "Cloud Storage"
+    ],
+    "tags": [
+      "tools",
+      "ai",
+      "gemini",
+      "genai",
+      "character-consistency",
+      "biometrics",
+      "evals",
+      "image-generation"
+    ],
+    "badge": "🎨 AI Image Studio",
+    "target": "Dad Riccardo & Creators",
+    "featured": true
+  },
+  {
     "id": "palladius-vetrina",
     "title": "🪞 Palladius Vetrina (Mise en Abyme)",
     "audience": "tools",
