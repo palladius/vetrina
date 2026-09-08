@@ -445,39 +445,133 @@
   featured: false
 
 - id: "gemini-tools"
-  title: "🎨 Gemini Tools & Character Consistency Studio"
+  title: "🛠️ Gemini Tools (Synthesizer & Video Judge)"
   audience: "tools"
   kind: "tool"
   category: "tools"
-  score: 95
-  created_at: "2026"
-  tagline: "Multimodal character consistency engine, 85mm portrait framing & LLM forensic likeness auditing!"
-  description: "GenAI image synthesis studio using Google Gemini 3.1 Flash Image. Features multi-character reference binding, automated 85mm portrait composition, LLM-as-a-Judge forensic likeness auditing, and an interactive voting web app."
+  score: 94
+  created_at: "2026-08"
+  tagline: "Google GenAI SDK CLI harness: character-consistent photo synthesis & biometric video judge!"
+  description: "A powerhouse collection of Python CLI utilities powered by Google GenAI (google-genai SDK & uv). Features bin/generate_photo.py for reference-driven character-consistent photo synthesis with automatic model fallbacks, bin/judge_video.py for Hollywood forensic video quality & biometric evaluation, bin/omni-video-gen.py for Veo video generation, and bin/list-gemini-models.py."
   screenshot: "assets/screenshots/gemini-tools.png"
-  play_url: ""
   repo_url: "https://github.com/palladius/gemini-tools"
-
   can_embed: false
   tech:
     - "Python"
     - "Google GenAI SDK"
     - "Gemini 3.1 Flash Image"
+    - "Nano Banana Pro"
+    - "Veo 3.0"
     - "Rich"
-    - "Node.js"
-    - "Cloud Storage"
+    - "uv"
   tags:
     - "tools"
     - "ai"
+    - "cli"
     - "gemini"
     - "genai"
     - "character-consistency"
     - "biometrics"
     - "evals"
-    - "image-generation"
-  badge: "🎨 AI Image Studio"
-  target: "Dad Riccardo & Creators"
+    - "veo"
+    - "video"
+  badge: "🛠️ Gemini GenAI CLI"
+  target: "AI Engineers & Devs"
   featured: true
 
+- id: "media-arneis"
+  title: "🍷 Media Arneis (Multimodal AI Orchestrator)"
+  audience: "tools"
+  kind: "tool"
+  category: "tools"
+  score: 93
+  created_at: "2026-06"
+  tagline: "Declarative kubectl-like orchestrator for AI videos, bedtime stories & comic strips!"
+  description: "Arneis is a declarative, Kubernetes-inspired media creation engine leveraging Gemini, Lyria, Nanobanana, and Veo. Transforms YAML specifications into multi-scene videos, illustrated kids storybooks with character consistency, and panel-by-panel comic strips (fumetti) with async Ruby fibers and token tracking."
+  screenshot: "assets/screenshots/media-arneis.png"
+  repo_url: "https://github.com/palladius/media-arneis"
+  can_embed: false
+  tech:
+    - "Ruby"
+    - "YAML"
+    - "Gemini"
+    - "Veo"
+    - "Lyria"
+    - "Nanobanana"
+    - "Fibers"
+  tags:
+    - "tools"
+    - "ai"
+    - "orchestration"
+    - "media"
+    - "ruby"
+    - "character-consistency"
+    - "video"
+    - "stories"
+  badge: "🍷 Media Orchestrator"
+  target: "Creative Developers & Devs"
+  featured: true
+
+- id: "character-consistency-studio"
+  title: "🎭 Character Consistency Studio 2026"
+  audience: "tools"
+  kind: "tool"
+  category: "tools"
+  score: 95
+  created_at: "2026-08"
+  tagline: "Same face, infinite worlds: AI character consistency with automated LLM Judge!"
+  description: "AI-powered web app and evaluation suite for generating consistent character images across infinite worlds using Google Gemini. Features multi-character reference photo management (Ale, Sebi, Riccardo, Kate), automated LLM Judge consistency evaluation (with hilarious Benigni easter egg), private dataset segregation, and live deployment on Google Cloud Run."
+  screenshot: "assets/screenshots/character-consistency-studio.png"
+  play_url: "https://character-consistency-studio-v1-frontend-only-272932496670.us-west1.run.app"
+  repo_url: "https://github.com/palladius/character-consistency-studio-2026"
+  can_embed: true
+  tech:
+    - "React"
+    - "TypeScript"
+    - "Vite"
+    - "Google Gemini"
+    - "Cloud Run"
+    - "Python Eval"
+  tags:
+    - "tools"
+    - "ai"
+    - "character-consistency"
+    - "photos"
+    - "gemini"
+    - "cloud-run"
+    - "eval"
+  badge: "🎭 Live Studio • Cloud Run"
+  target: "Creators, Family & Devs"
+  featured: true
+
+- id: "respec"
+  title: "📋 Re-SPEC (Spec-Driven AI Coding Engine)"
+  audience: "tools"
+  kind: "tool"
+  category: "tools"
+  score: 91
+  created_at: "2026-07"
+  tagline: "Turn rough ideas into structured SPEC.md blueprints for AI coding assistants!"
+  description: "A powerful Go-based CLI tool inspired by Ali G ('Booyakasha! You gotta RE-SPEC each other's repo!'). Transforms vague feature requests and one-liners into structured, production-ready SPEC.md documents tailored for AI coding assistants like Antigravity, Claude, and Gemini."
+  screenshot: "assets/screenshots/respec.png"
+  repo_url: "https://github.com/palladius/respec"
+  can_embed: false
+  tech:
+    - "Go"
+    - "LLM"
+    - "CLI"
+    - "Markdown"
+    - "Spec-Driven"
+  tags:
+    - "tools"
+    - "go"
+    - "cli"
+    - "spec"
+    - "ai"
+    - "engineering"
+  badge: "📋 Spec Engine"
+  target: "Software Engineers & Agents"
+  featured: true
 
 - id: "palladius-vetrina"
   title: "🪞 Palladius Vetrina (Mise en Abyme)"
@@ -612,7 +706,7 @@
   audience: "journals"
   kind: "journal"
   category: "journals"
-  score: 89
+  score: 90
   created_at: "2026"
   tagline: "Pilanesberg safaris, lions, Franschhoek wine trams & family adventures!"
   description: "Travelogue and daily photo diary of the Carlesso family trip to South Africa in February 2026. From Pilanesberg National Park game drives and lion encounters to the Franschhoek wine tram and the resurrection of Lobby."
@@ -634,7 +728,7 @@
     - "family"
   badge: "🇿🇦 Travel Diary"
   target: "Family & Explorers"
-  featured: false
+  featured: true
 
 - id: "ricc-reads-the-news"
   title: "📰 Ricc Reads the News"

@@ -63,6 +63,8 @@
       window.filterByAudience('journals');
     } else if (hash === 'pwa' || hash === 'offline') {
       window.filterByTag('pwa');
+    } else if (hash === 'character-consistency' || hash === 'consistency' || hash === 'faces') {
+      window.filterByTag('character-consistency');
     } else if (hash.startsWith('game-') || hash.startsWith('app-')) {
       const gId = hash.replace(/^(game-|app-)/, '');
       const g = allGames.find((item) => item.id === gId);
