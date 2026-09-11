@@ -1,0 +1,3 @@
+# External application repositories to slurp vetrina.json from:
+- name: "sakura"
+  url: "https://github.com/palladius/sakura"

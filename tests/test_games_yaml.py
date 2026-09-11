@@ -38,6 +38,23 @@ class TestGamesYaml(unittest.TestCase):
             self.assertTrue(item_id and isinstance(item_id, str), f'Invalid ID: {item_id}')
             self.assertNotIn(' ', item_id, f"ID cannot contain spaces: '{item_id}'")
 
+    def test_unique_urls(self):
+        """Ensure primary keys (repo_url and play_url) are unique across projects."""
+        repos = {}
+        plays = {}
+        for item in self.data:
+            item_id = item.get('id', '<unknown>')
+            repo = (item.get('repo_url') or '').strip().rstrip('/')
+            play = (item.get('play_url') or '').strip().rstrip('/')
+
+            if repo:
+                self.assertNotIn(repo, repos, f"Duplicate repo_url '{repo}' in '{item_id}' (already in '{repos.get(repo)}')")
+                repos[repo] = item_id
+
+            if play:
+                self.assertNotIn(play, plays, f"Duplicate play_url '{play}' in '{item_id}' (already in '{plays.get(play)}')")
+                plays[play] = item_id
+
     def test_required_fields(self):
         for item in self.data:
             item_id = item.get('id', '<unknown>')

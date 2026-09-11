@@ -113,14 +113,14 @@
   kind: "game"
   is_game: true
   category: "kids"
-  score: 78
+  score: 48
   tagline: "Cosmic arcade shooter against flying pasta with live Nonna commentary!"
-  description: "A hilarious Space Invaders-style arcade shooter: defend the galaxy from an airborne invasion of rigatoni, tagliatelle, and ravioli, featuring real-time satirical commentary and encouragement from Nonna powered by Google Gemini AI!"
+  description: "A hilarious Space Invaders-style arcade shooter: defend the galaxy from an airborne invasion of rigatoni, tagliatelle, and ravioli, featuring real-time satirical commentary and encouragement from Nonna powered by Google Gemini AI! [Archived: no direct online playable endpoint found, source code available on GitHub]."
   screenshot: "assets/screenshots/pasta-invaders.png"
-  play_url: "https://ai.studio/apps/drive/1YEMXop64tbCrh8RBHiF1um5o6iRKzInm?resourceKey=0-yreZnGE7-QQn_2WhLHdjpg"
+  play_url: ""
   repo_url: "https://github.com/palladius/pasta-invaders"
   can_embed: false
-  archived: false
+  archived: true
   hidden: false
   created_at: "2026"
   model_used: "Gemini 2.5 Flash"
@@ -135,9 +135,8 @@
     - "kids"
     - "game"
     - "pasta"
-    - "fun"
-    - "shooter"
-  badge: "🍝 Nonna AI • Game"
+    - "archived"
+  badge: "📦 Archived"
   target: "Kids & Young Gamers"
   featured: false
 
