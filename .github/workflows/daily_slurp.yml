@@ -1,4 +1,4 @@
-name: 🔄 Daily Cron: Slurp Federated Vetrina Metadata
+name: "🔄 Daily Cron: Slurp Federated Vetrina Metadata"
 
 on:
   schedule:
