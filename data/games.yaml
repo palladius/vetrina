@@ -1,760 +1,818 @@
-# ==============================================================================
-# 🎠 Palladius Showcase: Kids Games, Kids Educational & Dad's Tools
-# ==============================================================================
-# Tree Structure:
-#   audience: "kids"
-#     kind: "game"         -> 🎮 Kids Games
-#     kind: "educational"  -> 📚 Kids Educational & Stories
-#   audience: "tools"
-#     kind: "tool"         -> 🛠️ Dad's Tools & Frameworks
-# ==============================================================================
-
-- id: "tubature"
-  title: "🚰 Tubature: The Dungeon Plumber"
-  audience: "kids"
-  kind: "game"
-  category: "kids"
+- id: tubature
+  title: '🚰 Tubature: The Dungeon Plumber'
+  audience: kids
+  kind: game
+  category: kids
   score: 95
-  created_at: "2026"
-  tagline: "Enchanting fantasy pipe-puzzle game starring Riccardo and his baby dragon!"
-  description: "A vibrant pipe-puzzle game built with Flutter & Riverpod. Starring Riccardo the Dungeon Plumber (wearing his signature yellow 'R' cap) and his cute emerald dragon companion. Rotate magical conduits to let crystal water rush through every single dungeon tile!"
-  screenshot: "assets/screenshots/tubature.jpg"
-  screenshot_gif: "assets/screenshots/tubature_gameplay.gif"
-  play_url: "https://palladius.github.io/tubature/"
-  repo_url: "https://github.com/palladius/tubature"
+  created_at: '2026'
+  tagline: Enchanting fantasy pipe-puzzle game starring Riccardo and his baby dragon!
+  description: A vibrant pipe-puzzle game built with Flutter & Riverpod. Starring
+    Riccardo the Dungeon Plumber (wearing his signature yellow 'R' cap) and his cute
+    emerald dragon companion. Rotate magical conduits to let crystal water rush through
+    every single dungeon tile!
+  screenshot: assets/screenshots/tubature.jpg
+  screenshot_gif: assets/screenshots/tubature_gameplay.gif
+  play_url: https://palladius.github.io/tubature/
+  repo_url: https://github.com/palladius/tubature
   can_embed: true
   tech:
-    - "Flutter"
-    - "Riverpod"
-    - "Dart"
-    - "Web"
-    - "PWA"
+  - Flutter
+  - Riverpod
+  - Dart
+  - Web
+  - PWA
   tags:
-    - "puzzle"
-    - "flutter"
-    - "kids"
-    - "game"
-    - "logic"
-    - "fantasy"
-    - "tetris"
-    - "plumber"
-    - "pwa"
-    - "offline"
+  - puzzle
+  - flutter
+  - kids
+  - game
+  - logic
+  - fantasy
+  - tetris
+  - plumber
+  - pwa
+  - offline
   pwa: true
-  badge: "🟢 Play Live • PWA"
-  target: "Kids & Family"
+  badge: 🟢 Play Live • PWA
+  target: Kids & Family
   featured: true
-
-- id: "orologiaio"
-  title: "⏰ Orologia.io (Time Master)"
-  audience: "kids"
-  kind: "educational"
+- id: orologiaio
+  title: ⏰ Orologia.io (Time Master)
+  audience: kids
+  kind: educational
   is_game: true
-  category: "kids"
+  category: kids
   score: 85
-  created_at: "2025"
-  tagline: "Master reading analog & digital clocks with Sebi and Alessandro!"
-  description: "Interactive clock-learning game designed to teach children how to read analog clocks (hands, quarter sub-ticks, half-past), adjust digital displays, and master 7-segment digital digits configurations with dedicated guides for Sebi and Ale."
-  screenshot: "assets/screenshots/orologiaio.png"
-  play_url: "https://palladius.github.io/orologia.io/"
-  repo_url: "https://github.com/palladius/orologia.io"
+  created_at: '2025'
+  tagline: Master reading analog & digital clocks with Sebi and Alessandro!
+  description: Interactive clock-learning game designed to teach children how to read
+    analog clocks (hands, quarter sub-ticks, half-past), adjust digital displays,
+    and master 7-segment digital digits configurations with dedicated guides for Sebi
+    and Ale.
+  screenshot: assets/screenshots/orologiaio.png
+  play_url: https://palladius.github.io/orologia.io/
+  repo_url: https://github.com/palladius/orologia.io
   can_embed: true
   tech:
-    - "Flutter"
-    - "Dart"
-    - "Web"
+  - Flutter
+  - Dart
+  - Web
   tags:
-    - "clock"
-    - "educational"
-    - "game"
-    - "flutter"
-    - "kids"
-    - "learning"
-    - "school"
-  badge: "🟢 Play Live"
-  target: "Alessandro & Sebi"
+  - clock
+  - educational
+  - game
+  - flutter
+  - kids
+  - learning
+  - school
+  badge: 🟢 Play Live
+  target: Alessandro & Sebi
   featured: true
-
-- id: "kids-jigsaw-puzzle"
-  title: "🧩 Kids Jigsaw Puzzle"
-  audience: "kids"
-  kind: "game"
-  category: "kids"
+- id: kids-jigsaw-puzzle
+  title: 🧩 Kids Jigsaw Puzzle
+  audience: kids
+  kind: game
+  category: kids
   score: 90
-  created_at: "2025"
-  tagline: "Interactive puzzle with family photos, heroes, and smart-merging tiles!"
-  description: "A delightful jigsaw puzzle game for kids where you can play with family photos or favorite illustrations. Adjacent correct pieces automatically merge and lock together with difficulty levels ranging from 'Easy Peasy' to 'Netflix is Down'!"
-  screenshot: "assets/screenshots/kids-jigsaw-puzzle.png"
-  play_url: "https://palladius.github.io/kids-jigsaw-puzzle/"
-  repo_url: "https://github.com/palladius/kids-jigsaw-puzzle"
+  created_at: '2025'
+  tagline: Interactive puzzle with family photos, heroes, and smart-merging tiles!
+  description: A delightful jigsaw puzzle game for kids where you can play with family
+    photos or favorite illustrations. Adjacent correct pieces automatically merge
+    and lock together with difficulty levels ranging from 'Easy Peasy' to 'Netflix
+    is Down'!
+  screenshot: assets/screenshots/kids-jigsaw-puzzle.png
+  play_url: https://palladius.github.io/kids-jigsaw-puzzle/
+  repo_url: https://github.com/palladius/kids-jigsaw-puzzle
   can_embed: true
   tech:
-    - "Flutter"
-    - "Dart"
-    - "Web"
-    - "PWA"
+  - Flutter
+  - Dart
+  - Web
+  - PWA
   tags:
-    - "puzzle"
-    - "flutter"
-    - "kids"
-    - "game"
-    - "photos"
-    - "family"
-    - "pwa"
-    - "offline"
+  - puzzle
+  - flutter
+  - kids
+  - game
+  - photos
+  - family
+  - pwa
+  - offline
   pwa: true
-  badge: "🟢 Play Live • PWA"
-  target: "The Whole Family"
+  badge: 🟢 Play Live • PWA
+  target: The Whole Family
   featured: true
-
-- id: "pasta-invaders"
-  title: "🍝 Pasta Invaders"
-  audience: "kids"
-  kind: "game"
+- id: pasta-invaders
+  title: 🍝 Pasta Invaders
+  audience: kids
+  kind: game
   is_game: true
-  category: "kids"
+  category: kids
   score: 48
-  tagline: "Cosmic arcade shooter against flying pasta with live Nonna commentary!"
-  description: "A hilarious Space Invaders-style arcade shooter: defend the galaxy from an airborne invasion of rigatoni, tagliatelle, and ravioli, featuring real-time satirical commentary and encouragement from Nonna powered by Google Gemini AI! [Archived: no direct online playable endpoint found, source code available on GitHub]."
-  screenshot: "assets/screenshots/pasta-invaders.png"
-  play_url: ""
-  repo_url: "https://github.com/palladius/pasta-invaders"
+  tagline: Cosmic arcade shooter against flying pasta with live Nonna commentary!
+  description: 'A hilarious Space Invaders-style arcade shooter: defend the galaxy
+    from an airborne invasion of rigatoni, tagliatelle, and ravioli, featuring real-time
+    satirical commentary and encouragement from Nonna powered by Google Gemini AI!
+    [Archived: no direct online playable endpoint found, source code available on
+    GitHub].'
+  screenshot: assets/screenshots/pasta-invaders.png
+  play_url: ''
+  repo_url: https://github.com/palladius/pasta-invaders
   can_embed: false
   archived: true
   hidden: false
-  created_at: "2026"
-  model_used: "Gemini 2.5 Flash"
+  created_at: '2026'
+  model_used: Gemini 2.5 Flash
   tech:
-    - "React"
-    - "HTML5 Canvas"
-    - "Gemini 2.5 Flash"
-    - "Vite"
+  - React
+  - HTML5 Canvas
+  - Gemini 2.5 Flash
+  - Vite
   tags:
-    - "arcade"
-    - "ai"
-    - "kids"
-    - "game"
-    - "pasta"
-    - "archived"
-  badge: "📦 Archived"
-  target: "Kids & Young Gamers"
+  - arcade
+  - ai
+  - kids
+  - game
+  - pasta
+  - archived
+  badge: 📦 Archived
+  target: Kids & Young Gamers
   featured: false
-
-- id: "smurfs-and-dragons"
-  title: "🐉 Smurfs & Dragons (Carlessian Game)"
-  audience: "kids"
-  kind: "game"
+- id: smurfs-and-dragons
+  title: 🐉 Smurfs & Dragons (Carlessian Game)
+  audience: kids
+  kind: game
   is_game: true
-  category: "kids"
+  category: kids
   score: 75
-  tagline: "Silly auto-shooting arcade runner with dragons & armies built with Gemini 2.0!"
-  description: "A hilarious, silly arcade game built with p5.js where your army auto-fires arrows at incoming challenges! Aim at RED choices [-X] to shoot them up into positives [+10] before colliding. Built with Gemini 2.0 (circa 2024/2025)."
-  screenshot: "assets/screenshots/smurfs-and-dragons.png"
-  play_url: "https://smurfs-and-dragons.web.app/"
+  tagline: Silly auto-shooting arcade runner with dragons & armies built with Gemini
+    2.0!
+  description: A hilarious, silly arcade game built with p5.js where your army auto-fires
+    arrows at incoming challenges! Aim at RED choices [-X] to shoot them up into positives
+    [+10] before colliding. Built with Gemini 2.0 (circa 2024/2025).
+  screenshot: assets/screenshots/smurfs-and-dragons.png
+  play_url: https://smurfs-and-dragons.web.app/
   can_embed: true
-  created_at: "Circa 2024"
-  model_used: "Gemini 2.0"
+  created_at: Circa 2024
+  model_used: Gemini 2.0
   tech:
-    - "p5.js"
-    - "Canvas"
-    - "Gemini 2.0"
-    - "Firebase"
+  - p5.js
+  - Canvas
+  - Gemini 2.0
+  - Firebase
   tags:
-    - "silly"
-    - "game"
-    - "kids"
-    - "p5js"
-    - "gemini2.0"
-    - "dragons"
-    - "arcade"
-  badge: "👾 Silly • Gemini 2.0"
-  target: "Kids & Family Fun"
+  - silly
+  - game
+  - kids
+  - p5js
+  - gemini2.0
+  - dragons
+  - arcade
+  badge: 👾 Silly • Gemini 2.0
+  target: Kids & Family Fun
   featured: false
-
-- id: "dungemoji"
-  title: "🏰 Dungemoji: Rogue-like Adventure"
-  audience: "kids"
-  kind: "game"
+- id: dungemoji
+  title: '🏰 Dungemoji: Rogue-like Adventure'
+  audience: kids
+  kind: game
   is_game: true
-  category: "kids"
+  category: kids
   score: 74
-  tagline: "Retro ASCII & Emoji dungeon crawler with rats 🐀, bats 🦇, goblins 👺 & dragons 🐉!"
-  description: "Your Emoji Rogue-like Adventure! Explore procedural ASCII dungeon rooms with virtual controls, fight giant bats, goblins, skeletons, zombies, and the mighty 🐉 Dragon! Generated with Gemini 2.0 (circa 2024/2025) using p5.js and retro 8-bit sound effects."
-  screenshot: "assets/screenshots/dungemoji.png"
-  play_url: "https://dungemoji.web.app/"
+  tagline: Retro ASCII & Emoji dungeon crawler with rats 🐀, bats 🦇, goblins 👺 & dragons
+    🐉!
+  description: Your Emoji Rogue-like Adventure! Explore procedural ASCII dungeon rooms
+    with virtual controls, fight giant bats, goblins, skeletons, zombies, and the
+    mighty 🐉 Dragon! Generated with Gemini 2.0 (circa 2024/2025) using p5.js and retro
+    8-bit sound effects.
+  screenshot: assets/screenshots/dungemoji.png
+  play_url: https://dungemoji.web.app/
   can_embed: true
-  created_at: "Circa 2024"
-  model_used: "Gemini 2.0"
+  created_at: Circa 2024
+  model_used: Gemini 2.0
   tech:
-    - "p5.js"
-    - "p5.sound"
-    - "Gemini 2.0"
-    - "Firebase"
+  - p5.js
+  - p5.sound
+  - Gemini 2.0
+  - Firebase
   tags:
-    - "silly"
-    - "game"
-    - "kids"
-    - "roguelike"
-    - "emoji"
-    - "gemini2.0"
-    - "retro"
-  badge: "👾 Silly • Gemini 2.0"
-  target: "Retro Gamers & Kids"
+  - silly
+  - game
+  - kids
+  - roguelike
+  - emoji
+  - gemini2.0
+  - retro
+  badge: 👾 Silly • Gemini 2.0
+  target: Retro Gamers & Kids
   featured: false
-
-- id: "parola-del-giorno"
-  title: "📜 Parola del Giorno"
-  audience: "kids"
-  kind: "educational"
+- id: parola-del-giorno
+  title: 📜 Parola del Giorno
+  audience: kids
+  kind: educational
   is_game: false
-  category: "kids"
+  category: kids
   score: 82
-  created_at: "2025"
-  tagline: "The whimsical archive of vintage Italian words curated by Pux the Pixie!"
-  description: "Not a game, but a lyrical educational archive for children! Every day a rare vintage Italian word (like fanfaluca, solerzia, cazzabubbola) paired with dreamy fantasy AI artwork and pronunciation to enrich children's vocabulary with laughter and wonder."
-  screenshot: "assets/screenshots/parola-del-giorno.png"
-  play_url: "https://palladius.github.io/parola-del-giorno/"
-  repo_url: "https://github.com/palladius/parola-del-giorno"
+  created_at: '2025'
+  tagline: The whimsical archive of vintage Italian words curated by Pux the Pixie!
+  description: Not a game, but a lyrical educational archive for children! Every day
+    a rare vintage Italian word (like fanfaluca, solerzia, cazzabubbola) paired with
+    dreamy fantasy AI artwork and pronunciation to enrich children's vocabulary with
+    laughter and wonder.
+  screenshot: assets/screenshots/parola-del-giorno.png
+  play_url: https://palladius.github.io/parola-del-giorno/
+  repo_url: https://github.com/palladius/parola-del-giorno
   can_embed: true
   tech:
-    - "Tailwind"
-    - "HTML5"
-    - "GenAI Art"
+  - Tailwind
+  - HTML5
+  - GenAI Art
   tags:
-    - "educational"
-    - "words"
-    - "kids"
-    - "fairytales"
-    - "language"
-    - "vocabulary"
-  badge: "🟢 Explore Live"
-  target: "Carlesso Household"
+  - educational
+  - words
+  - kids
+  - fairytales
+  - language
+  - vocabulary
+  badge: 🟢 Explore Live
+  target: Carlesso Household
   featured: false
-
-- id: "baby-alphabet"
-  title: "🔤 Baby Alphabet (AJ-Alphabet)"
-  audience: "kids"
-  kind: "educational"
+- id: baby-alphabet
+  title: 🔤 Baby Alphabet (AJ-Alphabet)
+  audience: kids
+  kind: educational
   is_game: false
-  category: "kids"
+  category: kids
   score: 42
-  created_at: "2023"
-  tagline: "Built in 24 hours to help Alessandro learn letters and phonetic sounds!"
-  description: "Interactive educational tool created out of Dad's 24-hour 'hold my beer' challenge to teach Alessandro letters and pronunciation with custom family photos. [Currently offline; tracking resurrection on Cloud Run via Issue #1]."
-  screenshot: "assets/screenshots/baby-alphabet.jpg"
-  play_url: ""
-  repo_url: "https://github.com/palladius/baby-alphabet"
-  issue_url: "https://github.com/palladius/baby-alphabet/issues/1"
+  created_at: '2023'
+  tagline: Built in 24 hours to help Alessandro learn letters and phonetic sounds!
+  description: 'Interactive educational tool created out of Dad''s 24-hour ''hold
+    my beer'' challenge to teach Alessandro letters and pronunciation with custom
+    family photos. [Currently offline; tracking resurrection on Cloud Run via Issue
+    #1].'
+  screenshot: assets/screenshots/baby-alphabet.jpg
+  play_url: ''
+  repo_url: https://github.com/palladius/baby-alphabet
+  issue_url: https://github.com/palladius/baby-alphabet/issues/1
   can_embed: false
   tech:
-    - "Ruby on Rails"
-    - "Web Audio"
-    - "Docker"
-    - "Kubernetes"
+  - Ruby on Rails
+  - Web Audio
+  - Docker
+  - Kubernetes
   tags:
-    - "alphabet"
-    - "educational"
-    - "kids"
-    - "school"
-    - "phonetics"
-  badge: "🔧 Offline (GHI #1)"
-  target: "Alessandro"
+  - alphabet
+  - educational
+  - kids
+  - school
+  - phonetics
+  badge: '🔧 Offline (GHI #1)'
+  target: Alessandro
   featured: false
-
-- id: "genai-kids-stories"
-  title: "📖 GenAI Kids Bedtime Stories"
-  audience: "kids"
-  kind: "educational"
+- id: genai-kids-stories
+  title: 📖 GenAI Kids Bedtime Stories
+  audience: kids
+  kind: educational
   is_game: false
-  category: "kids"
+  category: kids
   score: 62
-  created_at: "2024"
-  tagline: "Personalized bedtime story generator for kids with AI illustrations!"
-  description: "AI-driven educational bedtime story creator that crafts personalized fairy tales for children, illustrated and translated on the fly using Google Cloud Run, Gemini, and Vertex AI."
-  screenshot: "assets/screenshots/genai-kids-stories.png"
-  play_url: "https://genai-kids-stories-gcloud-poor-cdlu26pd4q-ew.a.run.app/"
-  repo_url: "https://github.com/palladius/genai-kids-stories"
+  created_at: '2024'
+  tagline: Personalized bedtime story generator for kids with AI illustrations!
+  description: AI-driven educational bedtime story creator that crafts personalized
+    fairy tales for children, illustrated and translated on the fly using Google Cloud
+    Run, Gemini, and Vertex AI.
+  screenshot: assets/screenshots/genai-kids-stories.png
+  play_url: https://genai-kids-stories-gcloud-poor-cdlu26pd4q-ew.a.run.app/
+  repo_url: https://github.com/palladius/genai-kids-stories
   can_embed: false
   tech:
-    - "Cloud Run"
-    - "Gemini / Vertex AI"
-    - "Python"
+  - Cloud Run
+  - Gemini / Vertex AI
+  - Python
   tags:
-    - "words"
-    - "stories"
-    - "educational"
-    - "ai"
-    - "kids"
-    - "bedtime"
-    - "reading"
-  badge: "🤖 AI Stories"
-  target: "Bedtime Storytellers"
+  - words
+  - stories
+  - educational
+  - ai
+  - kids
+  - bedtime
+  - reading
+  badge: 🤖 AI Stories
+  target: Bedtime Storytellers
   featured: false
-
-# ------------------------------------------------------------------------------
-# 🛠️ DAD'S TOOLS
-# ------------------------------------------------------------------------------
-
-- id: "conductoras"
-  title: "🚂 Conductoras (Conductor at Scale)"
-  audience: "tools"
-  kind: "tool"
-  category: "tools"
+- id: conductoras
+  title: 🚂 Conductoras (Conductor at Scale)
+  audience: tools
+  kind: tool
+  category: tools
   score: 93
-  created_at: "2026-07-18"
-  tagline: "Observe and orchestrate N git repositories with spaceship visualizers!"
-  description: "Framework to observe multiple git repositories concurrently across worktrees, track token spend (measured in Macha Lattes 🍵!), and animate code history progression with retro-futuristic spaceship UI."
-  screenshot: "assets/screenshots/conductoras.jpg"
-  youtube_id: "wHEUxk6G7wE"
-  youtube_url: "https://youtu.be/wHEUxk6G7wE"
-  play_url: ""
-  repo_url: "https://github.com/palladius/conductoras"
+  created_at: '2026-07-18'
+  tagline: Observe and orchestrate N git repositories with spaceship visualizers!
+  description: Framework to observe multiple git repositories concurrently across
+    worktrees, track token spend (measured in Macha Lattes 🍵!), and animate code history
+    progression with retro-futuristic spaceship UI.
+  screenshot: assets/screenshots/conductoras.jpg
+  youtube_id: wHEUxk6G7wE
+  youtube_url: https://youtu.be/wHEUxk6G7wE
+  play_url: ''
+  repo_url: https://github.com/palladius/conductoras
   can_embed: false
   tech:
-    - "Node.js"
-    - "Git Worktrees"
-    - "Spaceship UI"
-    - "ADK Benjamin SRE"
+  - Node.js
+  - Git Worktrees
+  - Spaceship UI
+  - ADK Benjamin SRE
   tags:
-    - "tools"
-    - "git"
-    - "sre"
-    - "automation"
-    - "video"
-  badge: "🎬 Demo Video"
-  target: "Dad Riccardo & Devs"
+  - tools
+  - git
+  - sre
+  - automation
+  - video
+  badge: 🎬 Demo Video
+  target: Dad Riccardo & Devs
   featured: true
-
-- id: "antigravity-ruby-sdk"
-  title: "💎 Antigravity Ruby SDK"
-  audience: "tools"
-  kind: "tool"
-  category: "tools"
+- id: antigravity-ruby-sdk
+  title: 💎 Antigravity Ruby SDK
+  audience: tools
+  kind: tool
+  category: tools
   score: 92
-  created_at: "2026-08-18"
-  tagline: "Official Unofficial Antigravity SDK for Ruby — Autonomous AI agents in Ruby & Rails!"
-  description: "Full-featured Ruby SDK for Google Antigravity autonomous AI agents! Seamless Rails integration, token streaming, declarative Policy DSL with sandbox permissions, audit logging, sidecars, guards, and Telegram bot voice integration."
-  screenshot: "assets/screenshots/antigravity-ruby-sdk.jpg"
-  youtube_id: "HuM6T_-NqO8"
-  youtube_url: "https://youtu.be/HuM6T_-NqO8"
-  article_url: "https://ricc.rocks/en/posts/technology/2026-08-13-antigravity-ruby-sdk-article/"
-  play_url: ""
-  repo_url: "https://github.com/palladius/antigravity-ruby-sdk"
+  created_at: '2026-08-18'
+  tagline: Official Unofficial Antigravity SDK for Ruby — Autonomous AI agents in
+    Ruby & Rails!
+  description: Full-featured Ruby SDK for Google Antigravity autonomous AI agents!
+    Seamless Rails integration, token streaming, declarative Policy DSL with sandbox
+    permissions, audit logging, sidecars, guards, and Telegram bot voice integration.
+  screenshot: assets/screenshots/antigravity-ruby-sdk.jpg
+  youtube_id: HuM6T_-NqO8
+  youtube_url: https://youtu.be/HuM6T_-NqO8
+  article_url: https://ricc.rocks/en/posts/technology/2026-08-13-antigravity-ruby-sdk-article/
+  play_url: ''
+  repo_url: https://github.com/palladius/antigravity-ruby-sdk
   can_embed: false
   tech:
-    - "Ruby"
-    - "Antigravity SDK"
-    - "Rails"
-    - "Gemini API"
-    - "Telegram Bot"
+  - Ruby
+  - Antigravity SDK
+  - Rails
+  - Gemini API
+  - Telegram Bot
   tags:
-    - "tools"
-    - "ruby"
-    - "sdk"
-    - "ai"
-    - "antigravity"
-    - "agents"
-    - "video"
-  badge: "🎬 Demo Video"
-  target: "Rubyists & AI Devs"
+  - tools
+  - ruby
+  - sdk
+  - ai
+  - antigravity
+  - agents
+  - video
+  badge: 🎬 Demo Video
+  target: Rubyists & AI Devs
   featured: true
-
-- id: "sumaron"
-  title: "🐴 Sumaron (The Big Donkey of Summarization)"
-  audience: "tools"
-  kind: "tool"
-  category: "tools"
+- id: sumaron
+  title: 🐴 Sumaron (The Big Donkey of Summarization)
+  audience: tools
+  kind: tool
+  category: tools
   score: 72
-  created_at: "2026"
-  tagline: "Fast, cache-efficient directory summarizer powered by Gemini & Imagen!"
-  description: "Codebase and folder summarizer with deterministic two-tier caching and automated visual documentation. Humorous homage to 'Il signore dei Tarzanelli' (Somaro donkey + Sauron of Mordor)."
-  screenshot: "assets/screenshots/sumaron.jpg"
-  play_url: ""
-  repo_url: "https://github.com/palladius/sumaron"
+  created_at: '2026'
+  tagline: Fast, cache-efficient directory summarizer powered by Gemini & Imagen!
+  description: Codebase and folder summarizer with deterministic two-tier caching
+    and automated visual documentation. Humorous homage to 'Il signore dei Tarzanelli'
+    (Somaro donkey + Sauron of Mordor).
+  screenshot: assets/screenshots/sumaron.jpg
+  play_url: ''
+  repo_url: https://github.com/palladius/sumaron
   can_embed: false
   tech:
-    - "Go"
-    - "Google Gemini"
-    - "Imagen"
+  - Go
+  - Google Gemini
+  - Imagen
   tags:
-    - "tools"
-    - "ai"
-    - "cli"
-    - "caching"
-  badge: "🛠️ Dad's Tool"
-  target: "Devs & Code Explorers"
+  - tools
+  - ai
+  - cli
+  - caching
+  badge: 🛠️ Dad's Tool
+  target: Devs & Code Explorers
   featured: false
-
-- id: "gprism"
-  title: "💎 Gprism (Git Privatize in Secret Manager)"
-  audience: "tools"
-  kind: "tool"
-  category: "tools"
+- id: gprism
+  title: 💎 Gprism (Git Privatize in Secret Manager)
+  audience: tools
+  kind: tool
+  category: tools
   score: 66
-  created_at: "2026"
-  tagline: "Store secret files in Google Cloud Secret Manager instead of git!"
-  description: "Ruby-based evolution of git-privatize that securely encrypts and synchronizes sensitive files (.env, credentials) to Google Cloud Secret Manager, with automated GCS offloading for payloads exceeding 64KB."
-  screenshot: "assets/screenshots/gprism.jpg"
-  play_url: ""
-  repo_url: "https://github.com/palladius/gprism"
+  created_at: '2026'
+  tagline: Store secret files in Google Cloud Secret Manager instead of git!
+  description: Ruby-based evolution of git-privatize that securely encrypts and synchronizes
+    sensitive files (.env, credentials) to Google Cloud Secret Manager, with automated
+    GCS offloading for payloads exceeding 64KB.
+  screenshot: assets/screenshots/gprism.jpg
+  play_url: ''
+  repo_url: https://github.com/palladius/gprism
   can_embed: false
   tech:
-    - "Ruby"
-    - "Secret Manager"
-    - "GCP"
-    - "CLI"
+  - Ruby
+  - Secret Manager
+  - GCP
+  - CLI
   tags:
-    - "tools"
-    - "gcp"
-    - "security"
-    - "secrets"
-    - "git"
-    - "cli"
-  badge: "🛠️ Dad's Tool"
-  target: "Devs & SREs"
+  - tools
+  - gcp
+  - security
+  - secrets
+  - git
+  - cli
+  badge: 🛠️ Dad's Tool
+  target: Devs & SREs
   featured: false
-
-- id: "storagify"
-  title: "📦 Storagify"
-  audience: "tools"
-  kind: "tool"
-  category: "tools"
+- id: storagify
+  title: 📦 Storagify
+  audience: tools
+  kind: tool
+  category: tools
   score: 69
-  created_at: "2026"
-  tagline: "Zero-friction CLI tool to sync media output folders to Cloud Storage!"
-  description: "Python CLI tool to sync rich media and report output folders from AI harnesses and automation scripts to GCS with Astro-styled HTML rendering, directory indexing, and bandwidth-optimized delta uploads."
-  screenshot: "assets/screenshots/storagify.png"
-  play_url: ""
-  repo_url: "https://gitlab.com/palladius/storagify"
+  created_at: '2026'
+  tagline: Zero-friction CLI tool to sync media output folders to Cloud Storage!
+  description: Python CLI tool to sync rich media and report output folders from AI
+    harnesses and automation scripts to GCS with Astro-styled HTML rendering, directory
+    indexing, and bandwidth-optimized delta uploads.
+  screenshot: assets/screenshots/storagify.png
+  play_url: ''
+  repo_url: https://gitlab.com/palladius/storagify
   can_embed: false
   tech:
-    - "Python"
-    - "Cloud Storage"
-    - "GCP"
-    - "Astro"
+  - Python
+  - Cloud Storage
+  - GCP
+  - Astro
   tags:
-    - "tools"
-    - "gcp"
-    - "storage"
-    - "media"
-    - "cli"
-    - "automation"
-  badge: "🛠️ Dad's Tool"
-  target: "AI Agents & Devs"
+  - tools
+  - gcp
+  - storage
+  - media
+  - cli
+  - automation
+  badge: 🛠️ Dad's Tool
+  target: AI Agents & Devs
   featured: false
-
-- id: "gemini-tools"
-  title: "🛠️ Gemini Tools (Synthesizer & Video Judge)"
-  audience: "tools"
-  kind: "tool"
-  category: "tools"
+- id: gemini-tools
+  title: 🛠️ Gemini Tools (Synthesizer & Video Judge)
+  audience: tools
+  kind: tool
+  category: tools
   score: 94
-  created_at: "2026-08"
-  tagline: "Google GenAI SDK CLI harness: character-consistent photo synthesis & biometric video judge!"
-  description: "A powerhouse collection of Python CLI utilities powered by Google GenAI (google-genai SDK & uv). Features bin/generate_photo.py for reference-driven character-consistent photo synthesis with automatic model fallbacks, bin/judge_video.py for Hollywood forensic video quality & biometric evaluation, bin/omni-video-gen.py for Veo video generation, and bin/list-gemini-models.py."
-  screenshot: "assets/screenshots/gemini-tools.png"
-  repo_url: "https://github.com/palladius/gemini-tools"
+  created_at: 2026-08
+  tagline: 'Google GenAI SDK CLI harness: character-consistent photo synthesis & biometric
+    video judge!'
+  description: A powerhouse collection of Python CLI utilities powered by Google GenAI
+    (google-genai SDK & uv). Features bin/generate_photo.py for reference-driven character-consistent
+    photo synthesis with automatic model fallbacks, bin/judge_video.py for Hollywood
+    forensic video quality & biometric evaluation, bin/omni-video-gen.py for Veo video
+    generation, and bin/list-gemini-models.py.
+  screenshot: assets/screenshots/gemini-tools.png
+  repo_url: https://github.com/palladius/gemini-tools
   can_embed: false
   tech:
-    - "Python"
-    - "Google GenAI SDK"
-    - "Gemini 3.1 Flash Image"
-    - "Nano Banana Pro"
-    - "Veo 3.0"
-    - "Rich"
-    - "uv"
+  - Python
+  - Google GenAI SDK
+  - Gemini 3.1 Flash Image
+  - Nano Banana Pro
+  - Veo 3.0
+  - Rich
+  - uv
   tags:
-    - "tools"
-    - "ai"
-    - "cli"
-    - "gemini"
-    - "genai"
-    - "character-consistency"
-    - "biometrics"
-    - "evals"
-    - "veo"
-    - "video"
-  badge: "🛠️ Gemini GenAI CLI"
-  target: "AI Engineers & Devs"
+  - tools
+  - ai
+  - cli
+  - gemini
+  - genai
+  - character-consistency
+  - biometrics
+  - evals
+  - veo
+  - video
+  badge: 🛠️ Gemini GenAI CLI
+  target: AI Engineers & Devs
   featured: true
-
-- id: "media-arneis"
-  title: "🍷 Media Arneis (Multimodal AI Orchestrator)"
-  audience: "tools"
-  kind: "tool"
-  category: "tools"
+- id: media-arneis
+  title: 🍷 Media Arneis (Multimodal AI Orchestrator)
+  audience: tools
+  kind: tool
+  category: tools
   score: 93
-  created_at: "2026-06"
-  tagline: "Declarative kubectl-like orchestrator for AI videos, bedtime stories & comic strips!"
-  description: "Arneis is a declarative, Kubernetes-inspired media creation engine leveraging Gemini, Lyria, Nanobanana, and Veo. Transforms YAML specifications into multi-scene videos, illustrated kids storybooks with character consistency, and panel-by-panel comic strips (fumetti) with async Ruby fibers and token tracking."
-  screenshot: "assets/screenshots/media-arneis.png"
-  repo_url: "https://github.com/palladius/media-arneis"
+  created_at: 2026-06
+  tagline: Declarative kubectl-like orchestrator for AI videos, bedtime stories &
+    comic strips!
+  description: Arneis is a declarative, Kubernetes-inspired media creation engine
+    leveraging Gemini, Lyria, Nanobanana, and Veo. Transforms YAML specifications
+    into multi-scene videos, illustrated kids storybooks with character consistency,
+    and panel-by-panel comic strips (fumetti) with async Ruby fibers and token tracking.
+  screenshot: assets/screenshots/media-arneis.png
+  repo_url: https://github.com/palladius/media-arneis
   can_embed: false
   tech:
-    - "Ruby"
-    - "YAML"
-    - "Gemini"
-    - "Veo"
-    - "Lyria"
-    - "Nanobanana"
-    - "Fibers"
+  - Ruby
+  - YAML
+  - Gemini
+  - Veo
+  - Lyria
+  - Nanobanana
+  - Fibers
   tags:
-    - "tools"
-    - "ai"
-    - "orchestration"
-    - "media"
-    - "ruby"
-    - "character-consistency"
-    - "video"
-    - "stories"
-  badge: "🍷 Media Orchestrator"
-  target: "Creative Developers & Devs"
+  - tools
+  - ai
+  - orchestration
+  - media
+  - ruby
+  - character-consistency
+  - video
+  - stories
+  badge: 🍷 Media Orchestrator
+  target: Creative Developers & Devs
   featured: true
-
-- id: "character-consistency-studio"
-  title: "🎭 Character Consistency Studio 2026"
-  audience: "tools"
-  kind: "tool"
-  category: "tools"
+- id: character-consistency-studio
+  title: 🎭 Character Consistency Studio 2026
+  audience: tools
+  kind: tool
+  category: tools
   score: 95
-  created_at: "2026-08"
-  tagline: "Same face, infinite worlds: AI character consistency with automated LLM Judge!"
-  description: "AI-powered web app and evaluation suite for generating consistent character images across infinite worlds using Google Gemini. Features multi-character reference photo management (Ale, Sebi, Riccardo, Kate), automated LLM Judge consistency evaluation (with hilarious Benigni easter egg), private dataset segregation, and live deployment on Google Cloud Run."
-  screenshot: "assets/screenshots/character-consistency-studio.png"
-  play_url: "https://character-consistency-studio-v1-frontend-only-272932496670.us-west1.run.app"
-  repo_url: "https://github.com/palladius/character-consistency-studio-2026"
+  created_at: 2026-08
+  tagline: 'Same face, infinite worlds: AI character consistency with automated LLM
+    Judge!'
+  description: AI-powered web app and evaluation suite for generating consistent character
+    images across infinite worlds using Google Gemini. Features multi-character reference
+    photo management (Ale, Sebi, Riccardo, Kate), automated LLM Judge consistency
+    evaluation (with hilarious Benigni easter egg), private dataset segregation, and
+    live deployment on Google Cloud Run.
+  screenshot: assets/screenshots/character-consistency-studio.png
+  play_url: https://character-consistency-studio-v1-frontend-only-272932496670.us-west1.run.app
+  repo_url: https://github.com/palladius/character-consistency-studio-2026
   can_embed: true
   tech:
-    - "React"
-    - "TypeScript"
-    - "Vite"
-    - "Google Gemini"
-    - "Cloud Run"
-    - "Python Eval"
+  - React
+  - TypeScript
+  - Vite
+  - Google Gemini
+  - Cloud Run
+  - Python Eval
   tags:
-    - "tools"
-    - "ai"
-    - "character-consistency"
-    - "photos"
-    - "gemini"
-    - "cloud-run"
-    - "eval"
-  badge: "🎭 Live Studio • Cloud Run"
-  target: "Creators, Family & Devs"
+  - tools
+  - ai
+  - character-consistency
+  - photos
+  - gemini
+  - cloud-run
+  - eval
+  badge: 🎭 Live Studio • Cloud Run
+  target: Creators, Family & Devs
   featured: true
-
-- id: "respec"
-  title: "📋 Re-SPEC (Spec-Driven AI Coding Engine)"
-  audience: "tools"
-  kind: "tool"
-  category: "tools"
+- id: respec
+  title: 📋 Re-SPEC (Spec-Driven AI Coding Engine)
+  audience: tools
+  kind: tool
+  category: tools
   score: 91
-  created_at: "2026-07"
-  tagline: "Turn rough ideas into structured SPEC.md blueprints for AI coding assistants!"
-  description: "A powerful Go-based CLI tool inspired by Ali G ('Booyakasha! You gotta RE-SPEC each other's repo!'). Transforms vague feature requests and one-liners into structured, production-ready SPEC.md documents tailored for AI coding assistants like Antigravity, Claude, and Gemini."
-  screenshot: "assets/screenshots/respec.png"
-  repo_url: "https://github.com/palladius/respec"
+  created_at: 2026-07
+  tagline: Turn rough ideas into structured SPEC.md blueprints for AI coding assistants!
+  description: A powerful Go-based CLI tool inspired by Ali G ('Booyakasha! You gotta
+    RE-SPEC each other's repo!'). Transforms vague feature requests and one-liners
+    into structured, production-ready SPEC.md documents tailored for AI coding assistants
+    like Antigravity, Claude, and Gemini.
+  screenshot: assets/screenshots/respec.png
+  repo_url: https://github.com/palladius/respec
   can_embed: false
   tech:
-    - "Go"
-    - "LLM"
-    - "CLI"
-    - "Markdown"
-    - "Spec-Driven"
+  - Go
+  - LLM
+  - CLI
+  - Markdown
+  - Spec-Driven
   tags:
-    - "tools"
-    - "go"
-    - "cli"
-    - "spec"
-    - "ai"
-    - "engineering"
-  badge: "📋 Spec Engine"
-  target: "Software Engineers & Agents"
+  - tools
+  - go
+  - cli
+  - spec
+  - ai
+  - engineering
+  badge: 📋 Spec Engine
+  target: Software Engineers & Agents
   featured: true
-
-- id: "palladius-vetrina"
-  title: "🪞 Palladius Vetrina (Mise en Abyme)"
-  audience: "tools"
-  kind: "tool"
-  category: "tools"
+- id: palladius-vetrina
+  title: 🪞 Palladius Vetrina (Mise en Abyme)
+  audience: tools
+  kind: tool
+  category: tools
   score: 99
-  created_at: "2026-09-06"
-  tagline: "The showcase that showcases the showcase that showcases the showcase..."
-  description: "A recursive Droste-effect inception loop! The Palladius Showcase running inside a browser, showcasing itself in an infinite visual mirror. Zero runtime dependencies, instant search, and pure philosophical meta-satisfaction."
-  screenshot: "assets/screenshots/vetrina-meta.jpg"
-  play_url: "https://palladius.github.io/vetrina/"
-  repo_url: "https://github.com/palladius/vetrina"
+  created_at: '2026-09-06'
+  tagline: The showcase that showcases the showcase that showcases the showcase...
+  description: A recursive Droste-effect inception loop! The Palladius Showcase running
+    inside a browser, showcasing itself in an infinite visual mirror. Zero runtime
+    dependencies, instant search, and pure philosophical meta-satisfaction.
+  screenshot: assets/screenshots/vetrina-meta.jpg
+  play_url: https://palladius.github.io/vetrina/
+  repo_url: https://github.com/palladius/vetrina
   can_embed: true
   pwa: true
   tech:
-    - "TailwindCSS"
-    - "Vanilla JS"
-    - "YAML"
-    - "GitHub Pages"
-    - "Python"
+  - TailwindCSS
+  - Vanilla JS
+  - YAML
+  - GitHub Pages
+  - Python
   tags:
-    - "meta"
-    - "droste"
-    - "inception"
-    - "showcase"
-    - "tools"
-    - "recursive"
-    - "infinite"
-    - "pwa"
-  badge: "🪞 #meta • Inception"
-  target: "Philosophers & Devs"
+  - meta
+  - droste
+  - inception
+  - showcase
+  - tools
+  - recursive
+  - infinite
+  - pwa
+  badge: '🪞 #meta • Inception'
+  target: Philosophers & Devs
   featured: true
-
-# ------------------------------------------------------------------------------
-# 📔 PAPINO'S DIARIES, JOURNALS & LIFE APPS
-# ------------------------------------------------------------------------------
-
-- id: "compleanno-palladiano-2026"
-  title: "🍽️ Compleanno di Papà (50° Mezzo Secolo)"
-  audience: "journals"
-  kind: "journal"
-  category: "journals"
+- id: compleanno-palladiano-2026
+  title: 🍽️ Compleanno di Papà (50° Mezzo Secolo)
+  audience: journals
+  kind: journal
+  category: journals
   score: 96
-  created_at: "2026"
-  tagline: "50 Shades of Yellow: Banquet d'Avanguardia & Bigoli con la Veganiga!"
-  description: "Official gastronomic website celebrating Riccardo's 50th birthday on December 29, 2026. Featuring Ermete Bottazzi's avant-garde cruelty-free menu (Bigoli con la Veganiga di Lugano, Aria di Bosco Ferrarese, Tiramisù allo Struzzo Vegano) built with Astro & Tailwind."
-  screenshot: "assets/screenshots/compleanno-palladiano.png"
-  play_url: "https://palladius.github.io/compleanno-palladiano-2026/menu/"
-  repo_url: "https://github.com/palladius/compleanno-palladiano-2026"
+  created_at: '2026'
+  tagline: '50 Shades of Yellow: Banquet d''Avanguardia & Bigoli con la Veganiga!'
+  description: Official gastronomic website celebrating Riccardo's 50th birthday on
+    December 29, 2026. Featuring Ermete Bottazzi's avant-garde cruelty-free menu (Bigoli
+    con la Veganiga di Lugano, Aria di Bosco Ferrarese, Tiramisù allo Struzzo Vegano)
+    built with Astro & Tailwind.
+  screenshot: assets/screenshots/compleanno-palladiano.png
+  play_url: https://palladius.github.io/compleanno-palladiano-2026/menu/
+  repo_url: https://github.com/palladius/compleanno-palladiano-2026
   can_embed: true
   tech:
-    - "Astro"
-    - "Tailwind"
-    - "TypeScript"
-    - "GitHub Pages"
+  - Astro
+  - Tailwind
+  - TypeScript
+  - GitHub Pages
   tags:
-    - "journal"
-    - "diary"
-    - "family"
-    - "food"
-    - "riccardo"
-    - "50th"
-    - "veganiga"
-  badge: "🎉 50° Compleanno"
-  target: "Friends & Family"
+  - journal
+  - diary
+  - family
+  - food
+  - riccardo
+  - 50th
+  - veganiga
+  badge: 🎉 50° Compleanno
+  target: Friends & Family
   featured: true
-
-- id: "septober-next"
-  title: "🗓️ Septober Next (Node/Python Todo PWA)"
-  audience: "journals"
-  kind: "journal"
-  category: "journals"
+- id: septober-next
+  title: 🗓️ Septober Next (Node/Python Todo PWA)
+  audience: journals
+  kind: journal
+  category: journals
   score: 91
-  created_at: "2026"
-  tagline: "Procrastinators unite... with real-time WebSockets & magic parser!"
-  description: "Modern rewrite of Riccardo's 15-year-old todo app with natural language magic parsing (dates, priorities, wishlists), real-time WebSockets synchronization, Supabase persistence, touch swipe gestures, and sleek dark mode UI deployed on Cloud Run."
-  screenshot: "assets/screenshots/septober.jpg"
-  play_url: "https://septober-next-467916597830.europe-west1.run.app/"
-  repo_url: "https://github.com/palladius/septober"
+  created_at: '2026'
+  tagline: Procrastinators unite... with real-time WebSockets & magic parser!
+  description: Modern rewrite of Riccardo's 15-year-old todo app with natural language
+    magic parsing (dates, priorities, wishlists), real-time WebSockets synchronization,
+    Supabase persistence, touch swipe gestures, and sleek dark mode UI deployed on
+    Cloud Run.
+  screenshot: assets/screenshots/septober.jpg
+  play_url: https://septober-next-467916597830.europe-west1.run.app/
+  repo_url: https://github.com/palladius/septober
   pwa: true
   can_embed: true
   tech:
-    - "FastAPI"
-    - "Python"
-    - "WebSockets"
-    - "Cloud Run"
-    - "PWA"
+  - FastAPI
+  - Python
+  - WebSockets
+  - Cloud Run
+  - PWA
   tags:
-    - "journal"
-    - "diary"
-    - "todo"
-    - "productivity"
-    - "pwa"
-    - "offline"
-    - "websockets"
-  badge: "🗓️ Todo App • PWA"
-  target: "Dad Riccardo"
+  - journal
+  - diary
+  - todo
+  - productivity
+  - pwa
+  - offline
+  - websockets
+  badge: 🗓️ Todo App • PWA
+  target: Dad Riccardo
   featured: true
-
-- id: "private-journal"
-  title: "🔒 Riccardo's Private Journal"
-  audience: "journals"
-  kind: "journal"
-  category: "journals"
+- id: private-journal
+  title: 🔒 Riccardo's Private Journal
+  audience: journals
+  kind: journal
+  category: journals
   score: 88
-  created_at: "2026"
-  tagline: "Family memoirs, Polaroid chronicles, and AI-illustrated private stories."
-  description: "Riccardo's deeply personal family memoirs and daily chronicles, featuring automated Polaroid photo galleries, AI Pixar-style memory renders with Ale and Sebi, and protected behind Cloudflare Zero Trust Access."
-  screenshot: "assets/screenshots/private-journal.jpg"
-  play_url: "https://lobby-ricc-pvt-journal2.palladiusbonton.workers.dev/"
-  repo_url: "https://github.com/palladius/lobby-ricc-pvt-journal"
+  created_at: '2026'
+  tagline: Family memoirs, Polaroid chronicles, and AI-illustrated private stories.
+  description: Riccardo's deeply personal family memoirs and daily chronicles, featuring
+    automated Polaroid photo galleries, AI Pixar-style memory renders with Ale and
+    Sebi, and protected behind Cloudflare Zero Trust Access.
+  screenshot: assets/screenshots/private-journal.jpg
+  play_url: https://lobby-ricc-pvt-journal2.palladiusbonton.workers.dev/
+  repo_url: https://github.com/palladius/lobby-ricc-pvt-journal
   can_embed: false
   tech:
-    - "Jekyll"
-    - "Cloudflare Workers"
-    - "Zero Trust"
-    - "Pixar AI"
+  - Jekyll
+  - Cloudflare Workers
+  - Zero Trust
+  - Pixar AI
   tags:
-    - "journal"
-    - "diary"
-    - "private"
-    - "family"
-    - "memoirs"
-    - "polaroid"
-  badge: "🔒 Private Journal"
-  target: "Riccardo & Family"
+  - journal
+  - diary
+  - private
+  - family
+  - memoirs
+  - polaroid
+  badge: 🔒 Private Journal
+  target: Riccardo & Family
   featured: false
-
-- id: "lobby-sudafrica-journal"
-  title: "🇿🇦 South Africa Diary (Lobby Safari)"
-  audience: "journals"
-  kind: "journal"
-  category: "journals"
+- id: lobby-sudafrica-journal
+  title: 🇿🇦 South Africa Diary (Lobby Safari)
+  audience: journals
+  kind: journal
+  category: journals
   score: 90
-  created_at: "2026"
-  tagline: "Pilanesberg safaris, lions, Franschhoek wine trams & family adventures!"
-  description: "Travelogue and daily photo diary of the Carlesso family trip to South Africa in February 2026. From Pilanesberg National Park game drives and lion encounters to the Franschhoek wine tram and the resurrection of Lobby."
-  screenshot: "assets/screenshots/sudafrica-journal.png"
-  play_url: "https://lobby-sudafrica-journal.palladiusbonton.workers.dev/"
-  repo_url: "https://github.com/palladius/lobby-sudafrica-journal"
+  created_at: '2026'
+  tagline: Pilanesberg safaris, lions, Franschhoek wine trams & family adventures!
+  description: Travelogue and daily photo diary of the Carlesso family trip to South
+    Africa in February 2026. From Pilanesberg National Park game drives and lion encounters
+    to the Franschhoek wine tram and the resurrection of Lobby.
+  screenshot: assets/screenshots/sudafrica-journal.png
+  play_url: https://lobby-sudafrica-journal.palladiusbonton.workers.dev/
+  repo_url: https://github.com/palladius/lobby-sudafrica-journal
   can_embed: false
   tech:
-    - "Jekyll"
-    - "Markdown"
-    - "Cloudflare Workers"
-    - "Pixar Maps"
+  - Jekyll
+  - Markdown
+  - Cloudflare Workers
+  - Pixar Maps
   tags:
-    - "journal"
-    - "diary"
-    - "travel"
-    - "south-africa"
-    - "safari"
-    - "family"
-  badge: "🇿🇦 Travel Diary"
-  target: "Family & Explorers"
+  - journal
+  - diary
+  - travel
+  - south-africa
+  - safari
+  - family
+  badge: 🇿🇦 Travel Diary
+  target: Family & Explorers
   featured: true
-
-- id: "ricc-reads-the-news"
-  title: "📰 Ricc Reads the News"
-  audience: "journals"
-  kind: "journal"
-  category: "journals"
+- id: ricc-reads-the-news
+  title: 📰 Ricc Reads the News
+  audience: journals
+  kind: journal
+  category: journals
   score: 84
-  created_at: "2026"
-  tagline: "Weekly agile newsletter connecting tech, politics, food & AI disruption!"
-  description: "Riccardo's weekly newsletter connecting the dots between breakthrough AI developments, global tech currents, occasional politics, and Italian cuisine, rendered with sleek editorial layout."
-  screenshot: "assets/screenshots/ricc-reads-the-news.png"
-  play_url: "https://ricc-reads-the-news.netlify.app/"
-  repo_url: "https://github.com/palladius/ricc-reads-the-news"
+  created_at: '2026'
+  tagline: Weekly agile newsletter connecting tech, politics, food & AI disruption!
+  description: Riccardo's weekly newsletter connecting the dots between breakthrough
+    AI developments, global tech currents, occasional politics, and Italian cuisine,
+    rendered with sleek editorial layout.
+  screenshot: assets/screenshots/ricc-reads-the-news.png
+  play_url: https://ricc-reads-the-news.netlify.app/
+  repo_url: https://github.com/palladius/ricc-reads-the-news
   can_embed: false
   tech:
-    - "Jekflix"
-    - "Jekyll"
-    - "Netlify"
-    - "Markdown"
+  - Jekflix
+  - Jekyll
+  - Netlify
+  - Markdown
   tags:
-    - "journal"
-    - "diary"
-    - "newsletter"
-    - "news"
-    - "tech"
-    - "ai"
-  badge: "📰 Newsletter"
-  target: "Curious Minds & Techies"
+  - journal
+  - diary
+  - newsletter
+  - news
+  - tech
+  - ai
+  badge: 📰 Newsletter
+  target: Curious Minds & Techies
   featured: false
-
+- id: sakura
+  title: 🌸 Sakura (Swiss Army Knife)
+  audience: tools
+  kind: tool
+  category: tools
+  version: 1.0.0
+  score: 70
+  created_at: '2024'
+  tagline: Swiss Army Knife Unnecessary Repository yet Awesome shell scripts!
+  description: Riccardo's open-source shell scripts, cheatsheets, PS1 coloring, and
+    CLI productivity swiss-army-knife with prompt coloring and act scrambler.
+  screenshot_url: https://raw.githubusercontent.com/palladius/sakura/master/images/sakura2.jpg
+  repo_url: https://github.com/palladius/sakura
+  play_url: ''
+  can_embed: false
+  tech:
+  - Bash
+  - Shell
+  - CLI
+  - Linux
+  - macOS
+  tags:
+  - shell
+  - tools
+  - bash
+  - cli
+  - sakura
+  - productivity
+  badge: 🌸 Shell Tool
+  target: Shell Lovers & SREs
+  screenshot: assets/screenshots/sakura.jpg
