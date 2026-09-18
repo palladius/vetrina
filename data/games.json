@@ -20,15 +20,31 @@
     "target": "Alessandro, Sebi & Family",
     "regions": [
       {
-        "name": "🇨🇭 Zurich (europe-west6)",
+        "name": "🇨🇭 Zurich Prod",
         "url": "https://pupurabbu-3d-272932496670.europe-west6.run.app",
         "region": "europe-west6",
+        "env": "prod",
         "flag": "🇨🇭"
       },
       {
-        "name": "🇧🇪 Belgium (europe-west1)",
+        "name": "🇨🇭 Zurich Dev",
+        "url": "https://pupurabbu-3d-dev-272932496670.europe-west6.run.app",
+        "region": "europe-west6",
+        "env": "dev",
+        "flag": "🇨🇭"
+      },
+      {
+        "name": "🇧🇪 Belgium Prod",
         "url": "https://pupurabbu-3d-272932496670.europe-west1.run.app",
         "region": "europe-west1",
+        "env": "prod",
+        "flag": "🇧🇪"
+      },
+      {
+        "name": "🇧🇪 Belgium Dev",
+        "url": "https://pupurabbu-3d-dev-272932496670.europe-west1.run.app",
+        "region": "europe-west1",
+        "env": "dev",
         "flag": "🇧🇪"
       }
     ],
