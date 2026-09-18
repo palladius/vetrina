@@ -521,6 +521,16 @@
               <!-- Row 3: Only "PLAY" in grande! -->
               <div>
                 ${playBtn}
+                ${game.regions && game.regions.length > 0 ? `
+                  <div class="flex items-center justify-center flex-wrap gap-2 mt-2 text-[11px] text-slate-500 font-medium">
+                    <span class="text-slate-400">Regions:</span>
+                    ${game.regions.map(r => `
+                      <a href="${r.url}" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-600 underline font-semibold transition-colors" title="${r.region || r.name}">
+                        ${r.name}
+                      </a>
+                    `).join('<span class="text-slate-300">•</span>')}
+                  </div>
+                ` : ''}
               </div>
 
               <!-- Hover Drawer: Shows description, tags, and "codice" in piccolo -->
@@ -546,6 +556,22 @@
                 <div class="flex flex-wrap items-center gap-1.5 mb-2.5">
                   ${tagsHtml}
                 </div>
+
+                <!-- Available Regions (Multi-Cloud / Multi-Region) -->
+                ${game.regions && game.regions.length > 0 ? `
+                  <div class="mb-2.5 p-2 rounded-xl bg-slate-50 border border-slate-200/80">
+                    <div class="text-[10px] font-bold text-slate-500 uppercase tracking-wider mb-1 flex items-center gap-1">
+                      <span>🌐 Available Regions:</span>
+                    </div>
+                    <div class="flex flex-wrap gap-1.5">
+                      ${game.regions.map(r => `
+                        <a href="${r.url}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[11px] font-semibold bg-white hover:bg-indigo-50 text-indigo-700 border border-slate-200 hover:border-indigo-300 shadow-2xs transition-all">
+                          <span>${r.name}</span>
+                        </a>
+                      `).join('')}
+                    </div>
+                  </div>
+                ` : ''}
 
                 <!-- Links: Article & Codice -->
                 <div class="pt-2 border-t border-slate-100 flex items-center justify-between text-xs">

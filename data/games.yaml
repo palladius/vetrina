@@ -1,3 +1,54 @@
+- id: "pupurabbu-3d"
+  title: "👾 Pupurabbu 3D: Quake Labyrinth"
+  audience: "kids"
+  kind: "game"
+  is_game: true
+  category: "kids"
+  score: 97
+  created_at: "2026-09"
+  tagline: "Kid-safe 3D retro labyrinth with Ale & Sebi, funny voice callouts, and multi-region Cloud Run!"
+  description: "A kid-friendly 3D first-person explorer and retro arena built with Three.js, Cannon-es physics, and Web Audio. Starring Alessandro, Sebastian, and the mythical giant purple creature Pupurabbu. Features Mario double-jump, Banana Launcher, Candy Star-Burst defeat effects, levitating Salmon Nigiri with celebratory Japanese voices ('すごい!'), comedic damage reactions ('Ouch!'), and Italian Kitten Bazooka quips. Deployed globally on Google Cloud Run across Zurich 🇨🇭 and Belgium 🇧🇪."
+  screenshot: "assets/screenshots/pupurabbu-3d.jpg"
+  play_url: "https://pupurabbu-3d-272932496670.europe-west6.run.app"
+  repo_url: "https://gitlab.com/palladius/pupurabbu-3d"
+  pwa: true
+  can_embed: true
+  featured: true
+  badge: "🟢 Multi-Region • 3D WebGL"
+  target: "Alessandro, Sebi & Family"
+  regions:
+    - name: "🇨🇭 Zurich (europe-west6)"
+      url: "https://pupurabbu-3d-272932496670.europe-west6.run.app"
+      region: "europe-west6"
+      flag: "🇨🇭"
+    - name: "🇧🇪 Belgium (europe-west1)"
+      url: "https://pupurabbu-3d-272932496670.europe-west1.run.app"
+      region: "europe-west1"
+      flag: "🇧🇪"
+  tech:
+    - "Three.js"
+    - "TypeScript"
+    - "Cannon-es"
+    - "Web Audio"
+    - "SpeechSynthesis"
+    - "Cloud Run"
+    - "Multi-Region"
+    - "PWA"
+    - "Vite"
+  tags:
+    - "3d"
+    - "game"
+    - "kids"
+    - "quake"
+    - "threejs"
+    - "cloud-run"
+    - "multi-region"
+    - "zurich"
+    - "belgium"
+    - "audio"
+    - "pwa"
+    - "funny"
+
 - id: tubature
   title: '🚰 Tubature: The Dungeon Plumber'
   audience: kids
