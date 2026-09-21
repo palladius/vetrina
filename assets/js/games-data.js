@@ -111,7 +111,40 @@ window.PALLADIUS_GAMES = [
     ],
     "pwa": true,
     "badge": "🟢 Play Live • PWA",
-    "target": "Kids & Family",
+    "target": "Kids & Family"
+  },
+  {
+    "id": "ale-french",
+    "title": "🇫🇷 Ale French: Verbes au Présent",
+    "audience": "kids",
+    "kind": "educational",
+    "is_game": true,
+    "category": "kids",
+    "score": 91,
+    "created_at": "2026",
+    "tagline": "Impara e memorizza l'ortografia dei verbi francesi con Ale!",
+    "description": "Mini web app pensata per Alessandro (Primary 3 / 8 anni) per imparare, ripassare e memorizzare l'ortografia scritta dei verbi francesi al presente indicativo, con focus sui verbi riflessivi della routine quotidiana, pronuncia vocale Web Speech (fr-FR) e quiz di scrittura interattivo.",
+    "screenshot": "assets/screenshots/ale-french.png",
+    "play_url": "https://palladius.github.io/ale-french/",
+    "repo_url": "https://github.com/palladius/ale-french",
+    "can_embed": true,
+    "tech": [
+      "HTML5",
+      "JavaScript",
+      "CSS3",
+      "Web Speech API"
+    ],
+    "tags": [
+      "french",
+      "educational",
+      "kids",
+      "language",
+      "quiz",
+      "school",
+      "audio"
+    ],
+    "badge": "🟢 Live App",
+    "target": "Alessandro",
     "featured": true
   },
   {
