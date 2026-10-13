@@ -139,38 +139,36 @@
   target: Kids & Young Gamers
   featured: false
 - id: smurfs-and-dragons
-  title: 🐉 Smurfs & Dragons (Carlessian Game)
+  title: '🐉 Smurfs & Dragons: Math Kingdom'
   audience: kids
   kind: game
   is_game: true
   category: kids
-  score: 75
-  tagline: Silly auto-shooting arcade runner with dragons & armies built with Gemini
-    2.0!
-  description: A hilarious, silly arcade game built with p5.js where your army auto-fires
-    arrows at incoming challenges! Aim at RED choices [-X] to shoot them up into positives
-    [+10] before colliding. Built with Gemini 2.0 (circa 2024/2025).
+  score: 94
+  tagline: 2D NanoBanana sprite math-arcade runner starring Royal Archers, Smurfs, Puffetta & the Emerald Dragon!
+  description: Lead your Royal Archer squadron down the King's Highway! Choose the best A-vs-B Math Gate (+, -, ×, ÷), dodge traps with comical wrong-math trombone & voice quips, battle mischievous Smurfs & Puffetta, and slay the wing-flapping Emerald Dragon! Revamped with alpha-transparent NanoBanana 2D sprites and luminous arcane arrows.
   screenshot: assets/screenshots/smurfs-and-dragons.png
-  play_url: https://smurfs-and-dragons.web.app/
+  play_url: https://palladius.github.io/vetrina/games/smurfs-and-dragons/
   can_embed: true
-  created_at: Circa 2024
-  model_used: Gemini 2.0
+  created_at: '2026'
+  model_used: Gemini 4 / NanoBanana
   tech:
-  - p5.js
-  - Canvas
-  - Gemini 2.0
-  - Firebase
+  - HTML5 Canvas
+  - Web Audio API
+  - NanoBanana 2D Sprites
+  - A2UI Math Coach
   tags:
-  - silly
+  - math
+  - educational
   - game
   - kids
-  - p5js
-  - gemini2.0
+  - smurfs
   - dragons
   - arcade
-  badge: 👾 Silly • Gemini 2.0
-  target: Kids & Family Fun
-  featured: false
+  - nanobanana
+  badge: 🟢 Play Live • 2D Revamp
+  target: Kids (Ages 6-11) & Family
+  featured: true
 - id: dungemoji
   title: '🏰 Dungemoji: Rogue-like Adventure'
   audience: kids
