@@ -961,7 +961,7 @@ window.PALLADIUS_GAMES = [
   {
     "id": "handsfree-chords",
     "title": "🎹 Handsfree-Chords",
-    "audience": "musicians",
+    "audience": "tools",
     "kind": "tool",
     "category": "tools",
     "score": 96,
@@ -974,7 +974,7 @@ window.PALLADIUS_GAMES = [
     "can_embed": true,
     "pwa": true,
     "featured": true,
-    "badge": "🎹 Music & AI Vision",
+    "badge": "🎹 Music & Utility",
     "target": "Pianists, Guitarists & Live Musicians",
     "tech": [
       "JavaScript",
@@ -994,7 +994,9 @@ window.PALLADIUS_GAMES = [
       "mediapipe",
       "handsfree",
       "live",
-      "audio"
+      "audio",
+      "utility",
+      "tools"
     ]
   }
 ];
