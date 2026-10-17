@@ -1009,6 +1009,7 @@ window.PALLADIUS_GAMES = [
     "created_at": "2026-10",
     "tagline": "Hands-free live chord sheets for pianists and guitarists with time-synced autoscroll, realtime transpose, and AI face-tracking!",
     "description": "Live chord sheets & lead sheet player in smart spartiti-md format. Features deterministic time-synced autoscroll, emergency +/-20s jump controls, real-time transposition with flat normalization (D -> Eb), Italian (DO RE MI) vs English (C D E) chord notation toggling, and client-side Google MediaPipe Face Mesh for hands-free head nod page turning without taking hands off the piano keys or guitar strings.",
+    "screenshot": "assets/screenshots/handsfree-chords.png",
     "screenshot_url": "https://raw.githubusercontent.com/palladius/handsfree-chords/main/docs/screenshot.png",
     "repo_url": "https://github.com/palladius/handsfree-chords",
     "play_url": "https://palladius.github.io/handsfree-chords/",
