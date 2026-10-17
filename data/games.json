@@ -1,5 +1,46 @@
 [
   {
+    "id": "family-mahjong-3d",
+    "title": "🀄 Carlesso Family 3D Mahjong Solitaire",
+    "audience": "kids",
+    "kind": "game",
+    "is_game": true,
+    "category": "kids",
+    "score": 98,
+    "created_at": "2026-10",
+    "tagline": "3D Imperial Marble & Obsidian Mahjong Solitaire with Ale, Sebi, Mamma Kate, Papà Riccardo & Dragon Biribip Power-Up FX!",
+    "description": "AAA-quality 3D Solitary Mahjong Web App & Look-Dev Studio built with Headless Blender 5.0.1 (Cycles) and Three.js (r170). Features 50 custom 3D Incandescent-Pen Carved tiles (Imperial White Marble + Black Obsidian + 24k Gold Kintsugi), Carlesso Family Seasons Quartet (Papà Riccardo, Mamma Kate, Ale, Sebi), Magical Companions Quartet (Ghigna 🐹 & Pupurabbu 👾), 4 Diptyque Split-Pair paintings (Great Wall, Cantonese Rice, Shaolin Kung Fu, Chengdu Pandas), Ornate 3D Carved Red Dragon (紅中), Ma Shan Zheng brush calligraphy, Solvability & Early Deadlock Engine, and a zero-halo transparent 2D-over-3D 'Biribip' Dragon Power-Up celebration!",
+    "screenshot": "assets/screenshots/family-mahjong-3d.jpg",
+    "play_url": "https://palladius.github.io/family-mahjong-3d/",
+    "repo_url": "https://github.com/palladius/family-mahjong-3d",
+    "pwa": true,
+    "can_embed": true,
+    "featured": true,
+    "badge": "🐉 3D WebGL • Blender 5.0.1",
+    "target": "Alessandro, Sebi, Kate, Riccardo & Family",
+    "tech": [
+      "Three.js",
+      "Blender 5.0.1 Cycles",
+      "WebGL",
+      "Web Audio",
+      "NanoBanana",
+      "Vite",
+      "GitHub Pages"
+    ],
+    "tags": [
+      "3d",
+      "mahjong",
+      "solitaire",
+      "game",
+      "kids",
+      "family",
+      "blender",
+      "threejs",
+      "dragons",
+      "puzzle"
+    ]
+  },
+  {
     "id": "pupurabbu-3d",
     "title": "👾 Pupurabbu 3D: Quake Labyrinth",
     "audience": "kids",
