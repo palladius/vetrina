@@ -317,7 +317,6 @@
 
     // Penalties for unplayable / offline
     if (game.archived) bonus -= 25;
-    if (game.id === 'baby-alphabet') bonus -= 20;
 
     return baseScore + bonus;
   }

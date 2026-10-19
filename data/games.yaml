@@ -372,30 +372,30 @@
   kind: educational
   is_game: false
   category: kids
-  score: 42
-  created_at: '2023'
+  score: 78
+  created_at: '2021'
   tagline: Built in 24 hours to help Alessandro learn letters and phonetic sounds!
-  description: 'Interactive educational tool created out of Dad''s 24-hour ''hold
-    my beer'' challenge to teach Alessandro letters and pronunciation with custom
-    family photos. [Currently offline; tracking resurrection on Cloud Run via Issue
-    #1].'
+  description: 'Interactive bilingual (IT/EN) educational tool created out of Dad''s
+    24-hour ''hold my beer'' challenge to teach Alessandro letters and pronunciation
+    with custom pasta & family photos, semi-transparent letter watermarks, and Web
+    Speech API audio.'
   screenshot: assets/screenshots/baby-alphabet.jpg
-  play_url: ''
+  play_url: https://palladius.github.io/baby-alphabet/
   repo_url: https://github.com/palladius/baby-alphabet
   issue_url: https://github.com/palladius/baby-alphabet/issues/1
-  can_embed: false
+  can_embed: true
   tech:
-  - Ruby on Rails
-  - Web Audio
-  - Docker
-  - Kubernetes
+  - GitHub Pages
+  - Ruby
+  - Web Speech API
+  - Vanilla JS
   tags:
   - alphabet
   - educational
   - kids
   - school
   - phonetics
-  badge: '🔧 Offline (GHI #1)'
+  badge: 🟢 Explore Live
   target: Alessandro
   featured: false
 - id: genai-kids-stories
