@@ -331,37 +331,40 @@ window.PALLADIUS_GAMES = [
   },
   {
     "id": "dungemoji",
-    "title": "🏰 Dungemoji: Rogue-like Adventure",
+    "title": "🐉🎲 Dungemoji v8.2: 1980s D&D Red Box Edition",
     "audience": "kids",
     "kind": "game",
     "is_game": true,
     "category": "kids",
-    "score": 74,
-    "tagline": "Retro ASCII & Emoji dungeon crawler with rats 🐀, bats 🦇, goblins 👺 & dragons 🐉!",
-    "description": "Your Emoji Rogue-like Adventure! Explore procedural ASCII dungeon rooms with virtual controls, fight giant bats, goblins, skeletons, zombies, and the mighty 🐉 Dragon! Generated with Gemini 2.0 (circa 2024/2025) using p5.js and retro 8-bit sound effects.",
+    "score": 94,
+    "tagline": "2D Tactical + Room Zoom + 3D Dungeon Crawler with 27 NanoBanana sprites, 2x2 IF Pupurabbu 🐻💜, Red Dragon 🐉 & 3D D20 Saving Throws!",
+    "description": "Born as an 80s ASCII Rogue-like for Alessandro (reminiscent of an 8086 Amstrad game) and completely reborn in v8.2 as a 1980s D&D Red Box Edition! Switch in real time [V] between 2D Tactical Map + Room Zoom Inspector, First-Person 3D Eye of the Beholder Dungeon Crawler, and Classic ASCII Rogue. Features 27 NanoBanana 2D sprites (Beholder, Mind Flayer, Gelatinous Cube, Mimic, Owlbear, Red Dragon 2x2, and Il Mitico Pupurabbu 2x2 IF Purple Bear), mathematical 3D Icosahedron (D20) Saving Throws, Lyria 3.5 Medieval Epic Metal at Level 5, and retro pixel-art Death Cutscenes!",
     "screenshot": "assets/screenshots/dungemoji.png",
+    "screenshot_gif": "assets/screenshots/dungemoji_gameplay.gif",
     "play_url": "https://dungemoji.web.app/",
     "can_embed": true,
-    "created_at": "Circa 2024",
-    "model_used": "Gemini 2.0",
+    "created_at": "2024 / 2026",
+    "model_used": "Gemini 3 / NanoBanana / Lyria 3.5 / Veo 3.1",
     "tech": [
-      "p5.js",
-      "p5.sound",
-      "Gemini 2.0",
-      "Firebase"
+      "HTML5 Canvas",
+      "3D Raycaster & D20 Physics",
+      "NanoBanana 2D Sprites",
+      "Lyria 3.5 & WebAudio Synth",
+      "Firebase Hosting"
     ],
     "tags": [
-      "silly",
+      "dnd",
+      "roguelike",
+      "3d",
+      "nanobanana",
       "game",
       "kids",
-      "roguelike",
-      "emoji",
-      "gemini2.0",
-      "retro"
+      "retro",
+      "dragons"
     ],
-    "badge": "👾 Silly • Gemini 2.0",
-    "target": "Retro Gamers & Kids",
-    "featured": false
+    "badge": "🟢 Play Live • v8.2 Red Box 2D/3D",
+    "target": "Retro D&D Gamers & Kids",
+    "featured": true
   },
   {
     "id": "parola-del-giorno",
