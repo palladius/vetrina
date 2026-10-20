@@ -331,15 +331,15 @@ window.PALLADIUS_GAMES = [
   },
   {
     "id": "dungemoji",
-    "title": "🐉🎲 Dungemoji v8.2: 1980s D&D Red Box Edition",
+    "title": "🐉🎲 Dungemoji v9.0: 1980s D&D Red Box Edition",
     "audience": "kids",
     "kind": "game",
     "is_game": true,
     "category": "kids",
-    "score": 94,
-    "tagline": "2D Tactical + Room Zoom + 3D Dungeon Crawler with 27 NanoBanana sprites, 2x2 IF Pupurabbu 🐻💜, Red Dragon 🐉 & 3D D20 Saving Throws!",
-    "description": "Born as an 80s ASCII Rogue-like for Alessandro (reminiscent of an 8086 Amstrad game) and completely reborn in v8.2 as a 1980s D&D Red Box Edition! Switch in real time [V] between 2D Tactical Map + Room Zoom Inspector, First-Person 3D Eye of the Beholder Dungeon Crawler, and Classic ASCII Rogue. Features 27 NanoBanana 2D sprites (Beholder, Mind Flayer, Gelatinous Cube, Mimic, Owlbear, Red Dragon 2x2, and Il Mitico Pupurabbu 2x2 IF Purple Bear), mathematical 3D Icosahedron (D20) Saving Throws, Lyria 3.5 Medieval Epic Metal at Level 5, and retro pixel-art Death Cutscenes!",
-    "screenshot": "assets/screenshots/dungemoji.png",
+    "score": 96,
+    "tagline": "2D Tactical + Room Zoom + 3D Dungeon Crawler with Cutie Monsters & Emojis Pandemonium, Secret Rooms, Paladin Spells, Pupurabbu 🐻💜 & Veo 3.1 Tragicomic Death Cutscenes!",
+    "description": "Born as an 80s ASCII Rogue-like for Alessandro and reborn in v9.0 as a 1980s D&D Red Box Edition! Switch in real time [V] between 2D Tactical Map + Room Zoom Inspector, First-Person 3D Eye of the Beholder Dungeon Crawler, and Classic ASCII Rogue. Features 27 NanoBanana 2D sprites (Beholder, Mind Flayer, Gelatinous Cube, Mimic, Owlbear, Red Dragon, and Il Mitico Pupurabbu IF Purple Bear), Negative-Space Secret Rooms, Paladin Divine Spells, Dwarven Merchant, mathematical 3D Icosahedron (D20) Saving Throws, Lyria 3.5 Medieval Epic Metal at Level 5, and 3 Dragon's Lair-style Veo 3.1 Tragicomic Death Cutscenes!",
+    "screenshot": "assets/screenshots/dungemoji-cover.jpg",
     "screenshot_gif": "assets/screenshots/dungemoji_gameplay.gif",
     "play_url": "https://dungemoji.web.app/",
     "can_embed": true,
@@ -349,7 +349,7 @@ window.PALLADIUS_GAMES = [
       "HTML5 Canvas",
       "3D Raycaster & D20 Physics",
       "NanoBanana 2D Sprites",
-      "Lyria 3.5 & WebAudio Synth",
+      "Veo 3.1 & Lyria 3.5",
       "Firebase Hosting"
     ],
     "tags": [
@@ -362,8 +362,8 @@ window.PALLADIUS_GAMES = [
       "retro",
       "dragons"
     ],
-    "badge": "🟢 Play Live • v8.2 Red Box 2D/3D",
-    "target": "Retro D&D Gamers & Kids",
+    "badge": "🟢 Play Live • v9.0 Red Box 2D/3D",
+    "target": "Alessandro, Kids & Retro D&D Gamers",
     "featured": true
   },
   {
