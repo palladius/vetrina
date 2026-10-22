@@ -155,15 +155,15 @@
   },
   {
     "id": "ale-french",
-    "title": "🇫🇷 Ale French: Verbes au Présent",
+    "title": "🇫🇷 Ale & Seby French",
     "audience": "kids",
     "kind": "educational",
     "is_game": true,
     "category": "kids",
-    "score": 91,
+    "score": 93,
     "created_at": "2026",
-    "tagline": "Impara e memorizza l'ortografia dei verbi francesi con Ale!",
-    "description": "Mini web app pensata per Alessandro (Primary 3 / 8 anni) per imparare, ripassare e memorizzare l'ortografia scritta dei verbi francesi al presente indicativo, con focus sui verbi riflessivi della routine quotidiana, pronuncia vocale Web Speech (fr-FR) e quiz di scrittura interattivo.",
+    "tagline": "Impara il Francese con Ale e Seby (Verbi P3 + Esame A1 Primary 1)!",
+    "description": "Web app educativa per Alessandro (Primary 3) e Sebastian (Primary 1) alla Tandem IMS. Include login con profilo, verbi al presente, desinenze ortografiche, flashcards 3D, quiz di ascolto e scrittura, e il programma A1 per Seby (saluti, numeri 0-12, colori e forme).",
     "screenshot": "assets/screenshots/ale-french.png",
     "play_url": "https://palladius.github.io/ale-french/",
     "repo_url": "https://github.com/palladius/ale-french",
@@ -183,8 +183,8 @@
       "school",
       "audio"
     ],
-    "badge": "🟢 Live App",
-    "target": "Alessandro",
+    "badge": "🟢 Live App • Ale & Seby",
+    "target": "Alessandro & Sebastian",
     "featured": true
   },
   {
