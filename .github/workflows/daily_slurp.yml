@@ -30,13 +30,19 @@ jobs:
         run: |
           python3 bin/slurp_vetrina.py
 
+      - name: 🩺 Run SRE Health & CI/CD Probe
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 bin/check_health.py
+
       - name: 🚀 Commit & Push Changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           if [ -n "$(git status --porcelain)" ]; then
             git add -A
-            git commit -m "chore(slurp): 🔄 federated update from remote vetrina.json"
+            git commit -m "chore(cron): 🔄 daily federated slurp & SRE health snapshot"
             git push origin main
           else
             echo "✨ No remote updates found. Working tree clean."

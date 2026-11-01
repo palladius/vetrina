@@ -1,0 +1,794 @@
+{
+  "checked_at": "2026-11-01T07:58:29Z",
+  "duration_sec": 9.88,
+  "total": 29,
+  "summary": {
+    "healthy": 25,
+    "ci_failing": 2,
+    "degraded": 1,
+    "down": 0,
+    "archived": 1
+  },
+  "items": {
+    "family-mahjong-3d": {
+      "id": "family-mahjong-3d",
+      "title": "🀄 Carlesso Family 3D Mahjong Solitaire",
+      "audience": "kids",
+      "archived": false,
+      "overall": "healthy",
+      "play_url": "https://palladius.github.io/family-mahjong-3d/",
+      "repo_url": "https://github.com/palladius/family-mahjong-3d",
+      "web": {
+        "status": "up",
+        "http_code": 200,
+        "latency_ms": 92,
+        "note": "OK"
+      },
+      "regions": [],
+      "ci": {
+        "status": "passing",
+        "repo": "palladius/family-mahjong-3d",
+        "conclusion": "success",
+        "run_status": "completed",
+        "workflow_name": "pages build and deployment",
+        "display_title": "pages build and deployment",
+        "branch": "gh-pages",
+        "event": "dynamic",
+        "updated_at": "2026-10-29T17:41:50Z",
+        "run_url": "https://github.com/palladius/family-mahjong-3d/actions/runs/40923688022",
+        "failing_workflows": []
+      }
+    },
+    "pupurabbu-3d": {
+      "id": "pupurabbu-3d",
+      "title": "👾 Pupurabbu 3D: Quake Labyrinth",
+      "audience": "kids",
+      "archived": false,
+      "overall": "degraded",
+      "play_url": "https://pupurabbu-3d-272932496670.europe-west6.run.app",
+      "repo_url": "https://gitlab.com/palladius/pupurabbu-3d",
+      "web": {
+        "status": "up",
+        "http_code": 200,
+        "latency_ms": 118,
+        "note": "OK"
+      },
+      "regions": [
+        {
+          "name": "🇨🇭 Zurich Prod",
+          "env": "prod",
+          "region": "europe-west6",
+          "url": "https://pupurabbu-3d-272932496670.europe-west6.run.app",
+          "status": "up",
+          "http_code": 200,
+          "latency_ms": 78,
+          "note": "OK"
+        },
+        {
+          "name": "🇨🇭 Zurich Dev",
+          "env": "dev",
+          "region": "europe-west6",
+          "url": "https://pupurabbu-3d-dev-272932496670.europe-west6.run.app",
+          "status": "up",
+          "http_code": 200,
+          "latency_ms": 5786,
+          "note": "OK"
+        },
+        {
+          "name": "🇧🇪 Belgium Prod",
+          "env": "prod",
+          "region": "europe-west1",
+          "url": "https://pupurabbu-3d-272932496670.europe-west1.run.app",
+          "status": "down",
+          "http_code": 404,
+          "latency_ms": 54,
+          "note": "HTTP 404: Not Found"
+        },
+        {
+          "name": "🇧🇪 Belgium Dev",
+          "env": "dev",
+          "region": "europe-west1",
+          "url": "https://pupurabbu-3d-dev-272932496670.europe-west1.run.app",
+          "status": "down",
+          "http_code": 404,
+          "latency_ms": 54,
+          "note": "HTTP 404: Not Found"
+        }
+      ],
+      "ci": {
+        "status": "gitlab",
+        "note": "Hosted on GitLab"
+      }
+    },
+    "tubature": {
+      "id": "tubature",
+      "title": "🚰 Tubature: The Dungeon Plumber",
+      "audience": "kids",
+      "archived": false,
+      "overall": "healthy",
+      "play_url": "https://palladius.github.io/tubature/",
+      "repo_url": "https://github.com/palladius/tubature",
+      "web": {
+        "status": "up",
+        "http_code": 200,
+        "latency_ms": 84,
+        "note": "OK"
+      },
+      "regions": [],
+      "ci": {
+        "status": "passing",
+        "repo": "palladius/tubature",
+        "conclusion": "success",
+        "run_status": "completed",
+        "workflow_name": "pages build and deployment",
+        "display_title": "pages build and deployment",
+        "branch": "gh-pages",
+        "event": "dynamic",
+        "updated_at": "2026-09-25T03:33:16Z",
+        "run_url": "https://github.com/palladius/tubature/actions/runs/36090770910",
+        "failing_workflows": []
+      }
+    },
+    "ale-french": {
+      "id": "ale-french",
+      "title": "🇫🇷 Ale & Seby French",
+      "audience": "kids",
+      "archived": false,
+      "overall": "healthy",
+      "play_url": "https://palladius.github.io/ale-french/",
+      "repo_url": "https://github.com/palladius/ale-french",
+      "web": {
+        "status": "up",
+        "http_code": 200,
+        "latency_ms": 96,
+        "note": "OK"
+      },
+      "regions": [],
+      "ci": {
+        "status": "passing",
+        "repo": "palladius/ale-french",
+        "conclusion": "success",
+        "run_status": "completed",
+        "workflow_name": "pages build and deployment",
+        "display_title": "pages build and deployment",
+        "branch": "main",
+        "event": "dynamic",
+        "updated_at": "2026-10-26T17:35:55Z",
+        "run_url": "https://github.com/palladius/ale-french/actions/runs/40369979540",
+        "failing_workflows": []
+      }
+    },
+    "orologiaio": {
+      "id": "orologiaio",
+      "title": "⏰ Orologia.io (Time Master)",
+      "audience": "kids",
+      "archived": false,
+      "overall": "healthy",
+      "play_url": "https://palladius.github.io/orologia.io/",
+      "repo_url": "https://github.com/palladius/orologia.io",
+      "web": {
+        "status": "up",
+        "http_code": 200,
+        "latency_ms": 107,
+        "note": "OK"
+      },
+      "regions": [],
+      "ci": {
+        "status": "passing",
+        "repo": "palladius/orologia.io",
+        "conclusion": "success",
+        "run_status": "completed",
+        "workflow_name": "Deploy static content to Pages",
+        "display_title": "fix: cleaner ¼ icon — no cross lines, just blue+gray quadrants",
+        "branch": "main",
+        "event": "push",
+        "updated_at": "2026-09-06T08:07:15Z",
+        "run_url": "https://github.com/palladius/orologia.io/actions/runs/34020955600",
+        "failing_workflows": []
+      }
+    },
+    "kids-jigsaw-puzzle": {
+      "id": "kids-jigsaw-puzzle",
+      "title": "🧩 Kids Jigsaw Puzzle",
+      "audience": "kids",
+      "archived": false,
+      "overall": "healthy",
+      "play_url": "https://palladius.github.io/kids-jigsaw-puzzle/",
+      "repo_url": "https://github.com/palladius/kids-jigsaw-puzzle",
+      "web": {
+        "status": "up",
+        "http_code": 200,
+        "latency_ms": 83,
+        "note": "OK"
+      },
+      "regions": [],
+      "ci": {
+        "status": "passing",
+        "repo": "palladius/kids-jigsaw-puzzle",
+        "conclusion": "success",
+        "run_status": "completed",
+        "workflow_name": "pages build and deployment",
+        "display_title": "pages build and deployment",
+        "branch": "gh-pages",
+        "event": "dynamic",
+        "updated_at": "2026-01-23T18:32:16Z",
+        "run_url": "https://github.com/palladius/kids-jigsaw-puzzle/actions/runs/21296935149",
+        "failing_workflows": []
+      }
+    },
+    "pasta-invaders": {
+      "id": "pasta-invaders",
+      "title": "🍝 Pasta Invaders",
+      "audience": "kids",
+      "archived": true,
+      "overall": "archived",
+      "play_url": "",
+      "repo_url": "https://github.com/palladius/pasta-invaders",
+      "web": {
+        "status": "archived",
+        "http_code": null,
+        "latency_ms": null,
+        "note": "Archived app"
+      },
+      "regions": [],
+      "ci": {
+        "status": "no_workflows",
+        "repo": "palladius/pasta-invaders",
+        "note": "No GitHub Actions runs"
+      }
+    },
+    "smurfs-and-dragons": {
+      "id": "smurfs-and-dragons",
+      "title": "🐧🐉 Smurfs, Puffins & Dragons: Math Kingdom",
+      "audience": "kids",
+      "archived": false,
+      "overall": "healthy",
+      "play_url": "https://palladius.github.io/vetrina/games/smurfs-and-dragons/?v=2.6",
+      "repo_url": "",
+      "web": {
+        "status": "up",
+        "http_code": 200,
+        "latency_ms": 95,
+        "note": "OK"
+      },
+      "regions": [],
+      "ci": {
+        "status": "none",
+        "note": "No repo_url"
+      }
+    },
+    "dungemoji": {
+      "id": "dungemoji",
+      "title": "🐉🎲 Dungemoji v9.0: 1980s D&D Red Box Edition",
+      "audience": "kids",
+      "archived": false,
+      "overall": "healthy",
+      "play_url": "https://dungemoji.web.app/",
+      "repo_url": "",
+      "web": {
+        "status": "up",
+        "http_code": 200,
+        "latency_ms": 93,
+        "note": "OK"
+      },
+      "regions": [],
+      "ci": {
+        "status": "none",
+        "note": "No repo_url"
+      }
+    },
+    "parola-del-giorno": {
+      "id": "parola-del-giorno",
+      "title": "📜 Parola del Giorno",
+      "audience": "kids",
+      "archived": false,
+      "overall": "healthy",
+      "play_url": "https://palladius.github.io/parola-del-giorno/",
+      "repo_url": "https://github.com/palladius/parola-del-giorno",
+      "web": {
+        "status": "up",
+        "http_code": 200,
+        "latency_ms": 93,
+        "note": "OK"
+      },
+      "regions": [],
+      "ci": {
+        "status": "passing",
+        "repo": "palladius/parola-del-giorno",
+        "conclusion": "success",
+        "run_status": "completed",
+        "workflow_name": "pages build and deployment",
+        "display_title": "pages build and deployment",
+        "branch": "main",
+        "event": "dynamic",
+        "updated_at": "2026-11-01T06:23:56Z",
+        "run_url": "https://github.com/palladius/parola-del-giorno/actions/runs/41280564214",
+        "failing_workflows": []
+      }
+    },
+    "baby-alphabet": {
+      "id": "baby-alphabet",
+      "title": "🔤 Baby Alphabet (AJ-Alphabet)",
+      "audience": "kids",
+      "archived": false,
+      "overall": "healthy",
+      "play_url": "https://palladius.github.io/baby-alphabet/",
+      "repo_url": "https://github.com/palladius/baby-alphabet",
+      "web": {
+        "status": "up",
+        "http_code": 200,
+        "latency_ms": 103,
+        "note": "OK"
+      },
+      "regions": [],
+      "ci": {
+        "status": "passing",
+        "repo": "palladius/baby-alphabet",
+        "conclusion": "success",
+        "run_status": "completed",
+        "workflow_name": "Deploy Baby Alphabet to GitHub Pages",
+        "display_title": "v2.10: update doc/screenshot.jpg with new watermarked UI and support …",
+        "branch": "main",
+        "event": "push",
+        "updated_at": "2026-10-19T13:54:42Z",
+        "run_url": "https://github.com/palladius/baby-alphabet/actions/runs/39264132468",
+        "failing_workflows": []
+      }
+    },
+    "genai-kids-stories": {
+      "id": "genai-kids-stories",
+      "title": "📖 GenAI Kids Bedtime Stories",
+      "audience": "kids",
+      "archived": false,
+      "overall": "ci_failing",
+      "play_url": "https://genai-kids-stories-gcloud-poor-cdlu26pd4q-ew.a.run.app/",
+      "repo_url": "https://github.com/palladius/genai-kids-stories",
+      "web": {
+        "status": "up",
+        "http_code": 200,
+        "latency_ms": 837,
+        "note": "OK"
+      },
+      "regions": [],
+      "ci": {
+        "status": "failing",
+        "repo": "palladius/genai-kids-stories",
+        "conclusion": "failure",
+        "run_status": "completed",
+        "workflow_name": "Ruby",
+        "display_title": "feat(v0.15.2): Edition 2026 UI redesign, Gemini Flash Latest (3.8) + …",
+        "branch": "main",
+        "event": "push",
+        "updated_at": "2026-10-19T16:20:05Z",
+        "run_url": "https://github.com/palladius/genai-kids-stories/actions/runs/39281695703",
+        "failing_workflows": [
+          {
+            "name": "Ruby",
+            "url": "https://github.com/palladius/genai-kids-stories/actions/runs/39281695703",
+            "updated_at": "2026-10-19T16:20:05Z",
+            "title": "feat(v0.15.2): Edition 2026 UI redesign, Gemini Flash Latest (3.8) + …"
+          }
+        ]
+      }
+    },
+    "conductoras": {
+      "id": "conductoras",
+      "title": "🚂 Conductoras (Conductor at Scale)",
+      "audience": "tools",
+      "archived": false,
+      "overall": "healthy",
+      "play_url": "",
+      "repo_url": "https://github.com/palladius/conductoras",
+      "web": {
+        "status": "none",
+        "http_code": null,
+        "latency_ms": null,
+        "note": "No play_url (CLI/Library)"
+      },
+      "regions": [],
+      "ci": {
+        "status": "no_workflows",
+        "repo": "palladius/conductoras",
+        "note": "No GitHub Actions runs"
+      }
+    },
+    "antigravity-ruby-sdk": {
+      "id": "antigravity-ruby-sdk",
+      "title": "💎 Antigravity Ruby SDK",
+      "audience": "tools",
+      "archived": false,
+      "overall": "healthy",
+      "play_url": "",
+      "repo_url": "https://github.com/palladius/antigravity-ruby-sdk",
+      "web": {
+        "status": "none",
+        "http_code": null,
+        "latency_ms": null,
+        "note": "No play_url (CLI/Library)"
+      },
+      "regions": [],
+      "ci": {
+        "status": "no_workflows",
+        "repo": "palladius/antigravity-ruby-sdk",
+        "note": "No GitHub Actions runs"
+      }
+    },
+    "sumaron": {
+      "id": "sumaron",
+      "title": "🐴 Sumaron (The Big Donkey of Summarization)",
+      "audience": "tools",
+      "archived": false,
+      "overall": "healthy",
+      "play_url": "",
+      "repo_url": "https://github.com/palladius/sumaron",
+      "web": {
+        "status": "none",
+        "http_code": null,
+        "latency_ms": null,
+        "note": "No play_url (CLI/Library)"
+      },
+      "regions": [],
+      "ci": {
+        "status": "no_workflows",
+        "repo": "palladius/sumaron",
+        "note": "No GitHub Actions runs"
+      }
+    },
+    "gprism": {
+      "id": "gprism",
+      "title": "💎 Gprism (Git Privatize in Secret Manager)",
+      "audience": "tools",
+      "archived": false,
+      "overall": "healthy",
+      "play_url": "",
+      "repo_url": "https://github.com/palladius/gprism",
+      "web": {
+        "status": "none",
+        "http_code": null,
+        "latency_ms": null,
+        "note": "No play_url (CLI/Library)"
+      },
+      "regions": [],
+      "ci": {
+        "status": "no_workflows",
+        "repo": "palladius/gprism",
+        "note": "No GitHub Actions runs"
+      }
+    },
+    "storagify": {
+      "id": "storagify",
+      "title": "📦 Storagify",
+      "audience": "tools",
+      "archived": false,
+      "overall": "healthy",
+      "play_url": "",
+      "repo_url": "https://gitlab.com/palladius/storagify",
+      "web": {
+        "status": "none",
+        "http_code": null,
+        "latency_ms": null,
+        "note": "No play_url (CLI/Library)"
+      },
+      "regions": [],
+      "ci": {
+        "status": "gitlab",
+        "note": "Hosted on GitLab"
+      }
+    },
+    "gemini-tools": {
+      "id": "gemini-tools",
+      "title": "🛠️ Gemini Tools (Synthesizer & Video Judge)",
+      "audience": "tools",
+      "archived": false,
+      "overall": "healthy",
+      "play_url": "",
+      "repo_url": "https://github.com/palladius/gemini-tools",
+      "web": {
+        "status": "none",
+        "http_code": null,
+        "latency_ms": null,
+        "note": "No play_url (CLI/Library)"
+      },
+      "regions": [],
+      "ci": {
+        "status": "no_workflows",
+        "repo": "palladius/gemini-tools",
+        "note": "No GitHub Actions runs"
+      }
+    },
+    "media-arneis": {
+      "id": "media-arneis",
+      "title": "🍷 Media Arneis (Multimodal AI Orchestrator)",
+      "audience": "tools",
+      "archived": false,
+      "overall": "healthy",
+      "play_url": "",
+      "repo_url": "https://github.com/palladius/media-arneis",
+      "web": {
+        "status": "none",
+        "http_code": null,
+        "latency_ms": null,
+        "note": "No play_url (CLI/Library)"
+      },
+      "regions": [],
+      "ci": {
+        "status": "no_workflows",
+        "repo": "palladius/media-arneis",
+        "note": "No GitHub Actions runs"
+      }
+    },
+    "character-consistency-studio": {
+      "id": "character-consistency-studio",
+      "title": "🎭 Character Consistency Studio 2026",
+      "audience": "tools",
+      "archived": false,
+      "overall": "healthy",
+      "play_url": "https://character-consistency-studio-v1-frontend-only-272932496670.us-west1.run.app",
+      "repo_url": "https://github.com/palladius/character-consistency-studio-2026",
+      "web": {
+        "status": "up",
+        "http_code": 200,
+        "latency_ms": 272,
+        "note": "OK"
+      },
+      "regions": [],
+      "ci": {
+        "status": "no_workflows",
+        "repo": "palladius/character-consistency-studio-2026",
+        "note": "No GitHub Actions runs"
+      }
+    },
+    "respec": {
+      "id": "respec",
+      "title": "📋 Re-SPEC (Spec-Driven AI Coding Engine)",
+      "audience": "tools",
+      "archived": false,
+      "overall": "healthy",
+      "play_url": "",
+      "repo_url": "https://github.com/palladius/respec",
+      "web": {
+        "status": "none",
+        "http_code": null,
+        "latency_ms": null,
+        "note": "No play_url (CLI/Library)"
+      },
+      "regions": [],
+      "ci": {
+        "status": "no_workflows",
+        "repo": "palladius/respec",
+        "note": "No GitHub Actions runs"
+      }
+    },
+    "palladius-vetrina": {
+      "id": "palladius-vetrina",
+      "title": "🪞 Palladius Vetrina (Mise en Abyme)",
+      "audience": "tools",
+      "archived": false,
+      "overall": "healthy",
+      "play_url": "https://palladius.github.io/vetrina/",
+      "repo_url": "https://github.com/palladius/vetrina",
+      "web": {
+        "status": "up",
+        "http_code": 200,
+        "latency_ms": 58,
+        "note": "OK"
+      },
+      "regions": [],
+      "ci": {
+        "status": "passing",
+        "repo": "palladius/vetrina",
+        "conclusion": "success",
+        "run_status": "completed",
+        "workflow_name": "🔄 Daily Cron: Slurp Federated Vetrina Metadata",
+        "display_title": "🔄 Daily Cron: Slurp Federated Vetrina Metadata",
+        "branch": "main",
+        "event": "schedule",
+        "updated_at": "2026-10-31T09:03:49Z",
+        "run_url": "https://github.com/palladius/vetrina/actions/runs/41187104219",
+        "failing_workflows": []
+      }
+    },
+    "compleanno-palladiano-2026": {
+      "id": "compleanno-palladiano-2026",
+      "title": "🍽️ Compleanno di Papà (50° Mezzo Secolo)",
+      "audience": "journals",
+      "archived": false,
+      "overall": "healthy",
+      "play_url": "https://palladius.github.io/compleanno-palladiano-2026/menu/",
+      "repo_url": "https://github.com/palladius/compleanno-palladiano-2026",
+      "web": {
+        "status": "up",
+        "http_code": 200,
+        "latency_ms": 58,
+        "note": "OK"
+      },
+      "regions": [],
+      "ci": {
+        "status": "passing",
+        "repo": "palladius/compleanno-palladiano-2026",
+        "conclusion": "success",
+        "run_status": "completed",
+        "workflow_name": "Deploy to GitHub Pages",
+        "display_title": "feat: add direct WhatsApp and Telegram buttons for carpooling request…",
+        "branch": "main",
+        "event": "push",
+        "updated_at": "2026-09-09T08:02:45Z",
+        "run_url": "https://github.com/palladius/compleanno-palladiano-2026/actions/runs/34326928464",
+        "failing_workflows": []
+      }
+    },
+    "septober-next": {
+      "id": "septober-next",
+      "title": "🗓️ Septober Next (Node/Python Todo PWA)",
+      "audience": "journals",
+      "archived": false,
+      "overall": "healthy",
+      "play_url": "https://septober-next-467916597830.europe-west1.run.app/",
+      "repo_url": "https://github.com/palladius/septober",
+      "web": {
+        "status": "up",
+        "http_code": 200,
+        "latency_ms": 8695,
+        "note": "OK"
+      },
+      "regions": [],
+      "ci": {
+        "status": "passing",
+        "repo": "palladius/septober",
+        "conclusion": "success",
+        "run_status": "completed",
+        "workflow_name": "Graph Update: uv in /septober-next #1546611967",
+        "display_title": "Graph Update: uv in /septober-next #1546611967",
+        "branch": "master",
+        "event": "dynamic",
+        "updated_at": "2026-08-31T06:49:35Z",
+        "run_url": "https://github.com/palladius/septober/actions/runs/33365706287",
+        "failing_workflows": []
+      }
+    },
+    "private-journal": {
+      "id": "private-journal",
+      "title": "🔒 Riccardo's Private Journal",
+      "audience": "journals",
+      "archived": false,
+      "overall": "healthy",
+      "play_url": "https://lobby-ricc-pvt-journal2.palladiusbonton.workers.dev/",
+      "repo_url": "https://github.com/palladius/lobby-ricc-pvt-journal",
+      "web": {
+        "status": "protected",
+        "http_code": 200,
+        "latency_ms": 258,
+        "note": "Cloudflare Zero Trust Access"
+      },
+      "regions": [],
+      "ci": {
+        "status": "passing",
+        "repo": "palladius/lobby-ricc-pvt-journal",
+        "conclusion": "success",
+        "run_status": "completed",
+        "workflow_name": "Deploy to Cloudflare",
+        "display_title": "CUJ02: Deepview of Yesterday (2026-10-31) - Sabato a Zurigo tra Rient…",
+        "branch": "master",
+        "event": "push",
+        "updated_at": "2026-11-01T05:18:20Z",
+        "run_url": "https://github.com/palladius/lobby-ricc-pvt-journal/actions/runs/41276250119",
+        "failing_workflows": []
+      }
+    },
+    "lobby-sudafrica-journal": {
+      "id": "lobby-sudafrica-journal",
+      "title": "🇿🇦 South Africa Diary (Lobby Safari)",
+      "audience": "journals",
+      "archived": false,
+      "overall": "healthy",
+      "play_url": "https://lobby-sudafrica-journal.palladiusbonton.workers.dev/",
+      "repo_url": "https://github.com/palladius/lobby-sudafrica-journal",
+      "web": {
+        "status": "up",
+        "http_code": 200,
+        "latency_ms": 58,
+        "note": "OK"
+      },
+      "regions": [],
+      "ci": {
+        "status": "no_workflows",
+        "repo": "palladius/lobby-sudafrica-journal",
+        "note": "No GitHub Actions runs"
+      }
+    },
+    "ricc-reads-the-news": {
+      "id": "ricc-reads-the-news",
+      "title": "📰 Ricc Reads the News",
+      "audience": "journals",
+      "archived": false,
+      "overall": "ci_failing",
+      "play_url": "https://ricc-reads-the-news.netlify.app/",
+      "repo_url": "https://github.com/palladius/ricc-reads-the-news",
+      "web": {
+        "status": "up",
+        "http_code": 200,
+        "latency_ms": 357,
+        "note": "OK"
+      },
+      "regions": [],
+      "ci": {
+        "status": "failing",
+        "repo": "palladius/ricc-reads-the-news",
+        "conclusion": "failure",
+        "run_status": "completed",
+        "workflow_name": "[MS UI] Deploy Jekyll site to Pages",
+        "display_title": "Articolo: Pubblica 'Goodbye Bondi Beach'",
+        "branch": "main",
+        "event": "push",
+        "updated_at": "2026-04-04T00:40:09Z",
+        "run_url": "https://github.com/palladius/ricc-reads-the-news/actions/runs/23967491516",
+        "failing_workflows": [
+          {
+            "name": "[MS UI] Deploy Jekyll site to Pages",
+            "url": "https://github.com/palladius/ricc-reads-the-news/actions/runs/23967491516",
+            "updated_at": "2026-04-04T00:40:09Z",
+            "title": "Articolo: Pubblica 'Goodbye Bondi Beach'"
+          }
+        ]
+      }
+    },
+    "sakura": {
+      "id": "sakura",
+      "title": "🌸 Sakura (Swiss Army Knife)",
+      "audience": "tools",
+      "archived": false,
+      "overall": "healthy",
+      "play_url": "",
+      "repo_url": "https://github.com/palladius/sakura",
+      "web": {
+        "status": "none",
+        "http_code": null,
+        "latency_ms": null,
+        "note": "No play_url (CLI/Library)"
+      },
+      "regions": [],
+      "ci": {
+        "status": "passing",
+        "repo": "palladius/sakura",
+        "conclusion": "success",
+        "run_status": "completed",
+        "workflow_name": "GitHub Actions Demo",
+        "display_title": "2.8.7 sobenme",
+        "branch": "master",
+        "event": "push",
+        "updated_at": "2026-10-22T09:33:30Z",
+        "run_url": "https://github.com/palladius/sakura/actions/runs/39756331238",
+        "failing_workflows": []
+      }
+    },
+    "handsfree-chords": {
+      "id": "handsfree-chords",
+      "title": "🎹 Handsfree-Chords",
+      "audience": "tools",
+      "archived": false,
+      "overall": "healthy",
+      "play_url": "https://palladius.github.io/handsfree-chords/",
+      "repo_url": "https://github.com/palladius/handsfree-chords",
+      "web": {
+        "status": "up",
+        "http_code": 200,
+        "latency_ms": 60,
+        "note": "OK"
+      },
+      "regions": [],
+      "ci": {
+        "status": "passing",
+        "repo": "palladius/handsfree-chords",
+        "conclusion": "success",
+        "run_status": "completed",
+        "workflow_name": "pages build and deployment",
+        "display_title": "pages build and deployment",
+        "branch": "main",
+        "event": "dynamic",
+        "updated_at": "2026-10-23T16:21:41Z",
+        "run_url": "https://github.com/palladius/handsfree-chords/actions/runs/39985684264",
+        "failing_workflows": []
+      }
+    }
+  }
+}

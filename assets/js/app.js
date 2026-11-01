@@ -8,6 +8,7 @@
 
   // State
   let allGames = [];
+  let healthReport = window.VETRINA_HEALTH || null;
   let currentAudience = 'all'; // 'all', 'kids', 'tools'
   let currentKind = 'all';     // 'all', 'game', 'educational', 'tool'
   let currentTag = null;
@@ -26,6 +27,7 @@
   const audienceBtns = document.querySelectorAll('.audience-filter-btn');
   const kindBtns = document.querySelectorAll('.kind-filter-btn');
   const activeFiltersContainer = document.getElementById('active-filters');
+  const sreHeaderSummary = document.getElementById('sre-header-summary');
 
   // Detail Modal elements
   const detailModal = document.getElementById('detail-modal');
@@ -42,7 +44,9 @@
   // Initialize
   async function init() {
     setupEventListeners();
-    await loadGamesData();
+    await Promise.all([loadGamesData(), loadHealthData()]);
+    updateSreHeaderSummary();
+    render();
     handleHashRouting();
     window.addEventListener('hashchange', handleHashRouting);
     if (searchInput && !window.location.hash) {
@@ -50,12 +54,14 @@
     }
   }
 
-  // Support direct bookmarkable hash endpoints: #kids, #ale-sebi, #tools, #diaries, #pwa, or game modal #game-tubature
+  // Support direct bookmarkable hash endpoints: #kids, #ale-sebi, #tools, #diaries, #pwa, #sre, or game modal #game-tubature
   function handleHashRouting() {
     const hash = window.location.hash.replace(/^#\/?/, '').toLowerCase();
     if (!hash) return;
 
-    if (hash === 'kids' || hash === 'ale-sebi' || hash === 'ale-seby' || hash === 'kids-club') {
+    if (hash === 'sre' || hash === 'health' || hash === 'status') {
+      window.openSreModal();
+    } else if (hash === 'kids' || hash === 'ale-sebi' || hash === 'ale-seby' || hash === 'kids-club') {
       window.filterByAudience('kids');
     } else if (hash === 'tools' || hash === 'dads-tools') {
       window.filterByAudience('tools');
@@ -88,7 +94,29 @@
     }
 
     updateDynamicCountLabels();
-    render();
+  }
+
+  async function loadHealthData() {
+    try {
+      const response = await fetch('data/health.json');
+      if (response.ok) {
+        healthReport = await response.json();
+      }
+    } catch (e) {
+      if (window.VETRINA_HEALTH) {
+        healthReport = window.VETRINA_HEALTH;
+      }
+    }
+  }
+
+  function updateSreHeaderSummary() {
+    if (!sreHeaderSummary || !healthReport || !healthReport.summary) return;
+    const s = healthReport.summary;
+    const parts = [`${s.healthy || 0}🟢`];
+    if (s.ci_failing > 0) parts.push(`${s.ci_failing}🟡`);
+    if (s.degraded > 0) parts.push(`${s.degraded}🟠`);
+    if (s.down > 0) parts.push(`${s.down}🔴`);
+    sreHeaderSummary.textContent = `SRE: ${parts.join(' ')}`;
   }
 
   function updateDynamicCountLabels() {
@@ -403,6 +431,19 @@
           ? `<span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium ${game.archived ? 'bg-amber-100 text-amber-800 border border-amber-300' : 'bg-indigo-50 text-indigo-700 border border-indigo-200'}">${game.badge}</span>`
           : '';
 
+        const itemHealth = healthReport && healthReport.items ? healthReport.items[game.id] : null;
+        let sreAlertBadge = '';
+        if (itemHealth) {
+          if (itemHealth.overall === 'down') {
+            sreAlertBadge = `<button onclick="window.openSreModal(); event.stopPropagation();" class="pointer-events-auto inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-bold bg-rose-600 text-white shadow-sm hover:bg-rose-700 transition" title="Endpoint Down! Click for SRE Status">🔴 Site Down</button>`;
+          } else if (itemHealth.overall === 'ci_failing') {
+            const runUrl = itemHealth.ci && itemHealth.ci.run_url ? itemHealth.ci.run_url : '#sre';
+            sreAlertBadge = `<a href="${runUrl}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();" class="pointer-events-auto inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-bold bg-amber-400 text-slate-950 border border-amber-500 shadow-sm hover:bg-amber-300 transition" title="Latest GitHub Actions Run Failed: ${itemHealth.ci.workflow_name || 'CI'}">🟡 CI Failed</a>`;
+          } else if (itemHealth.overall === 'degraded') {
+            sreAlertBadge = `<button onclick="window.openSreModal(); event.stopPropagation();" class="pointer-events-auto inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-bold bg-orange-500 text-white shadow-sm hover:bg-orange-600 transition" title="Secondary Region Down! Click for SRE Status">🟠 Region Degraded</button>`;
+          }
+        }
+
         const targetPill = game.target
           ? `<span class="text-xs text-slate-500 font-medium">🎯 ${game.target}</span>`
           : '';
@@ -485,6 +526,7 @@
               <div class="absolute top-2.5 left-2.5 flex flex-wrap gap-1.5 z-10 pointer-events-none">
                 ${typeBadge}
                 ${statusBadge}
+                ${sreAlertBadge}
               </div>
 
               <!-- Play hover overlay -->
@@ -825,6 +867,131 @@
           ${game.article_url ? `<a href="${game.article_url}" target="_blank" class="text-center py-2.5 px-4 rounded-xl text-sm font-semibold text-purple-700 bg-purple-50 hover:bg-purple-100 border border-purple-200 transition">📰 Read Article</a>` : ''}
           ${game.issue_url ? `<a href="${game.issue_url}" target="_blank" class="text-center py-2.5 px-4 rounded-xl text-sm font-semibold text-amber-800 bg-amber-50 hover:bg-amber-100 border border-amber-200 transition">🔧 View Issue #1</a>` : ''}
           ${game.repo_url && !game.archived ? `<a href="${game.repo_url}" target="_blank" class="text-center py-2.5 px-4 rounded-xl text-sm font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 transition">📂 GitHub</a>` : ''}
+        </div>
+      </div>
+    `;
+
+    detailModal.classList.remove('hidden');
+    detailModal.classList.add('flex');
+  };
+
+  window.openSreModal = function () {
+    if (!detailModal || !modalBody) return;
+    if (history.replaceState) {
+      history.replaceState(null, '', '#sre');
+    }
+
+    if (!healthReport || !healthReport.items) {
+      modalBody.innerHTML = `<div class="p-6 text-center text-slate-600">No SRE health telemetry loaded yet. Run <code>python3 bin/check_health.py</code>.</div>`;
+      detailModal.classList.remove('hidden');
+      detailModal.classList.add('flex');
+      return;
+    }
+
+    const s = healthReport.summary || {};
+    const itemsList = Object.values(healthReport.items);
+    const severityOrder = { down: 0, ci_failing: 1, degraded: 2, healthy: 3, archived: 4 };
+    itemsList.sort((a, b) => (severityOrder[a.overall] ?? 9) - (severityOrder[b.overall] ?? 9));
+
+    const rowsHtml = itemsList
+      .map((r) => {
+        let statusBadge = `<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-bold bg-emerald-100 text-emerald-900">🟢 Healthy</span>`;
+        if (r.overall === 'down') {
+          statusBadge = `<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-bold bg-rose-100 text-rose-900 border border-rose-300">🔴 Site Down</span>`;
+        } else if (r.overall === 'ci_failing') {
+          statusBadge = `<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-bold bg-amber-100 text-amber-900 border border-amber-300">🟡 CI Broken</span>`;
+        } else if (r.overall === 'degraded') {
+          statusBadge = `<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-bold bg-orange-100 text-orange-900 border border-orange-300">🟠 Degraded</span>`;
+        } else if (r.overall === 'archived') {
+          statusBadge = `<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium bg-slate-100 text-slate-600">📦 Archived</span>`;
+        }
+
+        const w = r.web || {};
+        let webCell = `<span class="text-slate-400 text-xs">— (CLI/Tool)</span>`;
+        if (w.status === 'up') {
+          webCell = `<a href="${r.play_url}" target="_blank" class="text-xs font-semibold text-emerald-700 hover:underline">200 OK (${w.latency_ms}ms)</a>`;
+        } else if (w.status === 'protected') {
+          webCell = `<a href="${r.play_url}" target="_blank" class="text-xs font-semibold text-indigo-700 hover:underline">🔒 ZeroTrust (${w.latency_ms}ms)</a>`;
+        } else if (w.status === 'archived') {
+          webCell = `<span class="text-xs text-slate-400">📦 Archived</span>`;
+        } else if (w.status === 'down') {
+          webCell = `<a href="${r.play_url}" target="_blank" class="text-xs font-bold text-rose-600 hover:underline">❌ ${w.http_code || 'ERR'} (${w.note || 'Down'})</a>`;
+        }
+
+        if (r.regions && r.regions.length > 0) {
+          const regPills = r.regions
+            .map((reg) => {
+              const ok = reg.status === 'up';
+              return `<a href="${reg.url}" target="_blank" class="inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded text-[10px] font-semibold ${ok ? 'bg-emerald-50 text-emerald-800 border border-emerald-200' : 'bg-rose-50 text-rose-800 border border-rose-300'}" title="${reg.note || ''}">${ok ? '🟢' : '🔴'} ${reg.name}</a>`;
+            })
+            .join(' ');
+          webCell += `<div class="mt-1 flex flex-wrap gap-1">${regPills}</div>`;
+        }
+
+        const ci = r.ci || {};
+        let ciCell = `<span class="text-xs text-slate-400">⚪ No workflows</span>`;
+        if (ci.status === 'passing') {
+          ciCell = `<a href="${ci.run_url}" target="_blank" class="text-xs font-medium text-emerald-700 hover:underline">✅ ${ci.workflow_name || 'CI'} <span class="text-slate-400">(${(ci.updated_at || '').slice(0, 10)})</span></a>`;
+        } else if (ci.status === 'failing') {
+          ciCell = `<a href="${ci.run_url}" target="_blank" class="text-xs font-bold text-rose-600 hover:underline">❌ FAIL: ${ci.workflow_name || 'CI'} (${(ci.updated_at || '').slice(0, 10)}) ↗</a>`;
+        } else if (ci.status === 'gitlab') {
+          ciCell = `<a href="${r.repo_url}" target="_blank" class="text-xs font-medium text-orange-700 hover:underline">🦊 GitLab Repo</a>`;
+        } else if (ci.status === 'none') {
+          ciCell = `<span class="text-xs text-slate-400">—</span>`;
+        }
+
+        return `
+          <tr class="border-b border-slate-100 hover:bg-slate-50/80 transition">
+            <td class="py-2.5 px-2 whitespace-nowrap">${statusBadge}</td>
+            <td class="py-2.5 px-2">
+              <div class="font-bold text-xs sm:text-sm text-slate-900">${r.title}</div>
+              <div class="text-[11px] text-slate-400 font-mono">${r.id}</div>
+            </td>
+            <td class="py-2.5 px-2">${webCell}</td>
+            <td class="py-2.5 px-2">${ciCell}</td>
+          </tr>
+        `;
+      })
+      .join('');
+
+    modalBody.innerHTML = `
+      <div class="space-y-4">
+        <div class="flex flex-wrap items-center justify-between gap-2 pr-8">
+          <div>
+            <h2 class="font-fun text-xl sm:text-2xl font-bold text-slate-900 flex items-center gap-2">
+              <span>🩺 Vetrina SRE Health & CI/CD Monitor</span>
+            </h2>
+            <p class="text-xs text-slate-500 mt-0.5">
+              Deterministic probe across all ${healthReport.total} Vetrina apps • Last checked: <code class="font-mono text-indigo-600">${healthReport.checked_at}</code> (${healthReport.duration_sec}s)
+            </p>
+          </div>
+          <div class="flex flex-wrap items-center gap-1.5 text-xs font-bold">
+            <span class="px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-900">🟢 ${s.healthy || 0} Healthy</span>
+            <span class="px-2.5 py-1 rounded-full bg-amber-100 text-amber-900">🟡 ${s.ci_failing || 0} CI Broken</span>
+            <span class="px-2.5 py-1 rounded-full bg-orange-100 text-orange-900">🟠 ${s.degraded || 0} Degraded</span>
+            <span class="px-2.5 py-1 rounded-full bg-rose-100 text-rose-900">🔴 ${s.down || 0} Down</span>
+          </div>
+        </div>
+
+        <div class="overflow-x-auto rounded-2xl border border-slate-200 max-h-[62vh] overflow-y-auto">
+          <table class="w-full text-left border-collapse">
+            <thead class="bg-slate-100/90 sticky top-0 text-[11px] font-bold uppercase text-slate-500 border-b border-slate-200">
+              <tr>
+                <th class="py-2.5 px-2">Status</th>
+                <th class="py-2.5 px-2">App</th>
+                <th class="py-2.5 px-2">Live Endpoint</th>
+                <th class="py-2.5 px-2">GitHub Actions CI/CD</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${rowsHtml}
+            </tbody>
+          </table>
+        </div>
+
+        <div class="text-[11px] text-slate-500 flex items-center justify-between pt-1">
+          <span>Run locally anytime: <code class="px-1.5 py-0.5 rounded bg-slate-100 font-mono text-indigo-700">just health</code> or <code class="px-1.5 py-0.5 rounded bg-slate-100 font-mono text-indigo-700">python3 bin/check_health.py</code></span>
+          <a href="https://github.com/palladius/vetrina/actions" target="_blank" class="text-indigo-600 hover:underline font-semibold">View Vetrina Cron Runs ↗</a>
         </div>
       </div>
     `;

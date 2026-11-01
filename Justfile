@@ -12,6 +12,10 @@ build:
 test: build
     uv run --with pyyaml python3 ./tests/test_games_yaml.py
 
+# Probe live URLs and GitHub Actions CI status across all Vetrina apps
+health:
+    uv run --with pyyaml python3 ./bin/check_health.py
+
 # Start a local preview server
 serve port="8080":
     @echo "🚀 Avvio server locale su http://localhost:{{port}}"
