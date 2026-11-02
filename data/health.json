@@ -1,10 +1,10 @@
 {
-  "checked_at": "2026-11-01T09:53:43Z",
-  "duration_sec": 8.88,
+  "checked_at": "2026-11-02T10:16:52Z",
+  "duration_sec": 12.13,
   "total": 29,
   "summary": {
-    "healthy": 25,
-    "ci_failing": 2,
+    "healthy": 24,
+    "ci_failing": 3,
     "degraded": 1,
     "down": 0,
     "archived": 1
@@ -15,28 +15,35 @@
       "title": "🀄 Carlesso Family 3D Mahjong Solitaire",
       "audience": "kids",
       "archived": false,
-      "overall": "healthy",
+      "overall": "ci_failing",
       "play_url": "https://palladius.github.io/family-mahjong-3d/",
       "repo_url": "https://github.com/palladius/family-mahjong-3d",
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 198,
+        "latency_ms": 426,
         "note": "OK"
       },
       "regions": [],
       "ci": {
-        "status": "passing",
+        "status": "failing",
         "repo": "palladius/family-mahjong-3d",
-        "conclusion": "success",
+        "conclusion": "failure",
         "run_status": "completed",
-        "workflow_name": "pages build and deployment",
-        "display_title": "pages build and deployment",
-        "branch": "gh-pages",
-        "event": "dynamic",
-        "updated_at": "2026-10-29T17:41:50Z",
-        "run_url": "https://github.com/palladius/family-mahjong-3d/actions/runs/40923688022",
-        "failing_workflows": []
+        "workflow_name": "Deploy to GitHub Pages",
+        "display_title": "docs(learn): persist dual-path GitHub Pages build_type=legacy rule in…",
+        "branch": "main",
+        "event": "push",
+        "updated_at": "2026-11-01T15:23:01Z",
+        "run_url": "https://github.com/palladius/family-mahjong-3d/actions/runs/41320916141",
+        "failing_workflows": [
+          {
+            "name": "Deploy to GitHub Pages",
+            "url": "https://github.com/palladius/family-mahjong-3d/actions/runs/41320916141",
+            "updated_at": "2026-11-01T15:23:01Z",
+            "title": "docs(learn): persist dual-path GitHub Pages build_type=legacy rule in…"
+          }
+        ]
       }
     },
     "pupurabbu-3d": {
@@ -50,7 +57,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 3831,
+        "latency_ms": 4954,
         "note": "OK"
       },
       "regions": [
@@ -61,7 +68,7 @@
           "url": "https://pupurabbu-3d-272932496670.europe-west6.run.app",
           "status": "up",
           "http_code": 200,
-          "latency_ms": 240,
+          "latency_ms": 357,
           "note": "OK"
         },
         {
@@ -71,7 +78,7 @@
           "url": "https://pupurabbu-3d-dev-272932496670.europe-west6.run.app",
           "status": "up",
           "http_code": 200,
-          "latency_ms": 3821,
+          "latency_ms": 6394,
           "note": "OK"
         },
         {
@@ -81,7 +88,7 @@
           "url": "https://pupurabbu-3d-272932496670.europe-west1.run.app",
           "status": "down",
           "http_code": 404,
-          "latency_ms": 140,
+          "latency_ms": 198,
           "note": "HTTP 404: Not Found"
         },
         {
@@ -91,7 +98,7 @@
           "url": "https://pupurabbu-3d-dev-272932496670.europe-west1.run.app",
           "status": "down",
           "http_code": 404,
-          "latency_ms": 147,
+          "latency_ms": 206,
           "note": "HTTP 404: Not Found"
         }
       ],
@@ -111,7 +118,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 186,
+        "latency_ms": 405,
         "note": "OK"
       },
       "regions": [],
@@ -140,7 +147,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 184,
+        "latency_ms": 401,
         "note": "OK"
       },
       "regions": [],
@@ -169,7 +176,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 185,
+        "latency_ms": 391,
         "note": "OK"
       },
       "regions": [],
@@ -198,7 +205,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 189,
+        "latency_ms": 404,
         "note": "OK"
       },
       "regions": [],
@@ -248,7 +255,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 214,
+        "latency_ms": 451,
         "note": "OK"
       },
       "regions": [],
@@ -268,7 +275,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 567,
+        "latency_ms": 641,
         "note": "OK"
       },
       "regions": [],
@@ -288,7 +295,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 197,
+        "latency_ms": 393,
         "note": "OK"
       },
       "regions": [],
@@ -301,8 +308,8 @@
         "display_title": "pages build and deployment",
         "branch": "main",
         "event": "dynamic",
-        "updated_at": "2026-11-01T06:23:56Z",
-        "run_url": "https://github.com/palladius/parola-del-giorno/actions/runs/41280564214",
+        "updated_at": "2026-11-02T06:26:21Z",
+        "run_url": "https://github.com/palladius/parola-del-giorno/actions/runs/41399791599",
         "failing_workflows": []
       }
     },
@@ -317,7 +324,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 133,
+        "latency_ms": 498,
         "note": "OK"
       },
       "regions": [],
@@ -346,7 +353,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 1246,
+        "latency_ms": 1333,
         "note": "OK"
       },
       "regions": [],
@@ -528,7 +535,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 204,
+        "latency_ms": 369,
         "note": "OK"
       },
       "regions": [],
@@ -570,7 +577,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 71,
+        "latency_ms": 260,
         "note": "OK"
       },
       "regions": [],
@@ -583,8 +590,8 @@
         "display_title": "🔄 Daily Cron: Slurp Federated Vetrina Metadata",
         "branch": "main",
         "event": "schedule",
-        "updated_at": "2026-11-01T09:53:29Z",
-        "run_url": "https://github.com/palladius/vetrina/actions/runs/41295055135",
+        "updated_at": "2026-11-02T10:16:31Z",
+        "run_url": "https://github.com/palladius/vetrina/actions/runs/41427469342",
         "failing_workflows": []
       }
     },
@@ -599,7 +606,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 78,
+        "latency_ms": 287,
         "note": "OK"
       },
       "regions": [],
@@ -628,7 +635,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 7787,
+        "latency_ms": 9007,
         "note": "OK"
       },
       "regions": [],
@@ -678,7 +685,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 252,
+        "latency_ms": 226,
         "note": "OK"
       },
       "regions": [],
@@ -699,7 +706,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 703,
+        "latency_ms": 842,
         "note": "OK"
       },
       "regions": [],
@@ -764,7 +771,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 80,
+        "latency_ms": 246,
         "note": "OK"
       },
       "regions": [],
