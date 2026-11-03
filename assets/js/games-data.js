@@ -14,9 +14,10 @@ window.PALLADIUS_GAMES = [
     "screenshot": "assets/screenshots/carlesso-fotoquad.jpg",
     "play_url": "https://palladius.github.io/carlesso-fotoquad/",
     "repo_url": "https://github.com/palladius/carlesso-fotoquad",
+    "pwa": true,
     "can_embed": true,
     "featured": true,
-    "badge": "🟢 Play Live • Drag & Drop",
+    "badge": "🟢 Play Live • PWA Offline",
     "target": "Alessandro, Sebi & Family",
     "tech": [
       "TypeScript",
@@ -25,12 +26,14 @@ window.PALLADIUS_GAMES = [
       "Web Audio",
       "NanoBanana",
       "Conductor",
+      "PWA",
       "GitHub Pages"
     ],
     "tags": [
       "puzzle",
       "solitaire",
       "photos",
+      "pwa",
       "family",
       "game",
       "kids",
