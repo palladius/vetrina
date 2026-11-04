@@ -1,6 +1,6 @@
 {
-  "checked_at": "2026-11-03T10:17:44Z",
-  "duration_sec": 15.49,
+  "checked_at": "2026-11-04T10:09:41Z",
+  "duration_sec": 11.43,
   "total": 30,
   "summary": {
     "healthy": 25,
@@ -21,7 +21,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 5341,
+        "latency_ms": 180,
         "note": "OK"
       },
       "regions": [],
@@ -30,12 +30,12 @@
         "repo": "palladius/carlesso-fotoquad",
         "conclusion": "success",
         "run_status": "completed",
-        "workflow_name": "Deploy to GitHub Pages",
-        "display_title": "chore(conductor): Mark track 'MVP — Zen Solitaire Core Loop (PWA)' as…",
+        "workflow_name": "CI",
+        "display_title": "🔖 release: v0.2.0 — rotation, three-button start, snappy celebration,…",
         "branch": "main",
         "event": "push",
-        "updated_at": "2026-11-03T07:14:08Z",
-        "run_url": "https://github.com/palladius/carlesso-fotoquad/actions/runs/41594834532",
+        "updated_at": "2026-11-03T20:28:44Z",
+        "run_url": "https://github.com/palladius/carlesso-fotoquad/actions/runs/41712737622",
         "failing_workflows": []
       }
     },
@@ -50,7 +50,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 5226,
+        "latency_ms": 195,
         "note": "OK"
       },
       "regions": [],
@@ -86,7 +86,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 4531,
+        "latency_ms": 4547,
         "note": "OK"
       },
       "regions": [
@@ -97,7 +97,7 @@
           "url": "https://pupurabbu-3d-272932496670.europe-west6.run.app",
           "status": "up",
           "http_code": 200,
-          "latency_ms": 323,
+          "latency_ms": 229,
           "note": "OK"
         },
         {
@@ -107,7 +107,7 @@
           "url": "https://pupurabbu-3d-dev-272932496670.europe-west6.run.app",
           "status": "up",
           "http_code": 200,
-          "latency_ms": 5903,
+          "latency_ms": 6380,
           "note": "OK"
         },
         {
@@ -117,7 +117,7 @@
           "url": "https://pupurabbu-3d-272932496670.europe-west1.run.app",
           "status": "down",
           "http_code": 404,
-          "latency_ms": 171,
+          "latency_ms": 127,
           "note": "HTTP 404: Not Found"
         },
         {
@@ -127,7 +127,7 @@
           "url": "https://pupurabbu-3d-dev-272932496670.europe-west1.run.app",
           "status": "down",
           "http_code": 404,
-          "latency_ms": 216,
+          "latency_ms": 134,
           "note": "HTTP 404: Not Found"
         }
       ],
@@ -147,7 +147,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 5196,
+        "latency_ms": 193,
         "note": "OK"
       },
       "regions": [],
@@ -176,7 +176,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 5163,
+        "latency_ms": 171,
         "note": "OK"
       },
       "regions": [],
@@ -205,7 +205,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 5197,
+        "latency_ms": 188,
         "note": "OK"
       },
       "regions": [],
@@ -234,7 +234,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 5158,
+        "latency_ms": 189,
         "note": "OK"
       },
       "regions": [],
@@ -284,7 +284,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 5324,
+        "latency_ms": 199,
         "note": "OK"
       },
       "regions": [],
@@ -304,7 +304,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 696,
+        "latency_ms": 484,
         "note": "OK"
       },
       "regions": [],
@@ -324,7 +324,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 4813,
+        "latency_ms": 108,
         "note": "OK"
       },
       "regions": [],
@@ -337,8 +337,8 @@
         "display_title": "pages build and deployment",
         "branch": "main",
         "event": "dynamic",
-        "updated_at": "2026-11-03T06:24:17Z",
-        "run_url": "https://github.com/palladius/parola-del-giorno/actions/runs/41589518695",
+        "updated_at": "2026-11-04T06:24:10Z",
+        "run_url": "https://github.com/palladius/parola-del-giorno/actions/runs/41785149369",
         "failing_workflows": []
       }
     },
@@ -353,7 +353,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 4824,
+        "latency_ms": 90,
         "note": "OK"
       },
       "regions": [],
@@ -382,7 +382,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 1248,
+        "latency_ms": 1265,
         "note": "OK"
       },
       "regions": [],
@@ -564,7 +564,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 395,
+        "latency_ms": 356,
         "note": "OK"
       },
       "regions": [],
@@ -606,7 +606,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 386,
+        "latency_ms": 78,
         "note": "OK"
       },
       "regions": [],
@@ -619,8 +619,8 @@
         "display_title": "🔄 Daily Cron: Slurp Federated Vetrina Metadata",
         "branch": "main",
         "event": "schedule",
-        "updated_at": "2026-11-03T10:17:15Z",
-        "run_url": "https://github.com/palladius/vetrina/actions/runs/41617987177",
+        "updated_at": "2026-11-04T10:09:23Z",
+        "run_url": "https://github.com/palladius/vetrina/actions/runs/41812277008",
         "failing_workflows": []
       }
     },
@@ -635,7 +635,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 137,
+        "latency_ms": 86,
         "note": "OK"
       },
       "regions": [],
@@ -664,7 +664,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 8975,
+        "latency_ms": 9454,
         "note": "OK"
       },
       "regions": [],
@@ -693,7 +693,7 @@
       "web": {
         "status": "protected",
         "http_code": 200,
-        "latency_ms": 1072,
+        "latency_ms": 694,
         "note": "Cloudflare Zero Trust Access"
       },
       "regions": [],
@@ -714,7 +714,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 382,
+        "latency_ms": 223,
         "note": "OK"
       },
       "regions": [],
@@ -735,7 +735,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 687,
+        "latency_ms": 757,
         "note": "OK"
       },
       "regions": [],
@@ -800,7 +800,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 175,
+        "latency_ms": 79,
         "note": "OK"
       },
       "regions": [],
