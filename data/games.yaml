@@ -1,3 +1,50 @@
+- id: "demo-snake"
+  title: "🐍🐧 Puffin Snake — Family Login & Hall of Fame"
+  audience: "kids"
+  kind: "game"
+  is_game: true
+  category: "kids"
+  score: 94
+  created_at: "2026-11"
+  tagline: "Classic arcade Snake with the 6 Carlesso Family Pixar RPG Heroes, Cutie Kids PIN Pad (X X X X), and Cloud Firestore Top 10 Hall of Fame!"
+  description: "End-to-end family arcade Snake showcasing PuffinLogin (<puffin-login> & <puffin-leaderboard>). Features mandatory login with the 6 Pixar RPG Bobblehead family profiles (Papino Riccardo, Mamma Kate, Ale, Seby, Nonna Lucilla, and Guest), a 4-digit cutie PIN keypad with 3-strike jam protection, zero-plaintext salted SHA-256 WebCrypto auth on public GitHub Pages, a 3-slot FIFO directional turn queue (dirQueue) so rapid UP+LEFT turns never drop a key, player-colored snake segments, and an end-of-match Top 10 Hall of Fame persisted to Google Cloud Firestore (ror-goldie / puffin-login)."
+  screenshot: "assets/screenshots/demo-snake.png"
+  play_url: "https://palladius.github.io/demo-snake/"
+  repo_url: "https://github.com/palladius/demo-snake"
+  pwa: true
+  can_embed: true
+  featured: true
+  badge: "🟢 Play Live • PuffinLogin + Firestore"
+  target: "Alessandro, Sebi, Kate, Riccardo, Nonna Lucilla & Family"
+  regions:
+    - name: "🌐 GitHub Pages"
+      url: "https://palladius.github.io/demo-snake/"
+      region: "global"
+      env: "prod"
+      flag: "🌐"
+    - name: "🇧🇪 Belgium Cloud Run"
+      url: "https://puffin-login-932724269481.europe-west1.run.app/snake.html"
+      region: "europe-west1"
+      env: "prod"
+      flag: "🇧🇪"
+  tech:
+    - "Web Components"
+    - "Canvas"
+    - "WebCrypto SHA-256"
+    - "Cloud Run"
+    - "Cloud Firestore"
+    - "NanoBanana"
+    - "GitHub Pages"
+  tags:
+    - "snake"
+    - "arcade"
+    - "puffin-login"
+    - "leaderboard"
+    - "firestore"
+    - "family"
+    - "game"
+    - "kids"
+
 - id: "carlesso-fotoquad"
   title: "📸🧩 FotoQuad: Il Solitario di Famiglia"
   audience: "kids"
