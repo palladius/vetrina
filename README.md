@@ -6,6 +6,7 @@
 
 🌐 **Live Website on GitHub Pages:** **[https://palladius.github.io/vetrina/](https://palladius.github.io/vetrina/)**  
 🧸 **Direct Kids Bookmark (Ale & Sebi's Club):** **[https://palladius.github.io/vetrina/#kids](https://palladius.github.io/vetrina/#kids)**  
+🔥💍 **Puffin Login Ring Apps (`#puffin-ring`):** **[https://palladius.github.io/vetrina/#puffin-ring](https://palladius.github.io/vetrina/#puffin-ring)**  
 ✈️ **Offline Games (PWA):** **[https://palladius.github.io/vetrina/#pwa](https://palladius.github.io/vetrina/#pwa)**  
 📔 **Papino's Diaries:** **[https://palladius.github.io/vetrina/#diaries](https://palladius.github.io/vetrina/#diaries)**  
 
@@ -67,6 +68,17 @@ The test suite automatically verifies:
    ```bash
    python3 tests/test_games_yaml.py
    ```
+
+## 🔥💍 Puffin Login Ring (`supports_puffin_login`)
+
+`palladius/vetrina` serves as the central **Single Source of Truth (SSOT)** registry for the **Puffin Login Ring** — our 1990s GeoCities-style WebRing that cross-links every family game and application integrating `<puffin-login>` and `<puffin-leaderboard>`.
+
+- **How to register an app in the Ring**:
+  1. Set `supports_puffin_login: true` and `puffin_game_id: "<firestore-game-id>"` on the app's entry in `data/games.yaml`.
+  2. Include `"supports_puffin_login"` and `"puffin-login"` in the entry's `tags` list.
+  3. Run `python3 bin/build.py` and `python3 tests/test_games_yaml.py`.
+- **Direct Showcase Filter**: **[https://palladius.github.io/vetrina/#puffin-ring](https://palladius.github.io/vetrina/#puffin-ring)** (or `#supports_puffin_login`) filters the showcase to display only Puffin Login Ring members, complete with a golden `🔥💍 Puffin Ring` badge.
+- **Ring Hub Endpoint**: **[https://puffin-login-932724269481.europe-west1.run.app/ring.html](https://puffin-login-932724269481.europe-west1.run.app/ring.html)** consumes `https://palladius.github.io/vetrina/data/games.json` (`supports_puffin_login === true`) so all apps in the Ring of Fire automatically cross-link (`⬅️ Prev` | `🔥💍 Ring Hub` | `🎲 Random` | `Next ➡️`) and link out from `<puffin-leaderboard>`.
 
 ## 💻 Local Preview
 

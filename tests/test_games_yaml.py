@@ -108,6 +108,20 @@ class TestGamesYaml(unittest.TestCase):
             if 'tech' in item and item['tech'] is not None:
                 self.assertIsInstance(item['tech'], list, f"[{item_id}] 'tech' must be a list")
 
+    def test_supports_puffin_login_field(self):
+        ring_members = []
+        for item in self.data:
+            item_id = item.get('id')
+            if 'supports_puffin_login' in item and item['supports_puffin_login'] is not None:
+                self.assertIsInstance(
+                    item['supports_puffin_login'],
+                    bool,
+                    f"[{item_id}] 'supports_puffin_login' must be a boolean"
+                )
+                if item['supports_puffin_login']:
+                    ring_members.append(item_id)
+        self.assertIn('demo-snake', ring_members, "Expected 'demo-snake' to have supports_puffin_login: true")
+
 if __name__ == '__main__':
     suite = unittest.TestLoader().loadTestsFromTestCase(TestGamesYaml)
     runner = unittest.TextTestRunner(verbosity=2)

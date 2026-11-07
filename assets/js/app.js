@@ -69,6 +69,8 @@
       window.filterByAudience('journals');
     } else if (hash === 'pwa' || hash === 'offline') {
       window.filterByTag('pwa');
+    } else if (hash === 'puffin-ring' || hash === 'puffin-login' || hash === 'supports_puffin_login' || hash === 'ring') {
+      window.filterByTag('supports_puffin_login');
     } else if (hash === 'character-consistency' || hash === 'consistency' || hash === 'faces') {
       window.filterByTag('character-consistency');
     } else if (hash.startsWith('game-') || hash.startsWith('app-')) {
@@ -295,9 +297,13 @@
 
       // 3. Tag filter
       if (currentTag) {
+        const tagLower = currentTag.toLowerCase();
         const itemTags = (item.tags || []).map((t) => t.toLowerCase());
         const itemTech = (item.tech || []).map((t) => t.toLowerCase());
-        if (!itemTags.includes(currentTag.toLowerCase()) && !itemTech.includes(currentTag.toLowerCase())) {
+        const isPuffinFilter = ['supports_puffin_login', 'puffin-login', 'puffin-ring'].includes(tagLower);
+        if (isPuffinFilter && item.supports_puffin_login === true) {
+          // Matches supports_puffin_login boolean flag
+        } else if (!itemTags.includes(tagLower) && !itemTech.includes(tagLower)) {
           return false;
         }
       }
@@ -431,6 +437,10 @@
           ? `<span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium ${game.archived ? 'bg-amber-100 text-amber-800 border border-amber-300' : 'bg-indigo-50 text-indigo-700 border border-indigo-200'}">${game.badge}</span>`
           : '';
 
+        const puffinRingBadge = game.supports_puffin_login
+          ? `<a href="https://puffin-login-932724269481.europe-west1.run.app/ring.html" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();" class="pointer-events-auto inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-bold bg-gradient-to-r from-amber-500 to-orange-500 text-white border border-amber-300 shadow-sm hover:from-amber-400 hover:to-orange-400 transition" title="Member of the Puffin Login Ring (supports_puffin_login: true)">🔥💍 Puffin Ring</a>`
+          : '';
+
         const itemHealth = healthReport && healthReport.items ? healthReport.items[game.id] : null;
         let sreAlertBadge = '';
         if (itemHealth) {
@@ -526,6 +536,7 @@
               <div class="absolute top-2.5 left-2.5 flex flex-wrap gap-1.5 z-10 pointer-events-none">
                 ${typeBadge}
                 ${statusBadge}
+                ${puffinRingBadge}
                 ${sreAlertBadge}
               </div>
 
