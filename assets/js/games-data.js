@@ -390,11 +390,14 @@ window.PALLADIUS_GAMES = [
       "photos",
       "family",
       "pwa",
-      "offline"
+      "offline",
+      "puffin-login",
+      "supports_puffin_login"
     ],
     "pwa": true,
-    "supports_puffin_login": false,
-    "badge": "🟢 Play Live • PWA",
+    "supports_puffin_login": true,
+    "puffin_game_id": "kids-jigsaw-puzzle",
+    "badge": "🟢 Play Live • PuffinLogin + PWA",
     "target": "The Whole Family",
     "featured": true
   },
