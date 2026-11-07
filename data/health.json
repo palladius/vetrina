@@ -1,15 +1,65 @@
 {
-  "checked_at": "2026-11-06T10:07:30Z",
-  "duration_sec": 12.03,
-  "total": 30,
+  "checked_at": "2026-11-07T09:25:03Z",
+  "duration_sec": 11.46,
+  "total": 31,
   "summary": {
-    "healthy": 24,
+    "healthy": 25,
     "ci_failing": 3,
     "degraded": 1,
     "down": 1,
     "archived": 1
   },
   "items": {
+    "demo-snake": {
+      "id": "demo-snake",
+      "title": "🐍🐧 Puffin Snake — Family Login & Hall of Fame",
+      "audience": "kids",
+      "archived": false,
+      "overall": "healthy",
+      "play_url": "https://palladius.github.io/demo-snake/",
+      "repo_url": "https://github.com/palladius/demo-snake",
+      "web": {
+        "status": "up",
+        "http_code": 200,
+        "latency_ms": 170,
+        "note": "OK"
+      },
+      "regions": [
+        {
+          "name": "🌐 GitHub Pages",
+          "env": "prod",
+          "region": "global",
+          "url": "https://palladius.github.io/demo-snake/",
+          "status": "up",
+          "http_code": 200,
+          "latency_ms": 38,
+          "note": "OK"
+        },
+        {
+          "name": "🇧🇪 Belgium Cloud Run",
+          "env": "prod",
+          "region": "europe-west1",
+          "url": "https://puffin-login-932724269481.europe-west1.run.app/snake.html",
+          "status": "up",
+          "http_code": 200,
+          "latency_ms": 1137,
+          "note": "OK"
+        }
+      ],
+      "ci": {
+        "status": "passing",
+        "repo": "palladius/demo-snake",
+        "conclusion": "success",
+        "run_status": "completed",
+        "workflow_name": "pages build and deployment",
+        "display_title": "pages build and deployment",
+        "branch": "main",
+        "event": "dynamic",
+        "updated_at": "2026-11-05T09:16:12Z",
+        "run_url": "https://github.com/palladius/demo-snake/actions/runs/42000907925",
+        "failing_workflows": []
+      }
+    },
     "carlesso-fotoquad": {
       "id": "carlesso-fotoquad",
       "title": "📸🧩 FotoQuad: Il Solitario di Famiglia",
@@ -21,7 +71,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 318,
+        "latency_ms": 133,
         "note": "OK"
       },
       "regions": [],
@@ -50,7 +100,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 339,
+        "latency_ms": 186,
         "note": "OK"
       },
       "regions": [],
@@ -86,7 +136,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 5273,
+        "latency_ms": 5299,
         "note": "OK"
       },
       "regions": [
@@ -97,7 +147,7 @@
           "url": "https://pupurabbu-3d-272932496670.europe-west6.run.app",
           "status": "up",
           "http_code": 200,
-          "latency_ms": 333,
+          "latency_ms": 144,
           "note": "OK"
         },
         {
@@ -107,7 +157,7 @@
           "url": "https://pupurabbu-3d-dev-272932496670.europe-west6.run.app",
           "status": "up",
           "http_code": 200,
-          "latency_ms": 5952,
+          "latency_ms": 5042,
           "note": "OK"
         },
         {
@@ -117,7 +167,7 @@
           "url": "https://pupurabbu-3d-272932496670.europe-west1.run.app",
           "status": "down",
           "http_code": 404,
-          "latency_ms": 199,
+          "latency_ms": 140,
           "note": "HTTP 404: Not Found"
         },
         {
@@ -127,7 +177,7 @@
           "url": "https://pupurabbu-3d-dev-272932496670.europe-west1.run.app",
           "status": "down",
           "http_code": 404,
-          "latency_ms": 229,
+          "latency_ms": 137,
           "note": "HTTP 404: Not Found"
         }
       ],
@@ -147,7 +197,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 322,
+        "latency_ms": 161,
         "note": "OK"
       },
       "regions": [],
@@ -176,7 +226,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 328,
+        "latency_ms": 191,
         "note": "OK"
       },
       "regions": [],
@@ -205,7 +255,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 318,
+        "latency_ms": 153,
         "note": "OK"
       },
       "regions": [],
@@ -234,7 +284,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 318,
+        "latency_ms": 162,
         "note": "OK"
       },
       "regions": [],
@@ -284,7 +334,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 507,
+        "latency_ms": 289,
         "note": "OK"
       },
       "regions": [],
@@ -304,7 +354,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 617,
+        "latency_ms": 593,
         "note": "OK"
       },
       "regions": [],
@@ -324,7 +374,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 161,
+        "latency_ms": 119,
         "note": "OK"
       },
       "regions": [],
@@ -337,8 +387,8 @@
         "display_title": "pages build and deployment",
         "branch": "main",
         "event": "dynamic",
-        "updated_at": "2026-11-05T06:22:27Z",
-        "run_url": "https://github.com/palladius/parola-del-giorno/actions/runs/41979848703",
+        "updated_at": "2026-11-07T06:23:53Z",
+        "run_url": "https://github.com/palladius/parola-del-giorno/actions/runs/42346737862",
         "failing_workflows": []
       }
     },
@@ -353,7 +403,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 131,
+        "latency_ms": 86,
         "note": "OK"
       },
       "regions": [],
@@ -382,7 +432,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 1339,
+        "latency_ms": 1629,
         "note": "OK"
       },
       "regions": [],
@@ -564,7 +614,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 339,
+        "latency_ms": 198,
         "note": "OK"
       },
       "regions": [],
@@ -606,7 +656,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 151,
+        "latency_ms": 77,
         "note": "OK"
       },
       "regions": [],
@@ -619,8 +669,8 @@
         "display_title": "🔄 Daily Cron: Slurp Federated Vetrina Metadata",
         "branch": "main",
         "event": "schedule",
-        "updated_at": "2026-11-06T10:07:09Z",
-        "run_url": "https://github.com/palladius/vetrina/actions/runs/42200172761",
+        "updated_at": "2026-11-07T09:24:45Z",
+        "run_url": "https://github.com/palladius/vetrina/actions/runs/42359620411",
         "failing_workflows": []
       }
     },
@@ -635,7 +685,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 147,
+        "latency_ms": 90,
         "note": "OK"
       },
       "regions": [],
@@ -664,7 +714,7 @@
       "web": {
         "status": "down",
         "http_code": 0,
-        "latency_ms": 10091,
+        "latency_ms": 10077,
         "note": "The read operation timed out"
       },
       "regions": [],
@@ -693,7 +743,7 @@
       "web": {
         "status": "protected",
         "http_code": 200,
-        "latency_ms": 794,
+        "latency_ms": 730,
         "note": "Cloudflare Zero Trust Access"
       },
       "regions": [],
@@ -714,7 +764,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 244,
+        "latency_ms": 75,
         "note": "OK"
       },
       "regions": [],
@@ -735,7 +785,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 902,
+        "latency_ms": 666,
         "note": "OK"
       },
       "regions": [],
@@ -781,11 +831,11 @@
         "conclusion": "success",
         "run_status": "completed",
         "workflow_name": "GitHub Actions Demo",
-        "display_title": "2.8.7 sobenme",
-        "branch": "master",
+        "display_title": "feat(build): convert Makefile to Justfile (fixes #9)",
+        "branch": "fix/issue-9",
         "event": "push",
-        "updated_at": "2026-10-22T09:33:30Z",
-        "run_url": "https://github.com/palladius/sakura/actions/runs/39756331238",
+        "updated_at": "2026-11-07T08:05:54Z",
+        "run_url": "https://github.com/palladius/sakura/actions/runs/42353995953",
         "failing_workflows": []
       }
     },
@@ -800,7 +850,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 167,
+        "latency_ms": 87,
         "note": "OK"
       },
       "regions": [],
