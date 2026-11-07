@@ -87,6 +87,7 @@
     "tags": [
       "snake",
       "arcade",
+      "login",
       "puffin-login",
       "supports_puffin_login",
       "leaderboard",
@@ -285,6 +286,7 @@
       "plumber",
       "pwa",
       "offline",
+      "login",
       "puffin-login",
       "supports_puffin_login"
     ],
@@ -390,6 +392,7 @@
       "family",
       "pwa",
       "offline",
+      "login",
       "puffin-login",
       "supports_puffin_login"
     ],

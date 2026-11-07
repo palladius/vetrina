@@ -56,6 +56,11 @@
           <span>🩺</span>
           <span id="sre-header-summary">SRE Status</span>
         </button>
+        <button onclick="window.filterByTag('puffin-login')" title="Giochi con Login di Famiglia & Cloud Firestore Hall of Fame (#puffin-login)"
+           class="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-bold text-white bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 rounded-full border border-amber-400 shadow-sm hover:shadow transition-all">
+          <span>🔥💍</span>
+          <span id="header-puffin-login-count">Puffin Login (3)</span>
+        </button>
         <button onclick="window.filterByAudience('kids')" title="Kids Zone: Ale & Sebi's Games"
            class="inline-flex items-center gap-2 pl-1.5 pr-3 py-1 text-xs font-bold text-amber-900 hover:text-amber-950 bg-gradient-to-r from-amber-100 to-yellow-200 hover:from-amber-200 hover:to-yellow-300 rounded-full border border-amber-300 shadow-sm hover:shadow transition-all">
           <img src="assets/images/ale_sebi_gaming.jpg" alt="Ale & Sebi" class="w-6 h-6 rounded-full object-cover border border-amber-400 shadow-xs" />
@@ -174,6 +179,12 @@
       <!-- Quick Tag Filter Pills -->
       <div class="flex items-center gap-1.5 overflow-x-auto pt-1">
         <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider mr-1">Quick Tags:</span>
+        <button onclick="window.filterByTag('puffin-login')" class="px-2.5 py-1 rounded-full text-xs font-bold bg-gradient-to-r from-amber-100 to-orange-100 hover:from-amber-200 hover:to-orange-200 text-amber-900 border border-amber-400 shadow-sm transition">
+          🔥💍 #puffin-login (<span id="quicktag-puffin-count">3</span>)
+        </button>
+        <button onclick="window.filterByTag('login')" class="px-2.5 py-1 rounded-full text-xs font-semibold bg-white hover:bg-amber-50 text-amber-800 hover:text-amber-900 border border-amber-300 shadow-sm transition">
+          🔐 #login
+        </button>
         <button onclick="window.filterByTag('pwa')" class="px-2.5 py-1 rounded-full text-xs font-medium bg-white hover:bg-emerald-50 text-emerald-700 hover:text-emerald-800 border border-emerald-200 shadow-sm transition">
           ✈️ Works Offline (PWA)
         </button>
@@ -213,6 +224,29 @@
         <button onclick="window.filterByTag('meta')" class="px-2.5 py-1 rounded-full text-xs font-bold bg-white hover:bg-indigo-50 text-indigo-800 hover:text-indigo-950 border border-indigo-300 shadow-sm transition">
           🪞 #meta
         </button>
+      </div>
+
+      <!-- Giochi con Puffin Login Ring Strip -->
+      <div id="puffin-login-strip" class="mt-2 p-3 rounded-2xl bg-gradient-to-r from-amber-50/90 via-orange-50/90 to-yellow-50/90 border border-amber-300/80 shadow-xs flex flex-wrap items-center justify-between gap-2">
+        <div class="flex flex-wrap items-center gap-2">
+          <button onclick="window.filterByTag('puffin-login')" class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-extrabold bg-gradient-to-r from-amber-500 to-orange-600 text-white shadow-xs hover:from-amber-600 hover:to-orange-700 transition" title="Filtra i giochi con Puffin Login">
+            <span>🔥💍 Giochi con Login</span>
+            <span id="strip-puffin-count" class="px-1.5 py-0.2 rounded-full bg-black/20 text-[11px]">3</span>
+          </button>
+          <div id="puffin-login-games-list" class="flex flex-wrap items-center gap-1.5">
+            <!-- Dynamically populated by assets/js/app.js -->
+          </div>
+        </div>
+        <div class="flex items-center gap-2">
+          <a href="https://puffin-login-932724269481.europe-west1.run.app/ring.html" target="_blank" rel="noopener noreferrer"
+             class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-bold text-amber-900 bg-amber-200/70 hover:bg-amber-300/80 border border-amber-400/70 transition">
+            <span>🔥💍 Ring of Fire</span>
+          </a>
+          <a href="https://puffin-login-932724269481.europe-west1.run.app/hall-of-fame.html" target="_blank" rel="noopener noreferrer"
+             class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-bold text-indigo-800 bg-indigo-100/80 hover:bg-indigo-200/80 border border-indigo-300/70 transition">
+            <span>🏆 Hall of Fame</span>
+          </a>
+        </div>
       </div>
     </div>
 

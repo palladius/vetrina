@@ -69,8 +69,8 @@
       window.filterByAudience('journals');
     } else if (hash === 'pwa' || hash === 'offline') {
       window.filterByTag('pwa');
-    } else if (hash === 'puffin-ring' || hash === 'puffin-login' || hash === 'supports_puffin_login' || hash === 'ring') {
-      window.filterByTag('supports_puffin_login');
+    } else if (hash === 'puffin-ring' || hash === 'puffin-login' || hash === 'supports_puffin_login' || hash === 'ring' || hash === 'login') {
+      window.filterByTag('puffin-login');
     } else if (hash === 'character-consistency' || hash === 'consistency' || hash === 'faces') {
       window.filterByTag('character-consistency');
     } else if (hash.startsWith('game-') || hash.startsWith('app-')) {
@@ -146,6 +146,33 @@
       if (k === 'journal') btn.innerHTML = `📔 Diaries (${journalsCount})`;
       if (k === 'tool') btn.innerHTML = `🛠️ Tools (${toolsCount})`;
     });
+
+    // Populate Giochi con Puffin Login counters & strip list
+    const loginGames = visibleGames.filter((g) => g.supports_puffin_login === true || (g.tags || []).includes('login') || (g.tags || []).includes('puffin-login'));
+    const headerPuffinCount = document.getElementById('header-puffin-login-count');
+    const quicktagPuffinCount = document.getElementById('quicktag-puffin-count');
+    const stripPuffinCount = document.getElementById('strip-puffin-count');
+    const stripGamesList = document.getElementById('puffin-login-games-list');
+
+    if (headerPuffinCount) headerPuffinCount.textContent = `Puffin Login (${loginGames.length})`;
+    if (quicktagPuffinCount) quicktagPuffinCount.textContent = String(loginGames.length);
+    if (stripPuffinCount) stripPuffinCount.textContent = String(loginGames.length);
+
+    if (stripGamesList) {
+      stripGamesList.innerHTML = loginGames
+        .map((g) => {
+          const shortTitle = (g.title || g.id).split('—')[0].split(':')[0].trim();
+          return `
+            <a href="${g.play_url || g.repo_url}" target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-bold bg-white hover:bg-amber-100 text-slate-800 hover:text-amber-950 border border-amber-300 shadow-2xs transition"
+               title="Gioca a ${g.title} (PuffinLogin game_id: ${g.puffin_game_id || g.id})">
+              <span>${shortTitle}</span>
+              <span class="text-[10px] text-amber-600 font-mono">↗</span>
+            </a>
+          `;
+        })
+        .join('');
+    }
   }
 
   // Setup UI listeners
@@ -300,7 +327,7 @@
         const tagLower = currentTag.toLowerCase();
         const itemTags = (item.tags || []).map((t) => t.toLowerCase());
         const itemTech = (item.tech || []).map((t) => t.toLowerCase());
-        const isPuffinFilter = ['supports_puffin_login', 'puffin-login', 'puffin-ring'].includes(tagLower);
+        const isPuffinFilter = ['supports_puffin_login', 'puffin-login', 'puffin-ring', 'login'].includes(tagLower);
         if (isPuffinFilter && item.supports_puffin_login === true) {
           // Matches supports_puffin_login boolean flag
         } else if (!itemTags.includes(tagLower) && !itemTech.includes(tagLower)) {
@@ -756,11 +783,17 @@
 
   window.filterByTag = function (tag) {
     currentTag = tag;
+    if (history.replaceState && tag) {
+      history.replaceState(null, '', '#' + tag);
+    }
     render();
   };
 
   window.clearCurrentTag = function () {
     currentTag = null;
+    if (history.replaceState) {
+      history.replaceState(null, '', window.location.pathname);
+    }
     render();
   };
 

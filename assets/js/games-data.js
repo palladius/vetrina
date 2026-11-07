@@ -88,6 +88,7 @@ window.PALLADIUS_GAMES = [
     "tags": [
       "snake",
       "arcade",
+      "login",
       "puffin-login",
       "supports_puffin_login",
       "leaderboard",
@@ -286,6 +287,7 @@ window.PALLADIUS_GAMES = [
       "plumber",
       "pwa",
       "offline",
+      "login",
       "puffin-login",
       "supports_puffin_login"
     ],
@@ -391,6 +393,7 @@ window.PALLADIUS_GAMES = [
       "family",
       "pwa",
       "offline",
+      "login",
       "puffin-login",
       "supports_puffin_login"
     ],
