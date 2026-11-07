@@ -369,10 +369,15 @@ window.PALLADIUS_GAMES = [
       "language",
       "quiz",
       "school",
-      "audio"
+      "audio",
+      "login",
+      "puffin-login",
+      "supports_puffin_login"
     ],
-    "badge": "🟢 Live App • Ale & Seby",
-    "target": "Alessandro & Sebastian",
+    "supports_puffin_login": true,
+    "puffin_game_id": "ale-french",
+    "badge": "🟢 Live App • PuffinLogin 🐧",
+    "target": "Alessandro, Sebastian & Family",
     "featured": true
   },
   {
