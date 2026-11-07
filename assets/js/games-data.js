@@ -285,10 +285,14 @@ window.PALLADIUS_GAMES = [
       "tetris",
       "plumber",
       "pwa",
-      "offline"
+      "offline",
+      "puffin-login",
+      "supports_puffin_login"
     ],
     "pwa": true,
-    "badge": "🟢 Play Live • PWA",
+    "supports_puffin_login": true,
+    "puffin_game_id": "tubature",
+    "badge": "🟢 Play Live • PuffinLogin + PWA",
     "target": "Kids & Family"
   },
   {

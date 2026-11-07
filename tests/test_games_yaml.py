@@ -121,6 +121,7 @@ class TestGamesYaml(unittest.TestCase):
                 if item['supports_puffin_login']:
                     ring_members.append(item_id)
         self.assertIn('demo-snake', ring_members, "Expected 'demo-snake' to have supports_puffin_login: true")
+        self.assertIn('tubature', ring_members, "Expected 'tubature' to have supports_puffin_login: true")
 
 if __name__ == '__main__':
     suite = unittest.TestLoader().loadTestsFromTestCase(TestGamesYaml)
