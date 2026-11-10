@@ -1,6 +1,6 @@
 {
-  "checked_at": "2026-11-09T10:37:24Z",
-  "duration_sec": 11.65,
+  "checked_at": "2026-11-10T10:36:50Z",
+  "duration_sec": 11.01,
   "total": 33,
   "summary": {
     "healthy": 27,
@@ -21,7 +21,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 469,
+        "latency_ms": 196,
         "note": "OK"
       },
       "regions": [],
@@ -50,7 +50,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 268,
+        "latency_ms": 192,
         "note": "OK"
       },
       "regions": [],
@@ -79,7 +79,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 202,
+        "latency_ms": 177,
         "note": "OK"
       },
       "regions": [
@@ -90,7 +90,7 @@
           "url": "https://palladius.github.io/demo-snake/",
           "status": "up",
           "http_code": 200,
-          "latency_ms": 77,
+          "latency_ms": 137,
           "note": "OK"
         },
         {
@@ -100,7 +100,7 @@
           "url": "https://puffin-login-932724269481.europe-west1.run.app/snake.html",
           "status": "up",
           "http_code": 200,
-          "latency_ms": 1838,
+          "latency_ms": 1433,
           "note": "OK"
         }
       ],
@@ -113,8 +113,8 @@
         "display_title": "pages build and deployment",
         "branch": "main",
         "event": "dynamic",
-        "updated_at": "2026-11-09T07:50:27Z",
-        "run_url": "https://github.com/palladius/demo-snake/actions/runs/42581794275",
+        "updated_at": "2026-11-09T11:18:17Z",
+        "run_url": "https://github.com/palladius/demo-snake/actions/runs/42607891026",
         "failing_workflows": []
       }
     },
@@ -129,7 +129,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 285,
+        "latency_ms": 177,
         "note": "OK"
       },
       "regions": [],
@@ -165,7 +165,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 264,
+        "latency_ms": 185,
         "note": "OK"
       },
       "regions": [],
@@ -201,7 +201,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 5282,
+        "latency_ms": 4792,
         "note": "OK"
       },
       "regions": [
@@ -212,7 +212,7 @@
           "url": "https://pupurabbu-3d-272932496670.europe-west6.run.app",
           "status": "up",
           "http_code": 200,
-          "latency_ms": 256,
+          "latency_ms": 235,
           "note": "OK"
         },
         {
@@ -222,7 +222,7 @@
           "url": "https://pupurabbu-3d-dev-272932496670.europe-west6.run.app",
           "status": "up",
           "http_code": 200,
-          "latency_ms": 5797,
+          "latency_ms": 5689,
           "note": "OK"
         },
         {
@@ -232,7 +232,7 @@
           "url": "https://pupurabbu-3d-272932496670.europe-west1.run.app",
           "status": "down",
           "http_code": 404,
-          "latency_ms": 147,
+          "latency_ms": 126,
           "note": "HTTP 404: Not Found"
         },
         {
@@ -242,7 +242,7 @@
           "url": "https://pupurabbu-3d-dev-272932496670.europe-west1.run.app",
           "status": "down",
           "http_code": 404,
-          "latency_ms": 154,
+          "latency_ms": 148,
           "note": "HTTP 404: Not Found"
         }
       ],
@@ -262,7 +262,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 277,
+        "latency_ms": 179,
         "note": "OK"
       },
       "regions": [],
@@ -291,7 +291,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 258,
+        "latency_ms": 188,
         "note": "OK"
       },
       "regions": [],
@@ -304,8 +304,8 @@
         "display_title": "pages build and deployment",
         "branch": "main",
         "event": "dynamic",
-        "updated_at": "2026-11-09T07:50:50Z",
-        "run_url": "https://github.com/palladius/ale-french/actions/runs/42581798031",
+        "updated_at": "2026-11-09T11:19:00Z",
+        "run_url": "https://github.com/palladius/ale-french/actions/runs/42607896450",
         "failing_workflows": []
       }
     },
@@ -320,7 +320,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 245,
+        "latency_ms": 172,
         "note": "OK"
       },
       "regions": [],
@@ -349,7 +349,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 251,
+        "latency_ms": 179,
         "note": "OK"
       },
       "regions": [],
@@ -399,7 +399,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 180,
+        "latency_ms": 108,
         "note": "OK"
       },
       "regions": [],
@@ -419,7 +419,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 632,
+        "latency_ms": 94,
         "note": "OK"
       },
       "regions": [],
@@ -439,7 +439,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 232,
+        "latency_ms": 85,
         "note": "OK"
       },
       "regions": [],
@@ -452,8 +452,8 @@
         "display_title": "pages build and deployment",
         "branch": "main",
         "event": "dynamic",
-        "updated_at": "2026-11-09T06:23:50Z",
-        "run_url": "https://github.com/palladius/parola-del-giorno/actions/runs/42572656117",
+        "updated_at": "2026-11-10T06:23:30Z",
+        "run_url": "https://github.com/palladius/parola-del-giorno/actions/runs/42768051235",
         "failing_workflows": []
       }
     },
@@ -468,7 +468,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 137,
+        "latency_ms": 132,
         "note": "OK"
       },
       "regions": [],
@@ -497,7 +497,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 1362,
+        "latency_ms": 1274,
         "note": "OK"
       },
       "regions": [],
@@ -679,7 +679,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 166,
+        "latency_ms": 165,
         "note": "OK"
       },
       "regions": [],
@@ -721,7 +721,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 140,
+        "latency_ms": 58,
         "note": "OK"
       },
       "regions": [],
@@ -734,8 +734,8 @@
         "display_title": "🔄 Daily Cron: Slurp Federated Vetrina Metadata",
         "branch": "main",
         "event": "schedule",
-        "updated_at": "2026-11-09T10:37:06Z",
-        "run_url": "https://github.com/palladius/vetrina/actions/runs/42602135416",
+        "updated_at": "2026-11-10T10:36:33Z",
+        "run_url": "https://github.com/palladius/vetrina/actions/runs/42800589157",
         "failing_workflows": []
       }
     },
@@ -750,7 +750,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 146,
+        "latency_ms": 433,
         "note": "OK"
       },
       "regions": [],
@@ -779,7 +779,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 8251,
+        "latency_ms": 8763,
         "note": "OK"
       },
       "regions": [],
@@ -808,7 +808,7 @@
       "web": {
         "status": "protected",
         "http_code": 200,
-        "latency_ms": 599,
+        "latency_ms": 682,
         "note": "Cloudflare Zero Trust Access"
       },
       "regions": [],
@@ -829,7 +829,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 130,
+        "latency_ms": 162,
         "note": "OK"
       },
       "regions": [],
@@ -850,7 +850,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 685,
+        "latency_ms": 541,
         "note": "OK"
       },
       "regions": [],
@@ -915,7 +915,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 113,
+        "latency_ms": 209,
         "note": "OK"
       },
       "regions": [],
