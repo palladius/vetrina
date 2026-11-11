@@ -1,12 +1,12 @@
 {
-  "checked_at": "2026-11-10T10:36:50Z",
-  "duration_sec": 11.01,
+  "checked_at": "2026-11-11T10:00:47Z",
+  "duration_sec": 14.21,
   "total": 33,
   "summary": {
-    "healthy": 27,
+    "healthy": 26,
     "ci_failing": 4,
     "degraded": 1,
-    "down": 0,
+    "down": 1,
     "archived": 1
   },
   "items": {
@@ -21,7 +21,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 196,
+        "latency_ms": 191,
         "note": "OK"
       },
       "regions": [],
@@ -50,7 +50,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 192,
+        "latency_ms": 179,
         "note": "OK"
       },
       "regions": [],
@@ -79,7 +79,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 177,
+        "latency_ms": 259,
         "note": "OK"
       },
       "regions": [
@@ -90,7 +90,7 @@
           "url": "https://palladius.github.io/demo-snake/",
           "status": "up",
           "http_code": 200,
-          "latency_ms": 137,
+          "latency_ms": 82,
           "note": "OK"
         },
         {
@@ -100,7 +100,7 @@
           "url": "https://puffin-login-932724269481.europe-west1.run.app/snake.html",
           "status": "up",
           "http_code": 200,
-          "latency_ms": 1433,
+          "latency_ms": 1736,
           "note": "OK"
         }
       ],
@@ -129,7 +129,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 177,
+        "latency_ms": 198,
         "note": "OK"
       },
       "regions": [],
@@ -165,7 +165,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 185,
+        "latency_ms": 186,
         "note": "OK"
       },
       "regions": [],
@@ -201,7 +201,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 4792,
+        "latency_ms": 6802,
         "note": "OK"
       },
       "regions": [
@@ -212,7 +212,7 @@
           "url": "https://pupurabbu-3d-272932496670.europe-west6.run.app",
           "status": "up",
           "http_code": 200,
-          "latency_ms": 235,
+          "latency_ms": 317,
           "note": "OK"
         },
         {
@@ -222,7 +222,7 @@
           "url": "https://pupurabbu-3d-dev-272932496670.europe-west6.run.app",
           "status": "up",
           "http_code": 200,
-          "latency_ms": 5689,
+          "latency_ms": 6610,
           "note": "OK"
         },
         {
@@ -232,7 +232,7 @@
           "url": "https://pupurabbu-3d-272932496670.europe-west1.run.app",
           "status": "down",
           "http_code": 404,
-          "latency_ms": 126,
+          "latency_ms": 223,
           "note": "HTTP 404: Not Found"
         },
         {
@@ -242,7 +242,7 @@
           "url": "https://pupurabbu-3d-dev-272932496670.europe-west1.run.app",
           "status": "down",
           "http_code": 404,
-          "latency_ms": 148,
+          "latency_ms": 244,
           "note": "HTTP 404: Not Found"
         }
       ],
@@ -262,7 +262,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 179,
+        "latency_ms": 183,
         "note": "OK"
       },
       "regions": [],
@@ -291,7 +291,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 188,
+        "latency_ms": 195,
         "note": "OK"
       },
       "regions": [],
@@ -320,7 +320,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 172,
+        "latency_ms": 182,
         "note": "OK"
       },
       "regions": [],
@@ -349,7 +349,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 179,
+        "latency_ms": 191,
         "note": "OK"
       },
       "regions": [],
@@ -399,7 +399,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 108,
+        "latency_ms": 133,
         "note": "OK"
       },
       "regions": [],
@@ -419,7 +419,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 94,
+        "latency_ms": 116,
         "note": "OK"
       },
       "regions": [],
@@ -439,7 +439,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 85,
+        "latency_ms": 148,
         "note": "OK"
       },
       "regions": [],
@@ -452,8 +452,8 @@
         "display_title": "pages build and deployment",
         "branch": "main",
         "event": "dynamic",
-        "updated_at": "2026-11-10T06:23:30Z",
-        "run_url": "https://github.com/palladius/parola-del-giorno/actions/runs/42768051235",
+        "updated_at": "2026-11-11T06:23:17Z",
+        "run_url": "https://github.com/palladius/parola-del-giorno/actions/runs/42971903556",
         "failing_workflows": []
       }
     },
@@ -468,7 +468,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 132,
+        "latency_ms": 143,
         "note": "OK"
       },
       "regions": [],
@@ -497,7 +497,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 1274,
+        "latency_ms": 1309,
         "note": "OK"
       },
       "regions": [],
@@ -679,7 +679,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 165,
+        "latency_ms": 555,
         "note": "OK"
       },
       "regions": [],
@@ -721,7 +721,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 58,
+        "latency_ms": 113,
         "note": "OK"
       },
       "regions": [],
@@ -734,8 +734,8 @@
         "display_title": "🔄 Daily Cron: Slurp Federated Vetrina Metadata",
         "branch": "main",
         "event": "schedule",
-        "updated_at": "2026-11-10T10:36:33Z",
-        "run_url": "https://github.com/palladius/vetrina/actions/runs/42800589157",
+        "updated_at": "2026-11-11T10:00:28Z",
+        "run_url": "https://github.com/palladius/vetrina/actions/runs/42999920336",
         "failing_workflows": []
       }
     },
@@ -750,7 +750,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 433,
+        "latency_ms": 155,
         "note": "OK"
       },
       "regions": [],
@@ -773,14 +773,14 @@
       "title": "🗓️ Septober Next (Node/Python Todo PWA)",
       "audience": "journals",
       "archived": false,
-      "overall": "healthy",
+      "overall": "down",
       "play_url": "https://septober-next-467916597830.europe-west1.run.app/",
       "repo_url": "https://github.com/palladius/septober",
       "web": {
-        "status": "up",
-        "http_code": 200,
-        "latency_ms": 8763,
-        "note": "OK"
+        "status": "down",
+        "http_code": 0,
+        "latency_ms": 10085,
+        "note": "The read operation timed out"
       },
       "regions": [],
       "ci": {
@@ -808,7 +808,7 @@
       "web": {
         "status": "protected",
         "http_code": 200,
-        "latency_ms": 682,
+        "latency_ms": 742,
         "note": "Cloudflare Zero Trust Access"
       },
       "regions": [],
@@ -829,7 +829,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 162,
+        "latency_ms": 177,
         "note": "OK"
       },
       "regions": [],
@@ -850,7 +850,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 541,
+        "latency_ms": 684,
         "note": "OK"
       },
       "regions": [],
@@ -915,7 +915,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 209,
+        "latency_ms": 242,
         "note": "OK"
       },
       "regions": [],
