@@ -327,6 +327,51 @@
   - drag-and-drop
   - raspberry-optimized
   raspberry_optimized: true
+- id: carchess3d
+  title: 🏰🚽 CarChess3D — Carlesso al Cesso (Scacchi 3D di Famiglia)
+  audience: kids
+  kind: game
+  is_game: true
+  category: kids
+  score: 97
+  created_at: 2026-10
+  tagline: 'Scacchi 3D dove i pezzi sono la famiglia: Re Riccardo, Regina Kate, Ale
+    Alfiere col draghetto, Seby Cavallo, Pupurabbu Torre e i Puffin pedoni — con risse
+    animate a ogni cattura!'
+  description: Scacchi 3D per la famiglia Carlesso, giocabili anche offline (PWA Three.js,
+    funziona in aereo ✈️). Regole complete (chess.js), hot-seat o contro la CPU (Easy/Medium/Hard
+    in un Web Worker), FEN/PGN e profili locali con autosalvataggio. 3 famiglie ×
+    6 pezzi = 18 personaggi 3D (Carlesso, Classic e Swamp) generati con Nano Banana
+    + TRELLIS, 36 battaglie Carlesso 6×6 con rissa 3D e video Veo 16:9, palude incantata
+    per i pezzi catturati, WOW mode, colonna sonora per quartetto d'archi (Lyria)
+    e playtest UAT quotidiano.
+  screenshot: assets/screenshots/carchess3d.jpg
+  play_url: https://palladius.github.io/carchess3d/
+  repo_url: https://github.com/palladius/carchess3d
+  pwa: true
+  can_embed: true
+  featured: true
+  badge: 🟢 Play Live • 3D Family Chess + Veo Brawls
+  target: Alessandro, Sebi, Kate, Riccardo & Family
+  tech:
+  - Three.js
+  - WebGL
+  - chess.js
+  - Web Workers
+  - NanoBanana
+  - TRELLIS
+  - Veo
+  - Lyria
+  - GitHub Pages
+  tags:
+  - chess
+  - 3d
+  - pwa
+  - offline
+  - game
+  - kids
+  - family
+  - threejs
 - id: family-mahjong-3d
   title: 🀄 Carlesso Family 3D Mahjong Solitaire
   audience: kids
