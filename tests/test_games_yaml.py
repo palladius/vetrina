@@ -124,6 +124,21 @@ class TestGamesYaml(unittest.TestCase):
         self.assertIn('tubature', ring_members, "Expected 'tubature' to have supports_puffin_login: true")
         self.assertIn('kids-jigsaw-puzzle', ring_members, "Expected 'kids-jigsaw-puzzle' to have supports_puffin_login: true")
 
+    def test_raspberry_optimized_field(self):
+        rpi_members = []
+        for item in self.data:
+            item_id = item.get('id')
+            if 'raspberry_optimized' in item and item['raspberry_optimized'] is not None:
+                self.assertIsInstance(
+                    item['raspberry_optimized'],
+                    bool,
+                    f"[{item_id}] 'raspberry_optimized' must be a boolean"
+                )
+                if item['raspberry_optimized']:
+                    rpi_members.append(item_id)
+        self.assertIn('tubature', rpi_members, "Expected 'tubature' to have raspberry_optimized: true")
+        self.assertGreaterEqual(len(rpi_members), 5, "Expected at least 5 Raspberry-Pi-optimized games")
+
 if __name__ == '__main__':
     suite = unittest.TestLoader().loadTestsFromTestCase(TestGamesYaml)
     runner = unittest.TextTestRunner(verbosity=2)

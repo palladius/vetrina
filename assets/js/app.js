@@ -54,7 +54,19 @@
     }
   }
 
-  // Support direct bookmarkable hash endpoints: #kids, #ale-sebi, #tools, #diaries, #pwa, #sre, or game modal #game-tubature
+  function isRaspberryOptimized(item) {
+    if (!item) return false;
+    if (item.raspberry_optimized === true) return true;
+    const itemTags = (item.tags || []).map((t) => String(t).toLowerCase());
+    return (
+      itemTags.includes('raspberry-optimized') ||
+      itemTags.includes('raspberry-pi') ||
+      itemTags.includes('rpi') ||
+      itemTags.includes('sguisatazzo')
+    );
+  }
+
+  // Support direct bookmarkable hash endpoints: #kids, #ale-sebi, #raspberry-optimized, #tools, #diaries, #pwa, #sre, or game modal #game-tubature
   function handleHashRouting() {
     const hash = window.location.hash.replace(/^#\/?/, '').toLowerCase();
     if (!hash) return;
@@ -63,6 +75,8 @@
       window.openSreModal();
     } else if (hash === 'kids' || hash === 'ale-sebi' || hash === 'ale-seby' || hash === 'kids-club') {
       window.filterByAudience('kids');
+    } else if (hash === 'raspberry-optimized' || hash === 'raspberry' || hash === 'rpi' || hash === 'sguisatazzo') {
+      window.filterByAudience('raspberry-optimized');
     } else if (hash === 'tools' || hash === 'dads-tools') {
       window.filterByAudience('tools');
     } else if (hash === 'diaries' || hash === 'journals') {
@@ -125,6 +139,7 @@
     const visibleGames = allGames.filter((g) => !g.archived && !g.hidden);
     const totalCount = visibleGames.length;
     const kidsCount = visibleGames.filter((g) => g.audience === 'kids' || g.category === 'kids').length;
+    const rpiCount = visibleGames.filter((g) => isRaspberryOptimized(g)).length;
     const journalsCount = visibleGames.filter((g) => g.audience === 'journals' || g.category === 'journals' || g.kind === 'journal').length;
     const toolsCount = visibleGames.filter((g) => g.audience === 'tools' || g.category === 'tools').length;
 
@@ -132,9 +147,15 @@
       const aud = btn.dataset.audience;
       if (aud === 'all') btn.textContent = `🌟 All (${totalCount})`;
       if (aud === 'kids') btn.textContent = `🧸 Kids & Family (${kidsCount})`;
+      if (aud === 'raspberry-optimized') btn.textContent = `🍓 Raspberry Optimized (${rpiCount})`;
       if (aud === 'journals') btn.textContent = `📔 Papino's Diaries (${journalsCount})`;
       if (aud === 'tools') btn.textContent = `🛠️ Dad's Tools (${toolsCount})`;
     });
+
+    const headerRpiCount = document.getElementById('header-rpi-count');
+    const quicktagRpiCount = document.getElementById('quicktag-rpi-count');
+    if (headerRpiCount) headerRpiCount.textContent = `Raspberry Pi (${rpiCount})`;
+    if (quicktagRpiCount) quicktagRpiCount.textContent = String(rpiCount);
 
     const gamesCount = visibleGames.filter((g) => g.kind === 'game' || g.is_game).length;
     const eduCount = visibleGames.filter((g) => g.kind === 'educational' || (g.tags || []).includes('educational')).length;
@@ -303,9 +324,11 @@
         return false;
       }
 
-      // 1. Audience filter (Kids vs Tools)
+      // 1. Audience filter (Kids vs Raspberry Optimized vs Journals vs Tools)
       const itemAudience = item.audience || item.category;
-      if (currentAudience !== 'all' && itemAudience !== currentAudience) {
+      if (currentAudience === 'raspberry-optimized') {
+        if (!isRaspberryOptimized(item)) return false;
+      } else if (currentAudience !== 'all' && itemAudience !== currentAudience) {
         return false;
       }
 
@@ -328,8 +351,11 @@
         const itemTags = (item.tags || []).map((t) => t.toLowerCase());
         const itemTech = (item.tech || []).map((t) => t.toLowerCase());
         const isPuffinFilter = ['supports_puffin_login', 'puffin-login', 'puffin-ring', 'login'].includes(tagLower);
+        const isRpiFilter = ['raspberry-optimized', 'raspberry-pi', 'rpi', 'sguisatazzo'].includes(tagLower);
         if (isPuffinFilter && item.supports_puffin_login === true) {
           // Matches supports_puffin_login boolean flag
+        } else if (isRpiFilter && isRaspberryOptimized(item)) {
+          // Matches raspberry_optimized boolean flag or tag
         } else if (!itemTags.includes(tagLower) && !itemTech.includes(tagLower)) {
           return false;
         }
@@ -468,6 +494,10 @@
           ? `<a href="https://puffin-login-932724269481.europe-west1.run.app/ring.html" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();" class="pointer-events-auto inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-bold bg-gradient-to-r from-amber-500 to-orange-500 text-white border border-amber-300 shadow-sm hover:from-amber-400 hover:to-orange-400 transition" title="Member of the Puffin Login Ring (supports_puffin_login: true)">🔥💍 Puffin Ring</a>`
           : '';
 
+        const rpiBadge = isRaspberryOptimized(game)
+          ? `<button onclick="window.setAudienceFilter('raspberry-optimized'); event.stopPropagation();" class="pointer-events-auto inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-bold bg-gradient-to-r from-rose-600 to-pink-600 text-white border border-rose-300 shadow-sm hover:from-rose-500 hover:to-pink-500 transition" title="Raspberry Pi 400 (Sguisatazzo) Optimized & Compliant!">🍓🐧 RPi 400</button>`
+          : '';
+
         const itemHealth = healthReport && healthReport.items ? healthReport.items[game.id] : null;
         let sreAlertBadge = '';
         if (itemHealth) {
@@ -564,6 +594,7 @@
                 ${typeBadge}
                 ${statusBadge}
                 ${puffinRingBadge}
+                ${rpiBadge}
                 ${sreAlertBadge}
               </div>
 
@@ -701,7 +732,13 @@
     let badges = [];
 
     if (currentAudience !== 'all') {
-      const label = currentAudience === 'kids' ? '🧸 Kids & Family' : "🛠️ Dad's Tools";
+      const audLabels = {
+        kids: '🧸 Kids & Family',
+        'raspberry-optimized': '🍓 Raspberry Optimized (RPi 400)',
+        journals: "📔 Papino's Diaries",
+        tools: "🛠️ Dad's Tools"
+      };
+      const label = audLabels[currentAudience] || currentAudience;
       badges.push(`
         <span class="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium bg-indigo-100 text-indigo-800">
           Audience: ${label}

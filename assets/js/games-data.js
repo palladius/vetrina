@@ -33,8 +33,10 @@ window.PALLADIUS_GAMES = [
       "vim",
       "arcade",
       "kids",
-      "game"
-    ]
+      "game",
+      "raspberry-optimized"
+    ],
+    "raspberry_optimized": true
   },
   {
     "id": "dots-and-lines",
@@ -72,8 +74,10 @@ window.PALLADIUS_GAMES = [
       "educational",
       "family",
       "game",
-      "kids"
-    ]
+      "kids",
+      "raspberry-optimized"
+    ],
+    "raspberry_optimized": true
   },
   {
     "id": "tribecca",
@@ -111,8 +115,10 @@ window.PALLADIUS_GAMES = [
       "educational",
       "family",
       "game",
-      "kids"
-    ]
+      "kids",
+      "raspberry-optimized"
+    ],
+    "raspberry_optimized": true
   },
   {
     "id": "kids-own-stories",
@@ -150,8 +156,10 @@ window.PALLADIUS_GAMES = [
       "puffins",
       "dragons",
       "nanobanana",
-      "video"
-    ]
+      "video",
+      "raspberry-optimized"
+    ],
+    "raspberry_optimized": true
   },
   {
     "id": "demo-snake",
@@ -209,8 +217,10 @@ window.PALLADIUS_GAMES = [
       "firestore",
       "family",
       "game",
-      "kids"
-    ]
+      "kids",
+      "raspberry-optimized"
+    ],
+    "raspberry_optimized": true
   },
   {
     "id": "carlesso-fotoquad",
@@ -254,8 +264,10 @@ window.PALLADIUS_GAMES = [
       "family",
       "game",
       "kids",
-      "drag-and-drop"
-    ]
+      "drag-and-drop",
+      "raspberry-optimized"
+    ],
+    "raspberry_optimized": true
   },
   {
     "id": "family-mahjong-3d",
@@ -295,8 +307,10 @@ window.PALLADIUS_GAMES = [
       "blender",
       "threejs",
       "dragons",
-      "puzzle"
-    ]
+      "puzzle",
+      "raspberry-optimized"
+    ],
+    "raspberry_optimized": true
   },
   {
     "id": "pupurabbu-3d",
@@ -370,19 +384,21 @@ window.PALLADIUS_GAMES = [
       "belgium",
       "audio",
       "pwa",
-      "funny"
-    ]
+      "funny",
+      "raspberry-optimized"
+    ],
+    "raspberry_optimized": true
   },
   {
     "id": "tubature",
-    "title": "🚰 Tubature: The Dungeon Plumber",
+    "title": "🚰🍓 Tubature: The Dungeon Plumber (v2.13 RPi Turbo)",
     "audience": "kids",
     "kind": "game",
     "category": "kids",
-    "score": 95,
-    "created_at": "2026",
-    "tagline": "Enchanting fantasy pipe-puzzle game starring Riccardo and his baby dragon!",
-    "description": "A vibrant pipe-puzzle game built with Flutter & Riverpod. Starring Riccardo the Dungeon Plumber (wearing his signature yellow 'R' cap) and his cute emerald dragon companion. Rotate magical conduits to let crystal water rush through every single dungeon tile!",
+    "score": 97,
+    "created_at": "2026-11",
+    "tagline": "Enchanting fantasy pipe-puzzle game with Ermete & baby dragon — now 100% Raspberry Pi 400 ('Sguisatazzo') Turbo Compliant!",
+    "description": "A vibrant pipe-puzzle game built with Flutter & Riverpod. Starring Riccardo the Dungeon Plumber (wearing his signature yellow 'R' cap), Ermete Bottazzi, and his cute emerald dragon companion. Rotate magical conduits to let crystal water rush through every single dungeon tile! Features v2.13.0 Raspberry Pi 400 ('Sguisatazzo') Turbo Engine: auto-detects ARM64 / RPi / WebKit2GTK, downscales textures 98% (88 MB -> 1.4 MB to fit BCM2711 L2 cache), wraps every tile in RepaintBoundary, and drops idle CPU to 0%.",
     "screenshot": "assets/screenshots/tubature.jpg",
     "screenshot_gif": "assets/screenshots/tubature_gameplay.gif",
     "play_url": "https://palladius.github.io/tubature/",
@@ -393,7 +409,8 @@ window.PALLADIUS_GAMES = [
       "Riverpod",
       "Dart",
       "Web",
-      "PWA"
+      "PWA",
+      "Raspberry Pi 400 Turbo"
     ],
     "tags": [
       "puzzle",
@@ -408,13 +425,17 @@ window.PALLADIUS_GAMES = [
       "offline",
       "login",
       "puffin-login",
-      "supports_puffin_login"
+      "supports_puffin_login",
+      "raspberry-optimized",
+      "raspberry-pi",
+      "sguisatazzo"
     ],
     "pwa": true,
+    "raspberry_optimized": true,
     "supports_puffin_login": true,
     "puffin_game_id": "tubature",
-    "badge": "🟢 Play Live • PuffinLogin + PWA",
-    "target": "Kids & Family"
+    "badge": "🍓🟢 Play Live • RPi 400 Turbo + PuffinLogin",
+    "target": "Alessandro, Sebi, Kids & Raspberry Pi 400 (Sguisatazzo)"
   },
   {
     "id": "ale-french",
@@ -447,13 +468,15 @@ window.PALLADIUS_GAMES = [
       "audio",
       "login",
       "puffin-login",
-      "supports_puffin_login"
+      "supports_puffin_login",
+      "raspberry-optimized"
     ],
     "supports_puffin_login": true,
     "puffin_game_id": "ale-french",
     "badge": "🟢 Live App • PuffinLogin 🐧",
     "target": "Alessandro, Sebastian & Family",
-    "featured": true
+    "featured": true,
+    "raspberry_optimized": true
   },
   {
     "id": "orologiaio",
@@ -482,11 +505,13 @@ window.PALLADIUS_GAMES = [
       "flutter",
       "kids",
       "learning",
-      "school"
+      "school",
+      "raspberry-optimized"
     ],
     "badge": "🟢 Play Live",
     "target": "Alessandro & Sebi",
-    "featured": true
+    "featured": true,
+    "raspberry_optimized": true
   },
   {
     "id": "kids-jigsaw-puzzle",
@@ -519,14 +544,16 @@ window.PALLADIUS_GAMES = [
       "offline",
       "login",
       "puffin-login",
-      "supports_puffin_login"
+      "supports_puffin_login",
+      "raspberry-optimized"
     ],
     "pwa": true,
     "supports_puffin_login": true,
     "puffin_game_id": "kids-jigsaw-puzzle",
     "badge": "🟢 Play Live • PuffinLogin + PWA",
     "target": "The Whole Family",
-    "featured": true
+    "featured": true,
+    "raspberry_optimized": true
   },
   {
     "id": "pasta-invaders",
@@ -595,11 +622,13 @@ window.PALLADIUS_GAMES = [
       "puffins",
       "dragons",
       "arcade",
-      "nanobanana"
+      "nanobanana",
+      "raspberry-optimized"
     ],
     "badge": "🟢 Play Live • 2D Revamp",
     "target": "Kids (Ages 6-11) & Family",
-    "featured": true
+    "featured": true,
+    "raspberry_optimized": true
   },
   {
     "id": "dungemoji",
@@ -632,11 +661,13 @@ window.PALLADIUS_GAMES = [
       "game",
       "kids",
       "retro",
-      "dragons"
+      "dragons",
+      "raspberry-optimized"
     ],
     "badge": "🟢 Play Live • v9.0 Red Box 2D/3D",
     "target": "Alessandro, Kids & Retro D&D Gamers",
-    "featured": true
+    "featured": true,
+    "raspberry_optimized": true
   },
   {
     "id": "parola-del-giorno",
@@ -664,11 +695,13 @@ window.PALLADIUS_GAMES = [
       "kids",
       "fairytales",
       "language",
-      "vocabulary"
+      "vocabulary",
+      "raspberry-optimized"
     ],
     "badge": "🟢 Explore Live",
     "target": "Carlesso Household",
-    "featured": false
+    "featured": false,
+    "raspberry_optimized": true
   },
   {
     "id": "baby-alphabet",
@@ -697,11 +730,13 @@ window.PALLADIUS_GAMES = [
       "educational",
       "kids",
       "school",
-      "phonetics"
+      "phonetics",
+      "raspberry-optimized"
     ],
     "badge": "🟢 Explore Live",
     "target": "Alessandro",
-    "featured": false
+    "featured": false,
+    "raspberry_optimized": true
   },
   {
     "id": "genai-kids-stories",

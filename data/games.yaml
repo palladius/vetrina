@@ -1,350 +1,398 @@
-- id: "snake-tui"
-  title: "🐍💎 TUI Vim Snake — Dual-Engine Ruby 3.3 WASM & PTY"
-  audience: "kids"
-  kind: "game"
+- id: snake-tui
+  title: 🐍💎 TUI Vim Snake — Dual-Engine Ruby 3.3 WASM & PTY
+  audience: kids
+  kind: game
   is_game: true
-  category: "kids"
+  category: kids
   score: 94
-  created_at: "2026-11"
-  tagline: "Classic Nokia-inspired Terminal Snake in pure Ruby 3.3 with Google ball emojis 🔵🔴🟡🟢🟣, Vim HJKL + Arrow keys, running untouched in browser via CRuby WebAssembly + xterm.js!"
-  description: "Nostalgic Nokia-style TUI Snake generated from respec (tui-vim-snake) in pure zero-gem Ruby 3.3. Features Google-colored ball emojis (🔵🔴🟡🟢 = +10 pts, 92%) and super rare Purple balls (🟣 = +50 pts, 8%), dual Vim HJKL + standard Arrow controls, 3 difficulty tiers (Easy/Medium/Hard) with spawn countdown, and a Dual-Engine Web Pseudo-Terminal Bridge: runs the exact unmodified lib/snake_tui/*.rb files client-side on GitHub Pages via @ruby/3.3-wasm-wasi + @xterm/xterm, or streams a real Linux PTY over RFC 6455 WebSockets locally!"
-  screenshot: "assets/screenshots/snake-tui.png"
-  play_url: "https://palladius.github.io/snake-tui/"
-  repo_url: "https://github.com/palladius/snake-tui"
+  created_at: 2026-11
+  tagline: Classic Nokia-inspired Terminal Snake in pure Ruby 3.3 with Google ball emojis 🔵🔴🟡🟢🟣, Vim HJKL + Arrow keys, running
+    untouched in browser via CRuby WebAssembly + xterm.js!
+  description: 'Nostalgic Nokia-style TUI Snake generated from respec (tui-vim-snake) in pure zero-gem Ruby 3.3. Features
+    Google-colored ball emojis (🔵🔴🟡🟢 = +10 pts, 92%) and super rare Purple balls (🟣 = +50 pts, 8%), dual Vim HJKL + standard
+    Arrow controls, 3 difficulty tiers (Easy/Medium/Hard) with spawn countdown, and a Dual-Engine Web Pseudo-Terminal Bridge:
+    runs the exact unmodified lib/snake_tui/*.rb files client-side on GitHub Pages via @ruby/3.3-wasm-wasi + @xterm/xterm,
+    or streams a real Linux PTY over RFC 6455 WebSockets locally!'
+  screenshot: assets/screenshots/snake-tui.png
+  play_url: https://palladius.github.io/snake-tui/
+  repo_url: https://github.com/palladius/snake-tui
   can_embed: true
   featured: true
-  badge: "💎 Ruby 3.3 WASM • TUI in Browser"
-  target: "Alessandro, Seby, Riccardo & Vim Ninjas"
+  badge: 💎 Ruby 3.3 WASM • TUI in Browser
+  target: Alessandro, Seby, Riccardo & Vim Ninjas
   tech:
-    - "Ruby 3.3"
-    - "CRuby WebAssembly (@ruby/3.3-wasm-wasi)"
-    - "xterm.js"
-    - "Linux PTY WebSocket"
-    - "GitHub Pages"
+  - Ruby 3.3
+  - CRuby WebAssembly (@ruby/3.3-wasm-wasi)
+  - xterm.js
+  - Linux PTY WebSocket
+  - GitHub Pages
   tags:
-    - "snake"
-    - "tui"
-    - "ruby"
-    - "wasm"
-    - "vim"
-    - "arcade"
-    - "kids"
-    - "game"
-
-- id: "dots-and-lines"
-  title: "⚡🔲🐧 Dots & Lines — Neon Duel (Dual PuffinLogin)"
-  audience: "kids"
-  kind: "game"
+  - snake
+  - tui
+  - ruby
+  - wasm
+  - vim
+  - arcade
+  - kids
+  - game
+  - raspberry-optimized
+  raspberry_optimized: true
+- id: dots-and-lines
+  title: ⚡🔲🐧 Dots & Lines — Neon Duel (Dual PuffinLogin)
+  audience: kids
+  kind: game
   is_game: true
-  category: "kids"
+  category: kids
   score: 96
-  created_at: "2026-11"
-  tagline: "Dots and Boxes al Neon con Doppio PuffinLogin (Ale vs Seby / Ale vs Papino), catene musicali Do-Re-Mi, particelle shockwave e bilancino Head-to-Head Cloud!"
-  description: "Edizione Carlessiana Deluxe di Dots and Boxes ispirata al gioco dell'amico Paolo, potenziata con Dual PuffinLogin v2.1.0 (slot indipendenti P1 vs P2 per sfide Ale vs Seby o Ale vs Papino sullo stesso schermo), medaglioni Pixar stampati nei quadratini conquistati, esplosioni particellari shockwave al neon, scala musicale ascendente Do-Re-Mi-Fa-Sol-La-Si-Do sulle combo di cattura, Smart Bot 3-ply (Tattico / Strategico) e sincronizzazione Cloud Firestore dei record Head-to-Head!"
-  screenshot: "assets/screenshots/dots-and-lines.png"
-  play_url: "https://palladius.github.io/dots-and-lines/"
-  repo_url: "https://github.com/palladius/dots-and-lines"
+  created_at: 2026-11
+  tagline: Dots and Boxes al Neon con Doppio PuffinLogin (Ale vs Seby / Ale vs Papino), catene musicali Do-Re-Mi, particelle
+    shockwave e bilancino Head-to-Head Cloud!
+  description: Edizione Carlessiana Deluxe di Dots and Boxes ispirata al gioco dell'amico Paolo, potenziata con Dual PuffinLogin
+    v2.1.0 (slot indipendenti P1 vs P2 per sfide Ale vs Seby o Ale vs Papino sullo stesso schermo), medaglioni Pixar stampati
+    nei quadratini conquistati, esplosioni particellari shockwave al neon, scala musicale ascendente Do-Re-Mi-Fa-Sol-La-Si-Do
+    sulle combo di cattura, Smart Bot 3-ply (Tattico / Strategico) e sincronizzazione Cloud Firestore dei record Head-to-Head!
+  screenshot: assets/screenshots/dots-and-lines.png
+  play_url: https://palladius.github.io/dots-and-lines/
+  repo_url: https://github.com/palladius/dots-and-lines
   can_embed: true
   featured: true
   supports_puffin_login: true
-  puffin_game_id: "dots-and-lines"
-  badge: "⚡ Dual PuffinLogin • Neon H2H"
-  target: "Alessandro, Seby, Riccardo & Family"
+  puffin_game_id: dots-and-lines
+  badge: ⚡ Dual PuffinLogin • Neon H2H
+  target: Alessandro, Seby, Riccardo & Family
   tech:
-    - "HTML5 Canvas 2D"
-    - "Web Audio API"
-    - "Dual PuffinLogin v2.1"
-    - "Cloud Firestore"
-    - "GitHub Pages"
+  - HTML5 Canvas 2D
+  - Web Audio API
+  - Dual PuffinLogin v2.1
+  - Cloud Firestore
+  - GitHub Pages
   tags:
-    - "dots-and-boxes"
-    - "strategy"
-    - "login"
-    - "puffin-login"
-    - "supports_puffin_login"
-    - "educational"
-    - "family"
-    - "game"
-    - "kids"
-
-- id: "tribecca"
-  title: "🇮🇹♟️🔺 TriBecca — Scacchi Tricolore 3D a 3 Giocatori"
-  audience: "kids"
-  kind: "game"
+  - dots-and-boxes
+  - strategy
+  - login
+  - puffin-login
+  - supports_puffin_login
+  - educational
+  - family
+  - game
+  - kids
+  - raspberry-optimized
+  raspberry_optimized: true
+- id: tribecca
+  title: 🇮🇹♟️🔺 TriBecca — Scacchi Tricolore 3D a 3 Giocatori
+  audience: kids
+  kind: game
   is_game: true
-  category: "kids"
+  category: kids
   score: 96
-  created_at: "2026-11"
-  tagline: "Scacchi a 3 Giocatori (3D + 2D) sulla scacchiera esagonale a 96 caselle con Raggi Illuminati della Rosetta e PuffinLogin multi-seat!"
-  description: "Gioco didattico e pragmatico di Scacchi a 3 Giocatori (3D + 2D) progettato per insegnare ad Alessandro e Sebastian le traiettorie della scacchiera esagonale a 96 caselle (A..L × 1..12) con Rosetta centrale. Include illuminazione dei raggi che curvano e si biforcano a Y nella Rosetta, rotazione automatica di 120° a ogni mossa (Bianco → Rosso → Verde), 4 modalità di eliminazione (Distruzione, Assimilazione Protoss, Relitti Inerti, Morte Improvvisa), e PuffinLogin multi-seat con classifica Cloud Firestore!"
-  screenshot: "assets/screenshots/tribecca.png"
-  play_url: "https://palladius.github.io/tribecca/"
-  repo_url: "https://github.com/palladius/tribecca"
+  created_at: 2026-11
+  tagline: Scacchi a 3 Giocatori (3D + 2D) sulla scacchiera esagonale a 96 caselle con Raggi Illuminati della Rosetta e PuffinLogin
+    multi-seat!
+  description: Gioco didattico e pragmatico di Scacchi a 3 Giocatori (3D + 2D) progettato per insegnare ad Alessandro e Sebastian
+    le traiettorie della scacchiera esagonale a 96 caselle (A..L × 1..12) con Rosetta centrale. Include illuminazione dei
+    raggi che curvano e si biforcano a Y nella Rosetta, rotazione automatica di 120° a ogni mossa (Bianco → Rosso → Verde),
+    4 modalità di eliminazione (Distruzione, Assimilazione Protoss, Relitti Inerti, Morte Improvvisa), e PuffinLogin multi-seat
+    con classifica Cloud Firestore!
+  screenshot: assets/screenshots/tribecca.png
+  play_url: https://palladius.github.io/tribecca/
+  repo_url: https://github.com/palladius/tribecca
   can_embed: true
   featured: true
   supports_puffin_login: true
-  puffin_game_id: "tribecca"
-  badge: "🟢 Play Live • 3D Chess + PuffinLogin"
-  target: "Alessandro, Sebi, Riccardo & Family"
+  puffin_game_id: tribecca
+  badge: 🟢 Play Live • 3D Chess + PuffinLogin
+  target: Alessandro, Sebi, Riccardo & Family
   tech:
-    - "Three.js"
-    - "WebGL"
-    - "Web Components"
-    - "Cloud Firestore"
-    - "GitHub Pages"
+  - Three.js
+  - WebGL
+  - Web Components
+  - Cloud Firestore
+  - GitHub Pages
   tags:
-    - "chess"
-    - "3d"
-    - "login"
-    - "puffin-login"
-    - "supports_puffin_login"
-    - "educational"
-    - "family"
-    - "game"
-    - "kids"
-
-- id: "kids-own-stories"
-  title: "📚🎙️ Kids' Own Stories — Le Storie di Ale & Seby"
-  audience: "kids"
-  kind: "educational"
+  - chess
+  - 3d
+  - login
+  - puffin-login
+  - supports_puffin_login
+  - educational
+  - family
+  - game
+  - kids
+  - raspberry-optimized
+  raspberry_optimized: true
+- id: kids-own-stories
+  title: 📚🎙️ Kids' Own Stories — Le Storie di Ale & Seby
+  audience: kids
+  kind: educational
   is_game: false
-  category: "kids"
+  category: kids
   score: 96
-  created_at: "2026-11"
-  tagline: "Storie inventate al microfono da Alessandro & Sebastian, sbobinate parola-per-parola, illustrate in 3D e animate con Gemini Omni Flash!"
-  description: "Archivio multimediale e libro sfogliabile interattivo (con un Tab dedicato per ogni storia) delle storie inventate a voce da Alessandro (2018) e Sebastian (2020) insieme a papà Riccardo. Include le registrazioni vocali originali al microfono (.mp3/.ogg), le sbobinature fedeli che preservano tutte le invenzioni linguistiche dei bimbi, le illustrazioni 3D capitolo per capitolo (Nano Banana Pro) e il video animato finale con il Drago e i Puffins (Gemini Omni Flash), il tutto alimentato dal registro deterministico stories.yaml."
-  screenshot: "assets/screenshots/kids-own-stories.jpg"
-  play_url: "https://palladius.github.io/kids-own-stories/"
-  repo_url: "https://github.com/palladius/kids-own-stories"
+  created_at: 2026-11
+  tagline: Storie inventate al microfono da Alessandro & Sebastian, sbobinate parola-per-parola, illustrate in 3D e animate
+    con Gemini Omni Flash!
+  description: Archivio multimediale e libro sfogliabile interattivo (con un Tab dedicato per ogni storia) delle storie inventate
+    a voce da Alessandro (2018) e Sebastian (2020) insieme a papà Riccardo. Include le registrazioni vocali originali al microfono
+    (.mp3/.ogg), le sbobinature fedeli che preservano tutte le invenzioni linguistiche dei bimbi, le illustrazioni 3D capitolo
+    per capitolo (Nano Banana Pro) e il video animato finale con il Drago e i Puffins (Gemini Omni Flash), il tutto alimentato
+    dal registro deterministico stories.yaml.
+  screenshot: assets/screenshots/kids-own-stories.jpg
+  play_url: https://palladius.github.io/kids-own-stories/
+  repo_url: https://github.com/palladius/kids-own-stories
   can_embed: true
   featured: true
-  badge: "🎙️ Audio + 3D + Video AI"
-  target: "Alessandro, Sebastian & Family"
+  badge: 🎙️ Audio + 3D + Video AI
+  target: Alessandro, Sebastian & Family
   tech:
-    - "HTML5 Audio & Video"
-    - "YAML SSOT"
-    - "Gemini Omni Flash"
-    - "NanoBanana Pro"
-    - "View Transitions API"
-    - "GitHub Pages"
+  - HTML5 Audio & Video
+  - YAML SSOT
+  - Gemini Omni Flash
+  - NanoBanana Pro
+  - View Transitions API
+  - GitHub Pages
   tags:
-    - "stories"
-    - "kids"
-    - "audio"
-    - "educational"
-    - "family"
-    - "fairytales"
-    - "puffins"
-    - "dragons"
-    - "nanobanana"
-    - "video"
-
-- id: "demo-snake"
-  title: "🐍🐧 Puffin Snake — Family Login & Hall of Fame"
-  audience: "kids"
-  kind: "game"
+  - stories
+  - kids
+  - audio
+  - educational
+  - family
+  - fairytales
+  - puffins
+  - dragons
+  - nanobanana
+  - video
+  - raspberry-optimized
+  raspberry_optimized: true
+- id: demo-snake
+  title: 🐍🐧 Puffin Snake — Family Login & Hall of Fame
+  audience: kids
+  kind: game
   is_game: true
-  category: "kids"
+  category: kids
   score: 94
-  created_at: "2026-11"
-  tagline: "Classic arcade Snake with the 6 Carlesso Family Pixar RPG Heroes, Cutie Kids PIN Pad (X X X X), and Cloud Firestore Top 10 Hall of Fame!"
-  description: "End-to-end family arcade Snake showcasing PuffinLogin (<puffin-login> & <puffin-leaderboard>). Features mandatory login with the 6 Pixar RPG Bobblehead family profiles (Papino Riccardo, Mamma Kate, Ale, Seby, Nonna Lucilla, and Guest), a 4-digit cutie PIN keypad with 3-strike jam protection, zero-plaintext salted SHA-256 WebCrypto auth on public GitHub Pages, a 3-slot FIFO directional turn queue (dirQueue) so rapid UP+LEFT turns never drop a key, player-colored snake segments, and an end-of-match Top 10 Hall of Fame persisted to Google Cloud Firestore (ror-goldie / puffin-login)."
-  screenshot: "assets/screenshots/demo-snake.png"
-  play_url: "https://palladius.github.io/demo-snake/"
-  repo_url: "https://github.com/palladius/demo-snake"
+  created_at: 2026-11
+  tagline: Classic arcade Snake with the 6 Carlesso Family Pixar RPG Heroes, Cutie Kids PIN Pad (X X X X), and Cloud Firestore
+    Top 10 Hall of Fame!
+  description: End-to-end family arcade Snake showcasing PuffinLogin (<puffin-login> & <puffin-leaderboard>). Features mandatory
+    login with the 6 Pixar RPG Bobblehead family profiles (Papino Riccardo, Mamma Kate, Ale, Seby, Nonna Lucilla, and Guest),
+    a 4-digit cutie PIN keypad with 3-strike jam protection, zero-plaintext salted SHA-256 WebCrypto auth on public GitHub
+    Pages, a 3-slot FIFO directional turn queue (dirQueue) so rapid UP+LEFT turns never drop a key, player-colored snake segments,
+    and an end-of-match Top 10 Hall of Fame persisted to Google Cloud Firestore (ror-goldie / puffin-login).
+  screenshot: assets/screenshots/demo-snake.png
+  play_url: https://palladius.github.io/demo-snake/
+  repo_url: https://github.com/palladius/demo-snake
   pwa: true
   can_embed: true
   featured: true
   supports_puffin_login: true
-  puffin_game_id: "puffin-snake"
-  badge: "🟢 Play Live • PuffinLogin + Firestore"
-  target: "Alessandro, Sebi, Kate, Riccardo, Nonna Lucilla & Family"
+  puffin_game_id: puffin-snake
+  badge: 🟢 Play Live • PuffinLogin + Firestore
+  target: Alessandro, Sebi, Kate, Riccardo, Nonna Lucilla & Family
   regions:
-    - name: "🌐 GitHub Pages"
-      url: "https://palladius.github.io/demo-snake/"
-      region: "global"
-      env: "prod"
-      flag: "🌐"
-    - name: "🇧🇪 Belgium Cloud Run"
-      url: "https://puffin-login-932724269481.europe-west1.run.app/snake.html"
-      region: "europe-west1"
-      env: "prod"
-      flag: "🇧🇪"
+  - name: 🌐 GitHub Pages
+    url: https://palladius.github.io/demo-snake/
+    region: global
+    env: prod
+    flag: 🌐
+  - name: 🇧🇪 Belgium Cloud Run
+    url: https://puffin-login-932724269481.europe-west1.run.app/snake.html
+    region: europe-west1
+    env: prod
+    flag: 🇧🇪
   tech:
-    - "Web Components"
-    - "Canvas"
-    - "WebCrypto SHA-256"
-    - "Cloud Run"
-    - "Cloud Firestore"
-    - "NanoBanana"
-    - "GitHub Pages"
+  - Web Components
+  - Canvas
+  - WebCrypto SHA-256
+  - Cloud Run
+  - Cloud Firestore
+  - NanoBanana
+  - GitHub Pages
   tags:
-    - "snake"
-    - "arcade"
-    - "login"
-    - "puffin-login"
-    - "supports_puffin_login"
-    - "leaderboard"
-    - "firestore"
-    - "family"
-    - "game"
-    - "kids"
-
-- id: "carlesso-fotoquad"
-  title: "📸🧩 FotoQuad: Il Solitario di Famiglia"
-  audience: "kids"
-  kind: "game"
+  - snake
+  - arcade
+  - login
+  - puffin-login
+  - supports_puffin_login
+  - leaderboard
+  - firestore
+  - family
+  - game
+  - kids
+  - raspberry-optimized
+  raspberry_optimized: true
+- id: carlesso-fotoquad
+  title: '📸🧩 FotoQuad: Il Solitario di Famiglia'
+  audience: kids
+  kind: game
   is_game: true
-  category: "kids"
+  category: kids
   score: 95
-  created_at: "2026-11"
-  tagline: "Ricomponi le foto di famiglia dai loro 4 pezzi su un tavolo verde da solitario!"
-  description: "Match-4 photo solitaire: every portrait photo is auto-sliced (Canvas) into 4 quadrants and shuffled on a green-felt tableau with 5 draw decks. Drag tiles inside the board until a photo's 4 pieces form its 2×2 block: it pops up with a caption, confetti and an 8-bit chime, then 4 new tiles are dealt. Three levels: 🐣 Facile (tap-to-tray, for little ones), 🙂 Medio (drag & drop, up to 3 doable photos) and 🧠 Difficile (exactly one doable photo, guaranteed by a seeded solvability-aware dealer). Photo Album, auto-save/resume, demo pack illustrated with Nano Banana (Gamberone chef & astronaut, Zurich tram, tennis camp). Built spec-first with Conductor."
-  screenshot: "assets/screenshots/carlesso-fotoquad.jpg"
-  play_url: "https://palladius.github.io/carlesso-fotoquad/"
-  repo_url: "https://github.com/palladius/carlesso-fotoquad"
+  created_at: 2026-11
+  tagline: Ricomponi le foto di famiglia dai loro 4 pezzi su un tavolo verde da solitario!
+  description: 'Match-4 photo solitaire: every portrait photo is auto-sliced (Canvas) into 4 quadrants and shuffled on a green-felt
+    tableau with 5 draw decks. Drag tiles inside the board until a photo''s 4 pieces form its 2×2 block: it pops up with a
+    caption, confetti and an 8-bit chime, then 4 new tiles are dealt. Three levels: 🐣 Facile (tap-to-tray, for little ones),
+    🙂 Medio (drag & drop, up to 3 doable photos) and 🧠 Difficile (exactly one doable photo, guaranteed by a seeded solvability-aware
+    dealer). Photo Album, auto-save/resume, demo pack illustrated with Nano Banana (Gamberone chef & astronaut, Zurich tram,
+    tennis camp). Built spec-first with Conductor.'
+  screenshot: assets/screenshots/carlesso-fotoquad.jpg
+  play_url: https://palladius.github.io/carlesso-fotoquad/
+  repo_url: https://github.com/palladius/carlesso-fotoquad
   pwa: true
   can_embed: true
   featured: true
   supports_puffin_login: true
-  puffin_game_id: "carlesso-fotoquad"
-  badge: "🟢 Play Live • PuffinLogin + PWA"
-  target: "Alessandro, Sebi & Family"
+  puffin_game_id: carlesso-fotoquad
+  badge: 🟢 Play Live • PuffinLogin + PWA
+  target: Alessandro, Sebi & Family
   tech:
-    - "TypeScript"
-    - "Vite"
-    - "Canvas"
-    - "Web Audio"
-    - "NanoBanana"
-    - "Conductor"
-    - "PWA"
-    - "GitHub Pages"
+  - TypeScript
+  - Vite
+  - Canvas
+  - Web Audio
+  - NanoBanana
+  - Conductor
+  - PWA
+  - GitHub Pages
   tags:
-    - "puzzle"
-    - "solitaire"
-    - "photos"
-    - "pwa"
-    - "login"
-    - "puffin-login"
-    - "supports_puffin_login"
-    - "family"
-    - "game"
-    - "kids"
-    - "drag-and-drop"
-
-- id: "family-mahjong-3d"
-  title: "🀄 Carlesso Family 3D Mahjong Solitaire"
-  audience: "kids"
-  kind: "game"
+  - puzzle
+  - solitaire
+  - photos
+  - pwa
+  - login
+  - puffin-login
+  - supports_puffin_login
+  - family
+  - game
+  - kids
+  - drag-and-drop
+  - raspberry-optimized
+  raspberry_optimized: true
+- id: family-mahjong-3d
+  title: 🀄 Carlesso Family 3D Mahjong Solitaire
+  audience: kids
+  kind: game
   is_game: true
-  category: "kids"
+  category: kids
   score: 98
-  created_at: "2026-10"
-  tagline: "3D Imperial Marble & Obsidian Mahjong Solitaire with Ale, Sebi, Mamma Kate, Papà Riccardo & Dragon Biribip Power-Up FX!"
-  description: "AAA-quality 3D Solitary Mahjong Web App & Look-Dev Studio built with Headless Blender 5.0.1 (Cycles) and Three.js (r170). Features 50 custom 3D Incandescent-Pen Carved tiles (Imperial White Marble + Black Obsidian + 24k Gold Kintsugi), Carlesso Family Seasons Quartet (Papà Riccardo, Mamma Kate, Ale, Sebi), Magical Companions Quartet (Ghigna 🐹 & Pupurabbu 👾), 4 Diptyque Split-Pair paintings (Great Wall, Cantonese Rice, Shaolin Kung Fu, Chengdu Pandas), Ornate 3D Carved Red Dragon (紅中), Ma Shan Zheng brush calligraphy, Solvability & Early Deadlock Engine, and a zero-halo transparent 2D-over-3D 'Biribip' Dragon Power-Up celebration!"
-  screenshot: "assets/screenshots/family-mahjong-3d.jpg"
-  play_url: "https://palladius.github.io/family-mahjong-3d/"
-  repo_url: "https://github.com/palladius/family-mahjong-3d"
+  created_at: 2026-10
+  tagline: 3D Imperial Marble & Obsidian Mahjong Solitaire with Ale, Sebi, Mamma Kate, Papà Riccardo & Dragon Biribip Power-Up
+    FX!
+  description: AAA-quality 3D Solitary Mahjong Web App & Look-Dev Studio built with Headless Blender 5.0.1 (Cycles) and Three.js
+    (r170). Features 50 custom 3D Incandescent-Pen Carved tiles (Imperial White Marble + Black Obsidian + 24k Gold Kintsugi),
+    Carlesso Family Seasons Quartet (Papà Riccardo, Mamma Kate, Ale, Sebi), Magical Companions Quartet (Ghigna 🐹 & Pupurabbu
+    👾), 4 Diptyque Split-Pair paintings (Great Wall, Cantonese Rice, Shaolin Kung Fu, Chengdu Pandas), Ornate 3D Carved Red
+    Dragon (紅中), Ma Shan Zheng brush calligraphy, Solvability & Early Deadlock Engine, and a zero-halo transparent 2D-over-3D
+    'Biribip' Dragon Power-Up celebration!
+  screenshot: assets/screenshots/family-mahjong-3d.jpg
+  play_url: https://palladius.github.io/family-mahjong-3d/
+  repo_url: https://github.com/palladius/family-mahjong-3d
   pwa: true
   can_embed: true
   featured: true
-  badge: "🐉 3D WebGL • Blender 5.0.1"
-  target: "Alessandro, Sebi, Kate, Riccardo & Family"
+  badge: 🐉 3D WebGL • Blender 5.0.1
+  target: Alessandro, Sebi, Kate, Riccardo & Family
   tech:
-    - "Three.js"
-    - "Blender 5.0.1 Cycles"
-    - "WebGL"
-    - "Web Audio"
-    - "NanoBanana"
-    - "Vite"
-    - "GitHub Pages"
+  - Three.js
+  - Blender 5.0.1 Cycles
+  - WebGL
+  - Web Audio
+  - NanoBanana
+  - Vite
+  - GitHub Pages
   tags:
-    - "3d"
-    - "mahjong"
-    - "solitaire"
-    - "game"
-    - "kids"
-    - "family"
-    - "blender"
-    - "threejs"
-    - "dragons"
-    - "puzzle"
-
-- id: "pupurabbu-3d"
-  title: "👾 Pupurabbu 3D: Quake Labyrinth"
-  audience: "kids"
-  kind: "game"
+  - 3d
+  - mahjong
+  - solitaire
+  - game
+  - kids
+  - family
+  - blender
+  - threejs
+  - dragons
+  - puzzle
+  - raspberry-optimized
+  raspberry_optimized: true
+- id: pupurabbu-3d
+  title: '👾 Pupurabbu 3D: Quake Labyrinth'
+  audience: kids
+  kind: game
   is_game: true
-  category: "kids"
+  category: kids
   score: 97
-  created_at: "2026-09"
-  tagline: "Kid-safe 3D retro labyrinth with Ale & Sebi, funny voice callouts, and multi-region Cloud Run!"
-  description: "A kid-friendly 3D first-person explorer and retro arena built with Three.js, Cannon-es physics, and Web Audio. Starring Alessandro, Sebastian, and the mythical giant purple creature Pupurabbu. Features Mario double-jump, Banana Launcher, Candy Star-Burst defeat effects, levitating Salmon Nigiri with celebratory Japanese voices ('すごい!'), comedic damage reactions ('Ouch!'), and Italian Kitten Bazooka quips. Deployed globally on Google Cloud Run across Zurich 🇨🇭 and Belgium 🇧🇪."
-  screenshot: "assets/screenshots/pupurabbu-3d.jpg"
-  play_url: "https://pupurabbu-3d-272932496670.europe-west6.run.app"
-  repo_url: "https://gitlab.com/palladius/pupurabbu-3d"
+  created_at: 2026-09
+  tagline: Kid-safe 3D retro labyrinth with Ale & Sebi, funny voice callouts, and multi-region Cloud Run!
+  description: A kid-friendly 3D first-person explorer and retro arena built with Three.js, Cannon-es physics, and Web Audio.
+    Starring Alessandro, Sebastian, and the mythical giant purple creature Pupurabbu. Features Mario double-jump, Banana Launcher,
+    Candy Star-Burst defeat effects, levitating Salmon Nigiri with celebratory Japanese voices ('すごい!'), comedic damage reactions
+    ('Ouch!'), and Italian Kitten Bazooka quips. Deployed globally on Google Cloud Run across Zurich 🇨🇭 and Belgium 🇧🇪.
+  screenshot: assets/screenshots/pupurabbu-3d.jpg
+  play_url: https://pupurabbu-3d-272932496670.europe-west6.run.app
+  repo_url: https://gitlab.com/palladius/pupurabbu-3d
   pwa: true
   can_embed: true
   featured: true
-  badge: "🟢 Multi-Region • 3D WebGL"
-  target: "Alessandro, Sebi & Family"
+  badge: 🟢 Multi-Region • 3D WebGL
+  target: Alessandro, Sebi & Family
   regions:
-    - name: "🇨🇭 Zurich Prod"
-      url: "https://pupurabbu-3d-272932496670.europe-west6.run.app"
-      region: "europe-west6"
-      env: "prod"
-      flag: "🇨🇭"
-    - name: "🇨🇭 Zurich Dev"
-      url: "https://pupurabbu-3d-dev-272932496670.europe-west6.run.app"
-      region: "europe-west6"
-      env: "dev"
-      flag: "🇨🇭"
-    - name: "🇧🇪 Belgium Prod"
-      url: "https://pupurabbu-3d-272932496670.europe-west1.run.app"
-      region: "europe-west1"
-      env: "prod"
-      flag: "🇧🇪"
-    - name: "🇧🇪 Belgium Dev"
-      url: "https://pupurabbu-3d-dev-272932496670.europe-west1.run.app"
-      region: "europe-west1"
-      env: "dev"
-      flag: "🇧🇪"
+  - name: 🇨🇭 Zurich Prod
+    url: https://pupurabbu-3d-272932496670.europe-west6.run.app
+    region: europe-west6
+    env: prod
+    flag: 🇨🇭
+  - name: 🇨🇭 Zurich Dev
+    url: https://pupurabbu-3d-dev-272932496670.europe-west6.run.app
+    region: europe-west6
+    env: dev
+    flag: 🇨🇭
+  - name: 🇧🇪 Belgium Prod
+    url: https://pupurabbu-3d-272932496670.europe-west1.run.app
+    region: europe-west1
+    env: prod
+    flag: 🇧🇪
+  - name: 🇧🇪 Belgium Dev
+    url: https://pupurabbu-3d-dev-272932496670.europe-west1.run.app
+    region: europe-west1
+    env: dev
+    flag: 🇧🇪
   tech:
-    - "Three.js"
-    - "TypeScript"
-    - "Cannon-es"
-    - "Web Audio"
-    - "SpeechSynthesis"
-    - "Cloud Run"
-    - "Multi-Region"
-    - "PWA"
-    - "Vite"
+  - Three.js
+  - TypeScript
+  - Cannon-es
+  - Web Audio
+  - SpeechSynthesis
+  - Cloud Run
+  - Multi-Region
+  - PWA
+  - Vite
   tags:
-    - "3d"
-    - "game"
-    - "kids"
-    - "quake"
-    - "threejs"
-    - "cloud-run"
-    - "multi-region"
-    - "zurich"
-    - "belgium"
-    - "audio"
-    - "pwa"
-    - "funny"
-
+  - 3d
+  - game
+  - kids
+  - quake
+  - threejs
+  - cloud-run
+  - multi-region
+  - zurich
+  - belgium
+  - audio
+  - pwa
+  - funny
+  - raspberry-optimized
+  raspberry_optimized: true
 - id: tubature
-  title: '🚰 Tubature: The Dungeon Plumber'
+  title: '🚰🍓 Tubature: The Dungeon Plumber (v2.13 RPi Turbo)'
   audience: kids
   kind: game
   category: kids
-  score: 95
-  created_at: '2026'
-  tagline: Enchanting fantasy pipe-puzzle game starring Riccardo and his baby dragon!
-  description: A vibrant pipe-puzzle game built with Flutter & Riverpod. Starring
-    Riccardo the Dungeon Plumber (wearing his signature yellow 'R' cap) and his cute
-    emerald dragon companion. Rotate magical conduits to let crystal water rush through
-    every single dungeon tile!
+  score: 97
+  created_at: 2026-11
+  tagline: Enchanting fantasy pipe-puzzle game with Ermete & baby dragon — now 100% Raspberry Pi 400 ('Sguisatazzo') Turbo
+    Compliant!
+  description: 'A vibrant pipe-puzzle game built with Flutter & Riverpod. Starring Riccardo the Dungeon Plumber (wearing his
+    signature yellow ''R'' cap), Ermete Bottazzi, and his cute emerald dragon companion. Rotate magical conduits to let crystal
+    water rush through every single dungeon tile! Features v2.13.0 Raspberry Pi 400 (''Sguisatazzo'') Turbo Engine: auto-detects
+    ARM64 / RPi / WebKit2GTK, downscales textures 98% (88 MB -> 1.4 MB to fit BCM2711 L2 cache), wraps every tile in RepaintBoundary,
+    and drops idle CPU to 0%.'
   screenshot: assets/screenshots/tubature.jpg
   screenshot_gif: assets/screenshots/tubature_gameplay.gif
   play_url: https://palladius.github.io/tubature/
@@ -356,6 +404,7 @@
   - Dart
   - Web
   - PWA
+  - Raspberry Pi 400 Turbo
   tags:
   - puzzle
   - flutter
@@ -370,13 +419,17 @@
   - login
   - puffin-login
   - supports_puffin_login
+  - raspberry-optimized
+  - raspberry-pi
+  - sguisatazzo
   pwa: true
+  raspberry_optimized: true
   supports_puffin_login: true
-  puffin_game_id: "tubature"
-  badge: 🟢 Play Live • PuffinLogin + PWA
-  target: Kids & Family
+  puffin_game_id: tubature
+  badge: 🍓🟢 Play Live • RPi 400 Turbo + PuffinLogin
+  target: Alessandro, Sebi, Kids & Raspberry Pi 400 (Sguisatazzo)
 - id: ale-french
-  title: '🇫🇷 Ale & Seby French'
+  title: 🇫🇷 Ale & Seby French
   audience: kids
   kind: educational
   is_game: true
@@ -384,7 +437,9 @@
   score: 93
   created_at: '2026'
   tagline: Impara il Francese con Ale e Seby (Verbi P3 + Esame A1 Primary 1)!
-  description: Web app educativa per Alessandro (Primary 3) e Sebastian (Primary 1) alla Tandem IMS. Include login con profilo, verbi al presente, desinenze ortografiche, flashcards 3D, quiz di ascolto e scrittura, e il programma A1 per Seby (saluti, numeri 0-12, colori e forme).
+  description: Web app educativa per Alessandro (Primary 3) e Sebastian (Primary 1) alla Tandem IMS. Include login con profilo,
+    verbi al presente, desinenze ortografiche, flashcards 3D, quiz di ascolto e scrittura, e il programma A1 per Seby (saluti,
+    numeri 0-12, colori e forme).
   screenshot: assets/screenshots/ale-french.png
   play_url: https://palladius.github.io/ale-french/
   repo_url: https://github.com/palladius/ale-french
@@ -405,11 +460,13 @@
   - login
   - puffin-login
   - supports_puffin_login
+  - raspberry-optimized
   supports_puffin_login: true
-  puffin_game_id: "ale-french"
-  badge: "🟢 Live App • PuffinLogin 🐧"
+  puffin_game_id: ale-french
+  badge: 🟢 Live App • PuffinLogin 🐧
   target: Alessandro, Sebastian & Family
   featured: true
+  raspberry_optimized: true
 - id: orologiaio
   title: ⏰ Orologia.io (Time Master)
   audience: kids
@@ -419,9 +476,8 @@
   score: 85
   created_at: '2025'
   tagline: Master reading analog & digital clocks with Sebi and Alessandro!
-  description: Interactive clock-learning game designed to teach children how to read
-    analog clocks (hands, quarter sub-ticks, half-past), adjust digital displays,
-    and master 7-segment digital digits configurations with dedicated guides for Sebi
+  description: Interactive clock-learning game designed to teach children how to read analog clocks (hands, quarter sub-ticks,
+    half-past), adjust digital displays, and master 7-segment digital digits configurations with dedicated guides for Sebi
     and Ale.
   screenshot: assets/screenshots/orologiaio.png
   play_url: https://palladius.github.io/orologia.io/
@@ -439,9 +495,11 @@
   - kids
   - learning
   - school
+  - raspberry-optimized
   badge: 🟢 Play Live
   target: Alessandro & Sebi
   featured: true
+  raspberry_optimized: true
 - id: kids-jigsaw-puzzle
   title: 🧩 Kids Jigsaw Puzzle
   audience: kids
@@ -450,10 +508,8 @@
   score: 90
   created_at: '2025'
   tagline: Interactive puzzle with family photos, heroes, and smart-merging tiles!
-  description: A delightful jigsaw puzzle game for kids where you can play with family
-    photos or favorite illustrations. Adjacent correct pieces automatically merge
-    and lock together with difficulty levels ranging from 'Easy Peasy' to 'Netflix
-    is Down'!
+  description: A delightful jigsaw puzzle game for kids where you can play with family photos or favorite illustrations. Adjacent
+    correct pieces automatically merge and lock together with difficulty levels ranging from 'Easy Peasy' to 'Netflix is Down'!
   screenshot: assets/screenshots/kids-jigsaw-puzzle.png
   play_url: https://palladius.github.io/kids-jigsaw-puzzle/
   repo_url: https://github.com/palladius/kids-jigsaw-puzzle
@@ -475,12 +531,14 @@
   - login
   - puffin-login
   - supports_puffin_login
+  - raspberry-optimized
   pwa: true
   supports_puffin_login: true
-  puffin_game_id: "kids-jigsaw-puzzle"
+  puffin_game_id: kids-jigsaw-puzzle
   badge: 🟢 Play Live • PuffinLogin + PWA
   target: The Whole Family
   featured: true
+  raspberry_optimized: true
 - id: pasta-invaders
   title: 🍝 Pasta Invaders
   audience: kids
@@ -489,11 +547,9 @@
   category: kids
   score: 48
   tagline: Cosmic arcade shooter against flying pasta with live Nonna commentary!
-  description: 'A hilarious Space Invaders-style arcade shooter: defend the galaxy
-    from an airborne invasion of rigatoni, tagliatelle, and ravioli, featuring real-time
-    satirical commentary and encouragement from Nonna powered by Google Gemini AI!
-    [Archived: no direct online playable endpoint found, source code available on
-    GitHub].'
+  description: 'A hilarious Space Invaders-style arcade shooter: defend the galaxy from an airborne invasion of rigatoni,
+    tagliatelle, and ravioli, featuring real-time satirical commentary and encouragement from Nonna powered by Google Gemini
+    AI! [Archived: no direct online playable endpoint found, source code available on GitHub].'
   screenshot: assets/screenshots/pasta-invaders.png
   play_url: ''
   repo_url: https://github.com/palladius/pasta-invaders
@@ -525,7 +581,9 @@
   category: kids
   score: 96
   tagline: 2D NanoBanana sprite math-arcade runner starring Puffin Archers 🐧, Baby Puffini 💙, Puffetta & the Emerald Dragon!
-  description: Lead your organic interlaced squadron of adorable Puffin Archers, Baby Puffini, and Royal Knights down the King's Highway! Choose the best A-vs-B Math Gate (+, -, ×, ÷), laugh at comical wrong-math trombone & voice quips, battle mischievous Smurfs & Puffetta, and slay the wing-flapping Emerald Dragon!
+  description: Lead your organic interlaced squadron of adorable Puffin Archers, Baby Puffini, and Royal Knights down the
+    King's Highway! Choose the best A-vs-B Math Gate (+, -, ×, ÷), laugh at comical wrong-math trombone & voice quips, battle
+    mischievous Smurfs & Puffetta, and slay the wing-flapping Emerald Dragon!
   screenshot: assets/screenshots/smurfs-and-dragons-v26.png
   screenshot_gif: assets/screenshots/smurfs-and-dragons_gameplay.gif
   play_url: https://palladius.github.io/vetrina/games/smurfs-and-dragons/?v=2.6
@@ -547,9 +605,11 @@
   - dragons
   - arcade
   - nanobanana
+  - raspberry-optimized
   badge: 🟢 Play Live • 2D Revamp
   target: Kids (Ages 6-11) & Family
   featured: true
+  raspberry_optimized: true
 - id: dungemoji
   title: '🐉🎲 Dungemoji v9.0: 1980s D&D Red Box Edition'
   audience: kids
@@ -557,8 +617,14 @@
   is_game: true
   category: kids
   score: 96
-  tagline: 2D Tactical + Room Zoom + 3D Dungeon Crawler with Cutie Monsters & Emojis Pandemonium, Secret Rooms, Paladin Spells, Pupurabbu 🐻💜 & Veo 3.1 Tragicomic Death Cutscenes!
-  description: 'Born as an 80s ASCII Rogue-like for Alessandro and reborn in v9.0 as a 1980s D&D Red Box Edition! Switch in real time [V] between 2D Tactical Map + Room Zoom Inspector, First-Person 3D Eye of the Beholder Dungeon Crawler, and Classic ASCII Rogue. Features 27 NanoBanana 2D sprites (Beholder, Mind Flayer, Gelatinous Cube, Mimic, Owlbear, Red Dragon, and Il Mitico Pupurabbu IF Purple Bear), Negative-Space Secret Rooms, Paladin Divine Spells, Dwarven Merchant, mathematical 3D Icosahedron (D20) Saving Throws, Lyria 3.5 Medieval Epic Metal at Level 5, and 3 Dragon''s Lair-style Veo 3.1 Tragicomic Death Cutscenes!'
+  tagline: 2D Tactical + Room Zoom + 3D Dungeon Crawler with Cutie Monsters & Emojis Pandemonium, Secret Rooms, Paladin Spells,
+    Pupurabbu 🐻💜 & Veo 3.1 Tragicomic Death Cutscenes!
+  description: Born as an 80s ASCII Rogue-like for Alessandro and reborn in v9.0 as a 1980s D&D Red Box Edition! Switch in
+    real time [V] between 2D Tactical Map + Room Zoom Inspector, First-Person 3D Eye of the Beholder Dungeon Crawler, and
+    Classic ASCII Rogue. Features 27 NanoBanana 2D sprites (Beholder, Mind Flayer, Gelatinous Cube, Mimic, Owlbear, Red Dragon,
+    and Il Mitico Pupurabbu IF Purple Bear), Negative-Space Secret Rooms, Paladin Divine Spells, Dwarven Merchant, mathematical
+    3D Icosahedron (D20) Saving Throws, Lyria 3.5 Medieval Epic Metal at Level 5, and 3 Dragon's Lair-style Veo 3.1 Tragicomic
+    Death Cutscenes!
   screenshot: assets/screenshots/dungemoji-cover.jpg
   screenshot_gif: assets/screenshots/dungemoji_gameplay.gif
   play_url: https://dungemoji.web.app/
@@ -580,9 +646,11 @@
   - kids
   - retro
   - dragons
+  - raspberry-optimized
   badge: 🟢 Play Live • v9.0 Red Box 2D/3D
   target: Alessandro, Kids & Retro D&D Gamers
   featured: true
+  raspberry_optimized: true
 - id: parola-del-giorno
   title: 📜 Parola del Giorno
   audience: kids
@@ -592,10 +660,9 @@
   score: 82
   created_at: '2025'
   tagline: The whimsical archive of vintage Italian words curated by Pux the Pixie!
-  description: Not a game, but a lyrical educational archive for children! Every day
-    a rare vintage Italian word (like fanfaluca, solerzia, cazzabubbola) paired with
-    dreamy fantasy AI artwork and pronunciation to enrich children's vocabulary with
-    laughter and wonder.
+  description: Not a game, but a lyrical educational archive for children! Every day a rare vintage Italian word (like fanfaluca,
+    solerzia, cazzabubbola) paired with dreamy fantasy AI artwork and pronunciation to enrich children's vocabulary with laughter
+    and wonder.
   screenshot: assets/screenshots/parola-del-giorno.png
   play_url: https://palladius.github.io/parola-del-giorno/
   repo_url: https://github.com/palladius/parola-del-giorno
@@ -611,9 +678,11 @@
   - fairytales
   - language
   - vocabulary
+  - raspberry-optimized
   badge: 🟢 Explore Live
   target: Carlesso Household
   featured: false
+  raspberry_optimized: true
 - id: baby-alphabet
   title: 🔤 Baby Alphabet (AJ-Alphabet)
   audience: kids
@@ -623,10 +692,9 @@
   score: 78
   created_at: '2021'
   tagline: Built in 24 hours to help Alessandro learn letters and phonetic sounds!
-  description: 'Interactive bilingual (IT/EN) educational tool created out of Dad''s
-    24-hour ''hold my beer'' challenge to teach Alessandro letters and pronunciation
-    with custom pasta & family photos, semi-transparent letter watermarks, and Web
-    Speech API audio.'
+  description: Interactive bilingual (IT/EN) educational tool created out of Dad's 24-hour 'hold my beer' challenge to teach
+    Alessandro letters and pronunciation with custom pasta & family photos, semi-transparent letter watermarks, and Web Speech
+    API audio.
   screenshot: assets/screenshots/baby-alphabet.jpg
   play_url: https://palladius.github.io/baby-alphabet/
   repo_url: https://github.com/palladius/baby-alphabet
@@ -643,9 +711,11 @@
   - kids
   - school
   - phonetics
+  - raspberry-optimized
   badge: 🟢 Explore Live
   target: Alessandro
   featured: false
+  raspberry_optimized: true
 - id: genai-kids-stories
   title: 📖 GenAI Kids Bedtime Stories
   audience: kids
@@ -655,9 +725,8 @@
   score: 62
   created_at: '2024'
   tagline: Personalized bedtime story generator for kids with AI illustrations!
-  description: AI-driven educational bedtime story creator that crafts personalized
-    fairy tales for children, illustrated and translated on the fly using Google Cloud
-    Run, Gemini, and Vertex AI.
+  description: AI-driven educational bedtime story creator that crafts personalized fairy tales for children, illustrated
+    and translated on the fly using Google Cloud Run, Gemini, and Vertex AI.
   screenshot: assets/screenshots/genai-kids-stories.png
   play_url: https://genai-kids-stories-gcloud-poor-cdlu26pd4q-ew.a.run.app/
   repo_url: https://github.com/palladius/genai-kids-stories
@@ -685,9 +754,8 @@
   score: 93
   created_at: '2026-07-18'
   tagline: Observe and orchestrate N git repositories with spaceship visualizers!
-  description: Framework to observe multiple git repositories concurrently across
-    worktrees, track token spend (measured in Macha Lattes 🍵!), and animate code history
-    progression with retro-futuristic spaceship UI.
+  description: Framework to observe multiple git repositories concurrently across worktrees, track token spend (measured in
+    Macha Lattes 🍵!), and animate code history progression with retro-futuristic spaceship UI.
   screenshot: assets/screenshots/conductoras.jpg
   youtube_id: wHEUxk6G7wE
   youtube_url: https://youtu.be/wHEUxk6G7wE
@@ -715,11 +783,9 @@
   category: tools
   score: 92
   created_at: '2026-08-18'
-  tagline: Official Unofficial Antigravity SDK for Ruby — Autonomous AI agents in
-    Ruby & Rails!
-  description: Full-featured Ruby SDK for Google Antigravity autonomous AI agents!
-    Seamless Rails integration, token streaming, declarative Policy DSL with sandbox
-    permissions, audit logging, sidecars, guards, and Telegram bot voice integration.
+  tagline: Official Unofficial Antigravity SDK for Ruby — Autonomous AI agents in Ruby & Rails!
+  description: Full-featured Ruby SDK for Google Antigravity autonomous AI agents! Seamless Rails integration, token streaming,
+    declarative Policy DSL with sandbox permissions, audit logging, sidecars, guards, and Telegram bot voice integration.
   screenshot: assets/screenshots/antigravity-ruby-sdk.jpg
   youtube_id: HuM6T_-NqO8
   youtube_url: https://youtu.be/HuM6T_-NqO8
@@ -752,9 +818,8 @@
   score: 72
   created_at: '2026'
   tagline: Fast, cache-efficient directory summarizer powered by Gemini & Imagen!
-  description: Codebase and folder summarizer with deterministic two-tier caching
-    and automated visual documentation. Humorous homage to 'Il signore dei Tarzanelli'
-    (Somaro donkey + Sauron of Mordor).
+  description: Codebase and folder summarizer with deterministic two-tier caching and automated visual documentation. Humorous
+    homage to 'Il signore dei Tarzanelli' (Somaro donkey + Sauron of Mordor).
   screenshot: assets/screenshots/sumaron.jpg
   play_url: ''
   repo_url: https://github.com/palladius/sumaron
@@ -779,9 +844,8 @@
   score: 66
   created_at: '2026'
   tagline: Store secret files in Google Cloud Secret Manager instead of git!
-  description: Ruby-based evolution of git-privatize that securely encrypts and synchronizes
-    sensitive files (.env, credentials) to Google Cloud Secret Manager, with automated
-    GCS offloading for payloads exceeding 64KB.
+  description: Ruby-based evolution of git-privatize that securely encrypts and synchronizes sensitive files (.env, credentials)
+    to Google Cloud Secret Manager, with automated GCS offloading for payloads exceeding 64KB.
   screenshot: assets/screenshots/gprism.jpg
   play_url: ''
   repo_url: https://github.com/palladius/gprism
@@ -809,9 +873,8 @@
   score: 69
   created_at: '2026'
   tagline: Zero-friction CLI tool to sync media output folders to Cloud Storage!
-  description: Python CLI tool to sync rich media and report output folders from AI
-    harnesses and automation scripts to GCS with Astro-styled HTML rendering, directory
-    indexing, and bandwidth-optimized delta uploads.
+  description: Python CLI tool to sync rich media and report output folders from AI harnesses and automation scripts to GCS
+    with Astro-styled HTML rendering, directory indexing, and bandwidth-optimized delta uploads.
   screenshot: assets/screenshots/storagify.png
   play_url: ''
   repo_url: https://gitlab.com/palladius/storagify
@@ -838,13 +901,10 @@
   category: tools
   score: 94
   created_at: 2026-08
-  tagline: 'Google GenAI SDK CLI harness: character-consistent photo synthesis & biometric
-    video judge!'
-  description: A powerhouse collection of Python CLI utilities powered by Google GenAI
-    (google-genai SDK & uv). Features bin/generate_photo.py for reference-driven character-consistent
-    photo synthesis with automatic model fallbacks, bin/judge_video.py for Hollywood
-    forensic video quality & biometric evaluation, bin/omni-video-gen.py for Veo video
-    generation, and bin/list-gemini-models.py.
+  tagline: 'Google GenAI SDK CLI harness: character-consistent photo synthesis & biometric video judge!'
+  description: A powerhouse collection of Python CLI utilities powered by Google GenAI (google-genai SDK & uv). Features bin/generate_photo.py
+    for reference-driven character-consistent photo synthesis with automatic model fallbacks, bin/judge_video.py for Hollywood
+    forensic video quality & biometric evaluation, bin/omni-video-gen.py for Veo video generation, and bin/list-gemini-models.py.
   screenshot: assets/screenshots/gemini-tools.png
   repo_url: https://github.com/palladius/gemini-tools
   can_embed: false
@@ -877,12 +937,10 @@
   category: tools
   score: 93
   created_at: 2026-06
-  tagline: Declarative kubectl-like orchestrator for AI videos, bedtime stories &
-    comic strips!
-  description: Arneis is a declarative, Kubernetes-inspired media creation engine
-    leveraging Gemini, Lyria, Nanobanana, and Veo. Transforms YAML specifications
-    into multi-scene videos, illustrated kids storybooks with character consistency,
-    and panel-by-panel comic strips (fumetti) with async Ruby fibers and token tracking.
+  tagline: Declarative kubectl-like orchestrator for AI videos, bedtime stories & comic strips!
+  description: Arneis is a declarative, Kubernetes-inspired media creation engine leveraging Gemini, Lyria, Nanobanana, and
+    Veo. Transforms YAML specifications into multi-scene videos, illustrated kids storybooks with character consistency, and
+    panel-by-panel comic strips (fumetti) with async Ruby fibers and token tracking.
   screenshot: assets/screenshots/media-arneis.png
   repo_url: https://github.com/palladius/media-arneis
   can_embed: false
@@ -913,13 +971,10 @@
   category: tools
   score: 95
   created_at: 2026-08
-  tagline: 'Same face, infinite worlds: AI character consistency with automated LLM
-    Judge!'
-  description: AI-powered web app and evaluation suite for generating consistent character
-    images across infinite worlds using Google Gemini. Features multi-character reference
-    photo management (Ale, Sebi, Riccardo, Kate), automated LLM Judge consistency
-    evaluation (with hilarious Benigni easter egg), private dataset segregation, and
-    live deployment on Google Cloud Run.
+  tagline: 'Same face, infinite worlds: AI character consistency with automated LLM Judge!'
+  description: AI-powered web app and evaluation suite for generating consistent character images across infinite worlds using
+    Google Gemini. Features multi-character reference photo management (Ale, Sebi, Riccardo, Kate), automated LLM Judge consistency
+    evaluation (with hilarious Benigni easter egg), private dataset segregation, and live deployment on Google Cloud Run.
   screenshot: assets/screenshots/character-consistency-studio.png
   play_url: https://character-consistency-studio-v1-frontend-only-272932496670.us-west1.run.app
   repo_url: https://github.com/palladius/character-consistency-studio-2026
@@ -950,9 +1005,8 @@
   score: 91
   created_at: 2026-07
   tagline: Turn rough ideas into structured SPEC.md blueprints for AI coding assistants!
-  description: A powerful Go-based CLI tool inspired by Ali G ('Booyakasha! You gotta
-    RE-SPEC each other's repo!'). Transforms vague feature requests and one-liners
-    into structured, production-ready SPEC.md documents tailored for AI coding assistants
+  description: A powerful Go-based CLI tool inspired by Ali G ('Booyakasha! You gotta RE-SPEC each other's repo!'). Transforms
+    vague feature requests and one-liners into structured, production-ready SPEC.md documents tailored for AI coding assistants
     like Antigravity, Claude, and Gemini.
   screenshot: assets/screenshots/respec.png
   repo_url: https://github.com/palladius/respec
@@ -981,9 +1035,8 @@
   score: 99
   created_at: '2026-09-06'
   tagline: The showcase that showcases the showcase that showcases the showcase...
-  description: A recursive Droste-effect inception loop! The Palladius Showcase running
-    inside a browser, showcasing itself in an infinite visual mirror. Zero runtime
-    dependencies, instant search, and pure philosophical meta-satisfaction.
+  description: A recursive Droste-effect inception loop! The Palladius Showcase running inside a browser, showcasing itself
+    in an infinite visual mirror. Zero runtime dependencies, instant search, and pure philosophical meta-satisfaction.
   screenshot: assets/screenshots/vetrina-meta.jpg
   play_url: https://palladius.github.io/vetrina/
   repo_url: https://github.com/palladius/vetrina
@@ -1015,9 +1068,8 @@
   score: 96
   created_at: '2026'
   tagline: '50 Shades of Yellow: Banquet d''Avanguardia & Bigoli con la Veganiga!'
-  description: Official gastronomic website celebrating Riccardo's 50th birthday on
-    December 29, 2026. Featuring Ermete Bottazzi's avant-garde cruelty-free menu (Bigoli
-    con la Veganiga di Lugano, Aria di Bosco Ferrarese, Tiramisù allo Struzzo Vegano)
+  description: Official gastronomic website celebrating Riccardo's 50th birthday on December 29, 2026. Featuring Ermete Bottazzi's
+    avant-garde cruelty-free menu (Bigoli con la Veganiga di Lugano, Aria di Bosco Ferrarese, Tiramisù allo Struzzo Vegano)
     built with Astro & Tailwind.
   screenshot: assets/screenshots/compleanno-palladiano.png
   play_url: https://palladius.github.io/compleanno-palladiano-2026/menu/
@@ -1047,10 +1099,9 @@
   score: 91
   created_at: '2026'
   tagline: Procrastinators unite... with real-time WebSockets & magic parser!
-  description: Modern rewrite of Riccardo's 15-year-old todo app with natural language
-    magic parsing (dates, priorities, wishlists), real-time WebSockets synchronization,
-    Supabase persistence, touch swipe gestures, and sleek dark mode UI deployed on
-    Cloud Run.
+  description: Modern rewrite of Riccardo's 15-year-old todo app with natural language magic parsing (dates, priorities, wishlists),
+    real-time WebSockets synchronization, Supabase persistence, touch swipe gestures, and sleek dark mode UI deployed on Cloud
+    Run.
   screenshot: assets/screenshots/septober.jpg
   play_url: https://septober-next-467916597830.europe-west1.run.app/
   repo_url: https://github.com/palladius/septober
@@ -1081,9 +1132,8 @@
   score: 88
   created_at: '2026'
   tagline: Family memoirs, Polaroid chronicles, and AI-illustrated private stories.
-  description: Riccardo's deeply personal family memoirs and daily chronicles, featuring
-    automated Polaroid photo galleries, AI Pixar-style memory renders with Ale and
-    Sebi, and protected behind Cloudflare Zero Trust Access.
+  description: Riccardo's deeply personal family memoirs and daily chronicles, featuring automated Polaroid photo galleries,
+    AI Pixar-style memory renders with Ale and Sebi, and protected behind Cloudflare Zero Trust Access.
   screenshot: assets/screenshots/private-journal.jpg
   play_url: https://lobby-ricc-pvt-journal2.palladiusbonton.workers.dev/
   repo_url: https://github.com/palladius/lobby-ricc-pvt-journal
@@ -1111,9 +1161,8 @@
   score: 90
   created_at: '2026'
   tagline: Pilanesberg safaris, lions, Franschhoek wine trams & family adventures!
-  description: Travelogue and daily photo diary of the Carlesso family trip to South
-    Africa in February 2026. From Pilanesberg National Park game drives and lion encounters
-    to the Franschhoek wine tram and the resurrection of Lobby.
+  description: Travelogue and daily photo diary of the Carlesso family trip to South Africa in February 2026. From Pilanesberg
+    National Park game drives and lion encounters to the Franschhoek wine tram and the resurrection of Lobby.
   screenshot: assets/screenshots/sudafrica-journal.png
   play_url: https://lobby-sudafrica-journal.palladiusbonton.workers.dev/
   repo_url: https://github.com/palladius/lobby-sudafrica-journal
@@ -1141,9 +1190,8 @@
   score: 84
   created_at: '2026'
   tagline: Weekly agile newsletter connecting tech, politics, food & AI disruption!
-  description: Riccardo's weekly newsletter connecting the dots between breakthrough
-    AI developments, global tech currents, occasional politics, and Italian cuisine,
-    rendered with sleek editorial layout.
+  description: Riccardo's weekly newsletter connecting the dots between breakthrough AI developments, global tech currents,
+    occasional politics, and Italian cuisine, rendered with sleek editorial layout.
   screenshot: assets/screenshots/ricc-reads-the-news.png
   play_url: https://ricc-reads-the-news.netlify.app/
   repo_url: https://github.com/palladius/ricc-reads-the-news
@@ -1172,8 +1220,8 @@
   score: 72
   created_at: '2024'
   tagline: Swiss Army Knife Unnecessary Repository yet Awesome shell scripts! (v1.0.1)
-  description: Riccardo's open-source shell scripts, cheatsheets, PS1 coloring, and
-    CLI productivity swiss-army-knife with prompt coloring and act scrambler.
+  description: Riccardo's open-source shell scripts, cheatsheets, PS1 coloring, and CLI productivity swiss-army-knife with
+    prompt coloring and act scrambler.
   screenshot_url: https://raw.githubusercontent.com/palladius/sakura/master/images/sakura2.jpg
   repo_url: https://github.com/palladius/sakura
   play_url: ''
@@ -1200,9 +1248,13 @@
   kind: tool
   category: tools
   score: 96
-  created_at: '2026-10'
-  tagline: Hands-free live chord sheets (accordi e spartiti) for pianists and guitarists with time-synced autoscroll, realtime transpose, and AI face-tracking!
-  description: Live chord sheets & lead sheet player in smart spartiti-md format. Leggi testi, accordi e spartiti a mani libere con scorrimento automatico temporizzato, emergency +/-20s jump controls, real-time transposition with flat normalization (D -> Eb), Italian (DO RE MI) vs English (C D E) chord notation toggling, and client-side Google MediaPipe Face Mesh for hands-free head nod page turning without taking hands off the piano keys or guitar strings.
+  created_at: 2026-10
+  tagline: Hands-free live chord sheets (accordi e spartiti) for pianists and guitarists with time-synced autoscroll, realtime
+    transpose, and AI face-tracking!
+  description: Live chord sheets & lead sheet player in smart spartiti-md format. Leggi testi, accordi e spartiti a mani libere
+    con scorrimento automatico temporizzato, emergency +/-20s jump controls, real-time transposition with flat normalization
+    (D -> Eb), Italian (DO RE MI) vs English (C D E) chord notation toggling, and client-side Google MediaPipe Face Mesh for
+    hands-free head nod page turning without taking hands off the piano keys or guitar strings.
   screenshot: assets/screenshots/handsfree-chords.png
   screenshot_url: https://raw.githubusercontent.com/palladius/handsfree-chords/main/docs/screenshot.png
   repo_url: https://github.com/palladius/handsfree-chords
@@ -1235,4 +1287,3 @@
   - audio
   - utility
   - tools
-
