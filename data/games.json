@@ -1,5 +1,41 @@
 [
   {
+    "id": "snake-tui",
+    "title": "🐍💎 TUI Vim Snake — Dual-Engine Ruby 3.3 WASM & PTY",
+    "audience": "kids",
+    "kind": "game",
+    "is_game": true,
+    "category": "kids",
+    "score": 94,
+    "created_at": "2026-11",
+    "tagline": "Classic Nokia-inspired Terminal Snake in pure Ruby 3.3 with Google ball emojis 🔵🔴🟡🟢🟣, Vim HJKL + Arrow keys, running untouched in browser via CRuby WebAssembly + xterm.js!",
+    "description": "Nostalgic Nokia-style TUI Snake generated from respec (tui-vim-snake) in pure zero-gem Ruby 3.3. Features Google-colored ball emojis (🔵🔴🟡🟢 = +10 pts, 92%) and super rare Purple balls (🟣 = +50 pts, 8%), dual Vim HJKL + standard Arrow controls, 3 difficulty tiers (Easy/Medium/Hard) with spawn countdown, and a Dual-Engine Web Pseudo-Terminal Bridge: runs the exact unmodified lib/snake_tui/*.rb files client-side on GitHub Pages via @ruby/3.3-wasm-wasi + @xterm/xterm, or streams a real Linux PTY over RFC 6455 WebSockets locally!",
+    "screenshot": "assets/screenshots/snake-tui.png",
+    "play_url": "https://palladius.github.io/snake-tui/",
+    "repo_url": "https://github.com/palladius/snake-tui",
+    "can_embed": true,
+    "featured": true,
+    "badge": "💎 Ruby 3.3 WASM • TUI in Browser",
+    "target": "Alessandro, Seby, Riccardo & Vim Ninjas",
+    "tech": [
+      "Ruby 3.3",
+      "CRuby WebAssembly (@ruby/3.3-wasm-wasi)",
+      "xterm.js",
+      "Linux PTY WebSocket",
+      "GitHub Pages"
+    ],
+    "tags": [
+      "snake",
+      "tui",
+      "ruby",
+      "wasm",
+      "vim",
+      "arcade",
+      "kids",
+      "game"
+    ]
+  },
+  {
     "id": "dots-and-lines",
     "title": "⚡🔲🐧 Dots & Lines — Neon Duel (Dual PuffinLogin)",
     "audience": "kids",
