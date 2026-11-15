@@ -1,5 +1,44 @@
 [
   {
+    "id": "kids-words",
+    "title": "🔤 Kids Words (Parole in Fuga)",
+    "audience": "kids",
+    "kind": "game",
+    "is_game": true,
+    "category": "kids",
+    "score": 94,
+    "created_at": "2026-11",
+    "tagline": "Gioco di parole a scorrimento con tessere a esaurimento e illustrazioni Pixar di Ale & Seby!",
+    "description": "Gioco educativo di anagrammi a scorrimento continuo (solo orizzontale/verticale) con esaurimento progressivo delle tessere D(r,c) che svelano illustrazioni Pixar di Alessandro, Sebastian, Ghigna e Pupurabbu. Include tier Seby (3×3/3×4) e Ale / Sfida (3×4, 3×5, 4×4 fino a 24 parole A1–C1), fumetti educativi per parole B1/B2/C1 e Album dei Ricordi.",
+    "screenshot": "assets/screenshots/kids-words.png",
+    "play_url": "https://palladius.github.io/kids-words/",
+    "repo_url": "https://github.com/palladius/kids-words",
+    "can_embed": true,
+    "featured": true,
+    "badge": "🟢 Live App • Ale & Seby 🐧",
+    "target": "Alessandro, Sebastian & Family",
+    "tech": [
+      "HTML5",
+      "JavaScript",
+      "CSS3",
+      "Web Speech API",
+      "Nano Banana Pro",
+      "GitHub Pages"
+    ],
+    "tags": [
+      "italian",
+      "words",
+      "puzzle",
+      "educational",
+      "kids",
+      "game",
+      "swipe",
+      "family",
+      "audio",
+      "cartoon"
+    ]
+  },
+  {
     "id": "snake-tui",
     "title": "🐍💎 TUI Vim Snake — Dual-Engine Ruby 3.3 WASM & PTY",
     "audience": "kids",
