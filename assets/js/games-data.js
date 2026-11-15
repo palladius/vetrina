@@ -16,7 +16,7 @@ window.PALLADIUS_GAMES = [
     "repo_url": "https://github.com/palladius/kids-words",
     "can_embed": true,
     "featured": true,
-    "badge": "🟢 Live App • Ale & Seby 🐧",
+    "badge": "🟢 Live App • PuffinLogin 🐧",
     "target": "Alessandro, Sebastian & Family",
     "tech": [
       "HTML5",
@@ -36,8 +36,13 @@ window.PALLADIUS_GAMES = [
       "swipe",
       "family",
       "audio",
-      "cartoon"
-    ]
+      "cartoon",
+      "login",
+      "puffin-login",
+      "supports_puffin_login"
+    ],
+    "supports_puffin_login": true,
+    "puffin_game_id": "kids-words"
   },
   {
     "id": "snake-tui",
