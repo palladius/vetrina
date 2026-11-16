@@ -1,15 +1,44 @@
 {
-  "checked_at": "2026-11-15T10:09:14Z",
-  "duration_sec": 11.38,
-  "total": 35,
+  "checked_at": "2026-11-16T10:21:35Z",
+  "duration_sec": 11.45,
+  "total": 36,
   "summary": {
-    "healthy": 29,
-    "ci_failing": 4,
+    "healthy": 31,
+    "ci_failing": 3,
     "degraded": 1,
     "down": 0,
     "archived": 1
   },
   "items": {
+    "kids-words": {
+      "id": "kids-words",
+      "title": "🔤 Kids Words (Parole in Fuga)",
+      "audience": "kids",
+      "archived": false,
+      "overall": "healthy",
+      "play_url": "https://palladius.github.io/kids-words/",
+      "repo_url": "https://github.com/palladius/kids-words",
+      "web": {
+        "status": "up",
+        "http_code": 200,
+        "latency_ms": 466,
+        "note": "OK"
+      },
+      "regions": [],
+      "ci": {
+        "status": "passing",
+        "repo": "palladius/kids-words",
+        "conclusion": "success",
+        "run_status": "completed",
+        "workflow_name": "Deploy Kids Words to GitHub Pages",
+        "display_title": "fix(ring): link ring.html back to Kids Words and set app-id=kids-words",
+        "branch": "main",
+        "event": "push",
+        "updated_at": "2026-11-15T15:16:34Z",
+        "run_url": "https://github.com/palladius/kids-words/actions/runs/43728921087",
+        "failing_workflows": []
+      }
+    },
     "snake-tui": {
       "id": "snake-tui",
       "title": "🐍💎 TUI Vim Snake — Dual-Engine Ruby 3.3 WASM & PTY",
@@ -21,7 +50,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 140,
+        "latency_ms": 139,
         "note": "OK"
       },
       "regions": [],
@@ -50,7 +79,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 184,
+        "latency_ms": 172,
         "note": "OK"
       },
       "regions": [],
@@ -79,7 +108,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 145,
+        "latency_ms": 450,
         "note": "OK"
       },
       "regions": [],
@@ -108,7 +137,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 261,
+        "latency_ms": 142,
         "note": "OK"
       },
       "regions": [],
@@ -118,11 +147,11 @@
         "conclusion": "success",
         "run_status": "completed",
         "workflow_name": "Deploy Kids' Own Stories to GitHub Pages",
-        "display_title": "feat(sardegna): replace photo slideshow with 40s 4-act Pixar 3D anima…",
+        "display_title": "fix(ui): remove duplicate const bookEl in renderActiveBook and add JS…",
         "branch": "main",
         "event": "push",
-        "updated_at": "2026-11-14T17:11:49Z",
-        "run_url": "https://github.com/palladius/kids-own-stories/actions/runs/43619721998",
+        "updated_at": "2026-11-15T18:12:40Z",
+        "run_url": "https://github.com/palladius/kids-own-stories/actions/runs/43745335827",
         "failing_workflows": []
       }
     },
@@ -137,7 +166,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 161,
+        "latency_ms": 476,
         "note": "OK"
       },
       "regions": [
@@ -148,7 +177,7 @@
           "url": "https://palladius.github.io/demo-snake/",
           "status": "up",
           "http_code": 200,
-          "latency_ms": 44,
+          "latency_ms": 119,
           "note": "OK"
         },
         {
@@ -158,7 +187,7 @@
           "url": "https://puffin-login-932724269481.europe-west1.run.app/snake.html",
           "status": "up",
           "http_code": 200,
-          "latency_ms": 1894,
+          "latency_ms": 1536,
           "note": "OK"
         }
       ],
@@ -181,35 +210,28 @@
       "title": "📸🧩 FotoQuad: Il Solitario di Famiglia",
       "audience": "kids",
       "archived": false,
-      "overall": "ci_failing",
+      "overall": "healthy",
       "play_url": "https://palladius.github.io/carlesso-fotoquad/",
       "repo_url": "https://github.com/palladius/carlesso-fotoquad",
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 146,
+        "latency_ms": 140,
         "note": "OK"
       },
       "regions": [],
       "ci": {
-        "status": "failing",
+        "status": "passing",
         "repo": "palladius/carlesso-fotoquad",
-        "conclusion": "failure",
+        "conclusion": "success",
         "run_status": "completed",
-        "workflow_name": "CI",
-        "display_title": "✨ feat(telemetry,puffin-login): send duration_sec/difficulty telemetr…",
+        "workflow_name": "Deploy to GitHub Pages",
+        "display_title": "feat(offline): upgrade PuffinLogin to v2.2.2 with Airplane Mode MD5 s…",
         "branch": "main",
         "event": "push",
-        "updated_at": "2026-11-08T14:45:18Z",
-        "run_url": "https://github.com/palladius/carlesso-fotoquad/actions/runs/42491269439",
-        "failing_workflows": [
-          {
-            "name": "CI",
-            "url": "https://github.com/palladius/carlesso-fotoquad/actions/runs/42491269439",
-            "updated_at": "2026-11-08T14:45:18Z",
-            "title": "✨ feat(telemetry,puffin-login): send duration_sec/difficulty telemetr…"
-          }
-        ]
+        "updated_at": "2026-11-15T12:58:25Z",
+        "run_url": "https://github.com/palladius/carlesso-fotoquad/actions/runs/43716448435",
+        "failing_workflows": []
       }
     },
     "family-mahjong-3d": {
@@ -223,7 +245,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 144,
+        "latency_ms": 154,
         "note": "OK"
       },
       "regions": [],
@@ -259,7 +281,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 5085,
+        "latency_ms": 338,
         "note": "OK"
       },
       "regions": [
@@ -270,7 +292,7 @@
           "url": "https://pupurabbu-3d-272932496670.europe-west6.run.app",
           "status": "up",
           "http_code": 200,
-          "latency_ms": 297,
+          "latency_ms": 317,
           "note": "OK"
         },
         {
@@ -280,7 +302,7 @@
           "url": "https://pupurabbu-3d-dev-272932496670.europe-west6.run.app",
           "status": "up",
           "http_code": 200,
-          "latency_ms": 5583,
+          "latency_ms": 6326,
           "note": "OK"
         },
         {
@@ -290,7 +312,7 @@
           "url": "https://pupurabbu-3d-272932496670.europe-west1.run.app",
           "status": "down",
           "http_code": 404,
-          "latency_ms": 204,
+          "latency_ms": 187,
           "note": "HTTP 404: Not Found"
         },
         {
@@ -300,7 +322,7 @@
           "url": "https://pupurabbu-3d-dev-272932496670.europe-west1.run.app",
           "status": "down",
           "http_code": 404,
-          "latency_ms": 205,
+          "latency_ms": 165,
           "note": "HTTP 404: Not Found"
         }
       ],
@@ -320,7 +342,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 139,
+        "latency_ms": 418,
         "note": "OK"
       },
       "regions": [],
@@ -349,7 +371,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 150,
+        "latency_ms": 138,
         "note": "OK"
       },
       "regions": [],
@@ -378,7 +400,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 107,
+        "latency_ms": 124,
         "note": "OK"
       },
       "regions": [],
@@ -407,7 +429,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 218,
+        "latency_ms": 126,
         "note": "OK"
       },
       "regions": [],
@@ -457,7 +479,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 300,
+        "latency_ms": 154,
         "note": "OK"
       },
       "regions": [],
@@ -477,7 +499,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 148,
+        "latency_ms": 633,
         "note": "OK"
       },
       "regions": [],
@@ -497,7 +519,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 180,
+        "latency_ms": 176,
         "note": "OK"
       },
       "regions": [],
@@ -510,8 +532,8 @@
         "display_title": "pages build and deployment",
         "branch": "main",
         "event": "dynamic",
-        "updated_at": "2026-11-15T06:23:07Z",
-        "run_url": "https://github.com/palladius/parola-del-giorno/actions/runs/43685099397",
+        "updated_at": "2026-11-16T06:23:36Z",
+        "run_url": "https://github.com/palladius/parola-del-giorno/actions/runs/43816293892",
         "failing_workflows": []
       }
     },
@@ -526,7 +548,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 125,
+        "latency_ms": 124,
         "note": "OK"
       },
       "regions": [],
@@ -555,7 +577,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 2205,
+        "latency_ms": 1405,
         "note": "OK"
       },
       "regions": [],
@@ -737,7 +759,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 533,
+        "latency_ms": 266,
         "note": "OK"
       },
       "regions": [],
@@ -779,7 +801,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 115,
+        "latency_ms": 278,
         "note": "OK"
       },
       "regions": [],
@@ -792,8 +814,8 @@
         "display_title": "🔄 Daily Cron: Slurp Federated Vetrina Metadata",
         "branch": "main",
         "event": "schedule",
-        "updated_at": "2026-11-15T10:08:59Z",
-        "run_url": "https://github.com/palladius/vetrina/actions/runs/43702652324",
+        "updated_at": "2026-11-16T10:21:15Z",
+        "run_url": "https://github.com/palladius/vetrina/actions/runs/43848063118",
         "failing_workflows": []
       }
     },
@@ -808,7 +830,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 123,
+        "latency_ms": 187,
         "note": "OK"
       },
       "regions": [],
@@ -837,7 +859,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 8245,
+        "latency_ms": 8937,
         "note": "OK"
       },
       "regions": [],
@@ -866,7 +888,7 @@
       "web": {
         "status": "protected",
         "http_code": 200,
-        "latency_ms": 608,
+        "latency_ms": 656,
         "note": "Cloudflare Zero Trust Access"
       },
       "regions": [],
@@ -887,7 +909,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 292,
+        "latency_ms": 280,
         "note": "OK"
       },
       "regions": [],
@@ -908,7 +930,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 504,
+        "latency_ms": 468,
         "note": "OK"
       },
       "regions": [],
@@ -973,7 +995,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 121,
+        "latency_ms": 142,
         "note": "OK"
       },
       "regions": [],
