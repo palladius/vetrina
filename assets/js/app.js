@@ -398,7 +398,7 @@
     }
 
     // Playability & Media bonus
-    if (game.can_embed) bonus += 7;
+    if (game.can_embed || (game.play_url && game.play_url.trim() !== '')) bonus += 7;
     if (game.youtube_id) bonus += 7;
     if (game.featured) bonus += 4;
 
@@ -529,7 +529,7 @@
             playBtn = `
               <a href="${game.play_url}" target="_blank" rel="noopener noreferrer"
                  class="inline-flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-xl text-xs sm:text-sm font-bold tracking-wide text-white bg-gradient-to-r from-indigo-600 via-indigo-600 to-violet-600 hover:from-indigo-700 hover:to-violet-700 shadow-sm hover:shadow transition-all">
-                <span>🎮 PLAY</span>
+                <span>🎮 PLAY ↗</span>
               </a>
             `;
           }
@@ -613,7 +613,7 @@
                 <!-- Row 1: Title with Emoji + Score Badge -->
                 <div class="flex items-start justify-between gap-2 mb-1">
                   <h3 class="font-fun text-base sm:text-lg font-bold text-slate-900 group-hover:text-indigo-600 transition-colors leading-tight line-clamp-1">
-                    <a href="${imgTargetUrl}" ${imgClickAction} class="hover:text-indigo-600">
+                    <a href="${imgTargetUrl}" ${imgClickAction} target="_blank" rel="noopener noreferrer" class="hover:text-indigo-600">
                       ${game.title}
                     </a>
                   </h3>
