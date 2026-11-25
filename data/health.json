@@ -1,10 +1,10 @@
 {
-  "checked_at": "2026-11-24T13:04:13Z",
-  "duration_sec": 10.78,
+  "checked_at": "2026-11-25T11:53:36Z",
+  "duration_sec": 10.71,
   "total": 37,
   "summary": {
-    "healthy": 31,
-    "ci_failing": 4,
+    "healthy": 32,
+    "ci_failing": 3,
     "degraded": 1,
     "down": 0,
     "archived": 1
@@ -21,7 +21,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 240,
+        "latency_ms": 196,
         "note": "OK"
       },
       "regions": [],
@@ -50,7 +50,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 142,
+        "latency_ms": 152,
         "note": "OK"
       },
       "regions": [],
@@ -79,7 +79,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 142,
+        "latency_ms": 246,
         "note": "OK"
       },
       "regions": [],
@@ -108,7 +108,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 144,
+        "latency_ms": 153,
         "note": "OK"
       },
       "regions": [],
@@ -137,7 +137,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 157,
+        "latency_ms": 198,
         "note": "OK"
       },
       "regions": [],
@@ -160,35 +160,28 @@
       "title": "📚🎙️ Kids' Own Stories — Le Storie di Ale & Seby",
       "audience": "kids",
       "archived": false,
-      "overall": "ci_failing",
+      "overall": "healthy",
       "play_url": "https://palladius.github.io/kids-own-stories/",
       "repo_url": "https://github.com/palladius/kids-own-stories",
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 157,
+        "latency_ms": 140,
         "note": "OK"
       },
       "regions": [],
       "ci": {
-        "status": "failing",
+        "status": "passing",
         "repo": "palladius/kids-own-stories",
-        "conclusion": "failure",
+        "conclusion": "success",
         "run_status": "completed",
         "workflow_name": "Deploy Kids' Own Stories to GitHub Pages",
-        "display_title": "feat: add Le Petit Prince 26p multi-book reader, /books/ 3D shelf, an…",
+        "display_title": "feat(books): add 3s Veo watercolor animations (p02/p04), fix 8 silent…",
         "branch": "main",
         "event": "push",
-        "updated_at": "2026-11-24T09:06:09Z",
-        "run_url": "https://github.com/palladius/kids-own-stories/actions/runs/45361863764",
-        "failing_workflows": [
-          {
-            "name": "Deploy Kids' Own Stories to GitHub Pages",
-            "url": "https://github.com/palladius/kids-own-stories/actions/runs/45361863764",
-            "updated_at": "2026-11-24T09:06:09Z",
-            "title": "feat: add Le Petit Prince 26p multi-book reader, /books/ 3D shelf, an…"
-          }
-        ]
+        "updated_at": "2026-11-25T06:49:24Z",
+        "run_url": "https://github.com/palladius/kids-own-stories/actions/runs/45563363491",
+        "failing_workflows": []
       }
     },
     "demo-snake": {
@@ -202,7 +195,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 315,
+        "latency_ms": 158,
         "note": "OK"
       },
       "regions": [
@@ -213,7 +206,7 @@
           "url": "https://palladius.github.io/demo-snake/",
           "status": "up",
           "http_code": 200,
-          "latency_ms": 16,
+          "latency_ms": 35,
           "note": "OK"
         },
         {
@@ -223,7 +216,7 @@
           "url": "https://puffin-login-932724269481.europe-west1.run.app/snake.html",
           "status": "up",
           "http_code": 200,
-          "latency_ms": 1745,
+          "latency_ms": 225,
           "note": "OK"
         }
       ],
@@ -252,7 +245,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 245,
+        "latency_ms": 159,
         "note": "OK"
       },
       "regions": [],
@@ -281,7 +274,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 142,
+        "latency_ms": 153,
         "note": "OK"
       },
       "regions": [],
@@ -317,7 +310,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 303,
+        "latency_ms": 2172,
         "note": "OK"
       },
       "regions": [
@@ -328,7 +321,7 @@
           "url": "https://pupurabbu-3d-272932496670.europe-west6.run.app",
           "status": "up",
           "http_code": 200,
-          "latency_ms": 219,
+          "latency_ms": 367,
           "note": "OK"
         },
         {
@@ -338,7 +331,7 @@
           "url": "https://pupurabbu-3d-dev-272932496670.europe-west6.run.app",
           "status": "up",
           "http_code": 200,
-          "latency_ms": 2307,
+          "latency_ms": 1958,
           "note": "OK"
         },
         {
@@ -348,7 +341,7 @@
           "url": "https://pupurabbu-3d-272932496670.europe-west1.run.app",
           "status": "down",
           "http_code": 404,
-          "latency_ms": 112,
+          "latency_ms": 204,
           "note": "HTTP 404: Not Found"
         },
         {
@@ -358,7 +351,7 @@
           "url": "https://pupurabbu-3d-dev-272932496670.europe-west1.run.app",
           "status": "down",
           "http_code": 404,
-          "latency_ms": 120,
+          "latency_ms": 219,
           "note": "HTTP 404: Not Found"
         }
       ],
@@ -378,7 +371,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 50,
+        "latency_ms": 169,
         "note": "OK"
       },
       "regions": [],
@@ -407,7 +400,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 85,
+        "latency_ms": 148,
         "note": "OK"
       },
       "regions": [],
@@ -436,7 +429,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 77,
+        "latency_ms": 157,
         "note": "OK"
       },
       "regions": [],
@@ -465,7 +458,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 85,
+        "latency_ms": 152,
         "note": "OK"
       },
       "regions": [],
@@ -515,7 +508,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 128,
+        "latency_ms": 586,
         "note": "OK"
       },
       "regions": [],
@@ -535,7 +528,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 63,
+        "latency_ms": 317,
         "note": "OK"
       },
       "regions": [],
@@ -555,7 +548,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 66,
+        "latency_ms": 161,
         "note": "OK"
       },
       "regions": [],
@@ -584,7 +577,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 113,
+        "latency_ms": 152,
         "note": "OK"
       },
       "regions": [],
@@ -613,7 +606,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 974,
+        "latency_ms": 1049,
         "note": "OK"
       },
       "regions": [],
@@ -795,7 +788,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 1024,
+        "latency_ms": 1011,
         "note": "OK"
       },
       "regions": [],
@@ -837,7 +830,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 113,
+        "latency_ms": 126,
         "note": "OK"
       },
       "regions": [],
@@ -850,8 +843,8 @@
         "display_title": "🔄 Daily Cron: Slurp Federated Vetrina Metadata",
         "branch": "main",
         "event": "schedule",
-        "updated_at": "2026-11-24T13:03:58Z",
-        "run_url": "https://github.com/palladius/vetrina/actions/runs/45399587772",
+        "updated_at": "2026-11-25T11:53:11Z",
+        "run_url": "https://github.com/palladius/vetrina/actions/runs/45608536017",
         "failing_workflows": [
           {
             "name": "🚀 Test & Deploy to GitHub Pages",
@@ -873,7 +866,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 67,
+        "latency_ms": 165,
         "note": "OK"
       },
       "regions": [],
@@ -902,7 +895,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 8863,
+        "latency_ms": 8835,
         "note": "OK"
       },
       "regions": [],
@@ -931,7 +924,7 @@
       "web": {
         "status": "protected",
         "http_code": 200,
-        "latency_ms": 626,
+        "latency_ms": 628,
         "note": "Cloudflare Zero Trust Access"
       },
       "regions": [],
@@ -952,7 +945,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 315,
+        "latency_ms": 83,
         "note": "OK"
       },
       "regions": [],
@@ -973,7 +966,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 310,
+        "latency_ms": 464,
         "note": "OK"
       },
       "regions": [],
@@ -1038,7 +1031,7 @@
       "web": {
         "status": "up",
         "http_code": 200,
-        "latency_ms": 65,
+        "latency_ms": 141,
         "note": "OK"
       },
       "regions": [],
